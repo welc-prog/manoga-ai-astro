@@ -1,6 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import { t, changeLanguage } from 'i18next';
+import { t } from '../../i18n/index.ts';
 import AIBrain from '../../components/AIBrain.astro';
 import IconArrowRight from '../../components/icons/IconArrowRight.astro';
 import IconExternal from '../../components/icons/IconExternal.astro';
@@ -8,30 +8,29 @@ import IconPhone from '../../components/icons/IconPhone.astro';
 import IconLinkedIn from '../../components/icons/IconLinkedIn.astro';
 import IconLocation from '../../components/icons/IconLocation.astro';
 
-const lang = Astro.currentLocale || 'en';
-changeLanguage(lang);
-const prefix = lang === 'en' ? '' : `/${lang}`;
+const lang = 'da';  // Hardcode for Danish pages
+const prefix = '/da';  // Hardcode for Danish pages
 ---
 
-<Layout title={t('meta.homeTitle')} description={t('meta.homeDescription')}>
+<Layout title={t('meta.homeTitle', lang)} description={t('meta.homeDescription', lang)} lang={lang}>
   <!-- Hero Section -->
   <section class="hero section bg-hero-neural" id="hero">
     <div class="container">
       <div class="hero-content">
         <div class="hero-text">
-          <span class="hero-tagline">{t('hero.tagline')}</span>
+          <span class="hero-tagline">{t('hero.tagline', lang)}</span>
           <h1 class="hero-title">
-            {t('hero.title')}
+            {t('hero.title', lang)}
             <span class="text-gradient glitch" data-text="Vibecoding">Vibecoding</span>
           </h1>
-          <p class="hero-description">{t('hero.description')}</p>
+          <p class="hero-description">{t('hero.description', lang)}</p>
           <div class="hero-buttons">
             <a href={`${prefix}/contact`} class="btn btn-primary btn-glow">
-              {t('hero.cta')}
+              {t('hero.cta', lang)}
               <IconArrowRight />
             </a>
             <a href={`${prefix}/portfolio`} class="btn btn-secondary">
-              {t('hero.secondary')}
+              {t('hero.secondary', lang)}
             </a>
           </div>
         </div>
@@ -46,19 +45,19 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
   <div class="marquee section-sm">
     <div class="marquee-content">
       <span>Vibecoding</span>
-      <span>{t('services.aiConsulting')}</span>
+      <span>{t('services.aiConsulting', lang)}</span>
       <span>SEO</span>
       <span>Google Ads</span>
-      <span>Meta {t('services.advertising')}</span>
-      <span>{t('services.webDesign')}</span>
+      <span>Meta {t('services.advertising', lang)}</span>
+      <span>{t('services.webDesign', lang)}</span>
       <span>GTM</span>
       <span>Workshops</span>
       <span>Vibecoding</span>
-      <span>{t('services.aiConsulting')}</span>
+      <span>{t('services.aiConsulting', lang)}</span>
       <span>SEO</span>
       <span>Google Ads</span>
-      <span>Meta {t('services.advertising')}</span>
-      <span>{t('services.webDesign')}</span>
+      <span>Meta {t('services.advertising', lang)}</span>
+      <span>{t('services.webDesign', lang)}</span>
       <span>GTM</span>
       <span>Workshops</span>
     </div>
@@ -68,9 +67,9 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
   <section class="section" id="services">
     <div class="container">
       <div class="text-center mb-3">
-        <span class="hero-tagline">{t('services.whatWeDo')}</span>
-        <h2>{t('services.title')}</h2>
-        <p style="max-width: 600px; margin: 0 auto;">{t('services.subtitle')}</p>
+        <span class="hero-tagline">{t('services.whatWeDo', lang)}</span>
+        <h2>{t('services.title', lang)}</h2>
+        <p style="max-width: 600px; margin: 0 auto;">{t('services.subtitle', lang)}</p>
       </div>
 
       <div class="services-grid stagger reveal">
@@ -80,9 +79,9 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
             <img src="/images/icon-vibecoding.webp" alt="Vibecoding" loading="lazy" />
           </div>
           <h3 class="card-title">Vibecoding</h3>
-          <p class="card-text">{t('services.vibecoding')}</p>
+          <p class="card-text">{t('services.vibecoding', lang)}</p>
           <a href={`${prefix}/vibecoding`} class="btn btn-secondary mt-1">
-            {t('common.learnMore')}
+            {t('common.learnMore', lang)}
           </a>
         </div>
 
@@ -91,10 +90,10 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
           <div class="card-icon card-icon-image">
             <img src="/images/icon-ai-consulting.webp" alt="AI Consulting" loading="lazy" />
           </div>
-          <h3 class="card-title">{t('services.aiConsulting')}</h3>
-          <p class="card-text">{t('services.aiConsultingDesc')}</p>
+          <h3 class="card-title">{t('services.aiConsulting', lang)}</h3>
+          <p class="card-text">{t('services.aiConsultingDesc', lang)}</p>
           <a href={`${prefix}/ai-consulting`} class="btn btn-secondary mt-1">
-            {t('common.learnMore')}
+            {t('common.learnMore', lang)}
           </a>
         </div>
 
@@ -103,10 +102,10 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
           <div class="card-icon card-icon-image">
             <img src="/images/icon-workshops.webp" alt="AI Workshops" loading="lazy" />
           </div>
-          <h3 class="card-title">{t('services.workshops')}</h3>
-          <p class="card-text">{t('services.workshopsDesc')}</p>
+          <h3 class="card-title">{t('services.workshops', lang)}</h3>
+          <p class="card-text">{t('services.workshopsDesc', lang)}</p>
           <a href={`${prefix}/workshops`} class="btn btn-secondary mt-1">
-            {t('common.learnMore')}
+            {t('common.learnMore', lang)}
           </a>
         </div>
       </div>
@@ -117,9 +116,9 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
   <section class="section bg-marketing">
     <div class="container">
       <div class="text-center mb-3">
-        <span class="hero-tagline">{t('marketing.tagline')}</span>
-        <h2>15+ {t('marketing.yearsOf')} <span class="text-gradient">{t('marketing.expertise')}</span></h2>
-        <p style="max-width: 600px; margin: 0 auto;">{t('marketing.subtitle')}</p>
+        <span class="hero-tagline">{t('marketing.tagline', lang)}</span>
+        <h2>15+ {t('marketing.yearsOf', lang)} <span class="text-gradient">{t('marketing.expertise', lang)}</span></h2>
+        <p style="max-width: 600px; margin: 0 auto;">{t('marketing.subtitle', lang)}</p>
       </div>
 
       <div class="services-grid stagger reveal">
@@ -129,8 +128,8 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
             <img src="/images/icon-seo.webp" alt="SEO" loading="lazy" />
           </div>
           <h4 class="card-title">SEO</h4>
-          <p class="card-text">{t('marketing.seo')}</p>
-          <a href={`${prefix}/seo`}>{t('common.learnMore')} →</a>
+          <p class="card-text">{t('marketing.seo', lang)}</p>
+          <a href={`${prefix}/seo`}>{t('common.learnMore', lang)} →</a>
         </div>
 
         <!-- Google Ads -->
@@ -139,8 +138,8 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
             <img src="/images/icon-google-ads.webp" alt="Google Ads" loading="lazy" />
           </div>
           <h4 class="card-title">Google Ads</h4>
-          <p class="card-text">{t('marketing.googleAds')}</p>
-          <a href={`${prefix}/google-ads`}>{t('common.learnMore')} →</a>
+          <p class="card-text">{t('marketing.googleAds', lang)}</p>
+          <a href={`${prefix}/google-ads`}>{t('common.learnMore', lang)} →</a>
         </div>
 
         <!-- Meta Advertising -->
@@ -148,9 +147,9 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
           <div class="card-icon card-icon-image">
             <img src="/images/icon-meta-ads.webp" alt="Meta Advertising" loading="lazy" />
           </div>
-          <h4 class="card-title">{t('nav.metaAds')}</h4>
-          <p class="card-text">{t('marketing.metaAds')}</p>
-          <a href={`${prefix}/meta-advertising`}>{t('common.learnMore')} →</a>
+          <h4 class="card-title">{t('nav.metaAds', lang)}</h4>
+          <p class="card-text">{t('marketing.metaAds', lang)}</p>
+          <a href={`${prefix}/meta-advertising`}>{t('common.learnMore', lang)} →</a>
         </div>
 
         <!-- Web Design -->
@@ -158,9 +157,9 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
           <div class="card-icon card-icon-image">
             <img src="/images/icon-webdesign.webp" alt="Web Design" loading="lazy" />
           </div>
-          <h4 class="card-title">{t('nav.webdesign')}</h4>
-          <p class="card-text">{t('marketing.webDesign')}</p>
-          <a href={`${prefix}/webdesign`}>{t('common.learnMore')} →</a>
+          <h4 class="card-title">{t('nav.webdesign', lang)}</h4>
+          <p class="card-text">{t('marketing.webDesign', lang)}</p>
+          <a href={`${prefix}/webdesign`}>{t('common.learnMore', lang)} →</a>
         </div>
 
         <!-- Google Tag Manager -->
@@ -169,8 +168,8 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
             <img src="/images/icon-gtm.webp" alt="Google Tag Manager" loading="lazy" />
           </div>
           <h4 class="card-title">Google Tag Manager</h4>
-          <p class="card-text">{t('marketing.gtm')}</p>
-          <a href={`${prefix}/google-tag-manager`}>{t('common.learnMore')} →</a>
+          <p class="card-text">{t('marketing.gtm', lang)}</p>
+          <a href={`${prefix}/google-tag-manager`}>{t('common.learnMore', lang)} →</a>
         </div>
 
         <!-- Analytics -->
@@ -178,9 +177,9 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
           <div class="card-icon card-icon-image">
             <img src="/images/icon-analytics.webp" alt="Analytics" loading="lazy" />
           </div>
-          <h4 class="card-title">{t('marketing.analytics')}</h4>
-          <p class="card-text">{t('marketing.analyticsDesc')}</p>
-          <a href={`${prefix}/contact`}>{t('common.learnMore')} →</a>
+          <h4 class="card-title">{t('marketing.analytics', lang)}</h4>
+          <p class="card-text">{t('marketing.analyticsDesc', lang)}</p>
+          <a href={`${prefix}/contact`}>{t('common.learnMore', lang)} →</a>
         </div>
       </div>
     </div>
@@ -192,19 +191,19 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
       <div class="stats-grid reveal">
         <div class="stat-item">
           <div class="stat-number">15+</div>
-          <div class="stat-label">{t('stats.years')}</div>
+          <div class="stat-label">{t('stats.years', lang)}</div>
         </div>
         <div class="stat-item">
           <div class="stat-number">100+</div>
-          <div class="stat-label">{t('stats.projects')}</div>
+          <div class="stat-label">{t('stats.projects', lang)}</div>
         </div>
         <div class="stat-item">
           <div class="stat-number">10x</div>
-          <div class="stat-label">{t('stats.faster')}</div>
+          <div class="stat-label">{t('stats.faster', lang)}</div>
         </div>
         <div class="stat-item">
           <div class="stat-number">24/7</div>
-          <div class="stat-label">{t('stats.support')}</div>
+          <div class="stat-label">{t('stats.support', lang)}</div>
         </div>
       </div>
     </div>
@@ -214,9 +213,9 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
   <section class="section" id="portfolio">
     <div class="container">
       <div class="text-center mb-3">
-        <span class="hero-tagline">{t('portfolio.tagline')}</span>
-        <h2>{t('portfolio.featured')} <span class="text-gradient">{t('portfolio.projects')}</span></h2>
-        <p style="max-width: 600px; margin: 0 auto;">{t('portfolio.subtitle')}</p>
+        <span class="hero-tagline">{t('portfolio.tagline', lang)}</span>
+        <h2>{t('portfolio.featured', lang)} <span class="text-gradient">{t('portfolio.projects', lang)}</span></h2>
+        <p style="max-width: 600px; margin: 0 auto;">{t('portfolio.subtitle', lang)}</p>
       </div>
 
       <div class="showcase-grid reveal">
@@ -224,11 +223,11 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
         <div class="showcase-item">
           <img class="showcase-image" src="/images/portfolio-crypto.webp" alt="WeLoveEverythingCrypto" loading="lazy" />
           <div class="showcase-overlay">
-            <span class="showcase-tag">{t('portfolio.liveProject')}</span>
+            <span class="showcase-tag">{t('portfolio.liveProject', lang)}</span>
             <h3 class="showcase-title">WeLoveEverythingCrypto</h3>
-            <p>{t('portfolio.welcDesc')}</p>
+            <p>{t('portfolio.welcDesc', lang)}</p>
             <a href="https://weloveeverythingcrypto.com" target="_blank" rel="noopener" class="btn btn-primary">
-              {t('portfolio.visitSite')} <IconExternal />
+              {t('portfolio.visitSite', lang)} <IconExternal />
             </a>
           </div>
         </div>
@@ -237,11 +236,11 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
         <div class="showcase-item">
           <img class="showcase-image" src="/images/portfolio-handball.webp" alt="Handball Tracker" loading="lazy" />
           <div class="showcase-overlay">
-            <span class="showcase-tag">{t('portfolio.liveProject')}</span>
+            <span class="showcase-tag">{t('portfolio.liveProject', lang)}</span>
             <h3 class="showcase-title">Handball Tracker</h3>
-            <p>{t('portfolio.handballDesc')}</p>
+            <p>{t('portfolio.handballDesc', lang)}</p>
             <a href="https://handballtracker.com" target="_blank" rel="noopener" class="btn btn-primary">
-              {t('portfolio.visitSite')} <IconExternal />
+              {t('portfolio.visitSite', lang)} <IconExternal />
             </a>
           </div>
         </div>
@@ -253,30 +252,30 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
   <section class="section bg-geometric">
     <div class="container">
       <div class="text-center mb-3">
-        <span class="hero-tagline">{t('process.tagline')}</span>
-        <h2>{t('process.the')} <span class="text-gradient">Vibecoding</span>{t('process.process')}</h2>
+        <span class="hero-tagline">{t('process.tagline', lang)}</span>
+        <h2>{t('process.the', lang)} <span class="text-gradient">Vibecoding</span>{t('process.process', lang)}</h2>
       </div>
 
       <div class="process-grid reveal">
         <div class="process-step">
           <div class="process-number">1</div>
-          <h4 class="process-title">{t('process.discovery')}</h4>
-          <p class="process-text">{t('process.discoveryDesc')}</p>
+          <h4 class="process-title">{t('process.discovery', lang)}</h4>
+          <p class="process-text">{t('process.discoveryDesc', lang)}</p>
         </div>
         <div class="process-step">
           <div class="process-number">2</div>
-          <h4 class="process-title">{t('process.design')}</h4>
-          <p class="process-text">{t('process.designDesc')}</p>
+          <h4 class="process-title">{t('process.design', lang)}</h4>
+          <p class="process-text">{t('process.designDesc', lang)}</p>
         </div>
         <div class="process-step">
           <div class="process-number">3</div>
-          <h4 class="process-title">{t('process.develop')}</h4>
-          <p class="process-text">{t('process.developDesc')}</p>
+          <h4 class="process-title">{t('process.develop', lang)}</h4>
+          <p class="process-text">{t('process.developDesc', lang)}</p>
         </div>
         <div class="process-step">
           <div class="process-number">4</div>
-          <h4 class="process-title">{t('process.deploy')}</h4>
-          <p class="process-text">{t('process.deployDesc')}</p>
+          <h4 class="process-title">{t('process.deploy', lang)}</h4>
+          <p class="process-text">{t('process.deployDesc', lang)}</p>
         </div>
       </div>
     </div>
@@ -286,11 +285,11 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
   <section class="section bg-gradient-mesh">
     <div class="container">
       <div class="card text-center" style="padding: var(--space-xl); max-width: 800px; margin: 0 auto;">
-        <h2 class="mb-1">{t('cta.title')}</h2>
-        <p style="font-size: 1.25rem; margin-bottom: var(--space-md);">{t('cta.subtitle')}</p>
+        <h2 class="mb-1">{t('cta.title', lang)}</h2>
+        <p style="font-size: 1.25rem; margin-bottom: var(--space-md);">{t('cta.subtitle', lang)}</p>
         <div class="flex-center" style="gap: var(--space-sm); flex-wrap: wrap;">
           <a href={`${prefix}/contact`} class="btn btn-primary btn-glow">
-            {t('cta.button')}
+            {t('cta.button', lang)}
             <IconArrowRight />
           </a>
           <a href="tel:+4550587900" class="btn btn-secondary">
@@ -307,16 +306,16 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
     <div class="container">
       <div class="contact-grid">
         <div class="contact-info reveal-left">
-          <span class="hero-tagline">{t('contact.tagline')}</span>
-          <h2>{t('contact.title')} <span class="text-gradient">{t('contact.amazing')}</span></h2>
-          <p>{t('contact.subtitle')}</p>
+          <span class="hero-tagline">{t('contact.tagline', lang)}</span>
+          <h2>{t('contact.title', lang)} <span class="text-gradient">{t('contact.amazing', lang)}</span></h2>
+          <p>{t('contact.subtitle', lang)}</p>
 
           <div class="contact-item">
             <div class="contact-icon">
               <IconPhone />
             </div>
             <div>
-              <strong>{t('contact.phone')}</strong><br />
+              <strong>{t('contact.phone', lang)}</strong><br />
               <a href="tel:+4550587900">+45 50 58 79 00</a>
             </div>
           </div>
@@ -328,7 +327,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
             <div>
               <strong>LinkedIn</strong><br />
               <a href="https://www.linkedin.com/in/kennethabueg/" target="_blank" rel="noopener">
-                {t('contact.connectLinkedIn')}
+                {t('contact.connectLinkedIn', lang)}
               </a>
             </div>
           </div>
@@ -338,9 +337,9 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
               <IconLocation />
             </div>
             <div>
-              <strong>{t('contact.businessReg')}</strong><br />
+              <strong>{t('contact.businessReg', lang)}</strong><br />
               CVR: DK39733730<br />
-              {t('footer.denmark')}
+              {t('footer.denmark', lang)}
             </div>
           </div>
         </div>
@@ -348,7 +347,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
         <div class="reveal-right">
           <form class="contact-form" id="contact-form">
             <div class="form-group">
-              <label class="form-label" for="contact-name">{t('contact.name')} *</label>
+              <label class="form-label" for="contact-name">{t('contact.name', lang)} *</label>
               <input type="text" id="contact-name" name="name" class="form-input" required />
             </div>
 
@@ -358,33 +357,33 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
             </div>
 
             <div class="form-group">
-              <label class="form-label" for="contact-phone">{t('contact.phone')}</label>
+              <label class="form-label" for="contact-phone">{t('contact.phone', lang)}</label>
               <input type="tel" id="contact-phone" name="phone" class="form-input" />
             </div>
 
             <div class="form-group">
-              <label class="form-label" for="contact-service">{t('contact.serviceInterest')}</label>
+              <label class="form-label" for="contact-service">{t('contact.serviceInterest', lang)}</label>
               <select id="contact-service" name="service" class="form-input form-select">
-                <option value="">{t('contact.selectService')}</option>
+                <option value="">{t('contact.selectService', lang)}</option>
                 <option value="vibecoding">Vibecoding</option>
-                <option value="ai-consulting">{t('services.aiConsulting')}</option>
+                <option value="ai-consulting">{t('services.aiConsulting', lang)}</option>
                 <option value="workshops">AI Workshops</option>
                 <option value="seo">SEO</option>
                 <option value="google-ads">Google Ads</option>
-                <option value="meta-ads">{t('nav.metaAds')}</option>
-                <option value="webdesign">{t('nav.webdesign')}</option>
+                <option value="meta-ads">{t('nav.metaAds', lang)}</option>
+                <option value="webdesign">{t('nav.webdesign', lang)}</option>
                 <option value="gtm">Google Tag Manager</option>
-                <option value="other">{t('contact.other')}</option>
+                <option value="other">{t('contact.other', lang)}</option>
               </select>
             </div>
 
             <div class="form-group">
-              <label class="form-label" for="contact-message">{t('contact.message')} *</label>
-              <textarea id="contact-message" name="message" class="form-textarea" required placeholder={t('contact.messagePlaceholder')}></textarea>
+              <label class="form-label" for="contact-message">{t('contact.message', lang)} *</label>
+              <textarea id="contact-message" name="message" class="form-textarea" required placeholder={t('contact.messagePlaceholder', lang)}></textarea>
             </div>
 
             <button type="submit" class="btn btn-primary w-full">
-              {t('contact.send')}
+              {t('contact.send', lang)}
               <IconArrowRight />
             </button>
           </form>

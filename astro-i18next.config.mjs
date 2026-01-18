@@ -2,6 +2,10 @@
 export default {
   defaultLocale: "en",
   locales: ["en", "da"],
+  namespaces: ["translation"],
+  defaultNamespace: "translation",
+  load: ["server", "client"],
+  resourcesBasePath: "/locales",
   routes: {
     da: {
       home: "hjem",

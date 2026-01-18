@@ -1,8 +1,12 @@
 ---
-import { t } from 'i18next';
+import { t } from '../i18n/index.ts';
 import IconLinkedIn from './icons/IconLinkedIn.astro';
 
-const lang = Astro.currentLocale || 'en';
+interface Props {
+  lang?: string;
+}
+
+const { lang = 'en' } = Astro.props;
 const prefix = lang === 'en' ? '' : `/${lang}`;
 const currentYear = 2025;
 ---
@@ -16,7 +20,7 @@ const currentYear = 2025;
           <span class="logo-icon">M</span>
           <span class="logo-text">Manoga<span class="text-gradient">AI</span></span>
         </a>
-        <p>{t('footer.description')}</p>
+        <p>{t('footer.description', lang)}</p>
         <div class="social-links">
           <a href="https://www.linkedin.com/in/kennethabueg/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
             <IconLinkedIn />
@@ -26,21 +30,21 @@ const currentYear = 2025;
 
       <!-- Services Column -->
       <div class="footer-column">
-        <h4 class="footer-heading">{t('footer.digitalMarketing')}</h4>
+        <h4 class="footer-heading">{t('footer.digitalMarketing', lang)}</h4>
         <ul class="footer-links">
-          <li><a href={`${prefix}/seo`}>{t('footer.seoServices')}</a></li>
+          <li><a href={`${prefix}/seo`}>{t('footer.seoServices', lang)}</a></li>
           <li><a href={`${prefix}/google-ads`}>Google Ads</a></li>
-          <li><a href={`${prefix}/meta-advertising`}>{t('nav.metaAds')}</a></li>
-          <li><a href={`${prefix}/webdesign`}>{t('nav.webdesign')}</a></li>
+          <li><a href={`${prefix}/meta-advertising`}>{t('nav.metaAds', lang)}</a></li>
+          <li><a href={`${prefix}/webdesign`}>{t('nav.webdesign', lang)}</a></li>
           <li><a href={`${prefix}/google-tag-manager`}>Google Tag Manager</a></li>
         </ul>
       </div>
 
       <!-- AI Services Column -->
       <div class="footer-column">
-        <h4 class="footer-heading">{t('footer.aiServices')}</h4>
+        <h4 class="footer-heading">{t('footer.aiServices', lang)}</h4>
         <ul class="footer-links">
-          <li><a href={`${prefix}/ai-consulting`}>{t('nav.aiConsulting')}</a></li>
+          <li><a href={`${prefix}/ai-consulting`}>{t('nav.aiConsulting', lang)}</a></li>
           <li><a href={`${prefix}/vibecoding`}>Vibecoding</a></li>
           <li><a href={`${prefix}/workshops`}>AI Workshops</a></li>
           <li><a href={`${prefix}/portfolio`}>Portfolio</a></li>
@@ -49,14 +53,14 @@ const currentYear = 2025;
 
       <!-- Contact Column -->
       <div class="footer-column">
-        <h4 class="footer-heading">{t('footer.contact')}</h4>
+        <h4 class="footer-heading">{t('footer.contact', lang)}</h4>
         <ul class="footer-links">
           <li>
             <a href="tel:+4550587900">+45 50 58 79 00</a>
           </li>
           <li>
             <a href="https://www.linkedin.com/in/kennethabueg/" target="_blank" rel="noopener">
-              {t('footer.linkedinProfile')}
+              {t('footer.linkedinProfile', lang)}
             </a>
           </li>
           <li>CVR: DK39733730</li>
@@ -66,8 +70,8 @@ const currentYear = 2025;
 
     <!-- Footer Bottom -->
     <div class="footer-bottom">
-      <p>&copy; {currentYear} Manoga AI. {t('footer.allRights')}</p>
-      <p>CVR: DK39733730 | {t('footer.denmark')}</p>
+      <p>&copy; {currentYear} Manoga AI. {t('footer.allRights', lang)}</p>
+      <p>CVR: DK39733730 | {t('footer.denmark', lang)}</p>
     </div>
   </div>
 </footer>

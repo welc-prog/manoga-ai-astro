@@ -1,6 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import { t, changeLanguage } from 'i18next';
+import { t } from '../../i18n/index.ts';
 import IconCode from '../../components/icons/IconCode.astro';
 import IconLayout from '../../components/icons/IconLayout.astro';
 import IconBrain from '../../components/icons/IconBrain.astro';
@@ -9,19 +9,18 @@ import IconBarChart from '../../components/icons/IconBarChart.astro';
 import IconShield from '../../components/icons/IconShield.astro';
 import IconArrowRight from '../../components/icons/IconArrowRight.astro';
 
-const lang = Astro.currentLocale || 'en';
-changeLanguage(lang);
-const prefix = lang === 'en' ? '' : `/${lang}`;
+const lang = 'da';  // Hardcode for Danish pages
+const prefix = '/da';  // Hardcode for Danish pages
 ---
 
-<Layout title="Vibecoding" description={t('services.vibecoding')}>
+<Layout title="Vibecoding" description={t('services.vibecoding', lang)}>
   <section class="page-header">
     <div class="container">
       <div class="page-header-with-image">
         <div class="page-header-content">
-          <span class="page-subtitle">{t('services.whatWeDo')}</span>
+          <span class="page-subtitle">{t('services.whatWeDo', lang)}</span>
           <h1><span class="text-gradient">Vibecoding</span></h1>
-          <p class="page-header-description">{t('services.vibecoding')}</p>
+          <p class="page-header-description">{t('services.vibecoding', lang)}</p>
         </div>
         <div class="page-header-image">
           <img src="/images/vibecoding.webp" alt="Vibecoding - AI-assisted development" />
@@ -38,24 +37,24 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
           <div class="card-icon">
             <IconCode />
           </div>
-          <h3 class="card-title">{t('pages.vibecoding.rapidPrototyping')}</h3>
-          <p class="card-text">{t('pages.vibecoding.rapidPrototypingDesc')}</p>
+          <h3 class="card-title">{t('pages.vibecoding.rapidPrototyping', lang)}</h3>
+          <p class="card-text">{t('pages.vibecoding.rapidPrototypingDesc', lang)}</p>
         </div>
 
         <div class="card">
           <div class="card-icon">
             <IconLayout />
           </div>
-          <h3 class="card-title">{t('pages.vibecoding.fullStack')}</h3>
-          <p class="card-text">{t('pages.vibecoding.fullStackDesc')}</p>
+          <h3 class="card-title">{t('pages.vibecoding.fullStack', lang)}</h3>
+          <p class="card-text">{t('pages.vibecoding.fullStackDesc', lang)}</p>
         </div>
 
         <div class="card">
           <div class="card-icon">
             <IconBrain />
           </div>
-          <h3 class="card-title">{t('pages.vibecoding.aiIntegration')}</h3>
-          <p class="card-text">{t('pages.vibecoding.aiIntegrationDesc')}</p>
+          <h3 class="card-title">{t('pages.vibecoding.aiIntegration', lang)}</h3>
+          <p class="card-text">{t('pages.vibecoding.aiIntegrationDesc', lang)}</p>
         </div>
       </div>
     </div>
@@ -65,9 +64,9 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
   <section class="section" style="background: rgba(30, 41, 59, 0.3);">
     <div class="container">
       <div class="content-section reveal">
-        <h2 class="section-title">{t('pages.vibecoding.aboutTitle')}</h2>
-        <p class="section-text">{t('pages.vibecoding.aboutDesc')}</p>
-        <p class="section-text">{t('pages.vibecoding.aboutDesc2')}</p>
+        <h2 class="section-title">{t('pages.vibecoding.aboutTitle', lang)}</h2>
+        <p class="section-text">{t('pages.vibecoding.aboutDesc', lang)}</p>
+        <p class="section-text">{t('pages.vibecoding.aboutDesc2', lang)}</p>
       </div>
     </div>
   </section>
@@ -76,9 +75,9 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
   <section class="section">
     <div class="container">
       <div class="text-center mb-3">
-        <span class="hero-tagline">{t('common.benefits')}</span>
-        <h2>{t('pages.vibecoding.whyTitle')}</h2>
-        <p style="max-width: 700px; margin: 0 auto;">{t('pages.vibecoding.whyDesc')}</p>
+        <span class="hero-tagline">{t('common.benefits', lang)}</span>
+        <h2>{t('pages.vibecoding.whyTitle', lang)}</h2>
+        <p style="max-width: 700px; margin: 0 auto;">{t('pages.vibecoding.whyDesc', lang)}</p>
       </div>
 
       <div class="benefits-grid reveal">
@@ -86,32 +85,32 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
           <div class="benefit-icon">
             <IconCode />
           </div>
-          <h4>{t('pages.vibecoding.benefit1')}</h4>
-          <p>{t('pages.vibecoding.benefit1Desc')}</p>
+          <h4>{t('pages.vibecoding.benefit1', lang)}</h4>
+          <p>{t('pages.vibecoding.benefit1Desc', lang)}</p>
         </div>
 
         <div class="benefit-item">
           <div class="benefit-icon">
             <IconTarget />
           </div>
-          <h4>{t('pages.vibecoding.benefit2')}</h4>
-          <p>{t('pages.vibecoding.benefit2Desc')}</p>
+          <h4>{t('pages.vibecoding.benefit2', lang)}</h4>
+          <p>{t('pages.vibecoding.benefit2Desc', lang)}</p>
         </div>
 
         <div class="benefit-item">
           <div class="benefit-icon">
             <IconBarChart />
           </div>
-          <h4>{t('pages.vibecoding.benefit3')}</h4>
-          <p>{t('pages.vibecoding.benefit3Desc')}</p>
+          <h4>{t('pages.vibecoding.benefit3', lang)}</h4>
+          <p>{t('pages.vibecoding.benefit3Desc', lang)}</p>
         </div>
 
         <div class="benefit-item">
           <div class="benefit-icon">
             <IconShield />
           </div>
-          <h4>{t('pages.vibecoding.benefit4')}</h4>
-          <p>{t('pages.vibecoding.benefit4Desc')}</p>
+          <h4>{t('pages.vibecoding.benefit4', lang)}</h4>
+          <p>{t('pages.vibecoding.benefit4Desc', lang)}</p>
         </div>
       </div>
     </div>
@@ -121,26 +120,26 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
   <section class="section" style="background: rgba(30, 41, 59, 0.3);">
     <div class="container">
       <div class="text-center mb-3">
-        <span class="hero-tagline">{t('services.whatWeDo')}</span>
-        <h2>{t('pages.vibecoding.servicesTitle')}</h2>
+        <span class="hero-tagline">{t('services.whatWeDo', lang)}</span>
+        <h2>{t('pages.vibecoding.servicesTitle', lang)}</h2>
       </div>
 
       <div class="services-grid reveal">
         <div class="card">
-          <h4 class="card-title">{t('pages.vibecoding.service1')}</h4>
-          <p class="card-text">{t('pages.vibecoding.service1Desc')}</p>
+          <h4 class="card-title">{t('pages.vibecoding.service1', lang)}</h4>
+          <p class="card-text">{t('pages.vibecoding.service1Desc', lang)}</p>
         </div>
         <div class="card">
-          <h4 class="card-title">{t('pages.vibecoding.service2')}</h4>
-          <p class="card-text">{t('pages.vibecoding.service2Desc')}</p>
+          <h4 class="card-title">{t('pages.vibecoding.service2', lang)}</h4>
+          <p class="card-text">{t('pages.vibecoding.service2Desc', lang)}</p>
         </div>
         <div class="card">
-          <h4 class="card-title">{t('pages.vibecoding.service3')}</h4>
-          <p class="card-text">{t('pages.vibecoding.service3Desc')}</p>
+          <h4 class="card-title">{t('pages.vibecoding.service3', lang)}</h4>
+          <p class="card-text">{t('pages.vibecoding.service3Desc', lang)}</p>
         </div>
         <div class="card">
-          <h4 class="card-title">{t('pages.vibecoding.service4')}</h4>
-          <p class="card-text">{t('pages.vibecoding.service4Desc')}</p>
+          <h4 class="card-title">{t('pages.vibecoding.service4', lang)}</h4>
+          <p class="card-text">{t('pages.vibecoding.service4Desc', lang)}</p>
         </div>
       </div>
     </div>
@@ -150,30 +149,30 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
   <section class="section">
     <div class="container">
       <div class="text-center mb-3">
-        <span class="hero-tagline">{t('process.tagline')}</span>
-        <h2>{t('process.the')}<span class="text-gradient">Vibecoding</span>{t('process.process')}</h2>
+        <span class="hero-tagline">{t('process.tagline', lang)}</span>
+        <h2>{t('process.the', lang)}<span class="text-gradient">Vibecoding</span>{t('process.process', lang)}</h2>
       </div>
 
       <div class="process-grid reveal">
         <div class="process-step">
           <div class="process-number">1</div>
-          <h4 class="process-title">{t('process.discovery')}</h4>
-          <p class="process-text">{t('process.discoveryDesc')}</p>
+          <h4 class="process-title">{t('process.discovery', lang)}</h4>
+          <p class="process-text">{t('process.discoveryDesc', lang)}</p>
         </div>
         <div class="process-step">
           <div class="process-number">2</div>
-          <h4 class="process-title">{t('process.design')}</h4>
-          <p class="process-text">{t('process.designDesc')}</p>
+          <h4 class="process-title">{t('process.design', lang)}</h4>
+          <p class="process-text">{t('process.designDesc', lang)}</p>
         </div>
         <div class="process-step">
           <div class="process-number">3</div>
-          <h4 class="process-title">{t('process.develop')}</h4>
-          <p class="process-text">{t('process.developDesc')}</p>
+          <h4 class="process-title">{t('process.develop', lang)}</h4>
+          <p class="process-text">{t('process.developDesc', lang)}</p>
         </div>
         <div class="process-step">
           <div class="process-number">4</div>
-          <h4 class="process-title">{t('process.deploy')}</h4>
-          <p class="process-text">{t('process.deployDesc')}</p>
+          <h4 class="process-title">{t('process.deploy', lang)}</h4>
+          <p class="process-text">{t('process.deployDesc', lang)}</p>
         </div>
       </div>
     </div>
@@ -183,29 +182,29 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
   <section class="section" style="background: rgba(30, 41, 59, 0.3);">
     <div class="container">
       <div class="text-center mb-3">
-        <span class="hero-tagline">{t('common.gotQuestions')}</span>
-        <h2>{t('common.faq')}</h2>
+        <span class="hero-tagline">{t('common.gotQuestions', lang)}</span>
+        <h2>{t('common.faq', lang)}</h2>
       </div>
 
       <div class="faq-grid reveal">
         <div class="faq-item">
-          <h4 class="faq-question">{t('pages.vibecoding.faq1')}</h4>
-          <p class="faq-answer">{t('pages.vibecoding.faq1Answer')}</p>
+          <h4 class="faq-question">{t('pages.vibecoding.faq1', lang)}</h4>
+          <p class="faq-answer">{t('pages.vibecoding.faq1Answer', lang)}</p>
         </div>
 
         <div class="faq-item">
-          <h4 class="faq-question">{t('pages.vibecoding.faq2')}</h4>
-          <p class="faq-answer">{t('pages.vibecoding.faq2Answer')}</p>
+          <h4 class="faq-question">{t('pages.vibecoding.faq2', lang)}</h4>
+          <p class="faq-answer">{t('pages.vibecoding.faq2Answer', lang)}</p>
         </div>
 
         <div class="faq-item">
-          <h4 class="faq-question">{t('pages.vibecoding.faq3')}</h4>
-          <p class="faq-answer">{t('pages.vibecoding.faq3Answer')}</p>
+          <h4 class="faq-question">{t('pages.vibecoding.faq3', lang)}</h4>
+          <p class="faq-answer">{t('pages.vibecoding.faq3Answer', lang)}</p>
         </div>
 
         <div class="faq-item">
-          <h4 class="faq-question">{t('pages.vibecoding.faq4')}</h4>
-          <p class="faq-answer">{t('pages.vibecoding.faq4Answer')}</p>
+          <h4 class="faq-question">{t('pages.vibecoding.faq4', lang)}</h4>
+          <p class="faq-answer">{t('pages.vibecoding.faq4Answer', lang)}</p>
         </div>
       </div>
     </div>
@@ -215,10 +214,10 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
   <section class="section">
     <div class="container">
       <div class="card text-center" style="padding: var(--space-xl); max-width: 800px; margin: 0 auto;">
-        <h2 class="mb-1">{t('cta.title')}</h2>
-        <p style="font-size: 1.25rem; margin-bottom: var(--space-md);">{t('cta.subtitle')}</p>
+        <h2 class="mb-1">{t('cta.title', lang)}</h2>
+        <p style="font-size: 1.25rem; margin-bottom: var(--space-md);">{t('cta.subtitle', lang)}</p>
         <a href={`${prefix}/contact`} class="btn btn-primary btn-glow">
-          {t('cta.button')}
+          {t('cta.button', lang)}
           <IconArrowRight />
         </a>
       </div>

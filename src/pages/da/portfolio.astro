@@ -1,20 +1,19 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import { t, changeLanguage } from 'i18next';
+import { t } from '../../i18n/index.ts';
 import IconExternal from '../../components/icons/IconExternal.astro';
 import IconArrowRight from '../../components/icons/IconArrowRight.astro';
 
-const lang = Astro.currentLocale || 'en';
-changeLanguage(lang);
-const prefix = lang === 'en' ? '' : `/${lang}`;
+const lang = 'da';  // Hardcode for Danish pages
+const prefix = '/da';  // Hardcode for Danish pages
 ---
 
-<Layout title="Portfolio" description={t('portfolio.subtitle')}>
+<Layout title="Portfolio" description={t('portfolio.subtitle', lang)}>
   <section class="page-header">
     <div class="container">
-      <span class="page-subtitle">{t('portfolio.tagline')}</span>
-      <h1>{t('portfolio.featured')} <span class="text-gradient">{t('portfolio.projects')}</span></h1>
-      <p class="page-header-description">{t('portfolio.subtitle')}</p>
+      <span class="page-subtitle">{t('portfolio.tagline', lang)}</span>
+      <h1>{t('portfolio.featured', lang)} <span class="text-gradient">{t('portfolio.projects', lang)}</span></h1>
+      <p class="page-header-description">{t('portfolio.subtitle', lang)}</p>
     </div>
   </section>
 
@@ -22,8 +21,8 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
   <section class="section">
     <div class="container">
       <div class="content-section reveal">
-        <h2 class="section-title">{t('portfolio.aboutTitle')}</h2>
-        <p class="section-text">{t('portfolio.aboutDesc')}</p>
+        <h2 class="section-title">{t('portfolio.aboutTitle', lang)}</h2>
+        <p class="section-text">{t('portfolio.aboutDesc', lang)}</p>
       </div>
     </div>
   </section>
@@ -36,11 +35,11 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
         <div class="showcase-item">
           <img class="showcase-image" src="/images/portfolio-crypto.webp" alt="WeLoveEverythingCrypto" loading="lazy" />
           <div class="showcase-overlay">
-            <span class="showcase-tag">{t('portfolio.liveProject')}</span>
+            <span class="showcase-tag">{t('portfolio.liveProject', lang)}</span>
             <h3 class="showcase-title">WeLoveEverythingCrypto</h3>
-            <p>{t('portfolio.welcDesc')}</p>
+            <p>{t('portfolio.welcDesc', lang)}</p>
             <a href="https://weloveeverythingcrypto.com" target="_blank" rel="noopener" class="btn btn-primary">
-              {t('portfolio.visitSite')} <IconExternal />
+              {t('portfolio.visitSite', lang)} <IconExternal />
             </a>
           </div>
         </div>
@@ -49,11 +48,11 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
         <div class="showcase-item">
           <img class="showcase-image" src="/images/portfolio-handball.webp" alt="Handball Tracker" loading="lazy" />
           <div class="showcase-overlay">
-            <span class="showcase-tag">{t('portfolio.liveProject')}</span>
+            <span class="showcase-tag">{t('portfolio.liveProject', lang)}</span>
             <h3 class="showcase-title">Handball Tracker</h3>
-            <p>{t('portfolio.handballDesc')}</p>
+            <p>{t('portfolio.handballDesc', lang)}</p>
             <a href="https://handballtracker.com" target="_blank" rel="noopener" class="btn btn-primary">
-              {t('portfolio.visitSite')} <IconExternal />
+              {t('portfolio.visitSite', lang)} <IconExternal />
             </a>
           </div>
         </div>
@@ -67,11 +66,11 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
       <div class="project-details">
         <div class="project-detail reveal">
           <h3>WeLoveEverythingCrypto</h3>
-          <p>{t('portfolio.welcFullDesc')}</p>
+          <p>{t('portfolio.welcFullDesc', lang)}</p>
         </div>
         <div class="project-detail reveal">
           <h3>Handball Stats App</h3>
-          <p>{t('portfolio.handballFullDesc')}</p>
+          <p>{t('portfolio.handballFullDesc', lang)}</p>
         </div>
       </div>
     </div>
@@ -81,9 +80,9 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
   <section class="section" style="background: rgba(30, 41, 59, 0.3);">
     <div class="container">
       <div class="text-center mb-3">
-        <span class="hero-tagline">{t('common.howItWorks')}</span>
-        <h2>{t('portfolio.technologiesTitle')}</h2>
-        <p style="max-width: 700px; margin: 0 auto;">{t('portfolio.technologiesDesc')}</p>
+        <span class="hero-tagline">{t('common.howItWorks', lang)}</span>
+        <h2>{t('portfolio.technologiesTitle', lang)}</h2>
+        <p style="max-width: 700px; margin: 0 auto;">{t('portfolio.technologiesDesc', lang)}</p>
       </div>
 
       <div class="tech-grid reveal">
@@ -113,10 +112,10 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
   <section class="section">
     <div class="container">
       <div class="card text-center" style="padding: var(--space-xl); max-width: 800px; margin: 0 auto;">
-        <h2 class="mb-1">{t('cta.title')}</h2>
-        <p style="font-size: 1.25rem; margin-bottom: var(--space-md);">{t('cta.subtitle')}</p>
+        <h2 class="mb-1">{t('cta.title', lang)}</h2>
+        <p style="font-size: 1.25rem; margin-bottom: var(--space-md);">{t('cta.subtitle', lang)}</p>
         <a href={`${prefix}/contact`} class="btn btn-primary btn-glow">
-          {t('cta.button')}
+          {t('cta.button', lang)}
           <IconArrowRight />
         </a>
       </div>

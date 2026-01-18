@@ -1,8 +1,12 @@
 ---
-import { t } from 'i18next';
+import { t } from '../i18n/index.ts';
 import LanguageSwitcher from './LanguageSwitcher.astro';
 
-const lang = Astro.currentLocale || 'en';
+interface Props {
+  lang?: string;
+}
+
+const { lang = 'en' } = Astro.props;
 const prefix = lang === 'en' ? '' : `/${lang}`;
 ---
 
@@ -18,7 +22,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
       <!-- Main Navigation -->
       <nav class="main-nav" id="main-nav" aria-label="Primary Navigation">
         <ul>
-          <li><a href={`${prefix}/`}>{t('nav.home')}</a></li>
+          <li><a href={`${prefix}/`}>{t('nav.home', lang)}</a></li>
           <li class="has-dropdown">
             <button
               type="button"
@@ -27,7 +31,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
               aria-expanded="false"
               aria-controls="services-dropdown"
             >
-              {t('nav.services')}
+              {t('nav.services', lang)}
               <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
                 <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
@@ -35,15 +39,15 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
             <ul class="dropdown" id="services-dropdown" role="menu">
               <li role="none"><a href={`${prefix}/seo`} role="menuitem">SEO</a></li>
               <li role="none"><a href={`${prefix}/google-ads`} role="menuitem">Google Ads</a></li>
-              <li role="none"><a href={`${prefix}/meta-advertising`} role="menuitem">{t('nav.metaAds')}</a></li>
-              <li role="none"><a href={`${prefix}/webdesign`} role="menuitem">{t('nav.webdesign')}</a></li>
+              <li role="none"><a href={`${prefix}/meta-advertising`} role="menuitem">{t('nav.metaAds', lang)}</a></li>
+              <li role="none"><a href={`${prefix}/webdesign`} role="menuitem">{t('nav.webdesign', lang)}</a></li>
               <li role="none"><a href={`${prefix}/google-tag-manager`} role="menuitem">Google Tag Manager</a></li>
             </ul>
           </li>
-          <li><a href={`${prefix}/ai-consulting`}>{t('nav.aiConsulting')}</a></li>
+          <li><a href={`${prefix}/ai-consulting`}>{t('nav.aiConsulting', lang)}</a></li>
           <li><a href={`${prefix}/workshops`}>Workshops</a></li>
           <li><a href={`${prefix}/portfolio`}>Portfolio</a></li>
-          <li><a href={`${prefix}/contact`} class="nav-cta">{t('nav.getStarted')}</a></li>
+          <li><a href={`${prefix}/contact`} class="nav-cta">{t('nav.getStarted', lang)}</a></li>
         </ul>
       </nav>
 

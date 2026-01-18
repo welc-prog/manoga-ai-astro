@@ -1,21 +1,20 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { t, changeLanguage } from 'i18next';
+import { t } from '../i18n/index.ts';
 import IconPhone from '../components/icons/IconPhone.astro';
 import IconLinkedIn from '../components/icons/IconLinkedIn.astro';
 import IconLocation from '../components/icons/IconLocation.astro';
 import IconArrowRight from '../components/icons/IconArrowRight.astro';
 
-const lang = Astro.currentLocale || 'en';
-changeLanguage(lang);
+const lang = 'en';
 const prefix = lang === 'en' ? '' : `/${lang}`;
 ---
 
-<Layout title={t('contact.tagline')} description={t('contact.subtitle')}>
+<Layout title={t('contact.tagline', lang)} description={t('contact.subtitle', lang)} lang={lang}>
   <section class="page-header">
     <div class="container">
-      <span class="page-subtitle">{t('contact.tagline')}</span>
-      <h1>{t('contact.title')} <span class="text-gradient">{t('contact.amazing')}</span></h1>
+      <span class="page-subtitle">{t('contact.tagline', lang)}</span>
+      <h1>{t('contact.title', lang)} <span class="text-gradient">{t('contact.amazing', lang)}</span></h1>
     </div>
   </section>
 
@@ -23,14 +22,14 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
     <div class="container">
       <div class="contact-grid">
         <div class="contact-info reveal-left">
-          <p style="font-size: 1.1rem;">{t('contact.subtitle')}</p>
+          <p style="font-size: 1.1rem;">{t('contact.subtitle', lang)}</p>
 
           <div class="contact-item">
             <div class="contact-icon">
               <IconPhone />
             </div>
             <div>
-              <strong>{t('contact.phone')}</strong><br />
+              <strong>{t('contact.phone', lang)}</strong><br />
               <a href="tel:+4550587900">+45 50 58 79 00</a>
             </div>
           </div>
@@ -42,7 +41,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
             <div>
               <strong>LinkedIn</strong><br />
               <a href="https://www.linkedin.com/in/kennethabueg/" target="_blank" rel="noopener">
-                {t('contact.connectLinkedIn')}
+                {t('contact.connectLinkedIn', lang)}
               </a>
             </div>
           </div>
@@ -52,21 +51,21 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
               <IconLocation />
             </div>
             <div>
-              <strong>{t('contact.businessReg')}</strong><br />
+              <strong>{t('contact.businessReg', lang)}</strong><br />
               CVR: DK39733730<br />
-              {t('footer.denmark')}
+              {t('footer.denmark', lang)}
             </div>
           </div>
 
           <!-- Additional Info Cards -->
           <div class="info-cards">
             <div class="info-card">
-              <h4>{t('contact.responseTime')}</h4>
-              <p>{t('contact.responseTimeDesc')}</p>
+              <h4>{t('contact.responseTime', lang)}</h4>
+              <p>{t('contact.responseTimeDesc', lang)}</p>
             </div>
             <div class="info-card">
-              <h4>{t('contact.freeConsultation')}</h4>
-              <p>{t('contact.freeConsultationDesc')}</p>
+              <h4>{t('contact.freeConsultation', lang)}</h4>
+              <p>{t('contact.freeConsultationDesc', lang)}</p>
             </div>
           </div>
         </div>
@@ -74,7 +73,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
         <div class="reveal-right">
           <form class="contact-form" id="contact-form">
             <div class="form-group">
-              <label class="form-label" for="contact-name">{t('contact.name')} *</label>
+              <label class="form-label" for="contact-name">{t('contact.name', lang)} *</label>
               <input type="text" id="contact-name" name="name" class="form-input" required />
             </div>
 
@@ -84,33 +83,33 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
             </div>
 
             <div class="form-group">
-              <label class="form-label" for="contact-phone">{t('contact.phone')}</label>
+              <label class="form-label" for="contact-phone">{t('contact.phone', lang)}</label>
               <input type="tel" id="contact-phone" name="phone" class="form-input" />
             </div>
 
             <div class="form-group">
-              <label class="form-label" for="contact-service">{t('contact.serviceInterest')}</label>
+              <label class="form-label" for="contact-service">{t('contact.serviceInterest', lang)}</label>
               <select id="contact-service" name="service" class="form-input form-select">
-                <option value="">{t('contact.selectService')}</option>
+                <option value="">{t('contact.selectService', lang)}</option>
                 <option value="vibecoding">Vibecoding</option>
-                <option value="ai-consulting">{t('services.aiConsulting')}</option>
+                <option value="ai-consulting">{t('services.aiConsulting', lang)}</option>
                 <option value="workshops">AI Workshops</option>
                 <option value="seo">SEO</option>
                 <option value="google-ads">Google Ads</option>
-                <option value="meta-ads">{t('nav.metaAds')}</option>
-                <option value="webdesign">{t('nav.webdesign')}</option>
+                <option value="meta-ads">{t('nav.metaAds', lang)}</option>
+                <option value="webdesign">{t('nav.webdesign', lang)}</option>
                 <option value="gtm">Google Tag Manager</option>
-                <option value="other">{t('contact.other')}</option>
+                <option value="other">{t('contact.other', lang)}</option>
               </select>
             </div>
 
             <div class="form-group">
-              <label class="form-label" for="contact-message">{t('contact.message')} *</label>
-              <textarea id="contact-message" name="message" class="form-textarea" required placeholder={t('contact.messagePlaceholder')}></textarea>
+              <label class="form-label" for="contact-message">{t('contact.message', lang)} *</label>
+              <textarea id="contact-message" name="message" class="form-textarea" required placeholder={t('contact.messagePlaceholder', lang)}></textarea>
             </div>
 
             <button type="submit" class="btn btn-primary w-full">
-              {t('contact.send')}
+              {t('contact.send', lang)}
               <IconArrowRight />
             </button>
           </form>
@@ -124,16 +123,16 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
     <div class="container">
       <div class="additional-info-grid reveal">
         <div class="additional-info-item">
-          <h4>{t('contact.workingWith')}</h4>
-          <p>{t('contact.workingWithDesc')}</p>
+          <h4>{t('contact.workingWith', lang)}</h4>
+          <p>{t('contact.workingWithDesc', lang)}</p>
         </div>
         <div class="additional-info-item">
-          <h4>{t('contact.preferredContact')}</h4>
-          <p>{t('contact.preferredContactDesc')}</p>
+          <h4>{t('contact.preferredContact', lang)}</h4>
+          <p>{t('contact.preferredContactDesc', lang)}</p>
         </div>
         <div class="additional-info-item">
-          <h4>{t('contact.globalReach')}</h4>
-          <p>{t('contact.globalReachDesc')}</p>
+          <h4>{t('contact.globalReach', lang)}</h4>
+          <p>{t('contact.globalReachDesc', lang)}</p>
         </div>
       </div>
     </div>

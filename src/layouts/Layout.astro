@@ -2,18 +2,16 @@
 import '../styles/main.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import { t, changeLanguage } from 'i18next';
+import { t } from '../i18n/index.ts';
 
 interface Props {
   title: string;
   description?: string;
+  lang?: string;
 }
 
-const { title, description = t('meta.description') } = Astro.props;
-const lang = Astro.currentLocale || 'en';
-
-// Set the language for i18next
-changeLanguage(lang);
+const { title, description, lang = 'en' } = Astro.props;
+const desc = description || t('meta.description', lang);
 ---
 
 <!DOCTYPE html>
@@ -21,7 +19,7 @@ changeLanguage(lang);
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content={description} />
+    <meta name="description" content={desc} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -29,10 +27,10 @@ changeLanguage(lang);
     <title>{title} | Manoga AI</title>
   </head>
   <body>
-    <Header />
+    <Header lang={lang} />
     <main>
       <slot />
     </main>
-    <Footer />
+    <Footer lang={lang} />
   </body>
 </html>

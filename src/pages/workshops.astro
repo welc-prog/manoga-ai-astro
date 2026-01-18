@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { t, changeLanguage } from 'i18next';
+import { t } from '../i18n/index.ts';
 import IconWorkshop from '../components/icons/IconWorkshop.astro';
 import IconCode from '../components/icons/IconCode.astro';
 import IconBrain from '../components/icons/IconBrain.astro';
@@ -9,22 +9,21 @@ import IconShield from '../components/icons/IconShield.astro';
 import IconTarget from '../components/icons/IconTarget.astro';
 import IconArrowRight from '../components/icons/IconArrowRight.astro';
 
-const lang = Astro.currentLocale || 'en';
-changeLanguage(lang);
+const lang = 'en';
 const prefix = lang === 'en' ? '' : `/${lang}`;
 ---
 
-<Layout title={t('services.workshops')} description={t('services.workshopsDesc')}>
+<Layout title={t('services.workshops', lang)} description={t('services.workshopsDesc', lang)} lang={lang}>
   <section class="page-header">
     <div class="container">
       <div class="page-header-with-image">
         <div class="page-header-content">
-          <span class="page-subtitle">{t('services.whatWeDo')}</span>
-          <h1>{t('services.workshops')}</h1>
-          <p class="page-header-description">{t('services.workshopsDesc')}</p>
+          <span class="page-subtitle">{t('services.whatWeDo', lang)}</span>
+          <h1>{t('services.workshops', lang)}</h1>
+          <p class="page-header-description">{t('services.workshopsDesc', lang)}</p>
         </div>
         <div class="page-header-image">
-          <img src="/images/workshops.webp" alt={t('services.workshops')} />
+          <img src="/images/workshops.webp" alt={t('services.workshops', lang)} />
         </div>
       </div>
     </div>
@@ -38,24 +37,24 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
           <div class="card-icon">
             <IconWorkshop />
           </div>
-          <h3 class="card-title">{t('pages.workshops.promptEngineering')}</h3>
-          <p class="card-text">{t('pages.workshops.promptEngineeringDesc')}</p>
+          <h3 class="card-title">{t('pages.workshops.promptEngineering', lang)}</h3>
+          <p class="card-text">{t('pages.workshops.promptEngineeringDesc', lang)}</p>
         </div>
 
         <div class="card">
           <div class="card-icon">
             <IconCode />
           </div>
-          <h3 class="card-title">{t('pages.workshops.vibecodingBootcamp')}</h3>
-          <p class="card-text">{t('pages.workshops.vibecodingBootcampDesc')}</p>
+          <h3 class="card-title">{t('pages.workshops.vibecodingBootcamp', lang)}</h3>
+          <p class="card-text">{t('pages.workshops.vibecodingBootcampDesc', lang)}</p>
         </div>
 
         <div class="card">
           <div class="card-icon">
             <IconBrain />
           </div>
-          <h3 class="card-title">{t('pages.workshops.aiForBusiness')}</h3>
-          <p class="card-text">{t('pages.workshops.aiForBusinessDesc')}</p>
+          <h3 class="card-title">{t('pages.workshops.aiForBusiness', lang)}</h3>
+          <p class="card-text">{t('pages.workshops.aiForBusinessDesc', lang)}</p>
         </div>
       </div>
     </div>
@@ -65,9 +64,9 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
   <section class="section" style="background: rgba(30, 41, 59, 0.3);">
     <div class="container">
       <div class="content-section reveal">
-        <h2 class="section-title">{t('pages.workshops.aboutTitle')}</h2>
-        <p class="section-text">{t('pages.workshops.aboutDesc')}</p>
-        <p class="section-text">{t('pages.workshops.aboutDesc2')}</p>
+        <h2 class="section-title">{t('pages.workshops.aboutTitle', lang)}</h2>
+        <p class="section-text">{t('pages.workshops.aboutDesc', lang)}</p>
+        <p class="section-text">{t('pages.workshops.aboutDesc2', lang)}</p>
       </div>
     </div>
   </section>
@@ -76,9 +75,9 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
   <section class="section">
     <div class="container">
       <div class="text-center mb-3">
-        <span class="hero-tagline">{t('common.benefits')}</span>
-        <h2>{t('pages.workshops.whyTitle')}</h2>
-        <p style="max-width: 700px; margin: 0 auto;">{t('pages.workshops.whyDesc')}</p>
+        <span class="hero-tagline">{t('common.benefits', lang)}</span>
+        <h2>{t('pages.workshops.whyTitle', lang)}</h2>
+        <p style="max-width: 700px; margin: 0 auto;">{t('pages.workshops.whyDesc', lang)}</p>
       </div>
 
       <div class="benefits-grid reveal">
@@ -86,32 +85,32 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
           <div class="benefit-icon">
             <IconBarChart />
           </div>
-          <h4>{t('pages.workshops.benefit1')}</h4>
-          <p>{t('pages.workshops.benefit1Desc')}</p>
+          <h4>{t('pages.workshops.benefit1', lang)}</h4>
+          <p>{t('pages.workshops.benefit1Desc', lang)}</p>
         </div>
 
         <div class="benefit-item">
           <div class="benefit-icon">
             <IconWorkshop />
           </div>
-          <h4>{t('pages.workshops.benefit2')}</h4>
-          <p>{t('pages.workshops.benefit2Desc')}</p>
+          <h4>{t('pages.workshops.benefit2', lang)}</h4>
+          <p>{t('pages.workshops.benefit2Desc', lang)}</p>
         </div>
 
         <div class="benefit-item">
           <div class="benefit-icon">
             <IconShield />
           </div>
-          <h4>{t('pages.workshops.benefit3')}</h4>
-          <p>{t('pages.workshops.benefit3Desc')}</p>
+          <h4>{t('pages.workshops.benefit3', lang)}</h4>
+          <p>{t('pages.workshops.benefit3Desc', lang)}</p>
         </div>
 
         <div class="benefit-item">
           <div class="benefit-icon">
             <IconTarget />
           </div>
-          <h4>{t('pages.workshops.benefit4')}</h4>
-          <p>{t('pages.workshops.benefit4Desc')}</p>
+          <h4>{t('pages.workshops.benefit4', lang)}</h4>
+          <p>{t('pages.workshops.benefit4Desc', lang)}</p>
         </div>
       </div>
     </div>
@@ -121,26 +120,26 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
   <section class="section" style="background: rgba(30, 41, 59, 0.3);">
     <div class="container">
       <div class="text-center mb-3">
-        <span class="hero-tagline">{t('common.howItWorks')}</span>
-        <h2>{t('pages.workshops.workshopsTitle')}</h2>
+        <span class="hero-tagline">{t('common.howItWorks', lang)}</span>
+        <h2>{t('pages.workshops.workshopsTitle', lang)}</h2>
       </div>
 
       <div class="services-grid reveal">
         <div class="card">
-          <h4 class="card-title">{t('pages.workshops.workshop1')}</h4>
-          <p class="card-text">{t('pages.workshops.workshop1Desc')}</p>
+          <h4 class="card-title">{t('pages.workshops.workshop1', lang)}</h4>
+          <p class="card-text">{t('pages.workshops.workshop1Desc', lang)}</p>
         </div>
         <div class="card">
-          <h4 class="card-title">{t('pages.workshops.workshop2')}</h4>
-          <p class="card-text">{t('pages.workshops.workshop2Desc')}</p>
+          <h4 class="card-title">{t('pages.workshops.workshop2', lang)}</h4>
+          <p class="card-text">{t('pages.workshops.workshop2Desc', lang)}</p>
         </div>
         <div class="card">
-          <h4 class="card-title">{t('pages.workshops.workshop3')}</h4>
-          <p class="card-text">{t('pages.workshops.workshop3Desc')}</p>
+          <h4 class="card-title">{t('pages.workshops.workshop3', lang)}</h4>
+          <p class="card-text">{t('pages.workshops.workshop3Desc', lang)}</p>
         </div>
         <div class="card">
-          <h4 class="card-title">{t('pages.workshops.workshop4')}</h4>
-          <p class="card-text">{t('pages.workshops.workshop4Desc')}</p>
+          <h4 class="card-title">{t('pages.workshops.workshop4', lang)}</h4>
+          <p class="card-text">{t('pages.workshops.workshop4Desc', lang)}</p>
         </div>
       </div>
     </div>
@@ -150,29 +149,29 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
   <section class="section">
     <div class="container">
       <div class="text-center mb-3">
-        <span class="hero-tagline">{t('common.gotQuestions')}</span>
-        <h2>{t('common.faq')}</h2>
+        <span class="hero-tagline">{t('common.gotQuestions', lang)}</span>
+        <h2>{t('common.faq', lang)}</h2>
       </div>
 
       <div class="faq-grid reveal">
         <div class="faq-item">
-          <h4 class="faq-question">{t('pages.workshops.faq1')}</h4>
-          <p class="faq-answer">{t('pages.workshops.faq1Answer')}</p>
+          <h4 class="faq-question">{t('pages.workshops.faq1', lang)}</h4>
+          <p class="faq-answer">{t('pages.workshops.faq1Answer', lang)}</p>
         </div>
 
         <div class="faq-item">
-          <h4 class="faq-question">{t('pages.workshops.faq2')}</h4>
-          <p class="faq-answer">{t('pages.workshops.faq2Answer')}</p>
+          <h4 class="faq-question">{t('pages.workshops.faq2', lang)}</h4>
+          <p class="faq-answer">{t('pages.workshops.faq2Answer', lang)}</p>
         </div>
 
         <div class="faq-item">
-          <h4 class="faq-question">{t('pages.workshops.faq3')}</h4>
-          <p class="faq-answer">{t('pages.workshops.faq3Answer')}</p>
+          <h4 class="faq-question">{t('pages.workshops.faq3', lang)}</h4>
+          <p class="faq-answer">{t('pages.workshops.faq3Answer', lang)}</p>
         </div>
 
         <div class="faq-item">
-          <h4 class="faq-question">{t('pages.workshops.faq4')}</h4>
-          <p class="faq-answer">{t('pages.workshops.faq4Answer')}</p>
+          <h4 class="faq-question">{t('pages.workshops.faq4', lang)}</h4>
+          <p class="faq-answer">{t('pages.workshops.faq4Answer', lang)}</p>
         </div>
       </div>
     </div>
@@ -182,10 +181,10 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
   <section class="section" style="background: rgba(30, 41, 59, 0.3);">
     <div class="container">
       <div class="card text-center" style="padding: var(--space-xl); max-width: 800px; margin: 0 auto;">
-        <h2 class="mb-1">{t('cta.title')}</h2>
-        <p style="font-size: 1.25rem; margin-bottom: var(--space-md);">{t('cta.subtitle')}</p>
+        <h2 class="mb-1">{t('cta.title', lang)}</h2>
+        <p style="font-size: 1.25rem; margin-bottom: var(--space-md);">{t('cta.subtitle', lang)}</p>
         <a href={`${prefix}/contact`} class="btn btn-primary btn-glow">
-          {t('cta.button')}
+          {t('cta.button', lang)}
           <IconArrowRight />
         </a>
       </div>
