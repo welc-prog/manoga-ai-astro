@@ -942,12 +942,24 @@ button.btn-primary {
 .process-grid::before {
     content: '';
     position: absolute;
-    top: 40px;
-    left: 15%;
-    right: 15%;
-    height: 2px;
-    background: linear-gradient(90deg, var(--accent), var(--accent-secondary), var(--accent-tertiary), var(--accent));
-    opacity: 0.3;
+    top: 36px;
+    left: 12%;
+    right: 12%;
+    height: 3px;
+    background: linear-gradient(90deg,
+        var(--accent) 0%,
+        var(--violet) 33%,
+        var(--pink) 66%,
+        var(--accent) 100%);
+    background-size: 200% 100%;
+    opacity: 0.6;
+    border-radius: 2px;
+    animation: process-line-flow 4s linear infinite;
+}
+
+@keyframes process-line-flow {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 200% 50%; }
 }
 
 .process-step {
@@ -958,8 +970,8 @@ button.btn-primary {
 .process-number {
     width: 72px;
     height: 72px;
-    background: var(--bg-surface);
-    border: 2px solid var(--border-subtle);
+    background: var(--bg-card);
+    border: 2px solid rgba(59, 130, 246, 0.3);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -967,10 +979,11 @@ button.btn-primary {
     font-size: 1.5rem;
     font-weight: 700;
     margin: 0 auto var(--space-md);
-    color: var(--text-primary);
+    color: var(--accent);
     transition: var(--transition);
     position: relative;
     z-index: 1;
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.15);
 }
 
 .process-step:hover .process-number {
@@ -2138,21 +2151,28 @@ button.btn-primary {
     background-clip: text;
 }
 
-/* Force white text on buttons inside CTA card */
+/* Force white text on buttons inside CTA card - nuclear option */
+.cta-section .btn-primary,
 .cta-card .btn-primary,
 .cta-card .btn-primary:hover,
 .cta-card .btn-primary:active,
-.cta-buttons .btn-primary {
+.cta-buttons .btn-primary,
+.cta-buttons a.btn-primary {
     color: #ffffff !important;
     -webkit-text-fill-color: #ffffff !important;
-    background-color: var(--accent);
-    background-image: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    background-clip: padding-box !important;
+    -webkit-background-clip: padding-box !important;
+    background-color: #3b82f6 !important;
+    background-image: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%) !important;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
 }
 
+.cta-section .btn-primary svg,
 .cta-card .btn-primary svg,
 .cta-buttons .btn-primary svg {
     color: #ffffff !important;
     stroke: #ffffff !important;
+    fill: none !important;
 }
 
 .cta-card p {
