@@ -690,6 +690,106 @@ p {
     z-index: 1;
 }
 
+/* Stats Section Background */
+.bg-stats {
+    position: relative;
+    background: transparent !important;
+}
+
+.bg-stats::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('/images/bg-stats.png') center center / cover no-repeat;
+    opacity: 0.35;
+    z-index: 0;
+}
+
+.bg-stats > .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Portfolio Section Background */
+.bg-portfolio {
+    position: relative;
+    background: transparent !important;
+}
+
+.bg-portfolio::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('/images/bg-portfolio.png') center center / cover no-repeat;
+    opacity: 0.3;
+    z-index: 0;
+}
+
+.bg-portfolio > .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Benefits Section Background */
+.bg-benefits {
+    position: relative;
+    background: transparent !important;
+}
+
+.bg-benefits::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('/images/bg-benefits.png') center center / cover no-repeat;
+    opacity: 0.3;
+    z-index: 0;
+}
+
+.bg-benefits > .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* FAQ Section Background */
+.bg-faq {
+    position: relative;
+    background: transparent !important;
+}
+
+.bg-faq::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('/images/bg-faq.png') center center / cover no-repeat;
+    opacity: 0.3;
+    z-index: 0;
+}
+
+.bg-faq > .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Tech Stack Section Background */
+.bg-techstack {
+    position: relative;
+    background: transparent !important;
+}
+
+.bg-techstack::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('/images/bg-techstack.png') center center / cover no-repeat;
+    opacity: 0.3;
+    z-index: 0;
+}
+
+.bg-techstack > .container {
+    position: relative;
+    z-index: 1;
+}
+
 /* ============================================
    HERO
    ============================================ */
@@ -1405,13 +1505,13 @@ button.btn-primary {
 
 .page-header-with-image {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.4fr 1fr;
     gap: var(--space-xl);
     align-items: center;
 }
 
 .page-header-content {
-    max-width: 560px;
+    max-width: 700px;
 }
 
 .page-header-image {
@@ -2207,6 +2307,12 @@ button.btn-primary {
     .page-header-content {
         order: 1;
         max-width: 100%;
+    }
+
+    .page-header h1 {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        hyphens: auto;
     }
 
     .page-subtitle::before {
