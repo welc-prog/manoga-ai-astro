@@ -2280,7 +2280,8 @@ button.btn-primary {
 
     .hero {
         min-height: auto;
-        padding: 100px 0 var(--space-lg);
+        padding-top: 100px;
+        padding-bottom: var(--space-lg);
     }
 
     .hero-visual {
@@ -2373,6 +2374,11 @@ button.btn-primary {
     /* Reduce section padding on small mobile to shorten page */
     .section {
         padding: var(--space-xl) 0;
+    }
+
+    /* Hero needs extra top padding to clear fixed header */
+    .section.hero {
+        padding-top: 100px;
     }
 
     .section-sm {
