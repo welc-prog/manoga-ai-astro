@@ -3,6 +3,12 @@ import Layout from '../layouts/Layout.astro';
 import { t } from '../i18n/index.ts';
 import IconExternal from '../components/icons/IconExternal.astro';
 import IconArrowRight from '../components/icons/IconArrowRight.astro';
+import IconVue from '../components/icons/IconVue.astro';
+import IconNuxt from '../components/icons/IconNuxt.astro';
+import IconTypeScript from '../components/icons/IconTypeScript.astro';
+import IconTailwind from '../components/icons/IconTailwind.astro';
+import IconPython from '../components/icons/IconPython.astro';
+import IconAI from '../components/icons/IconAI.astro';
 
 const lang = 'en';
 const prefix = lang === 'en' ? '' : `/${lang}`;
@@ -87,21 +93,27 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
 
       <div class="tech-grid reveal">
         <div class="tech-item">
+          <div class="tech-icon"><IconVue /></div>
           <span class="tech-name">Vue 3</span>
         </div>
         <div class="tech-item">
+          <div class="tech-icon"><IconNuxt /></div>
           <span class="tech-name">Nuxt 3</span>
         </div>
         <div class="tech-item">
+          <div class="tech-icon"><IconTypeScript /></div>
           <span class="tech-name">TypeScript</span>
         </div>
         <div class="tech-item">
+          <div class="tech-icon"><IconTailwind /></div>
           <span class="tech-name">TailwindCSS</span>
         </div>
         <div class="tech-item">
+          <div class="tech-icon"><IconPython /></div>
           <span class="tech-name">Python</span>
         </div>
         <div class="tech-item">
+          <div class="tech-icon"><IconAI /></div>
           <span class="tech-name">AI APIs</span>
         </div>
       </div>
