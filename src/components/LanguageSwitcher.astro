@@ -1,5 +1,9 @@
 ---
-const lang = Astro.currentLocale || 'en';
+interface Props {
+  lang?: string;
+}
+
+const { lang = 'en' } = Astro.props;
 const currentPath = Astro.url.pathname;
 
 // Calculate the path for the other language
@@ -19,26 +23,61 @@ if (lang === 'en') {
 <div class="language-switcher">
   <a
     href={enPath}
-    class:list={['lang-flag', { active: lang === 'en' }]}
-    aria-label="English"
+    class:list={['lang-btn', { active: lang === 'en' }]}
+    aria-label="Switch to English"
   >
-    <svg viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg">
-      <path fill="#012169" d="M0 0h640v480H0z"/>
-      <path fill="#FFF" d="m75 0 244 181L562 0h78v62L400 241l240 178v61h-80L320 301 81 480H0v-60l239-178L0 64V0h75z"/>
-      <path fill="#C8102E" d="m424 281 216 159v40L369 281h55zm-184 20 6 35L54 480H0l240-179zM640 0v3L391 191l2-44L590 0h50zM0 0l239 176h-60L0 42V0z"/>
-      <path fill="#FFF" d="M241 0v480h160V0H241zM0 160v160h640V160H0z"/>
-      <path fill="#C8102E" d="M0 193v96h640v-96H0zM273 0v480h96V0h-96z"/>
-    </svg>
+    EN
   </a>
+  <span class="lang-divider">/</span>
   <a
     href={daPath}
-    class:list={['lang-flag', { active: lang === 'da' }]}
-    aria-label="Dansk"
+    class:list={['lang-btn', { active: lang === 'da' }]}
+    aria-label="Skift til dansk"
   >
-    <svg viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg">
-      <path fill="#c8102e" d="M0 0h640v480H0z"/>
-      <path fill="#fff" d="M205.714 0h68.571v480h-68.571z"/>
-      <path fill="#fff" d="M0 205.714h640v68.571H0z"/>
-    </svg>
+    DA
   </a>
 </div>
+
+<style>
+.language-switcher {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-left: var(--space-md);
+}
+
+.lang-btn {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-decoration: none;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius-sm);
+  transition: all 0.2s ease;
+  letter-spacing: 0.025em;
+}
+
+.lang-btn:hover {
+  color: var(--text-primary);
+  background: var(--bg-surface);
+}
+
+.lang-btn.active {
+  color: var(--accent-primary);
+  font-weight: 600;
+}
+
+.lang-divider {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  user-select: none;
+}
+
+@media (max-width: 768px) {
+  .language-switcher {
+    margin-left: 0;
+    margin-right: auto;
+    order: -1;
+  }
+}
+</style>
