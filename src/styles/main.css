@@ -690,9 +690,18 @@ p {
 
 .btn-primary {
     background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
-    color: var(--white);
+    color: #ffffff !important;
     box-shadow: 0 4px 30px var(--accent-glow), 0 0 60px rgba(59, 130, 246, 0.2);
     font-weight: 700;
+    -webkit-text-fill-color: #ffffff !important;
+}
+
+.btn-primary *,
+.btn-primary span,
+.btn-primary svg {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    fill: currentColor;
 }
 
 .btn-primary:hover {
@@ -888,13 +897,20 @@ p {
 .stat-number {
     font-size: 3.5rem;
     font-weight: 800;
-    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-secondary) 100%);
+    background: linear-gradient(135deg, var(--accent) 0%, var(--violet) 50%, var(--accent-secondary) 100%);
+    background-size: 200% 200%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     line-height: 1;
     margin-bottom: var(--space-sm);
-    filter: drop-shadow(0 2px 10px var(--accent-glow));
+    filter: drop-shadow(0 4px 15px var(--accent-glow));
+    animation: stat-gradient 4s ease infinite;
+}
+
+@keyframes stat-gradient {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
 }
 
 .stat-label {
@@ -1039,13 +1055,20 @@ p {
 .form-select {
     width: 100%;
     padding: 16px 18px;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid var(--border-subtle);
-    border-radius: var(--radius-sm);
+    background: rgba(15, 23, 42, 0.6);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-md);
     color: var(--text-primary);
     font-family: inherit;
     font-size: 1rem;
     transition: var(--transition);
+}
+
+.form-input:hover,
+.form-textarea:hover,
+.form-select:hover {
+    border-color: rgba(255, 255, 255, 0.2);
+    background: rgba(15, 23, 42, 0.8);
 }
 
 /* Ensure select dropdown matches input styling */
@@ -1930,6 +1953,27 @@ p {
 @media (max-width: 480px) {
     .container {
         padding: 0 16px;
+    }
+
+    /* Reduce section padding on small mobile to shorten page */
+    .section {
+        padding: var(--space-xl) 0;
+    }
+
+    .section-sm {
+        padding: var(--space-md) 0;
+    }
+
+    .cta-section {
+        padding: var(--space-xl) 0;
+    }
+
+    .cta-card {
+        padding: var(--space-lg);
+    }
+
+    .cta-card h2 {
+        font-size: 1.75rem;
     }
 
     .hero-title {
