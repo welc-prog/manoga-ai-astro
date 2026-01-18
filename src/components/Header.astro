@@ -1,0 +1,161 @@
+---
+import { t } from 'i18next';
+import LanguageSwitcher from './LanguageSwitcher.astro';
+
+const lang = Astro.currentLocale || 'en';
+const prefix = lang === 'en' ? '' : `/${lang}`;
+---
+
+<header class="site-header" id="site-header">
+  <div class="container">
+    <div class="header-inner">
+      <!-- Logo -->
+      <a href={`${prefix}/`} class="logo" aria-label="Manoga AI">
+        <span class="logo-icon">M</span>
+        <span class="logo-text">Manoga<span class="text-gradient">AI</span></span>
+      </a>
+
+      <!-- Main Navigation -->
+      <nav class="main-nav" id="main-nav" aria-label="Primary Navigation">
+        <ul>
+          <li><a href={`${prefix}/`}>{t('nav.home')}</a></li>
+          <li class="has-dropdown">
+            <button
+              type="button"
+              class="dropdown-trigger"
+              aria-haspopup="menu"
+              aria-expanded="false"
+              aria-controls="services-dropdown"
+            >
+              {t('nav.services')}
+              <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <ul class="dropdown" id="services-dropdown" role="menu">
+              <li role="none"><a href={`${prefix}/seo`} role="menuitem">SEO</a></li>
+              <li role="none"><a href={`${prefix}/google-ads`} role="menuitem">Google Ads</a></li>
+              <li role="none"><a href={`${prefix}/meta-advertising`} role="menuitem">{t('nav.metaAds')}</a></li>
+              <li role="none"><a href={`${prefix}/webdesign`} role="menuitem">{t('nav.webdesign')}</a></li>
+              <li role="none"><a href={`${prefix}/google-tag-manager`} role="menuitem">Google Tag Manager</a></li>
+            </ul>
+          </li>
+          <li><a href={`${prefix}/ai-consulting`}>{t('nav.aiConsulting')}</a></li>
+          <li><a href={`${prefix}/workshops`}>Workshops</a></li>
+          <li><a href={`${prefix}/portfolio`}>Portfolio</a></li>
+          <li><a href={`${prefix}/contact`} class="nav-cta">{t('nav.getStarted')}</a></li>
+        </ul>
+      </nav>
+
+      <!-- Language Switcher -->
+      <LanguageSwitcher />
+
+      <!-- Mobile Menu Toggle -->
+      <button
+        class="menu-toggle"
+        id="menu-toggle"
+        aria-label="Toggle Menu"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<script>
+  // Mobile menu toggle
+  const menuToggle = document.getElementById('menu-toggle');
+  const mainNav = document.getElementById('main-nav');
+  const header = document.getElementById('site-header');
+
+  if (menuToggle && mainNav && header) {
+    menuToggle.addEventListener('click', () => {
+      const isOpen = mainNav.classList.contains('active');
+
+      if (isOpen) {
+        mainNav.classList.remove('active');
+        menuToggle.classList.remove('active');
+        header.classList.remove('menu-open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+        document.body.style.position = '';
+        document.body.style.width = '';
+      } else {
+        mainNav.classList.add('active');
+        menuToggle.classList.add('active');
+        header.classList.add('menu-open');
+        menuToggle.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
+        document.body.style.position = 'fixed';
+        document.body.style.width = '100%';
+      }
+    });
+
+    // Close menu on link click
+    mainNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mainNav.classList.remove('active');
+        menuToggle.classList.remove('active');
+        header.classList.remove('menu-open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+        document.body.style.position = '';
+        document.body.style.width = '';
+      });
+    });
+
+    // Escape key closes menu
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && mainNav.classList.contains('active')) {
+        mainNav.classList.remove('active');
+        menuToggle.classList.remove('active');
+        header.classList.remove('menu-open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+        document.body.style.position = '';
+        document.body.style.width = '';
+      }
+    });
+  }
+
+  // Dropdown toggle
+  const dropdownTriggers = document.querySelectorAll('.dropdown-trigger');
+  dropdownTriggers.forEach(trigger => {
+    trigger.addEventListener('click', () => {
+      const parent = trigger.parentElement;
+      if (parent) {
+        parent.classList.toggle('dropdown-open');
+        const isOpen = parent.classList.contains('dropdown-open');
+        trigger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      }
+    });
+  });
+
+  // Scroll effect
+  let scrollThrottle: ReturnType<typeof setTimeout> | null = null;
+
+  const updateScrollClass = () => {
+    const header = document.getElementById('site-header');
+    if (header) {
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    }
+  };
+
+  window.addEventListener('scroll', () => {
+    if (scrollThrottle) return;
+    scrollThrottle = setTimeout(() => {
+      updateScrollClass();
+      scrollThrottle = null;
+    }, 100);
+  }, { passive: true });
+
+  // Initial check
+  updateScrollClass();
+</script>

@@ -1,0 +1,193 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { t, changeLanguage } from 'i18next';
+import IconExternal from '../../components/icons/IconExternal.astro';
+import IconArrowRight from '../../components/icons/IconArrowRight.astro';
+
+const lang = Astro.currentLocale || 'en';
+changeLanguage(lang);
+const prefix = lang === 'en' ? '' : `/${lang}`;
+---
+
+<Layout title="Portfolio" description={t('portfolio.subtitle')}>
+  <section class="page-header">
+    <div class="container">
+      <span class="page-subtitle">{t('portfolio.tagline')}</span>
+      <h1>{t('portfolio.featured')} <span class="text-gradient">{t('portfolio.projects')}</span></h1>
+      <p class="page-header-description">{t('portfolio.subtitle')}</p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section">
+    <div class="container">
+      <div class="content-section reveal">
+        <h2 class="section-title">{t('portfolio.aboutTitle')}</h2>
+        <p class="section-text">{t('portfolio.aboutDesc')}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Showcase -->
+  <section class="section" style="background: rgba(30, 41, 59, 0.3);">
+    <div class="container">
+      <div class="showcase-grid reveal">
+        <!-- WELC -->
+        <div class="showcase-item">
+          <img class="showcase-image" src="/images/portfolio-crypto.webp" alt="WeLoveEverythingCrypto" loading="lazy" />
+          <div class="showcase-overlay">
+            <span class="showcase-tag">{t('portfolio.liveProject')}</span>
+            <h3 class="showcase-title">WeLoveEverythingCrypto</h3>
+            <p>{t('portfolio.welcDesc')}</p>
+            <a href="https://weloveeverythingcrypto.com" target="_blank" rel="noopener" class="btn btn-primary">
+              {t('portfolio.visitSite')} <IconExternal />
+            </a>
+          </div>
+        </div>
+
+        <!-- Handball Stats -->
+        <div class="showcase-item">
+          <img class="showcase-image" src="/images/portfolio-handball.webp" alt="Handball Tracker" loading="lazy" />
+          <div class="showcase-overlay">
+            <span class="showcase-tag">{t('portfolio.liveProject')}</span>
+            <h3 class="showcase-title">Handball Tracker</h3>
+            <p>{t('portfolio.handballDesc')}</p>
+            <a href="https://handballtracker.com" target="_blank" rel="noopener" class="btn btn-primary">
+              {t('portfolio.visitSite')} <IconExternal />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Detailed Project Descriptions -->
+  <section class="section">
+    <div class="container">
+      <div class="project-details">
+        <div class="project-detail reveal">
+          <h3>WeLoveEverythingCrypto</h3>
+          <p>{t('portfolio.welcFullDesc')}</p>
+        </div>
+        <div class="project-detail reveal">
+          <h3>Handball Stats App</h3>
+          <p>{t('portfolio.handballFullDesc')}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technologies Section -->
+  <section class="section" style="background: rgba(30, 41, 59, 0.3);">
+    <div class="container">
+      <div class="text-center mb-3">
+        <span class="hero-tagline">{t('common.howItWorks')}</span>
+        <h2>{t('portfolio.technologiesTitle')}</h2>
+        <p style="max-width: 700px; margin: 0 auto;">{t('portfolio.technologiesDesc')}</p>
+      </div>
+
+      <div class="tech-grid reveal">
+        <div class="tech-item">
+          <span class="tech-name">Vue 3</span>
+        </div>
+        <div class="tech-item">
+          <span class="tech-name">Nuxt 3</span>
+        </div>
+        <div class="tech-item">
+          <span class="tech-name">TypeScript</span>
+        </div>
+        <div class="tech-item">
+          <span class="tech-name">TailwindCSS</span>
+        </div>
+        <div class="tech-item">
+          <span class="tech-name">Python</span>
+        </div>
+        <div class="tech-item">
+          <span class="tech-name">AI APIs</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section">
+    <div class="container">
+      <div class="card text-center" style="padding: var(--space-xl); max-width: 800px; margin: 0 auto;">
+        <h2 class="mb-1">{t('cta.title')}</h2>
+        <p style="font-size: 1.25rem; margin-bottom: var(--space-md);">{t('cta.subtitle')}</p>
+        <a href={`${prefix}/contact`} class="btn btn-primary btn-glow">
+          {t('cta.button')}
+          <IconArrowRight />
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+.content-section {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.section-title {
+  margin-bottom: var(--space-md);
+}
+
+.section-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: var(--space-md);
+  color: var(--text-secondary);
+}
+
+.project-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: var(--space-xl);
+}
+
+.project-detail {
+  background: var(--bg-surface);
+  padding: var(--space-lg);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-subtle);
+}
+
+.project-detail h3 {
+  margin-bottom: var(--space-md);
+  color: var(--text-primary);
+}
+
+.project-detail p {
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: var(--space-md);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.tech-item {
+  background: var(--bg-surface);
+  padding: var(--space-md);
+  border-radius: var(--radius-md);
+  text-align: center;
+  border: 1px solid var(--border-subtle);
+}
+
+.tech-name {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+@media (max-width: 768px) {
+  .project-details {
+    grid-template-columns: 1fr;
+  }
+}
+</style>

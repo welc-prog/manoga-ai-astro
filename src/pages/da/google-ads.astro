@@ -1,0 +1,281 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { t, changeLanguage } from 'i18next';
+import IconTarget from '../../components/icons/IconTarget.astro';
+import IconLayout from '../../components/icons/IconLayout.astro';
+import IconBarChart from '../../components/icons/IconBarChart.astro';
+import IconShield from '../../components/icons/IconShield.astro';
+import IconSearch from '../../components/icons/IconSearch.astro';
+import IconArrowRight from '../../components/icons/IconArrowRight.astro';
+
+const lang = Astro.currentLocale || 'en';
+changeLanguage(lang);
+const prefix = lang === 'en' ? '' : `/${lang}`;
+---
+
+<Layout title="Google Ads" description={t('marketing.googleAds')}>
+  <section class="page-header">
+    <div class="container">
+      <div class="page-header-with-image">
+        <div class="page-header-content">
+          <span class="page-subtitle">{t('marketing.tagline')}</span>
+          <h1>Google <span class="text-gradient">Ads</span></h1>
+          <p class="page-header-description">{t('marketing.googleAds')}</p>
+        </div>
+        <div class="page-header-image">
+          <img src="/images/google-ads.webp" alt="Google Ads" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Services -->
+  <section class="section">
+    <div class="container">
+      <div class="services-grid reveal">
+        <div class="card">
+          <div class="card-icon">
+            <IconTarget />
+          </div>
+          <h3 class="card-title">{t('pages.googleAds.searchCampaigns')}</h3>
+          <p class="card-text">{t('pages.googleAds.searchCampaignsDesc')}</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">
+            <IconLayout />
+          </div>
+          <h3 class="card-title">{t('pages.googleAds.displayRemarketing')}</h3>
+          <p class="card-text">{t('pages.googleAds.displayRemarketingDesc')}</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">
+            <IconBarChart />
+          </div>
+          <h3 class="card-title">{t('pages.googleAds.performanceMax')}</h3>
+          <p class="card-text">{t('pages.googleAds.performanceMaxDesc')}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section" style="background: rgba(30, 41, 59, 0.3);">
+    <div class="container">
+      <div class="content-section reveal">
+        <h2 class="section-title">{t('pages.googleAds.aboutTitle')}</h2>
+        <p class="section-text">{t('pages.googleAds.aboutDesc')}</p>
+        <p class="section-text">{t('pages.googleAds.aboutDesc2')}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center mb-3">
+        <span class="hero-tagline">{t('common.benefits')}</span>
+        <h2>{t('pages.googleAds.whyTitle')}</h2>
+        <p style="max-width: 700px; margin: 0 auto;">{t('pages.googleAds.whyDesc')}</p>
+      </div>
+
+      <div class="benefits-grid reveal">
+        <div class="benefit-item">
+          <div class="benefit-icon">
+            <IconShield />
+          </div>
+          <h4>{t('pages.googleAds.benefit1')}</h4>
+          <p>{t('pages.googleAds.benefit1Desc')}</p>
+        </div>
+
+        <div class="benefit-item">
+          <div class="benefit-icon">
+            <IconTarget />
+          </div>
+          <h4>{t('pages.googleAds.benefit2')}</h4>
+          <p>{t('pages.googleAds.benefit2Desc')}</p>
+        </div>
+
+        <div class="benefit-item">
+          <div class="benefit-icon">
+            <IconBarChart />
+          </div>
+          <h4>{t('pages.googleAds.benefit3')}</h4>
+          <p>{t('pages.googleAds.benefit3Desc')}</p>
+        </div>
+
+        <div class="benefit-item">
+          <div class="benefit-icon">
+            <IconSearch />
+          </div>
+          <h4>{t('pages.googleAds.benefit4')}</h4>
+          <p>{t('pages.googleAds.benefit4Desc')}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="section" style="background: rgba(30, 41, 59, 0.3);">
+    <div class="container">
+      <div class="text-center mb-3">
+        <span class="hero-tagline">{t('services.whatWeDo')}</span>
+        <h2>{t('pages.googleAds.servicesTitle')}</h2>
+      </div>
+
+      <div class="services-grid reveal">
+        <div class="card">
+          <h4 class="card-title">{t('pages.googleAds.service1')}</h4>
+          <p class="card-text">{t('pages.googleAds.service1Desc')}</p>
+        </div>
+        <div class="card">
+          <h4 class="card-title">{t('pages.googleAds.service2')}</h4>
+          <p class="card-text">{t('pages.googleAds.service2Desc')}</p>
+        </div>
+        <div class="card">
+          <h4 class="card-title">{t('pages.googleAds.service3')}</h4>
+          <p class="card-text">{t('pages.googleAds.service3Desc')}</p>
+        </div>
+        <div class="card">
+          <h4 class="card-title">{t('pages.googleAds.service4')}</h4>
+          <p class="card-text">{t('pages.googleAds.service4Desc')}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center mb-3">
+        <span class="hero-tagline">{t('common.gotQuestions')}</span>
+        <h2>{t('common.faq')}</h2>
+      </div>
+
+      <div class="faq-grid reveal">
+        <div class="faq-item">
+          <h4 class="faq-question">{t('pages.googleAds.faq1')}</h4>
+          <p class="faq-answer">{t('pages.googleAds.faq1Answer')}</p>
+        </div>
+
+        <div class="faq-item">
+          <h4 class="faq-question">{t('pages.googleAds.faq2')}</h4>
+          <p class="faq-answer">{t('pages.googleAds.faq2Answer')}</p>
+        </div>
+
+        <div class="faq-item">
+          <h4 class="faq-question">{t('pages.googleAds.faq3')}</h4>
+          <p class="faq-answer">{t('pages.googleAds.faq3Answer')}</p>
+        </div>
+
+        <div class="faq-item">
+          <h4 class="faq-question">{t('pages.googleAds.faq4')}</h4>
+          <p class="faq-answer">{t('pages.googleAds.faq4Answer')}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section" style="background: rgba(30, 41, 59, 0.3);">
+    <div class="container">
+      <div class="card text-center" style="padding: var(--space-xl); max-width: 800px; margin: 0 auto;">
+        <h2 class="mb-1">{t('cta.title')}</h2>
+        <p style="font-size: 1.25rem; margin-bottom: var(--space-md);">{t('cta.subtitle')}</p>
+        <a href={`${prefix}/contact`} class="btn btn-primary btn-glow">
+          {t('cta.button')}
+          <IconArrowRight />
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+.content-section {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.section-title {
+  margin-bottom: var(--space-md);
+}
+
+.section-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: var(--space-md);
+  color: var(--text-secondary);
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-lg);
+}
+
+.benefit-item {
+  text-align: center;
+  padding: var(--space-lg);
+}
+
+.benefit-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto var(--space-md);
+  background: var(--gradient-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.benefit-icon :global(svg) {
+  width: 28px;
+  height: 28px;
+  color: white;
+}
+
+.benefit-item h4 {
+  margin-bottom: var(--space-sm);
+  color: var(--text-primary);
+}
+
+.benefit-item p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-lg);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background: var(--bg-surface);
+  padding: var(--space-lg);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-subtle);
+}
+
+.faq-question {
+  color: var(--text-primary);
+  margin-bottom: var(--space-sm);
+  font-size: 1.1rem;
+}
+
+.faq-answer {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>

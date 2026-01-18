@@ -1,0 +1,209 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { t, changeLanguage } from 'i18next';
+import IconPhone from '../../components/icons/IconPhone.astro';
+import IconLinkedIn from '../../components/icons/IconLinkedIn.astro';
+import IconLocation from '../../components/icons/IconLocation.astro';
+import IconArrowRight from '../../components/icons/IconArrowRight.astro';
+
+const lang = Astro.currentLocale || 'en';
+changeLanguage(lang);
+const prefix = lang === 'en' ? '' : `/${lang}`;
+---
+
+<Layout title={t('contact.tagline')} description={t('contact.subtitle')}>
+  <section class="page-header">
+    <div class="container">
+      <span class="page-subtitle">{t('contact.tagline')}</span>
+      <h1>{t('contact.title')} <span class="text-gradient">{t('contact.amazing')}</span></h1>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info reveal-left">
+          <p style="font-size: 1.1rem;">{t('contact.subtitle')}</p>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <IconPhone />
+            </div>
+            <div>
+              <strong>{t('contact.phone')}</strong><br />
+              <a href="tel:+4550587900">+45 50 58 79 00</a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <IconLinkedIn />
+            </div>
+            <div>
+              <strong>LinkedIn</strong><br />
+              <a href="https://www.linkedin.com/in/kennethabueg/" target="_blank" rel="noopener">
+                {t('contact.connectLinkedIn')}
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <IconLocation />
+            </div>
+            <div>
+              <strong>{t('contact.businessReg')}</strong><br />
+              CVR: DK39733730<br />
+              {t('footer.denmark')}
+            </div>
+          </div>
+
+          <!-- Additional Info Cards -->
+          <div class="info-cards">
+            <div class="info-card">
+              <h4>{t('contact.responseTime')}</h4>
+              <p>{t('contact.responseTimeDesc')}</p>
+            </div>
+            <div class="info-card">
+              <h4>{t('contact.freeConsultation')}</h4>
+              <p>{t('contact.freeConsultationDesc')}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal-right">
+          <form class="contact-form" id="contact-form">
+            <div class="form-group">
+              <label class="form-label" for="contact-name">{t('contact.name')} *</label>
+              <input type="text" id="contact-name" name="name" class="form-input" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contact-email">Email *</label>
+              <input type="email" id="contact-email" name="email" class="form-input" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contact-phone">{t('contact.phone')}</label>
+              <input type="tel" id="contact-phone" name="phone" class="form-input" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contact-service">{t('contact.serviceInterest')}</label>
+              <select id="contact-service" name="service" class="form-input form-select">
+                <option value="">{t('contact.selectService')}</option>
+                <option value="vibecoding">Vibecoding</option>
+                <option value="ai-consulting">{t('services.aiConsulting')}</option>
+                <option value="workshops">AI Workshops</option>
+                <option value="seo">SEO</option>
+                <option value="google-ads">Google Ads</option>
+                <option value="meta-ads">{t('nav.metaAds')}</option>
+                <option value="webdesign">{t('nav.webdesign')}</option>
+                <option value="gtm">Google Tag Manager</option>
+                <option value="other">{t('contact.other')}</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contact-message">{t('contact.message')} *</label>
+              <textarea id="contact-message" name="message" class="form-textarea" required placeholder={t('contact.messagePlaceholder')}></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-full">
+              {t('contact.send')}
+              <IconArrowRight />
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Additional Information Section -->
+  <section class="section" style="background: rgba(30, 41, 59, 0.3);">
+    <div class="container">
+      <div class="additional-info-grid reveal">
+        <div class="additional-info-item">
+          <h4>{t('contact.workingWith')}</h4>
+          <p>{t('contact.workingWithDesc')}</p>
+        </div>
+        <div class="additional-info-item">
+          <h4>{t('contact.preferredContact')}</h4>
+          <p>{t('contact.preferredContactDesc')}</p>
+        </div>
+        <div class="additional-info-item">
+          <h4>{t('contact.globalReach')}</h4>
+          <p>{t('contact.globalReachDesc')}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  // Form submission handler
+  const form = document.getElementById('contact-form') as HTMLFormElement;
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const formData = new FormData(form);
+      const name = formData.get('name');
+      const email = formData.get('email');
+      const phone = formData.get('phone');
+      const service = formData.get('service');
+      const message = formData.get('message');
+
+      const mailtoLink = `mailto:contact@manoga.digital?subject=Contact from ${name}&body=Name: ${name}%0D%0AEmail: ${email}%0D%0APhone: ${phone}%0D%0AService: ${service}%0D%0A%0D%0AMessage:%0D%0A${message}`;
+      window.location.href = mailtoLink;
+    });
+  }
+</script>
+
+<style>
+.info-cards {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+}
+
+.info-card {
+  background: var(--bg-card);
+  padding: var(--space-md);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+}
+
+.info-card h4 {
+  margin-bottom: var(--space-xs);
+  color: var(--text-primary);
+  font-size: 1rem;
+}
+
+.info-card p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.additional-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-lg);
+}
+
+.additional-info-item {
+  text-align: center;
+  padding: var(--space-lg);
+}
+
+.additional-info-item h4 {
+  margin-bottom: var(--space-sm);
+  color: var(--text-primary);
+}
+
+.additional-info-item p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+</style>
