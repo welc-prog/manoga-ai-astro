@@ -1,7 +1,27 @@
 {
   "meta": {
-    "homeTitle": "Manoga AI - Vibecoding, AI Consulting & Digital Marketing",
-    "homeDescription": "Transform your business with AI-powered solutions. 15+ years of digital marketing expertise combined with cutting-edge AI consulting, vibecoding, and hands-on workshops."
+    "homeTitle": "AI-First Digital Agency for Growth | manoga.digital",
+    "homeDescription": "Manoga is your AI-first digital agency. We combine 15+ years of experience with vibecoding for 10x faster results. Get a free strategic consultation today!",
+    "vibecodingTitle": "Vibecoding: 10x Faster AI-Assisted Development | Manoga",
+    "vibecodingDescription": "Launch your MVP or web app 10x faster with Vibecoding. Our AI-assisted development process saves you time and money. Start your project with Manoga today.",
+    "aiConsultingTitle": "AI Consulting: Strategy, Audit & Implementation | Manoga",
+    "aiConsultingDescription": "Unlock your business potential with expert AI consulting. We offer AI strategy, audits, and implementation to drive growth. Book your free AI consultation.",
+    "workshopsTitle": "AI Workshops & Prompt Engineering Training | Manoga",
+    "workshopsDescription": "Empower your team with hands-on AI workshops. Master prompt engineering and AI tools to boost productivity. Book a training session today.",
+    "seoTitle": "Expert SEO Services & Strategy (15+ Years) | Manoga",
+    "seoDescription": "Dominate search results with expert SEO services. Technical SEO & content strategy with 15+ years' experience. Get your free SEO audit today!",
+    "googleAdsTitle": "Google Ads Agency: PPC & Performance Max Experts | Manoga",
+    "googleAdsDescription": "Maximize your ROI with expert Google Ads management. We handle Search, Display, and Performance Max campaigns. Get a free account review.",
+    "metaAdsTitle": "Meta Ads Agency: Facebook & Instagram Ads Experts | Manoga",
+    "metaAdsDescription": "Drive leads and sales with targeted Meta Ads. We manage Facebook, Instagram, and Advantage+ campaigns for maximum impact. Let's discuss your goals.",
+    "webdesignTitle": "Modern Web Design with Nuxt 3 & Vue.js | manoga.digital",
+    "webdesignDescription": "We build fast, modern, and SEO-friendly websites using Nuxt 3 and Vue.js. Elevate your online presence with a stunning new design. Get a free quote today.",
+    "gtmTitle": "Google Tag Manager & GA4 Conversion Tracking | Manoga",
+    "gtmDescription": "Ensure accurate data with expert GTM services. We set up GA4 event and conversion tracking for better insights. Fix your tracking today.",
+    "contactTitle": "Contact Manoga | Free Digital Strategy Consultation",
+    "contactDescription": "Ready to grow your business with AI and digital marketing? Contact Manoga today for a free, no-obligation consultation. We respond quickly!",
+    "portfolioTitle": "Our Portfolio: Digital Marketing & Dev Case Studies | Manoga",
+    "portfolioDescription": "Explore our portfolio of successful projects. See case studies in web dev, SEO, and AI implementation. Discover how we can help your business."
   },
   "nav": {
     "home": "Home",

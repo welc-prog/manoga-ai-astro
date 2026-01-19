@@ -1,7 +1,27 @@
 {
   "meta": {
-    "homeTitle": "Manoga AI - Vibecoding, AI-konsulentrådgivning & Digital Marketing",
-    "homeDescription": "Transformér din virksomhed med AI-drevne løsninger. Over 15 års erfaring inden for digital marketing kombineret med banebrydende AI-konsulentrådgivning, vibecoding og praktiske workshops."
+    "homeTitle": "AI Bureau & Digital Marketing i Danmark | manoga.digital",
+    "homeDescription": "Manoga er dit AI-first digitale bureau. Vi kombinerer 15+ års erfaring med vibecoding for 10x hurtigere resultater. Få en gratis strategisk samtale i dag!",
+    "vibecodingTitle": "Vibecoding: AI-Udvikling 10x Hurtigere | Manoga",
+    "vibecodingDescription": "Lancér din MVP eller webapp 10x hurtigere med Vibecoding. Vores AI-assisterede udviklingsproces sparer tid og penge. Start dit projekt med Manoga i dag.",
+    "aiConsultingTitle": "AI Rådgivning: Strategi, Audit & Implementering | Manoga",
+    "aiConsultingDescription": "Frigør dit forretningspotentiale med ekspert AI-rådgivning. Vi tilbyder AI-strategi, audits og implementering, der skaber vækst. Book en gratis samtale.",
+    "workshopsTitle": "AI & Prompt Engineering Workshops i Danmark | Manoga",
+    "workshopsDescription": "Opkvalificer dit team med hands-on AI workshops i prompt engineering og vibecoding. Skræddersyede sessioner fra en halv dag. Book nu!",
+    "seoTitle": "SEO Ekspert i Danmark | 15+ Års Erfaring | Manoga",
+    "seoDescription": "Skab organisk vækst med datadrevet SEO. Vi er specialister i teknisk SEO, content-strategi og analyse. Få en gratis SEO-analyse i dag!",
+    "googleAdsTitle": "Google Ads Bureau i Danmark | PPC Eksperter | Manoga",
+    "googleAdsDescription": "Maksimér dit ROI med ekspert Google Ads-styring. Vi håndterer Search, Display og Performance Max-kampagner. Få et gratis kontotjek!",
+    "metaAdsTitle": "Meta Ads Bureau: Facebook & Instagram Annoncer | Manoga",
+    "metaAdsDescription": "Skab leads og salg med strategisk Meta-annoncering. Vi skaber effektive Facebook & Instagram-kampagner for dit brand. Kontakt os i dag!",
+    "webdesignTitle": "AI-Drevet Webdesign & Udvikling i Danmark | Manoga",
+    "webdesignDescription": "Få en moderne, konverteringsfokuseret hjemmeside bygget 10x hurtigere med AI-assisteret vibecoding. Nuxt 3 & Vue.js eksperter. Få tilbud!",
+    "gtmTitle": "Google Tag Manager Konsulent i Danmark | Manoga",
+    "gtmDescription": "Sikr præcis data med ekspert GTM-service. Vi håndterer GTM-opsætning, GA4-integration og avanceret konverteringssporing. Kontakt os nu!",
+    "contactTitle": "Kontakt Os for en Gratis Samtale | Manoga Digital",
+    "contactDescription": "Klar til at vækste med AI og digital marketing? Kontakt Manoga Digital i dag for en gratis og uforpligtende snak om dit projekt.",
+    "portfolioTitle": "Vores Cases & Portefølje | Manoga Digital Projekter",
+    "portfolioDescription": "Se vores succesfulde projekter inden for AI-udvikling, SEO og digital marketing. Udforsk vores arbejde med Nuxt 3, Vue.js og mere!"
   },
   "nav": {
     "home": "Hjem",

@@ -13,7 +13,7 @@ const lang = 'en';
 const prefix = lang === 'en' ? '' : `/${lang}`;
 ---
 
-<Layout title="SEO" description={t('marketing.seo', lang)}>
+<Layout title={t('meta.seoTitle', lang)} description={t('meta.seoDescription', lang)} lang={lang}>
   <section class="page-header">
     <div class="container">
       <div class="page-header-with-image">
