@@ -1,0 +1,139 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog')).sort(
+  (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+);
+
+const categories = [
+  { id: 'all', label: 'All Posts' },
+  { id: 'seo', label: 'SEO' },
+  { id: 'ai', label: 'AI' },
+  { id: 'claude-code', label: 'Claude Code' },
+  { id: 'gtm', label: 'GTM' },
+];
+
+const categoryColors: Record<string, string> = {
+  'seo': 'var(--accent)',
+  'ai': 'var(--accent-secondary)',
+  'claude-code': 'var(--accent-tertiary)',
+  'gtm': '#10b981',
+};
+---
+
+<Layout title="Blog" description="Insights on SEO, AI, Claude Code, and Google Tag Manager from Manoga AI.">
+  <section class="blog-hero section">
+    <div class="container">
+      <span class="hero-tagline">&lt;blog /&gt;</span>
+      <h1 class="section-title">Insights & <span class="text-gradient">Resources</span></h1>
+      <p class="section-subtitle">Expert articles on SEO, AI, Claude Code, and Google Tag Manager to help you stay ahead.</p>
+    </div>
+  </section>
+
+  <section class="blog-listing section section-sm">
+    <div class="container">
+      <div class="blog-filters" id="blog-filters">
+        {categories.map(cat => (
+          <button
+            class={`blog-filter-btn ${cat.id === 'all' ? 'active' : ''}`}
+            data-filter={cat.id}
+          >
+            {cat.label}
+          </button>
+        ))}
+      </div>
+
+      <div class="blog-grid" id="blog-grid">
+        {posts.map(post => (
+          <a
+            href={`/blog/${post.id.replace(/\.md$/, '')}`}
+            class="blog-card"
+            data-category={post.data.category}
+            data-date={post.data.date}
+            style="display:none"
+          >
+            <div class="blog-card-image">
+              <img src={post.data.image} alt={post.data.title} width="600" height="315" loading="lazy" />
+              <span class="blog-card-category" style={`--cat-color: ${categoryColors[post.data.category]}`}>
+                {post.data.category === 'claude-code' ? 'Claude Code' : post.data.category === 'gtm' ? 'GTM' : post.data.category === 'ai' ? 'AI' : 'SEO'}
+              </span>
+            </div>
+            <div class="blog-card-body">
+              <time datetime={post.data.date}>
+                {new Date(post.data.date).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
+              </time>
+              <h3>{post.data.title}</h3>
+              <p>{post.data.description}</p>
+            </div>
+          </a>
+        ))}
+      </div>
+
+      <div class="blog-empty" id="blog-empty" style="display:none">
+        <p>No posts found in this category yet. Check back soon!</p>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  // Release gate: only show posts whose date <= today
+  const today = new Date();
+  today.setHours(23, 59, 59, 999); // include all of today
+
+  const cards = document.querySelectorAll<HTMLElement>('.blog-card');
+  const emptyMsg = document.getElementById('blog-empty');
+
+  // Show released posts, keep future posts hidden
+  cards.forEach(card => {
+    const postDate = new Date(card.dataset.date + 'T00:00:00');
+    if (postDate <= today) {
+      card.dataset.released = 'true';
+      card.style.display = '';
+    } else {
+      card.dataset.released = 'false';
+    }
+  });
+
+  // Category filter - only operates on released posts
+  const filters = document.querySelectorAll('.blog-filter-btn');
+
+  function applyFilter(filter: string) {
+    let visibleCount = 0;
+
+    cards.forEach(card => {
+      if (card.dataset.released !== 'true') {
+        card.style.display = 'none';
+        return;
+      }
+
+      const category = card.dataset.category;
+      if (filter === 'all' || category === filter) {
+        card.style.display = '';
+        visibleCount++;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    if (emptyMsg) {
+      emptyMsg.style.display = visibleCount === 0 ? '' : 'none';
+    }
+  }
+
+  filters.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filters.forEach(f => f.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.getAttribute('data-filter') || 'all';
+      applyFilter(filter);
+    });
+  });
+
+  // Check if any posts are visible
+  const releasedCount = document.querySelectorAll('[data-released="true"]').length;
+  if (emptyMsg && releasedCount === 0) {
+    emptyMsg.style.display = '';
+  }
+</script>

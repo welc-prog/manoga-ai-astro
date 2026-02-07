@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg-4" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0a0f"/>
+      <stop offset="50%" stop-color="#0e0e16"/>
+      <stop offset="100%" stop-color="#12121a"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="accent-line-4" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg-4)"/>
+
+  <!-- Subtle grid overlay -->
+  <g opacity="0.02">
+    <pattern id="grid-4" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-width="0.5"/>
+    </pattern>
+    <rect width="1200" height="630" fill="url(#grid-4)"/>
+  </g>
+
+  <!-- Geometric decorations -->
+  <circle cx="320" cy="228" r="202" fill="url(#glow)" opacity="0.08"/>
+    <circle cx="916" cy="472" r="148" fill="url(#glow)" opacity="0.05"/>
+    <line x1="850" y1="80" x2="1150" y2="80" stroke="#3b82f6" stroke-width="0.5" opacity="0.04"/>
+    <line x1="850" y1="80" x2="850" y2="550" stroke="#3b82f6" stroke-width="0.5" opacity="0.04"/>
+    <line x1="850" y1="180" x2="1150" y2="180" stroke="#3b82f6" stroke-width="0.5" opacity="0.04"/>
+    <line x1="920" y1="80" x2="920" y2="550" stroke="#3b82f6" stroke-width="0.5" opacity="0.04"/>
+    <line x1="850" y1="280" x2="1150" y2="280" stroke="#3b82f6" stroke-width="0.5" opacity="0.04"/>
+    <line x1="990" y1="80" x2="990" y2="550" stroke="#3b82f6" stroke-width="0.5" opacity="0.04"/>
+    <line x1="850" y1="380" x2="1150" y2="380" stroke="#3b82f6" stroke-width="0.5" opacity="0.04"/>
+    <line x1="1060" y1="80" x2="1060" y2="550" stroke="#3b82f6" stroke-width="0.5" opacity="0.04"/>
+    <line x1="850" y1="480" x2="1150" y2="480" stroke="#3b82f6" stroke-width="0.5" opacity="0.04"/>
+    <line x1="1130" y1="80" x2="1130" y2="550" stroke="#3b82f6" stroke-width="0.5" opacity="0.04"/>
+    <line x1="80" y1="572" x2="392" y2="572" stroke="#3b82f6" stroke-width="2" opacity="0.3"/>
+    <circle cx="80" cy="557" r="2" fill="#3b82f6" opacity="0.4"/>
+    <circle cx="88" cy="557" r="2" fill="#3b82f6" opacity="0.4"/>
+    <circle cx="96" cy="557" r="2" fill="#3b82f6" opacity="0.4"/>
+
+  <!-- Category icon -->
+  <g transform="translate(980, 80) scale(0.8)" opacity="0.15">
+        <circle cx="40" cy="40" r="30" fill="none" stroke="#3b82f6" stroke-width="5"/>
+        <line x1="62" y1="62" x2="85" y2="85" stroke="#3b82f6" stroke-width="5" stroke-linecap="round"/>
+        <line x1="25" y1="40" x2="55" y2="40" stroke="#3b82f6" stroke-width="3" stroke-linecap="round"/>
+        <line x1="40" y1="25" x2="40" y2="55" stroke="#3b82f6" stroke-width="3" stroke-linecap="round"/>
+      </g>
+
+  <!-- Top accent line -->
+  <rect x="80" y="0" width="3" height="630" fill="#3b82f6" opacity="0.1"/>
+  <rect x="0" y="0" width="1200" height="3" fill="url(#accent-line-4)"/>
+
+  <!-- Category badge -->
+  <rect x="80" y="190" width="64" height="30" rx="15" fill="#3b82f6" opacity="0.15"/>
+  <text x="94" y="211" fill="#3b82f6" font-family="'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" letter-spacing="1.5">SEO</text>
+
+  <!-- Title -->
+  <text x="80" y="260" fill="#ffffff" font-family="'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif" font-size="40" font-weight="700" letter-spacing="-0.5">Local SEO: Ranking for Near Me</text>
+    <text x="80" y="312" fill="#ffffff" font-family="'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif" font-size="40" font-weight="700" letter-spacing="-0.5">Searches</text>
+
+  <!-- Bottom separator -->
+  <line x1="80" y1="520" x2="1120" y2="520" stroke="#ffffff" stroke-width="0.5" opacity="0.07"/>
+
+  <!-- Watermark -->
+  <text x="1120" y="590" fill="#a0a8b4" font-family="'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif" font-size="14" font-weight="400" text-anchor="end" opacity="0.5">manoga.digital</text>
+
+  <!-- Bottom left domain accent -->
+  <circle cx="80" cy="590" r="4" fill="#3b82f6" opacity="0.4"/>
+  <text x="92" y="594" fill="#a0a8b4" font-family="'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif" font-size="12" opacity="0.35">manoga.digital / seo</text>
+</svg>

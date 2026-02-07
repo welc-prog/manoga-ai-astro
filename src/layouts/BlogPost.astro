@@ -1,0 +1,115 @@
+---
+import '../styles/main.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Analytics from '@vercel/analytics/astro';
+
+interface Props {
+  title: string;
+  description: string;
+  date: string;
+  category: string;
+  image: string;
+  author: string;
+}
+
+const { title, description, date, category, image, author } = Astro.props;
+
+const categoryLabels: Record<string, string> = {
+  'seo': 'SEO',
+  'ai': 'Artificial Intelligence',
+  'claude-code': 'Claude Code',
+  'gtm': 'Google Tag Manager',
+};
+
+const categoryColors: Record<string, string> = {
+  'seo': 'var(--accent)',
+  'ai': 'var(--accent-secondary)',
+  'claude-code': 'var(--accent-tertiary)',
+  'gtm': '#10b981',
+};
+
+const formattedDate = new Date(date).toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta property="og:title" content={`${title} | Manoga AI Blog`} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+    <meta property="og:type" content="article" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <title>{title} | Manoga AI Blog</title>
+    <Analytics />
+  </head>
+  <body>
+    <Header lang="en" />
+    <main>
+      <article class="blog-post">
+        <div class="blog-post-hero">
+          <div class="container">
+            <div class="blog-post-meta">
+              <span class="blog-category-badge" style={`--cat-color: ${categoryColors[category]}`}>
+                {categoryLabels[category]}
+              </span>
+              <time datetime={date}>{formattedDate}</time>
+            </div>
+            <h1 class="blog-post-title">{title}</h1>
+            <p class="blog-post-description">{description}</p>
+            <div class="blog-post-author">
+              <span>By {author}</span>
+            </div>
+          </div>
+        </div>
+        <div class="blog-post-cover" id="post-cover">
+          <div class="container">
+            <img src={image} alt={title} width="1200" height="630" loading="eager" />
+          </div>
+        </div>
+        <div class="blog-post-content" id="post-content">
+          <div class="container container-narrow">
+            <slot />
+          </div>
+        </div>
+        <div class="blog-post-coming-soon" id="coming-soon" style="display:none">
+          <div class="container container-narrow" style="text-align:center;padding:4rem 0 6rem;">
+            <p style="font-size:3rem;margin-bottom:1rem;">&#128640;</p>
+            <h2 style="color:var(--text-primary);margin-bottom:1rem;">Coming Soon</h2>
+            <p style="color:var(--text-secondary);margin-bottom:2rem;">This article will be published on <strong style="color:var(--accent)">{formattedDate}</strong>. Check back then!</p>
+            <a href="/blog" class="btn btn-primary">Browse Published Articles</a>
+          </div>
+        </div>
+        <div class="blog-post-footer" id="post-footer">
+          <div class="container container-narrow">
+            <a href="/blog" class="btn btn-secondary">Back to Blog</a>
+          </div>
+        </div>
+      </article>
+    </main>
+    <Footer lang="en" />
+    <script define:vars={{ date }}>
+      const postDate = new Date(date + 'T00:00:00');
+      const today = new Date();
+      today.setHours(23, 59, 59, 999);
+
+      if (postDate > today) {
+        document.getElementById('post-cover').style.display = 'none';
+        document.getElementById('post-content').style.display = 'none';
+        document.getElementById('post-footer').style.display = 'none';
+        document.getElementById('coming-soon').style.display = '';
+      }
+    </script>
+  </body>
+</html>
