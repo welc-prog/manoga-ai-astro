@@ -88,7 +88,7 @@ const prefix = '/da';  // Hardcode for Danish pages
         <!-- AI Consulting -->
         <div class="card service-card">
           <div class="card-icon card-icon-image">
-            <img src="/images/icon-ai-consulting.webp" alt="AI Consulting" loading="lazy" />
+            <img src="/images/icon-ai-consulting.webp" alt="AI-rådgivning" loading="lazy" />
           </div>
           <h3 class="card-title">{t('services.aiConsulting', lang)}</h3>
           <p class="card-text">{t('services.aiConsultingDesc', lang)}</p>
@@ -100,7 +100,7 @@ const prefix = '/da';  // Hardcode for Danish pages
         <!-- Workshops -->
         <div class="card service-card">
           <div class="card-icon card-icon-image">
-            <img src="/images/icon-workshops.webp" alt="AI Workshops" loading="lazy" />
+            <img src="/images/icon-workshops.webp" alt="AI-workshops" loading="lazy" />
           </div>
           <h3 class="card-title">{t('services.workshops', lang)}</h3>
           <p class="card-text">{t('services.workshopsDesc', lang)}</p>
@@ -145,7 +145,7 @@ const prefix = '/da';  // Hardcode for Danish pages
         <!-- Meta Advertising -->
         <div class="card">
           <div class="card-icon card-icon-image">
-            <img src="/images/icon-meta-ads.webp" alt="Meta Advertising" loading="lazy" />
+            <img src="/images/icon-meta-ads.webp" alt="Meta-annoncering" loading="lazy" />
           </div>
           <h4 class="card-title">{t('nav.metaAds', lang)}</h4>
           <p class="card-text">{t('marketing.metaAds', lang)}</p>
@@ -155,7 +155,7 @@ const prefix = '/da';  // Hardcode for Danish pages
         <!-- Web Design -->
         <div class="card">
           <div class="card-icon card-icon-image">
-            <img src="/images/icon-webdesign.webp" alt="Web Design" loading="lazy" />
+            <img src="/images/icon-webdesign.webp" alt="Webdesign" loading="lazy" />
           </div>
           <h4 class="card-title">{t('nav.webdesign', lang)}</h4>
           <p class="card-text">{t('marketing.webDesign', lang)}</p>
@@ -175,7 +175,7 @@ const prefix = '/da';  // Hardcode for Danish pages
         <!-- Analytics -->
         <div class="card">
           <div class="card-icon card-icon-image">
-            <img src="/images/icon-analytics.webp" alt="Analytics" loading="lazy" />
+            <img src="/images/icon-analytics.webp" alt="Analyse" loading="lazy" />
           </div>
           <h4 class="card-title">{t('marketing.analytics', lang)}</h4>
           <p class="card-text">{t('marketing.analyticsDesc', lang)}</p>
@@ -355,7 +355,7 @@ const prefix = '/da';  // Hardcode for Danish pages
             </div>
 
             <div class="form-group">
-              <label class="form-label" for="contact-email">Email *</label>
+              <label class="form-label" for="contact-email">E-mail *</label>
               <input type="email" id="contact-email" name="email" class="form-input" required />
             </div>
 
@@ -370,7 +370,7 @@ const prefix = '/da';  // Hardcode for Danish pages
                 <option value="">{t('contact.selectService', lang)}</option>
                 <option value="vibecoding">Vibecoding</option>
                 <option value="ai-consulting">{t('services.aiConsulting', lang)}</option>
-                <option value="workshops">AI Workshops</option>
+                <option value="workshops">AI-workshops</option>
                 <option value="seo">SEO</option>
                 <option value="google-ads">Google Ads</option>
                 <option value="meta-ads">{t('nav.metaAds', lang)}</option>
@@ -409,7 +409,7 @@ const prefix = '/da';  // Hardcode for Danish pages
       const service = formData.get('service');
       const message = formData.get('message');
 
-      const mailtoLink = `mailto:contact@manoga.digital?subject=Contact from ${name}&body=Name: ${name}%0D%0AEmail: ${email}%0D%0APhone: ${phone}%0D%0AService: ${service}%0D%0A%0D%0AMessage:%0D%0A${message}`;
+      const mailtoLink = `mailto:contact@manoga.digital?subject=Kontakt fra ${name}&body=Navn: ${name}%0D%0AE-mail: ${email}%0D%0ATelefon: ${phone}%0D%0AYdelse: ${service}%0D%0A%0D%0ABesked:%0D%0A${message}`;
       window.location.href = mailtoLink;
     });
   }
