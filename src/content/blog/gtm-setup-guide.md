@@ -1,7 +1,7 @@
 ---
 title: "How to Set Up Google Tag Manager from Scratch"
 description: "A step-by-step guide to creating a Google Tag Manager account, installing the container snippet on your website, verifying the installation, and deploying your first tag."
-date: "2026-02-11"
+date: "2026-02-07"
 category: "gtm"
 image: "/images/blog/gtm-setup-guide.svg"
 author: "Kenneth Abueg"

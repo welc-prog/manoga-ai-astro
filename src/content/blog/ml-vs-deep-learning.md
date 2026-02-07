@@ -1,7 +1,7 @@
 ---
 title: "Machine Learning vs Deep Learning Explained"
 description: "A clear breakdown of the differences between machine learning and deep learning, including when to use each approach and how they relate to artificial intelligence."
-date: "2026-02-10"
+date: "2026-02-07"
 category: "ai"
 image: "/images/blog/ml-vs-deep-learning.svg"
 author: "Kenneth Abueg"

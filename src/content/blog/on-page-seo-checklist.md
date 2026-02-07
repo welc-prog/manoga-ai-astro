@@ -1,7 +1,7 @@
 ---
 title: "On-Page SEO: The Ultimate Checklist for 2026"
 description: "Master every on-page SEO element with this comprehensive checklist covering title tags, meta descriptions, heading structure, internal linking, and image optimization."
-date: "2026-02-10"
+date: "2026-02-07"
 category: "seo"
 image: "/images/blog/on-page-seo-checklist.svg"
 author: "Kenneth Abueg"

@@ -1,7 +1,7 @@
 ---
 title: "What is Claude Code? AI-Powered Development"
 description: "Discover Claude Code, Anthropic's official CLI for AI-assisted development. Learn what makes it different from chatbot AI and why developers are adopting it."
-date: "2026-02-09"
+date: "2026-02-06"
 category: "claude-code"
 image: "/images/blog/what-is-claude-code.svg"
 author: "Kenneth Abueg"

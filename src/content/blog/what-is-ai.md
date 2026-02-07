@@ -1,7 +1,7 @@
 ---
 title: "What is Artificial Intelligence? A Plain-English Guide"
 description: "A straightforward introduction to artificial intelligence covering what it is, how it works, the different types, and how it shows up in everyday life."
-date: "2026-02-08"
+date: "2026-02-06"
 category: "ai"
 image: "/images/blog/what-is-ai.svg"
 author: "Kenneth Abueg"

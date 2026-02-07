@@ -1,7 +1,7 @@
 ---
 title: "What is SEO? A Complete Beginner's Guide"
 description: "Learn the fundamentals of Search Engine Optimization, how search engines work, why SEO matters for every website, and the essential terminology you need to get started."
-date: "2026-02-08"
+date: "2026-02-06"
 category: "seo"
 image: "/images/blog/what-is-seo.svg"
 author: "Kenneth Abueg"

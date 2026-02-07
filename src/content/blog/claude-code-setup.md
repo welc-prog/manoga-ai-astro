@@ -1,7 +1,7 @@
 ---
 title: "Getting Started with Claude Code: Setup Guide"
 description: "A step-by-step guide to installing Claude Code, configuring your environment, choosing the right model, and running your first AI-assisted coding session."
-date: "2026-02-11"
+date: "2026-02-07"
 category: "claude-code"
 image: "/images/blog/claude-code-setup.svg"
 author: "Kenneth Abueg"

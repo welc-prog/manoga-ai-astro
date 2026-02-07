@@ -1,7 +1,7 @@
 ---
 title: "What is Google Tag Manager? A Beginner's Guide"
 description: "Learn what Google Tag Manager is, why it exists, and how tags, triggers, and variables work together to streamline your website tracking without touching code."
-date: "2026-02-09"
+date: "2026-02-06"
 category: "gtm"
 image: "/images/blog/what-is-gtm.svg"
 author: "Kenneth Abueg"
