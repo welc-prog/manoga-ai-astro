@@ -1,6 +1,6 @@
 ---
 title: "Custom HTML Tags: Advanced GTM Techniques"
-description: "Master Custom HTML tags in Google Tag Manager for advanced tracking, third-party integrations, and dynamic scripts, with security best practices and real-world examples."
+description: "Master Custom HTML tags in GTM for advanced tracking and integrations. Includes security best practices, performance tips, and real-world examples."
 date: "2026-03-15"
 category: "gtm"
 image: "/images/blog/gtm-custom-html-tags.svg"
@@ -8,7 +8,7 @@ author: "Kenneth Abueg"
 tags: ["gtm", "custom html", "javascript", "advanced", "tracking"]
 ---
 
-Custom HTML tags are the most powerful and most dangerous feature in Google Tag Manager. They let you execute arbitrary JavaScript and HTML within your GTM container, opening the door to virtually any tracking implementation, third-party integration, or custom functionality. But that same flexibility means they can introduce security vulnerabilities, performance issues, and hard-to-debug problems if used carelessly.
+Custom HTML tags are the most powerful and most dangerous feature in [Google Tag Manager](/blog/what-is-gtm). They let you execute arbitrary JavaScript and HTML within your GTM container, opening the door to virtually any tracking implementation, third-party integration, or custom functionality. But that same flexibility means they can introduce security vulnerabilities, [performance issues](/blog/gtm-performance), and hard-to-debug problems if used carelessly.
 
 This guide covers when to use Custom HTML tags, how to write them well, security considerations, and practical examples for common use cases.
 
@@ -44,7 +44,7 @@ Always wrap your code in an Immediately Invoked Function Expression (IIFE). This
 
 ### Using GTM Variables in Custom HTML
 
-You can reference GTM variables inside Custom HTML tags using the double curly brace syntax:
+You can reference [GTM variables](/blog/gtm-variables-guide) inside Custom HTML tags using the double curly brace syntax:
 
 ```html
 <script>
@@ -259,7 +259,7 @@ A Custom HTML tag should do one thing. If your tag is growing beyond 30-40 lines
 
 ### GTM Preview Mode
 
-In Preview mode, Custom HTML tags show in the Tags Fired section like any other tag. However, you do not see their internal execution details. Use `console.log` statements during development to trace execution flow.
+In [Preview mode](/blog/gtm-debug-mode), Custom HTML tags show in the Tags Fired section like any other tag. However, you do not see their internal execution details. Use `console.log` statements during development to trace execution flow.
 
 ### Browser Console
 

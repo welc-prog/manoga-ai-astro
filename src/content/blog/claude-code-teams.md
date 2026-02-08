@@ -1,6 +1,6 @@
 ---
 title: "Using Claude Code in Team Environments"
-description: "Practical strategies for integrating Claude Code into team workflows, including shared configurations, coding standards enforcement, and collaborative development."
+description: "Integrate Claude Code into team workflows with shared configurations, coding standards enforcement, and collaboration strategies."
 date: "2026-03-13"
 category: "claude-code"
 image: "/images/blog/claude-code-teams.svg"
@@ -8,7 +8,7 @@ author: "Kenneth Abueg"
 tags: ["claude-code", "teams", "collaboration", "standards", "workflow"]
 ---
 
-Individual developers adopt Claude Code quickly because the benefits are immediate and personal. Teams face a different challenge. When multiple developers use Claude Code on the same codebase, consistency, standards, and coordination become critical. Without shared configuration, one developer's Claude Code session might produce code that follows different patterns than another's. This article covers how to successfully integrate Claude Code into team development workflows.
+Individual developers adopt Claude Code quickly because the benefits are immediate and personal. Teams face a different challenge. When multiple developers use Claude Code on the same codebase, consistency, standards, and coordination become critical. Without shared configuration, one developer's Claude Code session might produce code that follows different patterns than another's. Learn more about [customizing with CLAUDE.md](/blog/claude-code-customization). This article covers how to successfully integrate Claude Code into team development workflows.
 
 ## Shared Configuration as a Team Standard
 
@@ -89,7 +89,7 @@ New developers get oriented quickly, and the AI provides context-sensitive guida
 
 ## Code Review Standardization
 
-One of the biggest consistency challenges in teams is code review quality. Different reviewers focus on different things, and busy reviewers sometimes approve PRs with minimal scrutiny.
+One of the biggest consistency challenges in teams is code review quality. Different reviewers focus on different things, and busy reviewers sometimes approve PRs with minimal scrutiny. See [code review best practices](/blog/code-reviews-claude-code) for comprehensive guidance.
 
 Claude Code creates a consistent review baseline by checking every PR against the same criteria:
 
@@ -105,7 +105,7 @@ Claude Code creates a consistent review baseline by checking every PR against th
 
 This pre-review catches the mechanical issues that should not consume human review time. The human reviewer then focuses on design decisions, business logic correctness, and knowledge sharing, the aspects where human judgment matters most.
 
-Teams can standardize this by including review checklists in their `CLAUDE.md`:
+Teams can standardize this by including review checklists in their `CLAUDE.md`. For security-specific checks, see [security best practices](/blog/claude-code-security):
 
 ```markdown
 ## PR Review Checklist

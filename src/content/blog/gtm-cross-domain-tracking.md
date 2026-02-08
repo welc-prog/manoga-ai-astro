@@ -1,6 +1,6 @@
 ---
 title: "Cross-Domain Tracking with GTM"
-description: "Set up cross-domain tracking in Google Tag Manager and GA4 to maintain user sessions across multiple domains, with configuration steps, testing methods, and troubleshooting tips."
+description: "Set up cross-domain tracking in GTM and GA4 to maintain user sessions across domains. Includes configuration, testing, and troubleshooting tips."
 date: "2026-03-13"
 category: "gtm"
 image: "/images/blog/gtm-cross-domain-tracking.svg"
@@ -10,7 +10,7 @@ tags: ["gtm", "cross-domain", "ga4", "tracking", "sessions"]
 
 When your business operates across multiple domains, tracking a user's journey from one domain to another becomes a technical challenge. By default, each domain is treated as a separate website in analytics. A user who starts on `www.example.com` and then moves to `shop.example-store.com` to complete a purchase appears as two separate users with two separate sessions. This breaks attribution, inflates user counts, and makes conversion path analysis unreliable.
 
-Cross-domain tracking solves this by passing a user identifier between domains, allowing GA4 to recognize the same user across different domain boundaries.
+Cross-domain tracking solves this by passing a user identifier between domains, allowing [GA4 to recognize](/blog/ga4-gtm-integration) the same user across different domain boundaries.
 
 For the official GA4 cross-domain documentation, see [support.google.com/analytics/answer/10071811](https://support.google.com/analytics/answer/10071811).
 
@@ -63,7 +63,7 @@ This tells GA4 which domains to decorate outbound links for and which incoming `
 
 ### Step 2: Verify GTM Configuration
 
-Your GA4 configuration tag in GTM should use the same Measurement ID across all domains. If each domain has its own GTM container, ensure they all contain a GA4 configuration tag with the identical Measurement ID.
+Your GA4 configuration tag in GTM should use the same Measurement ID across all domains. If each domain has its own [GTM container](/blog/gtm-setup-guide), ensure they all contain a GA4 configuration tag with the identical Measurement ID.
 
 If you use a single GTM container across multiple domains, no additional GTM changes are needed. The cross-domain configuration in GA4 handles the linker parameter injection automatically.
 
@@ -106,7 +106,7 @@ Thorough testing is essential because cross-domain issues are subtle and easy to
 3. Click a link that navigates to your secondary domain.
 4. Check the URL in the address bar. You should see a `_gl` parameter appended.
 
-If the `_gl` parameter is missing, the cross-domain configuration is not working. Check your GA4 domain settings and ensure the GA4 tag is loading correctly on the source page.
+If the `_gl` parameter is missing, the cross-domain configuration is not working. Check your GA4 domain settings and ensure the GA4 tag is loading correctly on the source page. Use [GTM debug mode](/blog/gtm-debug-mode) to verify tag firing.
 
 ### Step 2: Verify Session Continuity
 

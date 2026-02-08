@@ -36,7 +36,7 @@ For code review before creating a pull request:
 > Run the pr-reviewer agent on the current branch
 ```
 
-The PR reviewer agent examines all changes, checks them against common issues, verifies test coverage, and produces a structured review with actionable findings.
+The PR reviewer agent examines all changes, checks them against common issues, verifies test coverage, and produces a structured review with actionable findings. For manual reviews, see [code review best practices](/blog/code-reviews-claude-code).
 
 For security analysis after implementing a feature:
 
@@ -44,7 +44,7 @@ For security analysis after implementing a feature:
 > Run the chaos-monkey agent against the new authentication module
 ```
 
-The chaos-monkey agent thinks adversarially. It tries to find ways to break your code, bypass security measures, and exploit edge cases. It is deliberately aggressive in its testing approach.
+The chaos-monkey agent thinks adversarially. It tries to find ways to break your code, bypass security measures, and exploit edge cases. It is deliberately aggressive in its testing approach. For comprehensive security guidance, see [security best practices](/blog/claude-code-security).
 
 For test coverage analysis:
 
@@ -56,7 +56,7 @@ The test-architect agent reads your source code and existing tests, identifies u
 
 ## Creating Custom Agents
 
-The built-in agents cover common needs, but the real power comes from creating agents tailored to your specific workflow and project.
+The built-in agents cover common needs, but the real power comes from creating agents tailored to your specific workflow and project. Learn more about [configuration in CLAUDE.md](/blog/claude-code-customization).
 
 Custom agents are defined in configuration files that specify the agent's behavior:
 

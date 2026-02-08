@@ -1,6 +1,6 @@
 ---
 title: "What is Artificial Intelligence? A Plain-English Guide"
-description: "A straightforward introduction to artificial intelligence covering what it is, how it works, the different types, and how it shows up in everyday life."
+description: "A practical introduction to artificial intelligence covering what it is, how it works, different types, and everyday applications."
 date: "2026-02-06"
 category: "ai"
 image: "/images/blog/what-is-ai.svg"
@@ -22,7 +22,7 @@ Modern AI systems excel at narrow, well-defined tasks. A language model can writ
 
 Researchers generally categorize AI into three levels based on capability, and understanding these levels helps set realistic expectations about what the technology can and cannot do.
 
-**Narrow AI** (also called weak AI) is the only type that exists today. These systems are designed and trained for a specific task. Your email spam filter is narrow AI. Voice assistants like Siri and Alexa are narrow AI. The language model behind Claude is narrow AI, albeit an extraordinarily capable one. Narrow AI can outperform humans at its designated task, but it cannot transfer that ability to unrelated problems without retraining.
+**Narrow AI** (also called weak AI) is the only type that exists today. These systems are designed and trained for a specific task. Your email spam filter is narrow AI. Voice assistants like Siri and Alexa are narrow AI. [Large language models](/blog/how-llms-work) like Claude are narrow AI, albeit extraordinarily capable. Narrow AI can outperform humans at its designated task, but it cannot transfer that ability to unrelated problems without retraining.
 
 **General AI** (also called strong AI or AGI) would be a system with the ability to understand, learn, and apply intelligence across any domain, much like a human. AGI remains a theoretical concept. Despite significant advances in large language models and multimodal systems, no existing AI system demonstrates true general intelligence. Researchers disagree about when or whether AGI will be achieved.
 
@@ -30,11 +30,11 @@ Researchers generally categorize AI into three levels based on capability, and u
 
 ## How AI Works at a High Level
 
-Most modern AI systems are built on [machine learning](https://ai.google/discover/machine-learning/), a subset of AI where systems learn from data rather than following explicitly programmed rules. The basic process works like this.
+Most modern AI systems are built on machine learning, a subset of AI where systems learn from data rather than following explicitly programmed rules. The basic process works like this.
 
 First, you collect a large dataset relevant to the task. If you want an AI that recognizes cats in photos, you need thousands of images labeled "cat" and "not cat." If you want a language model, you need billions of words of text.
 
-Second, you choose a model architecture. This is the mathematical structure that will process the data. For images, convolutional neural networks are common. For text, transformer architectures have become dominant.
+Second, you choose a model architecture. This is the mathematical structure that will process the data. For images, [convolutional neural networks](/blog/understanding-neural-networks) are common. For text, transformer architectures have become dominant.
 
 Third, you train the model. During training, the system processes the data, makes predictions, compares those predictions to the correct answers, and adjusts its internal parameters to improve. This cycle repeats millions or billions of times.
 
@@ -64,7 +64,7 @@ Several factors have converged to make AI more capable and more accessible than 
 
 The result is that AI has moved from research labs into mainstream products and business operations. Companies use AI to automate customer service, analyze market trends, optimize supply chains, and generate content. Individuals use AI assistants to write emails, summarize documents, debug code, and brainstorm ideas.
 
-This accessibility also raises important questions about fairness, privacy, job displacement, and safety. As AI becomes more embedded in decisions that affect people's lives, from hiring to healthcare to criminal justice, the need for thoughtful governance and ethical guidelines grows more urgent.
+This accessibility also raises important questions about fairness, privacy, job displacement, and safety. As AI becomes more embedded in decisions that affect people's lives, from hiring to healthcare to criminal justice, the need for [thoughtful governance and ethical guidelines](/blog/ai-ethics-guide) grows more urgent.
 
 Understanding what AI is and how it works is the first step toward engaging with these questions productively. Whether you are a business leader evaluating AI tools, a developer building AI-powered features, or simply someone who wants to make informed decisions about the technology shaping the world, a clear-eyed understanding of AI's capabilities and limitations is essential.
 

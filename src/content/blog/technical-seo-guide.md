@@ -1,6 +1,6 @@
 ---
 title: "Technical SEO: Optimizing Your Site Architecture"
-description: "A comprehensive guide to technical SEO covering crawlability, indexing, site structure, XML sitemaps, robots.txt, and the infrastructure foundations that search engines depend on."
+description: "Comprehensive technical SEO guide covering crawlability, indexing, site structure, XML sitemaps, robots.txt, and infrastructure essentials."
 date: "2026-02-12"
 category: "seo"
 image: "/images/blog/technical-seo-guide.svg"
@@ -8,7 +8,7 @@ author: "Kenneth Abueg"
 tags: ["seo", "technical seo", "crawlability", "site architecture", "sitemaps"]
 ---
 
-Technical SEO is the backbone of your search visibility. You can write the most compelling content on the internet, but if search engines cannot crawl, understand, and index your pages efficiently, that content will never reach its audience. Technical SEO ensures the infrastructure of your website supports every other optimization effort you make.
+Technical SEO is the backbone of your search visibility. You can write the most compelling content on the internet, but if search engines cannot crawl, understand, and index your pages efficiently, that content will never reach its audience. Technical SEO ensures the infrastructure of your website supports every other optimization effort you make, complementing your [on-page SEO](/blog/on-page-seo-checklist) strategy.
 
 This guide walks through the critical components of technical SEO, from how search engines discover your pages to how your site architecture influences rankings.
 
@@ -66,11 +66,11 @@ For large sites, use a sitemap index file that references multiple individual si
 
 Technical SEO also encompasses the performance and security fundamentals that influence both rankings and user experience.
 
-**Page speed is a ranking factor.** Slow-loading pages frustrate users and receive less favorable treatment in search results. Optimize server response times, minimize render-blocking resources, compress images, and leverage browser caching. Core Web Vitals, which measure loading performance, interactivity, and visual stability, are a direct ranking signal.
+**Page speed is a ranking factor.** Slow-loading pages frustrate users and receive less favorable treatment in search results. Optimize server response times, minimize render-blocking resources, compress images, and leverage browser caching. [Core Web Vitals](/blog/core-web-vitals-guide), which measure loading performance, interactivity, and visual stability, are a direct ranking signal.
 
 **HTTPS is non-negotiable.** Google confirmed HTTPS as a ranking signal years ago, and modern browsers actively warn users about insecure sites. Ensure your entire site is served over HTTPS, with proper redirects from HTTP to HTTPS and no mixed content warnings.
 
-**Structured data** helps search engines understand the meaning behind your content. Implementing schema markup using JSON-LD enables rich results like review stars, FAQ accordions, and event listings. While structured data does not directly boost rankings, the enhanced search appearance it provides can significantly improve click-through rates.
+**Structured data** helps search engines understand the meaning behind your content. Implementing [schema markup](/blog/schema-markup-guide) using JSON-LD enables rich results like review stars, FAQ accordions, and event listings. While structured data does not directly boost rankings, the enhanced search appearance it provides can significantly improve click-through rates.
 
 **Render your content for crawlers.** If your site relies heavily on JavaScript to display content, ensure that Google can render it properly. Use server-side rendering or static generation where possible. Test how Google sees your pages using the URL Inspection tool in Search Console.
 

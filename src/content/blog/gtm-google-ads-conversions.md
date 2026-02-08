@@ -1,6 +1,6 @@
 ---
 title: "Google Ads Conversion Tracking with GTM"
-description: "Set up Google Ads conversion tracking through GTM, including the conversion linker tag, conversion tracking tags, enhanced conversions, and remarketing audiences."
+description: "Set up Google Ads conversion tracking through GTM: conversion linker, tracking tags, enhanced conversions, and remarketing."
 date: "2026-03-05"
 category: "gtm"
 image: "/images/blog/gtm-google-ads-conversions.svg"
@@ -8,7 +8,7 @@ author: "Kenneth Abueg"
 tags: ["gtm", "google ads", "conversion tracking", "remarketing", "ppc"]
 ---
 
-Conversion tracking is the bridge between your Google Ads spend and your business results. Without it, you are spending money on clicks with no visibility into which clicks lead to valuable outcomes. Google Tag Manager makes implementing and managing Google Ads conversion tracking straightforward, and it keeps your tracking flexible as campaigns evolve.
+Conversion tracking is the bridge between your Google Ads spend and your business results. Without it, you are spending money on clicks with no visibility into which clicks lead to valuable outcomes. Google Tag Manager makes implementing and managing Google Ads conversion tracking straightforward, and it keeps your tracking flexible as campaigns evolve. Before starting, ensure you have [completed your GTM setup](/blog/gtm-setup-guide).
 
 This guide covers the complete setup: the Conversion Linker tag that makes everything work, individual conversion tracking tags, enhanced conversions for better attribution, and remarketing tags for audience building.
 
@@ -64,7 +64,7 @@ Before creating the tag in GTM, get the conversion details from Google Ads:
 
 ### Purchase Conversion Example
 
-**Data layer push (on confirmation page):**
+**Data layer push (on confirmation page).** For complete e-commerce tracking setup, see our [e-commerce tracking guide](/blog/gtm-ecommerce-tracking):
 
 ```javascript
 dataLayer.push({
@@ -172,7 +172,7 @@ Conversion tags require careful testing because errors directly affect your ad s
 
 ### GTM Preview Mode
 
-1. Enter Preview mode and navigate to the page where the conversion fires.
+1. Enter Preview mode and navigate to the page where the conversion fires. For complete testing procedures, see our [debug mode guide](/blog/gtm-debug-mode).
 2. Trigger the conversion action (submit a form, complete a test purchase).
 3. In Tag Assistant, verify:
    - The Conversion Linker tag fired on page load.

@@ -1,6 +1,6 @@
 ---
 title: "International SEO: Reaching Global Audiences"
-description: "A complete guide to international SEO covering hreflang tags, country targeting, URL structure decisions, and content localization strategies for multi-regional and multilingual websites."
+description: "Complete guide to international SEO covering hreflang tags, country targeting, URL structures, and localization for global websites."
 date: "2026-03-06"
 category: "seo"
 image: "/images/blog/international-seo.svg"
@@ -18,7 +18,7 @@ The URL structure for your international content is one of the most consequentia
 
 **Country-code top-level domains (ccTLDs)** like example.de for Germany or example.fr for France send the strongest geographic signal. Each domain is clearly associated with a specific country. However, each ccTLD builds domain authority independently, meaning you start from scratch in each market rather than leveraging your existing domain strength.
 
-**Subdirectories** like example.com/de/ or example.com/fr/ keep all content on a single domain, consolidating authority. This is the most popular approach and the one Google's documentation tends to favor for most situations. Subdirectories are easier to set up and maintain than separate domains, and all link equity benefits the same root domain.
+**Subdirectories** like example.com/de/ or example.com/fr/ keep all content on a single domain, consolidating authority. This is the most popular approach and the one Google's documentation tends to favor for most situations. Subdirectories are easier to set up and maintain than separate domains, and all link equity benefits the same root domain. This is a crucial [technical SEO consideration](/blog/technical-seo-guide).
 
 **Subdomains** like de.example.com or fr.example.com offer a middle ground. They provide some geographic signal and allow independent hosting or configuration per market. However, subdomains are treated more independently by Google than subdirectories, meaning they do not fully benefit from the root domain's authority.
 
@@ -42,7 +42,7 @@ Hreflang can be implemented in three ways: as link elements in the HTML head sec
 
 Translation converts words from one language to another. Localization adapts content for a specific market's culture, conventions, expectations, and search behavior. Effective international SEO requires localization, not just translation.
 
-**Search behavior differs by market.** The keywords people use to search for the same thing vary between languages and even between regions that share a language. "Trainers" in British English, "sneakers" in American English, and "Turnschuhe" in German all refer to athletic shoes. Keyword research must be conducted independently for each target market.
+**Search behavior differs by market.** The keywords people use to search for the same thing vary between languages and even between regions that share a language. "Trainers" in British English, "sneakers" in American English, and "Turnschuhe" in German all refer to athletic shoes. [Keyword research](/blog/keyword-research-guide) must be conducted independently for each target market.
 
 **Cultural references and examples need adaptation.** A case study featuring a US company may not resonate with a Japanese audience. Currencies, date formats, measurement units, and cultural norms all require consideration. Content that feels foreign or out of touch signals to users and search engines that it was not created with that market in mind.
 
@@ -50,7 +50,7 @@ Translation converts words from one language to another. Localization adapts con
 
 **Avoid machine translation without human review.** While machine translation has improved dramatically, it still produces content that reads unnaturally and can contain errors that damage credibility. At minimum, have a native speaker review and refine any machine-translated content. For important pages, invest in professional localization.
 
-Consider which content to localize versus which to create fresh for each market. Some content, like product descriptions and evergreen guides, may translate well with localization adjustments. Other content, like market-specific case studies or region-specific advice, may need to be created from scratch.
+Consider which content to localize versus which to create fresh for each market. Some content, like product descriptions and evergreen guides, may translate well with localization adjustments. Other content, like market-specific case studies or region-specific advice, may need to be created from scratch. Your international [SEO content strategy](/blog/seo-content-strategy) should account for these differences.
 
 ## Country Targeting and Geolocation
 

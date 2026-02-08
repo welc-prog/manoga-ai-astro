@@ -1,6 +1,6 @@
 ---
 title: "SEO Myths Debunked: What Actually Matters"
-description: "Separate SEO fact from fiction by debunking the most persistent myths including keyword density, meta keywords, duplicate content penalties, and other common misconceptions."
+description: "Separate SEO fact from fiction by debunking persistent myths like keyword density, meta keywords, and duplicate content penalties."
 date: "2026-03-16"
 category: "seo"
 image: "/images/blog/seo-myths-debunked.svg"
@@ -8,7 +8,7 @@ author: "Kenneth Abueg"
 tags: ["seo", "seo myths", "misconceptions", "best practices", "google ranking"]
 ---
 
-The SEO industry is plagued by myths, outdated advice, and misconceptions that refuse to die. Some of these myths were once true but became obsolete as search engines evolved. Others were never true but spread through repetition until they became accepted wisdom. Following outdated or incorrect SEO advice wastes time at best and actively harms your rankings at worst.
+The SEO industry is plagued by myths, outdated advice, and misconceptions that refuse to die. Some of these myths were once true but became obsolete as search engines evolved. Others were never true but spread through repetition until they became accepted wisdom. Following outdated or incorrect SEO advice wastes time at best and actively harms your rankings at worst. Understanding [what SEO actually is](/blog/what-is-seo) helps you separate fact from fiction.
 
 This article debunks the most persistent SEO myths and replaces them with what actually matters in 2026. Google's [SEO starter guide](https://developers.google.com/search/docs/fundamentals/seo-starter-guide) remains the most authoritative source for understanding what Google recommends and what it does not.
 
@@ -16,11 +16,11 @@ This article debunks the most persistent SEO myths and replaces them with what a
 
 Few SEO myths are as persistent as the idea that keywords must appear at a specific percentage or frequency within your content. The claim typically suggests an optimal keyword density of two to three percent, meaning the target keyword should appear two to three times per hundred words.
 
-**The truth:** Google does not use keyword density as a ranking signal. John Mueller of Google has explicitly stated this on multiple occasions. Google's algorithms are sophisticated enough to understand topical relevance through semantic analysis rather than keyword counting. They understand synonyms, related concepts, and the overall meaning of your content without needing you to repeat the same phrase at specific intervals.
+**The truth:** Google does not use keyword density as a ranking signal. John Mueller of Google has explicitly stated this on multiple occasions. [Google's algorithms](/blog/how-google-algorithm-works) are sophisticated enough to understand topical relevance through semantic analysis rather than keyword counting. They understand synonyms, related concepts, and the overall meaning of your content without needing you to repeat the same phrase at specific intervals.
 
 What matters is natural, comprehensive coverage of your topic. If you write a thorough article about dog training, the relevant keywords will appear naturally because you are discussing the subject in depth. Artificially inflating keyword frequency makes content read awkwardly and can trigger spam filters.
 
-**What to do instead:** Write naturally and comprehensively. Include your primary keyword in the title tag, H1 heading, and naturally within the content. But focus on covering the topic thoroughly rather than hitting an arbitrary percentage. Use related terms and natural language variations rather than repeating the exact same phrase.
+**What to do instead:** Write naturally and comprehensively. Include your primary keyword in the title tag, H1 heading, and naturally within the content. But focus on covering the topic thoroughly rather than hitting an arbitrary percentage. Use related terms and natural language variations rather than repeating the exact same phrase. Proper [keyword research](/blog/keyword-research-guide) focuses on intent, not density.
 
 ## The Meta Keywords Myth
 

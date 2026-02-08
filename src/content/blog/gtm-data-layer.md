@@ -36,7 +36,7 @@ The data layer is not a simple variable. It is a message queue. When you push an
 
 ## Pushing Events to the Data Layer
 
-The most common use of the data layer is pushing custom events. An event tells GTM that something happened, which can then trigger tags to fire.
+The most common use of the data layer is pushing custom events. An event tells GTM that something happened, which can then trigger tags to fire. For detailed guidance on implementing [custom events in GTM](/blog/gtm-custom-events), see our comprehensive custom events guide.
 
 ### Basic Event Push
 
@@ -94,7 +94,7 @@ Setting `ecommerce` to `null` first ensures that any leftover data from a previo
 
 ## Reading Data Layer Values in GTM
 
-To use data layer values in your tags, you create Data Layer Variables in GTM.
+To use data layer values in your tags, you create Data Layer Variables in GTM. For a complete overview of [GTM variables](/blog/gtm-variables-guide), including data layer variables, see our variables guide.
 
 ### Creating a Data Layer Variable
 
@@ -194,7 +194,7 @@ Tracking errors through the data layer allows you to create GA4 events for 404 p
 
 **Validate your data layer.** Before relying on data layer values in production, verify them using GTM's preview mode. The Data Layer tab in Tag Assistant shows the current state of the data layer after each event, making it easy to confirm values are correct.
 
-**Use the `event` key to drive triggers.** While you can push data without an event, including an event key gives GTM an explicit signal to evaluate triggers. This is more reliable than depending on timing or page state.
+**Use the `event` key to drive triggers.** While you can push data without an event, including an event key gives GTM an explicit signal to evaluate [triggers](/blog/gtm-triggers-guide). This is more reliable than depending on timing or page state.
 
 **Plan your data layer architecture upfront.** Retrofitting a data layer onto an existing site is much harder than building it into the initial implementation. Work with your development team to define the data layer specification before development begins. Document which events fire on which pages, what data accompanies each event, and how the data layer changes during user interactions.
 

@@ -12,7 +12,7 @@ The market for AI tools has exploded. Every software vendor has added "AI-powere
 
 ## Defining Your Requirements First
 
-The most common mistake in AI tool selection is starting with the technology rather than the problem. Before evaluating any tool, invest time in clearly defining what you need.
+The most common mistake in AI tool selection is starting with the technology rather than the problem. Before evaluating any tool, invest time in clearly defining what you need. This strategic approach aligns with broader [AI guidance for business leaders](/blog/ai-guide-for-leaders).
 
 Start with the business problem, not the technology. "We want to use AI" is not a requirement. "We need to reduce customer service response times from 4 hours to 30 minutes while maintaining satisfaction scores above 90 percent" is a requirement. Specific, measurable objectives make it possible to evaluate whether a tool actually delivers.
 
@@ -30,7 +30,7 @@ Once your requirements are clear, the first major decision is whether to build a
 
 **Build when** your problem is unique to your industry or organization, you have proprietary data that provides competitive advantage, existing tools cannot meet your performance requirements, and you have or can hire the necessary technical talent. Custom models make sense when off-the-shelf solutions cannot capture the domain specificity your business requires.
 
-**The hybrid approach** is increasingly popular and often the most practical. Use commercial AI platforms and APIs as building blocks while adding custom logic, integrations, and fine-tuning to fit your specific needs. For example, you might use a commercial language model API like [Claude](https://docs.anthropic.com/en/docs/about-claude/models) as the foundation and build custom workflows, prompts, and integrations around it.
+**The hybrid approach** is increasingly popular and often the most practical. Use commercial AI platforms and APIs as building blocks while adding custom logic, integrations, and fine-tuning to fit your specific needs. For example, you might use a commercial language model API like [Claude](https://docs.anthropic.com/en/docs/about-claude/models) as the foundation and build custom workflows, prompts, and integrations around it. Understanding [how large language models work](/blog/how-llms-work) helps in making these architectural decisions.
 
 The build-vs-buy calculation should include total cost of ownership, not just the initial price. Building a custom model involves ongoing costs for data management, model retraining, infrastructure, and specialized talent. Buying a commercial tool involves subscription fees, integration costs, and the risk of vendor lock-in.
 
@@ -62,7 +62,7 @@ AI tool costs extend well beyond the subscription or licensing fee. A realistic 
 
 **Opportunity costs** are the hardest to quantify but often the most significant. What else could your team be doing with the time and budget allocated to this AI implementation?
 
-A practical approach is to calculate the return on investment based on conservative estimates of benefit and generous estimates of cost. If the investment still makes sense under pessimistic assumptions, it is likely a sound decision.
+A practical approach is to calculate the return on investment based on conservative estimates of benefit and generous estimates of cost. Understanding [how AI reduces operational costs](/blog/ai-cost-reduction) provides useful benchmarks for realistic ROI expectations. If the investment still makes sense under pessimistic assumptions, it is likely a sound decision.
 
 ## Implementation Strategy
 

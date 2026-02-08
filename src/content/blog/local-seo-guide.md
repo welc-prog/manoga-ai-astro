@@ -1,6 +1,6 @@
 ---
 title: "Local SEO: Ranking for Near Me Searches"
-description: "Master local SEO with this guide covering Google Business Profile optimization, NAP consistency, local citations, review management, and strategies to dominate near-me searches."
+description: "Master local SEO: Google Business Profile optimization, NAP consistency, local citations, review management, and near-me search strategies."
 date: "2026-02-16"
 category: "seo"
 image: "/images/blog/local-seo-guide.svg"
@@ -8,7 +8,7 @@ author: "Kenneth Abueg"
 tags: ["seo", "local seo", "google business profile", "local search", "near me"]
 ---
 
-Local SEO is the practice of optimizing your online presence to attract customers from relevant local searches. When someone searches "coffee shop near me" or "plumber in Austin," Google delivers results tailored to their geographic location. For businesses that serve specific areas, local SEO is not optional. It is the difference between being found by nearby customers and being invisible to them.
+Local SEO is the practice of optimizing your online presence to attract customers from relevant local searches. When someone searches "coffee shop near me" or "plumber in Austin," Google delivers results tailored to their geographic location. For businesses that serve specific areas, local SEO is not optional. It is the difference between being found by nearby customers and being invisible to them. Understanding [basic SEO principles](/blog/what-is-seo) provides essential context for local optimization.
 
 Local search has its own ranking factors, its own ecosystem of tools and signals, and its own set of best practices that differ meaningfully from traditional SEO. This guide covers everything you need to dominate local search results.
 
@@ -36,7 +36,7 @@ NAP stands for Name, Address, and Phone number. Consistency of this information 
 
 **Update immediately when anything changes.** If you change your phone number, move locations, or rebrand, update every listing as quickly as possible. Outdated information frustrates potential customers and erodes Google's trust in your business data.
 
-Your website should prominently display your NAP information, ideally in the footer of every page and on a dedicated contact page. Use structured data markup to make this information machine-readable for search engines.
+Your website should prominently display your NAP information, ideally in the footer of every page and on a dedicated contact page. Use [structured data markup](/blog/schema-markup-guide) to make this information machine-readable for search engines.
 
 ## Local Citations and Directory Listings
 
@@ -68,7 +68,7 @@ The volume, velocity, and quality of your reviews all matter. A steady stream of
 
 Your website content should reinforce your local relevance. This goes beyond simply mentioning your city name on every page.
 
-**Create location-specific landing pages** if you serve multiple areas. Each page should have unique, valuable content about your services in that specific location. Avoid creating thin, duplicate pages that differ only in the city name.
+**Create location-specific landing pages** if you serve multiple areas. Each page should have unique, valuable content about your services in that specific location. Avoid creating thin, duplicate pages that differ only in the city name. Apply [on-page SEO best practices](/blog/on-page-seo-checklist) to each location page.
 
 **Publish locally relevant content.** Blog posts about local events, industry news affecting your area, community involvement, and local case studies all strengthen your geographic relevance. This content also attracts local backlinks, which are particularly valuable for local SEO.
 

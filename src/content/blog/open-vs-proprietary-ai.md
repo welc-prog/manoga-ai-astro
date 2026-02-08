@@ -1,6 +1,6 @@
 ---
 title: "Open Source vs Proprietary AI Models"
-description: "A balanced analysis of open source and proprietary AI models, comparing their trade-offs in capability, safety, cost, and control, with guidance on choosing the right approach."
+description: "Balanced analysis of open source vs proprietary AI models: comparing capability, safety, cost, and control trade-offs."
 date: "2026-03-16"
 category: "ai"
 image: "/images/blog/open-vs-proprietary-ai.svg"
@@ -26,9 +26,9 @@ The licensing terms also vary significantly. Some open-weight models use permiss
 
 Proprietary models offer several compelling advantages that explain their widespread adoption.
 
-**State-of-the-art capability** has historically been led by proprietary models. The companies behind proprietary models invest billions in training infrastructure, data curation, and research, and the resulting models generally represent the frontier of AI capability. For tasks that demand the highest possible quality, proprietary models have consistently led.
+**State-of-the-art capability** has historically been led by proprietary models. The companies behind proprietary models invest billions in training infrastructure, data curation, and research, and the resulting models generally represent the frontier of AI capability. Understanding [how large language models work](/blog/how-llms-work) helps in evaluating these capabilities. For tasks that demand the highest possible quality, proprietary models have consistently led.
 
-**Safety and alignment** receive significant investment in proprietary models. Companies like [Anthropic](https://www.anthropic.com/research) invest heavily in techniques like RLHF, Constitutional AI, and red teaming to make their models helpful while minimizing harmful outputs. This safety work is expensive and requires ongoing effort, and the results are integrated into the API-served models.
+**Safety and alignment** receive significant investment in proprietary models. Companies like [Anthropic](https://www.anthropic.com/research) invest heavily in techniques like RLHF, Constitutional AI, and red teaming to make their models helpful while minimizing harmful outputs. These [AI safety and alignment](/blog/ai-safety-alignment) practices are expensive and require ongoing effort, and the results are integrated into the API-served models.
 
 **Ease of use** is a practical advantage. API-based proprietary models require no infrastructure management, no model hosting, and no ML engineering expertise. You send a request, receive a response, and pay per use. For many organizations, especially those without AI infrastructure teams, this simplicity is decisive.
 
@@ -66,7 +66,7 @@ Both arguments have merit, and the appropriate balance likely depends on the spe
 
 ## Making the Decision
 
-For organizations choosing between open source and proprietary models, several factors should guide the decision.
+For organizations choosing between open source and proprietary models, several factors should guide the decision. This evaluation framework aligns with broader guidance on [choosing AI tools](/blog/choosing-ai-tools).
 
 **Evaluate your technical capabilities honestly.** Running open source models requires ML engineering expertise, GPU infrastructure, and operational capacity. If your team lacks these capabilities, proprietary APIs are the practical choice, at least initially.
 

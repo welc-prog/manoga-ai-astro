@@ -1,6 +1,6 @@
 ---
 title: "Recovering from a Google Algorithm Penalty"
-description: "Learn how to identify, diagnose, and recover from Google penalties including manual actions and algorithmic adjustments, with step-by-step recovery strategies and prevention tips."
+description: "Learn to identify, diagnose, and recover from Google penalties with step-by-step strategies for manual actions and algorithmic drops."
 date: "2026-03-12"
 category: "seo"
 image: "/images/blog/google-penalty-recovery.svg"
@@ -32,11 +32,11 @@ Before you can fix the problem, you need to understand exactly what caused it an
 
 **Analyze which pages are affected.** Is the drop site-wide or limited to specific sections? A site-wide drop suggests a fundamental issue with your site's quality or a manual action. A drop isolated to certain pages or sections suggests those specific pages have quality or optimization problems that a recent update surfaced.
 
-**Review your backlink profile.** If the drop coincides with a spam or link-related update, examine your backlinks for patterns of manipulation. Look for sudden spikes in low-quality links, links from irrelevant foreign language sites, links with over-optimized anchor text, and links from known link networks.
+**Review your backlink profile.** If the drop coincides with a spam or link-related update, examine your backlinks for patterns of manipulation. Look for sudden spikes in low-quality links, links from irrelevant foreign language sites, links with over-optimized anchor text, and links from known link networks. Understanding proper [link building strategies](/blog/link-building-strategies) helps you identify what looks manipulative.
 
 **Audit your content quality.** If the drop follows a core update or helpful content update, critically evaluate your content. Is it genuinely helpful, or was it created primarily to attract search traffic? Does it demonstrate real expertise and experience? Does it provide value that competing content does not? Be honest in this assessment.
 
-**Check for technical issues.** Sometimes what appears to be a penalty is actually a technical problem. A botched migration, a changed robots.txt file, accidental noindex tags, or server performance issues can all cause dramatic traffic drops that mimic penalties.
+**Check for technical issues.** Sometimes what appears to be a penalty is actually a technical problem. A botched migration, a changed robots.txt file, accidental noindex tags, or server performance issues can all cause dramatic traffic drops that mimic penalties. Run a thorough [technical SEO audit](/blog/technical-seo-guide) to rule out these issues.
 
 ## Recovering from Manual Actions
 
@@ -60,7 +60,7 @@ Algorithmic recovery is less straightforward because there is no specific violat
 
 **Improve content quality systematically.** Audit your content against Google's quality guidelines. Remove or substantially improve thin, outdated, or unhelpful content. Consolidate pages that cover the same topic into comprehensive, authoritative resources.
 
-**Strengthen E-E-A-T signals.** Add author bylines with detailed bios. Cite authoritative sources. Include original research, data, or expert perspectives. Make your expertise, experience, and credentials visible and verifiable.
+**Strengthen E-E-A-T signals.** Add author bylines with detailed bios. Cite authoritative sources. Include original research, data, or expert perspectives. Make your expertise, experience, and credentials visible and verifiable. Our guide on [E-E-A-T content quality](/blog/eeat-content-quality) provides detailed implementation steps.
 
 **Address user experience issues.** Improve page speed, fix mobile usability problems, eliminate intrusive interstitials, and ensure your site is easy to navigate. User experience improvements align with what Google's algorithms increasingly reward.
 

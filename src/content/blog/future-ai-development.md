@@ -1,6 +1,6 @@
 ---
 title: "The Future of AI-Assisted Development"
-description: "Explore where AI-assisted development is heading, what changes developers should prepare for, and how tools like Claude Code are shaping the future of software engineering."
+description: "Where AI development is heading, what developers should prepare for, and how Claude Code shapes software engineering's future."
 date: "2026-03-19"
 category: "claude-code"
 image: "/images/blog/future-ai-development.svg"
@@ -20,7 +20,7 @@ To understand where we are going, it helps to be clear about where we are. As of
 
 **Code review** by AI catches real bugs, security vulnerabilities, and quality issues. While not a replacement for human review, AI pre-review filters out mechanical issues and lets human reviewers focus on design and logic.
 
-**Agentic workflows** are becoming practical. Tools like Claude Code do not just answer questions. They execute multi-step tasks, make decisions about approach, and coordinate complex operations. The agent paradigm is still maturing, but it already handles workflows that were purely manual a year ago.
+**Agentic workflows** are becoming practical. Tools like Claude Code do not just answer questions. They execute multi-step tasks, make decisions about approach, and coordinate complex operations. Learn more about [agents](/blog/claude-code-agents). The agent paradigm is still maturing, but it already handles workflows that were purely manual a year ago.
 
 What we do not yet have is fully autonomous software development. AI tools work best with human direction, review, and judgment. They are collaborators, not replacements.
 
@@ -56,7 +56,7 @@ The developer role is not going away. It is changing. Understanding these change
 
 ### From Writing to Directing
 
-The balance of developer time is shifting from writing code to directing AI to write code and reviewing the results. This is not a diminishment of the role. Directing and reviewing are higher-level skills. A movie director does not hold the camera, but their judgment shapes the entire production.
+The balance of developer time is shifting from writing code to directing AI to write code and reviewing the results. This is not a diminishment of the role. Directing and reviewing are higher-level skills. A movie director does not hold the camera, but their judgment shapes the entire production. This is the essence of [vibecoding](/blog/vibecoding-guide).
 
 Effective "directing" requires deep technical understanding. You need to know what good code looks like to evaluate AI output. You need to understand architecture to guide AI design decisions. You need to know security to catch AI-generated vulnerabilities. The knowledge bar stays high, but the application of that knowledge changes.
 
@@ -88,7 +88,7 @@ Practical steps you can take today to be ready for where AI development is headi
 
 ## The Pragmatic Outlook
 
-AI is not going to replace developers. It is going to change what developers do. The transition is already happening, and the developers who are thriving are those who have embraced AI tools as collaborators rather than resisting them as threats.
+AI is not going to replace developers. It is going to change what developers do. The transition is already happening, and the developers who are thriving are those who have embraced AI tools as collaborators rather than resisting them as threats. For a broader perspective, see [the AI code editors revolution](/blog/ai-code-editors-revolution).
 
 The software industry has always evolved. We went from assembly to high-level languages. From manual memory management to garbage collection. From bare metal to cloud computing. Each transition raised the level of abstraction and changed what developers focused on. AI-assisted development is the next step in that progression.
 

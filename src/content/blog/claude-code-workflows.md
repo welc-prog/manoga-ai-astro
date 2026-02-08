@@ -1,6 +1,6 @@
 ---
 title: "How Claude Code Transforms Developer Workflows"
-description: "See how Claude Code changes the way developers work, from planning to deployment, with real before-and-after examples showing measurable time savings."
+description: "How Claude Code transforms developer workflows from planning to deployment with real before-and-after examples."
 date: "2026-02-13"
 category: "claude-code"
 image: "/images/blog/claude-code-workflows.svg"
@@ -8,7 +8,7 @@ author: "Kenneth Abueg"
 tags: ["claude-code", "workflows", "productivity", "developer-experience"]
 ---
 
-Every developer has a workflow. You read a ticket, research the approach, write the code, test it, review it, and ship it. These steps have been roughly the same for decades, even as languages and frameworks have evolved. Claude Code changes this workflow in fundamental ways. Not by replacing steps, but by collapsing several of them into faster, more reliable operations. This article examines the practical workflow changes that happen when you adopt Claude Code as a daily tool.
+Every developer has a workflow. You read a ticket, research the approach, write the code, test it, review it, and ship it. These steps have been roughly the same for decades, even as languages and frameworks have evolved. [Claude Code](/blog/what-is-claude-code) changes this workflow in fundamental ways. Not by replacing steps, but by collapsing several of them into faster, more reliable operations. This article examines the practical workflow changes that happen when you adopt Claude Code as a daily tool.
 
 ## The Traditional Workflow and Its Bottlenecks
 
@@ -34,7 +34,7 @@ With Claude Code integrated into your workflow, the same feature implementation 
 
 **Implementation** is guided rather than manual. You describe the feature at a high level, and Claude Code generates the implementation. Not in isolation, but wired into your existing code. It creates the right imports, follows your naming conventions, and uses the patterns already established in your project.
 
-**Testing** is generated alongside the feature. Instead of writing tests after the fact, you can ask Claude Code to produce comprehensive test coverage as part of the implementation. It knows the testing framework you use and can generate tests that cover happy paths, edge cases, and error conditions.
+**Testing** is generated alongside the feature. Instead of writing tests after the fact, you can ask Claude Code to produce comprehensive test coverage as part of the implementation. It knows the testing framework you use and can generate tests that cover happy paths, edge cases, and error conditions. Explore detailed [testing strategies](/blog/testing-with-claude-code) for complex applications.
 
 ## Real Examples of Time Savings
 
@@ -68,7 +68,7 @@ After extensive daily use, certain workflow patterns have proven especially effe
 
 **Use the right model for the phase.** Use Opus for planning and architecture decisions where getting it right matters most. Switch to Sonnet for implementation work. Drop to Haiku for quick operations like commits and file management.
 
-**Let Claude Code handle the tedious parts.** Boilerplate, tests, documentation, and refactoring are where the time savings are largest. Save your focus for design decisions, user experience, and business logic where human judgment matters most.
+**Let Claude Code handle the tedious parts.** Boilerplate, tests, documentation, and refactoring are where the time savings are largest. Save your focus for design decisions, user experience, and business logic where human judgment matters most. Learn the [initial setup](/blog/claude-code-setup) to start optimizing your workflow.
 
 **Review everything before committing.** Claude Code is remarkably capable, but it is not infallible. Read the code it generates, verify it makes sense, and test it. The tool is a force multiplier, not a replacement for developer judgment.
 

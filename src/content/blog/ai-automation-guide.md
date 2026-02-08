@@ -1,6 +1,6 @@
 ---
 title: "AI-Powered Automation: What Can Be Automated"
-description: "A practical guide to AI-powered automation covering the difference between traditional and intelligent automation, real use cases, and a framework for deciding what to automate."
+description: "Practical guide to AI automation: traditional vs intelligent automation, real-world use cases, and a framework for deciding what to automate."
 date: "2026-02-28"
 category: "ai"
 image: "/images/blog/ai-automation-guide.svg"
@@ -8,7 +8,7 @@ author: "Kenneth Abueg"
 tags: ["ai", "automation", "rpa", "business", "productivity"]
 ---
 
-Automation is not new. Factories have used robots for decades, and software has been handling repetitive digital tasks for years. What is new is the intelligence that AI adds to automation. Traditional automation follows rigid rules and breaks when anything unexpected happens. AI-powered automation can handle variability, learn from experience, and make decisions that previously required human judgment. This article explains the landscape of intelligent automation, what can realistically be automated today, and how to approach implementation strategically.
+Automation is not new. Factories have used robots for decades, and software has been handling repetitive digital tasks for years. What is new is the intelligence that AI adds to automation. Traditional automation follows rigid rules and breaks when anything unexpected happens. AI-powered automation can handle variability, learn from experience, and make decisions that previously required human judgment. This article explains the landscape of intelligent automation, building on [practical AI business use cases](/blog/ai-business-use-cases), what can realistically be automated today, and how to approach implementation strategically.
 
 ## Traditional Automation vs AI Automation
 
@@ -26,7 +26,7 @@ The most powerful implementations combine both approaches. RPA handles the struc
 
 The range of automatable tasks has expanded significantly with AI. Here are the categories where AI automation is delivering proven results.
 
-**Document processing** is one of the highest-value applications. AI systems extract information from invoices, contracts, receipts, insurance claims, medical records, and legal documents. They handle varying formats, poor scan quality, handwritten text, and multi-language documents. Organizations that process large volumes of documents report cost reductions of 50 to 80 percent after implementing AI-powered document processing.
+**Document processing** is one of the highest-value applications. AI systems extract information from invoices, contracts, receipts, insurance claims, medical records, and legal documents. They handle varying formats, poor scan quality, handwritten text, and multi-language documents through advanced [natural language processing](/blog/nlp-explained). Organizations that process large volumes of documents report cost reductions of 50 to 80 percent after implementing AI-powered document processing.
 
 **Customer interactions** automation has matured beyond basic FAQ bots. Modern systems handle complex customer requests, access backend systems to look up information, process transactions, and resolve issues. They understand natural language, maintain context across multi-turn conversations, and escalate to human agents when appropriate. Companies report automation rates of 40 to 70 percent for customer interactions, with satisfaction scores that often match or exceed human-only service.
 
@@ -52,7 +52,7 @@ Honest assessment of automation's limitations is as important as understanding i
 
 ## Implementation Strategy
 
-Successfully implementing AI automation requires more than selecting the right tools. It requires a thoughtful approach to change management, process design, and continuous improvement.
+Successfully implementing AI automation requires more than selecting the right tools. It requires a thoughtful approach to change management, process design, and continuous improvement. [Choosing the right AI tools](/blog/choosing-ai-tools) is a critical first step in this process.
 
 **Map your processes before automating them.** Automating a broken or inefficient process just creates a faster broken process. Start by understanding and optimizing the process, then automate the optimized version. This often reveals that some steps can be eliminated entirely rather than automated.
 

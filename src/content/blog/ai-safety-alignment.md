@@ -1,6 +1,6 @@
 ---
 title: "AI Safety and Alignment: Why It Matters"
-description: "An accessible explanation of AI safety and alignment, covering the alignment problem, RLHF, Constitutional AI, and why building safe AI systems is a critical challenge."
+description: "AI safety and alignment explained: the alignment problem, RLHF, Constitutional AI, and why building safe AI systems matters."
 date: "2026-03-04"
 category: "ai"
 image: "/images/blog/ai-safety-alignment.svg"
@@ -26,11 +26,11 @@ The fundamental difficulty is that human values are complex, contextual, and som
 
 Reinforcement Learning from Human Feedback (RLHF) is one of the most important alignment techniques developed in recent years. The approach works in stages.
 
-First, a language model is pre-trained on a large text corpus using standard next-token prediction. This produces a capable but unaligned model that can generate fluent text but does not reliably follow instructions or avoid harmful outputs.
+First, a language model is pre-trained on a large text corpus using standard next-token prediction. Understanding [how large language models work](/blog/how-llms-work) provides essential context for RLHF. This produces a capable but unaligned model that can generate fluent text but does not reliably follow instructions or avoid harmful outputs.
 
 Second, human evaluators compare pairs of model outputs and indicate which response they prefer. These comparisons are used to train a reward model, a separate system that learns to predict which outputs humans would rate more highly.
 
-Third, the language model is fine-tuned using reinforcement learning, with the reward model providing the signal. The model learns to generate responses that score highly according to the reward model, which in turn reflects human preferences.
+Third, the language model is fine-tuned using reinforcement learning, with the reward model providing the signal. The model learns to generate responses that score highly according to the reward model, which in turn reflects human preferences. This process represents a key distinction in [machine learning vs deep learning](/blog/ml-vs-deep-learning) approaches.
 
 RLHF has been remarkably effective at producing models that follow instructions, provide helpful responses, and avoid obviously harmful outputs. However, it has limitations. The process is expensive because it requires extensive human evaluation. The reward model can be imperfect, learning to reward superficial features (like verbosity or apparent confidence) rather than genuine quality. And RLHF can only encode the preferences of the specific evaluators involved, which may not represent the full range of human values.
 
@@ -64,7 +64,7 @@ Modern AI development incorporates multiple layers of safety measures beyond the
 
 AI safety might seem like a concern only for researchers and policymakers, but it directly affects anyone who uses AI systems.
 
-When an AI assistant provides medical information, alignment determines whether it gives accurate, appropriately cautious advice or confident-sounding but incorrect guidance. When an AI system is used in hiring, alignment determines whether it evaluates candidates fairly or perpetuates historical biases. When AI generates content, alignment determines whether it produces helpful, honest information or plausible-sounding misinformation.
+When an AI assistant provides medical information, alignment determines whether it gives accurate, appropriately cautious advice or confident-sounding but incorrect guidance. When an AI system is used in hiring, alignment determines whether it evaluates candidates fairly or perpetuates historical biases. When AI generates content, alignment determines whether it produces helpful, honest information or plausible-sounding misinformation. These concerns are central to [AI ethics](/blog/ai-ethics-guide).
 
 The economic incentives in AI development create tension with safety. There is competitive pressure to release more capable models faster, which can conflict with the time needed for thorough safety evaluation. Companies that invest heavily in safety bear costs that competitors who cut corners do not. This dynamic is why many AI researchers advocate for industry standards and regulations that create a level playing field where safety investment is rewarded rather than penalized.
 

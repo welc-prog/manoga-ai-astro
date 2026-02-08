@@ -8,7 +8,7 @@ author: "Kenneth Abueg"
 tags: ["claude-code", "commands", "productivity", "tips"]
 ---
 
-Claude Code is a deep tool with a wide surface area. You can interact with it conversationally, but knowing the specific commands and patterns that unlock its full potential makes a significant difference in how productive you are. After months of daily use across multiple projects, these are the ten commands and techniques that I reach for most often. Each one addresses a common development need and will save you time from day one.
+Claude Code is a deep tool with a wide surface area. You can interact with it conversationally, but knowing the specific commands and patterns that unlock its full potential makes a significant difference in how productive you are. If you are just [getting started](/blog/claude-code-setup), these are the ten commands and techniques that I reach for most often. Each one addresses a common development need and will save you time from day one.
 
 ## 1. The Single Prompt Flag
 
@@ -64,7 +64,7 @@ When you encounter an error, paste it directly into Claude Code. This is one of 
 > at UserList.vue:42
 ```
 
-Claude Code will read the file, understand the context, identify the root cause, and implement a fix. For build errors, test failures, and runtime exceptions, this pattern handles the full cycle from diagnosis to resolution.
+Claude Code will read the file, understand the context, identify the root cause, and implement a fix. For build errors, test failures, and runtime exceptions, this pattern handles the full cycle from diagnosis to resolution. Learn more about [debugging strategies](/blog/debugging-with-claude-code) for complex issues.
 
 ## 5. Git Operations
 
@@ -100,7 +100,7 @@ Claude Code will read the source code, understand the behavior, identify edge ca
 
 ## 7. Code Review Requests
 
-Before opening a pull request, ask Claude Code to review your changes. This catches issues that would otherwise waste your reviewer's time.
+Before opening a pull request, ask Claude Code to review your changes. This catches issues that would otherwise waste your reviewer's time. Explore comprehensive [code review patterns](/blog/code-reviews-claude-code) for production environments.
 
 ```
 > Review all changes in the current branch compared to main. Check for bugs, security issues, performance problems, and style inconsistencies

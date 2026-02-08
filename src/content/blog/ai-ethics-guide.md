@@ -1,6 +1,6 @@
 ---
 title: "AI Ethics: Bias, Fairness, and Responsibility"
-description: "An exploration of the ethical challenges in artificial intelligence, covering algorithmic bias, fairness metrics, responsible development practices, and governance frameworks."
+description: "Ethical challenges in AI covering algorithmic bias, fairness metrics, responsible development practices, and governance frameworks."
 date: "2026-02-20"
 category: "ai"
 image: "/images/blog/ai-ethics-guide.svg"
@@ -16,7 +16,7 @@ Algorithmic bias occurs when an AI system produces systematically unfair outcome
 
 Training data is the most common source of bias. AI systems learn patterns from historical data, and historical data reflects historical inequalities. A hiring algorithm trained on a company's past hiring decisions will learn to favor candidates who resemble previous hires. If that company historically hired fewer women for technical roles, the algorithm will learn that pattern and perpetuate it.
 
-[Anthropic's research](https://www.anthropic.com/research) has explored how biases manifest in language models specifically. Large language models trained on internet text absorb the biases present in that text, including stereotypes about race, gender, nationality, and other characteristics. These biases can surface in subtle ways, such as the model associating certain professions with certain genders or generating different quality responses depending on the perceived demographics of the user.
+Research has explored how biases manifest in language models specifically. [Large language models](/blog/how-llms-work) trained on internet text absorb the biases present in that text, including stereotypes about race, gender, nationality, and other characteristics. These biases can surface in subtle ways, such as the model associating certain professions with certain genders or generating different quality responses depending on the perceived demographics of the user.
 
 Bias can also enter through feature selection. If a credit scoring model uses zip code as a feature, it may effectively discriminate by race due to the geographic segregation that exists in many countries. The model is not explicitly considering race, but it is using a proxy that correlates strongly with it.
 
@@ -40,7 +40,7 @@ This is why AI fairness cannot be solved by algorithms alone. It requires human 
 
 Addressing bias and fairness is part of a broader discipline called responsible AI, which encompasses the practices, tools, and governance structures that organizations use to develop and deploy AI ethically.
 
-**Transparency** is a foundational principle. Users should understand when they are interacting with an AI system and have a general understanding of how it works. Model cards, which document a model's capabilities, limitations, and evaluation results, are one tool for increasing transparency. Anthropic and other AI companies publish detailed documentation about their models' capabilities and known limitations.
+**Transparency** is a foundational principle. Users should understand when they are interacting with an AI system and have a general understanding of how it works. Model cards, which document a model's capabilities, limitations, and evaluation results, are one tool for increasing transparency. Understanding [how neural networks function](/blog/understanding-neural-networks) helps users better grasp AI system capabilities and limitations.
 
 **Explainability** goes a step further, aiming to make individual AI decisions understandable. When a loan application is denied, the applicant should be able to understand why. This is both an ethical requirement and, in many jurisdictions, a legal one. Techniques for explainability include feature importance analysis, which shows which inputs most influenced a decision, and counterfactual explanations, which describe the smallest change that would have led to a different outcome.
 
@@ -64,4 +64,4 @@ AI ethics is not a problem to be solved once and forgotten. It is an ongoing pra
 
 What gives cause for cautious optimism is that the AI community has moved beyond debating whether ethics matters to debating how best to implement ethical principles. The tools for detecting and mitigating bias are improving. Regulatory frameworks are providing clearer expectations. And organizations are building ethics into their development processes rather than treating it as an afterthought.
 
-The most important insight may be the simplest: building ethical AI systems requires diverse teams that bring different perspectives, experiences, and concerns to the table. Technical solutions are necessary but not sufficient. The value judgments embedded in AI systems should reflect the diversity of the people those systems affect.
+The most important insight may be the simplest: building ethical AI systems requires diverse teams that bring different perspectives, experiences, and concerns to the table. Technical solutions are necessary but not sufficient. Understanding the [differences between AI and human intelligence](/blog/ai-vs-human-intelligence) helps clarify where human judgment remains essential. The value judgments embedded in AI systems should reflect the diversity of the people those systems affect.

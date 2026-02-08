@@ -8,7 +8,7 @@ author: "Kenneth Abueg"
 tags: ["claude-code", "full-stack", "web-development", "backend", "frontend"]
 ---
 
-Building a full-stack application involves dozens of decisions and hundreds of files. Database schema, API endpoints, frontend components, authentication, validation, error handling, and deployment configuration all need to come together correctly. Claude Code handles this complexity remarkably well because it maintains context across all these layers simultaneously. This article walks through the process of building a complete application with Claude Code, covering the patterns and approaches that lead to the best results.
+Building a full-stack application involves dozens of decisions and hundreds of files. Database schema, [API endpoints](/blog/building-apis-claude-code), frontend components, authentication, validation, error handling, and deployment configuration all need to come together correctly. Claude Code handles this complexity remarkably well because it maintains context across all these layers simultaneously. This article walks through the process of building a complete application with Claude Code, covering the patterns and approaches that lead to the best results.
 
 ## Starting with Architecture
 
@@ -92,7 +92,7 @@ Claude Code generates utility-class-based styling that follows Tailwind conventi
 
 ## Integration and Testing
 
-With both layers built, integration testing verifies everything works together.
+With both layers built, integration [testing](/blog/testing-with-claude-code) verifies everything works together.
 
 ```
 > Write end-to-end tests that verify:
@@ -124,4 +124,4 @@ Claude Code creates Dockerfiles with appropriate base images, multi-stage builds
 
 Building full-stack with Claude Code has a unique advantage over using it for isolated tasks: consistency. Because it sees the entire application, types flow correctly from database to API to frontend. Validation rules are consistent between client and server. Error handling follows the same patterns everywhere. This cross-layer consistency is difficult to maintain manually, especially under deadline pressure, but it comes naturally when a single tool has context of the whole stack.
 
-The [Claude Code documentation](https://docs.anthropic.com/en/docs/claude-code) covers more advanced patterns including real-time features, file uploads, and complex query optimization that are common needs in full-stack applications.
+Getting [started with Claude Code](/blog/claude-code-setup) is quick and straightforward. The official documentation covers more advanced patterns including real-time features, file uploads, and complex query optimization that are common needs in full-stack applications.

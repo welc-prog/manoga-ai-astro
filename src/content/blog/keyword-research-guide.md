@@ -1,6 +1,6 @@
 ---
 title: "Keyword Research: A Step-by-Step Guide"
-description: "Master keyword research with this step-by-step guide covering search intent, long-tail keywords, keyword difficulty analysis, and practical methods to find the terms your audience searches for."
+description: "Master keyword research with this guide covering search intent, long-tail keywords, keyword difficulty, and practical discovery methods."
 date: "2026-02-24"
 category: "seo"
 image: "/images/blog/keyword-research-guide.svg"
@@ -8,7 +8,7 @@ author: "Kenneth Abueg"
 tags: ["seo", "keyword research", "search intent", "long-tail keywords", "content planning"]
 ---
 
-Keyword research is the foundation of every successful SEO strategy. It is the process of discovering what your target audience is searching for, understanding why they are searching for it, and determining which terms represent the best opportunities for your website. Without keyword research, you are creating content in the dark, hoping to stumble upon demand that may or may not exist.
+Keyword research is the foundation of every successful SEO strategy. It is the process of discovering what your target audience is searching for, understanding why they are searching for it, and determining which terms represent the best opportunities for your website. Without keyword research, you are creating content in the dark, hoping to stumble upon demand that may or may not exist. If you're new to SEO, start with our [beginner's guide](/blog/what-is-seo) first.
 
 This guide walks you through a systematic approach to keyword research, from understanding search intent to building a prioritized keyword list that drives your content strategy. Google's [SEO starter guide](https://developers.google.com/search/docs/fundamentals/seo-starter-guide) emphasizes the importance of understanding what users search for, and this article expands on that principle.
 
@@ -68,9 +68,9 @@ Long-tail keywords are longer, more specific search phrases. They typically have
 
 With your research complete, organize your findings into an actionable strategy.
 
-**Map keywords to existing pages** first. You may already have pages that could rank for valuable keywords with minor optimization. Updating title tags, expanding content, and improving internal linking are often faster wins than creating new pages.
+**Map keywords to existing pages** first. You may already have pages that could rank for valuable keywords with minor optimization. Updating title tags, expanding content, and improving internal linking are often faster wins than creating new pages. Use our [on-page SEO checklist](/blog/on-page-seo-checklist) to optimize existing content.
 
-**Identify content gaps** where no existing page serves a valuable keyword. These become new content opportunities in your editorial calendar.
+**Identify content gaps** where no existing page serves a valuable keyword. These become new content opportunities in your editorial calendar. A solid [SEO content strategy](/blog/seo-content-strategy) helps transform keyword research into actionable content plans.
 
 **Prioritize based on impact and effort.** Quick wins, keywords where you already rank on page two and just need a push, should be addressed first. Then tackle high-opportunity keywords that require new content. Save highly competitive head terms for longer-term campaigns after your domain has built more authority.
 

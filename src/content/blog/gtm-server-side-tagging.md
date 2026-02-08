@@ -1,6 +1,6 @@
 ---
 title: "Server-Side Tagging with GTM"
-description: "Understand server-side tagging in Google Tag Manager, its benefits over client-side tagging, how to set it up, and when to make the switch for better performance and data quality."
+description: "Understand server-side GTM, its benefits over client-side tagging, setup steps, and when to switch for better performance and data accuracy."
 date: "2026-03-09"
 category: "gtm"
 image: "/images/blog/gtm-server-side-tagging.svg"
@@ -8,7 +8,7 @@ author: "Kenneth Abueg"
 tags: ["gtm", "server-side tagging", "performance", "privacy", "first-party data"]
 ---
 
-Server-side tagging moves the execution of marketing and analytics tags from the user's browser to a server you control. Instead of loading dozens of third-party scripts on the client, your website sends data to your server-side GTM container, which then distributes that data to the appropriate platforms. This fundamental shift in architecture addresses growing challenges around page performance, data accuracy, ad blockers, and privacy.
+Server-side tagging moves the execution of marketing and analytics tags from the user's browser to a server you control. Instead of loading dozens of third-party scripts on the client, your website sends data to your server-side [GTM container](/blog/what-is-gtm), which then distributes that data to the appropriate platforms. This fundamental shift in architecture addresses growing challenges around [page performance](/blog/gtm-performance), data accuracy, ad blockers, and privacy.
 
 Server-side tagging is not a replacement for client-side GTM. It is a complementary layer that works alongside your existing web container to improve data quality and reduce client-side overhead.
 
@@ -83,7 +83,7 @@ In server-side GTM, a "Client" is the component that receives incoming requests 
 
 Server-side tags in GTM look similar to web tags but execute on the server. Common server-side tags include:
 
-- **GA4 Tag:** Forwards GA4 events to Google Analytics.
+- **GA4 Tag:** Forwards [GA4 events](/blog/ga4-gtm-integration) to Google Analytics.
 - **Google Ads Conversion Tracking:** Sends conversion data to Google Ads.
 - **HTTP Request Tag:** Sends data to any endpoint via HTTP, useful for platforms without native server-side templates.
 
@@ -133,7 +133,7 @@ Server-side tagging introduces hosting costs that client-side GTM does not have.
 
 ### Server-Side Preview Mode
 
-Server-side containers have their own Preview mode. It shows incoming requests from the web container, how clients parse them, and which server-side tags fire in response. Use this alongside the web container's Preview mode for end-to-end debugging.
+Server-side containers have their own [Preview mode](/blog/gtm-debug-mode). It shows incoming requests from the web container, how clients parse them, and which server-side tags fire in response. Use this alongside the web container's Preview mode for end-to-end debugging.
 
 ### Logging
 

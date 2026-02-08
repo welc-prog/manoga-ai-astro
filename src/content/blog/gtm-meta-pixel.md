@@ -1,6 +1,6 @@
 ---
 title: "Meta Pixel Setup Through GTM"
-description: "Deploy the Meta (Facebook) Pixel through Google Tag Manager using custom HTML tags, track standard events and custom conversions, and maintain reliable cross-platform tracking."
+description: "Deploy Meta Pixel through GTM using custom HTML tags. Track standard events, custom conversions, and maintain reliable cross-platform tracking."
 date: "2026-03-07"
 category: "gtm"
 image: "/images/blog/gtm-meta-pixel.svg"
@@ -8,9 +8,9 @@ author: "Kenneth Abueg"
 tags: ["gtm", "meta pixel", "facebook", "advertising", "conversion tracking"]
 ---
 
-The Meta Pixel (formerly Facebook Pixel) is the tracking foundation for Meta advertising across Facebook and Instagram. It tracks user interactions on your website and sends that data back to Meta for conversion measurement, audience building, and ad optimization. Deploying the Meta Pixel through Google Tag Manager gives you centralized control, easier testing, and the ability to manage pixel firing alongside your other marketing tags.
+The Meta Pixel (formerly Facebook Pixel) is the tracking foundation for Meta advertising across Facebook and Instagram. It tracks user interactions on your website and sends that data back to Meta for conversion measurement, audience building, and ad optimization. Deploying the Meta Pixel through [Google Tag Manager](/blog/what-is-gtm) gives you centralized control, easier testing, and the ability to manage pixel firing alongside your other marketing tags.
 
-While Meta provides its own direct installation method, using GTM keeps all your tracking in one place and lets you take advantage of GTM's trigger system, consent management, and debugging tools.
+While Meta provides its own direct installation method, using GTM keeps all your tracking in one place and lets you take advantage of GTM's trigger system, consent management, and [debugging tools](/blog/gtm-debug-mode).
 
 For general information on implementing tags through GTM, see [developers.google.com/tag-platform/tag-manager/web](https://developers.google.com/tag-platform/tag-manager/web).
 
@@ -166,7 +166,7 @@ Beyond standard events, you can track custom conversions for actions specific to
 </script>
 ```
 
-Custom events use `trackCustom` instead of `track`. You can define any event name and include any parameters. In Meta Events Manager, you can create custom conversions based on these events.
+Custom events use `trackCustom` instead of `track`. You can define any event name and include any parameters. In Meta Events Manager, you can create custom conversions based on these events. For more on implementing custom events, see our [GTM custom events guide](/blog/gtm-custom-events).
 
 ### URL-Based Custom Conversions
 

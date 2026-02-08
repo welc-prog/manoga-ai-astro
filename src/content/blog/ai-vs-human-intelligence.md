@@ -18,11 +18,9 @@ Artificial intelligence has clear advantages over human cognition in several imp
 
 **Consistency and tirelessness** are underappreciated AI strengths. Human performance degrades with fatigue, distraction, boredom, and emotional state. The thousandth quality inspection of the day is far less reliable than the first. AI systems maintain the same level of performance on the millionth input as the first. For tasks requiring sustained attention and consistency, this reliability advantage is significant.
 
-**Pattern recognition in high-dimensional data** is where AI's mathematical nature shines. Humans can perceive patterns in two or three dimensions, but data with hundreds or thousands of variables is beyond our perceptual capabilities. AI systems navigate these high-dimensional spaces natively, finding correlations and structures that would be impossible for humans to detect. Medical diagnosis, financial analysis, and scientific research all benefit from this capability.
+**Pattern recognition in high-dimensional data** is where AI's mathematical nature shines. Humans can perceive patterns in two or three dimensions, but data with hundreds or thousands of variables is beyond our perceptual capabilities. [AI systems using neural networks](/blog/understanding-neural-networks) navigate these high-dimensional spaces natively, finding correlations and structures that would be impossible for humans to detect. Medical diagnosis, financial analysis, and scientific research all benefit from this capability.
 
 **Recall and knowledge breadth** in AI systems are essentially perfect within their training data. A language model can draw on information spanning virtually every topic, language, and domain it was trained on. No human can match this breadth of accessible knowledge. When you need to synthesize information across multiple fields or access obscure facts, AI's comprehensive recall is invaluable.
-
-[Anthropic's research](https://www.anthropic.com/research) has continued to expand the capabilities of AI systems, pushing the boundaries of what machines can accomplish in areas like reasoning, analysis, and language understanding.
 
 ## Where Humans Excel
 
@@ -36,7 +34,7 @@ Despite AI's impressive capabilities, human intelligence retains fundamental adv
 
 **Adaptability to novel situations** is perhaps the most fundamental advantage of human intelligence. Humans can reason about entirely new situations by drawing on diverse knowledge and experiences. A person who has never encountered a specific problem can often figure out a reasonable approach by analogy, general principles, and creative thinking. AI systems, trained on historical data, struggle with situations that differ significantly from their training distribution.
 
-**Ethical reasoning and moral judgment** involve weighing competing values, considering context, and making decisions that reflect principles rather than statistical patterns. While AI can be trained to follow ethical guidelines, the development of those guidelines, the reasoning about edge cases, and the moral responsibility for decisions remain human capacities.
+**Ethical reasoning and moral judgment** involve weighing competing values, considering context, and making decisions that reflect principles rather than statistical patterns. While AI can be trained to follow ethical guidelines, the development of those guidelines, the reasoning about edge cases, and the moral responsibility for decisions remain human capacities. [AI ethics](/blog/ai-ethics-guide) continues to evolve as these systems become more capable.
 
 ## The Fundamental Differences
 
@@ -56,7 +54,7 @@ The most productive framing is not AI versus human intelligence but AI and human
 
 **In medicine**, AI analyzes medical images with superhuman consistency while human doctors provide clinical context, patient interaction, and judgment about treatment decisions. Neither alone achieves the outcomes that the combination delivers.
 
-**In creative work**, AI generates options, drafts, and variations at speed while humans provide vision, taste, emotional resonance, and strategic intent. The partnership produces more and better creative output than either could independently.
+**In creative work**, [generative AI](/blog/rise-of-generative-ai) generates options, drafts, and variations at speed while humans provide vision, taste, emotional resonance, and strategic intent. The partnership produces more and better creative output than either could independently.
 
 **In scientific research**, AI identifies patterns in large datasets and generates hypotheses while human researchers design experiments, interpret results in theoretical context, and develop the intuitions that drive discovery.
 

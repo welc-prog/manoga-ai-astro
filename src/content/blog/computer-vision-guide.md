@@ -14,7 +14,7 @@ Computer vision is the field of artificial intelligence that enables machines to
 
 Humans perceive images as coherent scenes filled with objects, colors, textures, and meaning. A computer sees an image as a grid of numbers. A grayscale image is a two-dimensional array where each cell contains a value between 0 (black) and 255 (white). A color image has three such arrays, one each for red, green, and blue channels. A 1920x1080 high-definition image contains over 6 million individual values.
 
-The challenge of computer vision is extracting meaning from these raw numbers. Early approaches relied on hand-engineered features: edges detected using mathematical filters, corners identified by intensity changes, and textures described by statistical properties. Researchers spent decades designing algorithms to detect specific visual patterns, and these methods worked for constrained problems but struggled with the variability of real-world images.
+The challenge of computer vision is extracting meaning from these raw numbers. Early approaches relied on hand-engineered features: edges detected using mathematical filters, corners identified by intensity changes, and textures described by statistical properties. Researchers spent decades designing algorithms to detect specific visual patterns, and these methods worked for constrained problems but struggled with the variability of real-world images. The distinction between [machine learning and deep learning](/blog/ml-vs-deep-learning) became crucial in solving these challenges.
 
 The [deep learning revolution](https://ai.google/discover/machine-learning/) transformed computer vision beginning around 2012, when a convolutional neural network called AlexNet dramatically outperformed all previous approaches on the ImageNet image classification challenge. The key insight was that rather than designing features by hand, you could train a neural network to discover the relevant features automatically from data.
 
@@ -52,7 +52,7 @@ Computer vision has moved from research demonstrations to production systems acr
 
 **Manufacturing** uses computer vision for quality control, inspecting products at speeds and accuracy levels that exceed human capability. Systems detect defects as small as fractions of a millimeter, identify issues before they cause downstream problems, and operate continuously without fatigue. The return on investment for visual inspection systems is often measured in months rather than years.
 
-**Healthcare** applies computer vision to medical imaging for detection of diseases in X-rays, CT scans, MRIs, and pathology slides. AI systems have matched or exceeded radiologist performance on specific diagnostic tasks, though they are used as decision-support tools rather than autonomous diagnosticians. Screening programs for conditions like diabetic retinopathy and certain cancers have been enhanced significantly by computer vision.
+**Healthcare** applies computer vision to medical imaging for detection of diseases in X-rays, CT scans, MRIs, and pathology slides. AI systems have matched or exceeded radiologist performance on specific diagnostic tasks, though they are used as decision-support tools rather than autonomous diagnosticians. Screening programs for conditions like diabetic retinopathy and certain cancers have been enhanced significantly by computer vision. These applications are part of broader [AI transformation across industries](/blog/ai-industry-applications).
 
 **Agriculture** uses aerial imagery analyzed by computer vision to monitor crop health, detect pest infestations, assess irrigation needs, and estimate yields. Drones equipped with cameras and AI can survey hundreds of acres in hours, identifying problems that would take workers days to find on foot.
 
@@ -62,7 +62,7 @@ Computer vision has moved from research demonstrations to production systems acr
 
 ## Challenges and the Road Ahead
 
-Computer vision has made extraordinary progress, but significant challenges remain. Robustness is a persistent concern. Systems that perform flawlessly in controlled conditions can fail when encountering unusual lighting, weather, angles, or occlusion. Adversarial examples, images modified in ways imperceptible to humans but confusing to AI, reveal fundamental fragilities in current approaches.
+Computer vision has made extraordinary progress, but significant challenges remain. Robustness is a persistent concern. Systems that perform flawlessly in controlled conditions can fail when encountering unusual lighting, weather, angles, or occlusion. Adversarial examples, images modified in ways imperceptible to humans but confusing to AI, reveal fundamental fragilities in current approaches. These challenges are central to [AI safety and alignment](/blog/ai-safety-alignment) efforts.
 
 Bias in training data leads to uneven performance across demographic groups, a concern that has been extensively documented in facial recognition systems. Building fair and equitable computer vision systems requires diverse training data, rigorous testing across populations, and thoughtful deployment practices.
 

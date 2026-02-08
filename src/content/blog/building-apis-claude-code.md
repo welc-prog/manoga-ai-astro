@@ -1,6 +1,6 @@
 ---
 title: "Building REST APIs with Claude Code"
-description: "A comprehensive guide to using Claude Code for designing, building, testing, and documenting REST APIs with practical examples and best practices."
+description: "Comprehensive guide to designing, building, testing, and documenting REST APIs with Claude Code and best practices."
 date: "2026-03-17"
 category: "claude-code"
 image: "/images/blog/building-apis-claude-code.svg"
@@ -147,7 +147,7 @@ Claude Code generates middleware that handles token validation and role checking
 
 ## API Testing
 
-Testing APIs is one of Claude Code's strongest capabilities because the input-output nature of endpoints maps perfectly to test assertions.
+Testing APIs is one of Claude Code's strongest capabilities because the input-output nature of endpoints maps perfectly to test assertions. Master comprehensive [testing patterns](/blog/testing-with-claude-code) to ensure quality.
 
 ```
 > Write comprehensive API tests for the task endpoints:
@@ -159,7 +159,7 @@ Testing APIs is one of Claude Code's strongest capabilities because the input-ou
 > - Test pagination (first page, last page, empty results)
 ```
 
-Claude Code generates tests that set up test data, make HTTP requests, and assert on status codes, response bodies, and side effects. The tests handle authentication by creating test tokens, manage test data lifecycle with setup and teardown, and verify database state after mutations.
+Claude Code generates tests that set up test data, make HTTP requests, and assert on status codes, response bodies, and side effects. The tests handle authentication by creating test tokens, manage test data lifecycle with setup and teardown, and verify database state after mutations. Use [code review practices](/blog/code-reviews-claude-code) before deployment.
 
 ## API Documentation
 
@@ -199,4 +199,4 @@ APIs evolve over time. Claude Code helps manage that evolution safely:
 
 Claude Code updates every layer consistently. The migration adds the column. The model includes the field. The validation makes it optional. The endpoints handle it. The tests cover it. The documentation reflects it. All in one coordinated change.
 
-Building APIs with [Claude Code](https://docs.anthropic.com/en/docs/claude-code) lets you focus on the design decisions that matter while the tool handles the implementation patterns that are well-established. The result is APIs that are well-designed, consistently implemented, thoroughly tested, and properly documented.
+Building APIs with Claude Code lets you focus on the design decisions that matter while the tool handles the implementation patterns that are well-established. The result is APIs that are well-designed, consistently implemented, thoroughly tested, and properly documented. Integrate with [full-stack development](/blog/fullstack-with-claude-code) for complete applications.

@@ -72,7 +72,7 @@ A developer writing these manually would likely cover the first four cases and s
 
 ## Test-Driven Development with Claude Code
 
-TDD works particularly well with Claude Code because you can express the desired behavior before writing the implementation.
+TDD works particularly well with Claude Code because you can express the desired behavior before writing the implementation. This approach is especially valuable during [refactoring legacy code](/blog/refactoring-with-claude-code).
 
 **Step 1:** Describe what you want to build:
 
@@ -112,7 +112,7 @@ Beyond generating new tests, Claude Code is excellent at analyzing and improving
 > Analyze the test coverage for the auth module. What code paths are not tested? Write tests for the gaps.
 ```
 
-Claude Code reads both the source code and existing tests, identifies untested branches, and generates targeted tests for the gaps. This is faster and more thorough than manually reviewing coverage reports.
+Claude Code reads both the source code and existing tests, identifies untested branches, and generates targeted tests for the gaps. This is faster and more thorough than manually reviewing coverage reports. Combine this with [debugging strategies](/blog/debugging-with-claude-code) to catch edge cases.
 
 **Improving test quality** goes beyond coverage numbers:
 
@@ -145,7 +145,7 @@ Unit tests are the foundation, but integration and end-to-end tests catch issues
 
 Claude Code generates integration tests that set up test data, execute the full flow, and verify side effects across multiple services and database tables. It handles test isolation, ensuring each test starts with a clean state and cleans up after itself.
 
-For API testing specifically:
+For API testing specifically, critical when [building REST APIs](/blog/building-apis-claude-code):
 
 ```
 > Write API tests for all endpoints in the /api/products route. Test authentication, authorization, input validation, successful responses, and error responses.

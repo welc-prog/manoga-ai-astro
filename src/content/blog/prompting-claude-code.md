@@ -1,6 +1,6 @@
 ---
 title: "Best Practices for Prompting Claude Code"
-description: "Learn how to write effective prompts for Claude Code that produce better results, including strategies for context setting, iteration, and avoiding common mistakes."
+description: "Master effective Claude Code prompts with strategies for context setting, iteration, and avoiding common mistakes for better results."
 date: "2026-03-09"
 category: "claude-code"
 image: "/images/blog/prompting-claude-code.svg"
@@ -8,7 +8,7 @@ author: "Kenneth Abueg"
 tags: ["claude-code", "prompting", "prompt-engineering", "best-practices", "tips"]
 ---
 
-The quality of what Claude Code produces is directly proportional to the quality of what you ask for. This is not a limitation. It is an opportunity. Developers who learn to communicate effectively with Claude Code get dramatically better results than those who treat it like a search engine. This article covers the practical techniques that make the difference between mediocre AI assistance and genuinely powerful AI collaboration.
+The quality of what Claude Code produces is directly proportional to the quality of what you ask for. This is not a limitation. It is an opportunity. Developers who learn to communicate effectively with Claude Code get dramatically better results than those who treat it like a search engine. If you're new to Claude Code, start with [the basics](/blog/what-is-claude-code). This article covers the practical techniques that make the difference between mediocre AI assistance and genuinely powerful AI collaboration.
 
 ## The Anatomy of an Effective Prompt
 
@@ -154,7 +154,7 @@ When you start a new session, do not assume Claude Code remembers previous conve
 
 ### Structured Requirements
 
-For complex features, structure your requirements clearly:
+For complex features, structure your requirements clearly. For larger projects, [customizing with CLAUDE.md](/blog/claude-code-customization) ensures consistency:
 
 ```
 > Build a notification system with these requirements:
@@ -184,7 +184,7 @@ This leverages Claude Code's knowledge to inform your decision before committing
 
 ### Phased Delivery
 
-For large features, break them into phases:
+For large features, break them into phases. This approach aligns with the [vibecoding philosophy](/blog/vibecoding-guide):
 
 ```
 > Let's implement the user settings page in phases.

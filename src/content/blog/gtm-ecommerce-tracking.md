@@ -1,6 +1,6 @@
 ---
 title: "E-commerce Tracking with GTM"
-description: "Implement GA4 e-commerce tracking through Google Tag Manager, covering product impressions, add to cart, checkout steps, and purchase events with complete data layer examples."
+description: "Implement GA4 e-commerce tracking through GTM: product impressions, add to cart, checkout, and purchase events with data layer examples."
 date: "2026-02-23"
 category: "gtm"
 image: "/images/blog/gtm-ecommerce-tracking.svg"
@@ -16,7 +16,7 @@ For the official GA4 e-commerce documentation, see [developers.google.com/analyt
 
 ## The E-commerce Data Layer Schema
 
-GA4 e-commerce tracking follows a specific data layer schema. Every e-commerce event includes an `ecommerce` object containing event-specific data and an `items` array describing the products involved.
+GA4 e-commerce tracking follows a specific [data layer](/blog/gtm-data-layer) schema. Every e-commerce event includes an `ecommerce` object containing event-specific data and an `items` array describing the products involved.
 
 ### The Items Array
 
@@ -198,7 +198,7 @@ The `transaction_id` is required for the purchase event. It must be unique for e
 
 ### Creating E-commerce Event Tags
 
-For each e-commerce event, create a GA4 Event tag in GTM:
+For each e-commerce event, create a GA4 Event tag in GTM. Learn more about [custom event implementation](/blog/gtm-custom-events) for standard events:
 
 1. **Tag Type:** Google Analytics: GA4 Event
 2. **Event Name:** Use the exact GA4 recommended event name (e.g., `view_item`, `add_to_cart`, `purchase`)
@@ -245,7 +245,7 @@ Before touching GTM, confirm your website pushes correct data. In the browser co
 
 ### Step 2: Test in GTM Preview Mode
 
-Connect Tag Assistant to your site and walk through the shopping flow. For each e-commerce event:
+Connect Tag Assistant to your site and walk through the shopping flow. For comprehensive testing procedures, see our [debug mode guide](/blog/gtm-debug-mode). For each e-commerce event:
 - Verify the correct tag fires.
 - Click on the tag to inspect the sent data.
 - Confirm all parameters and item data are correct.

@@ -8,7 +8,7 @@ author: "Kenneth Abueg"
 tags: ["claude-code", "github-copilot", "comparison", "developer-tools"]
 ---
 
-Developers frequently ask how Claude Code compares to GitHub Copilot. It is a fair question, but it is a bit like comparing a power drill to a workshop. They both help you build things, but they operate at fundamentally different levels. This comparison breaks down where each tool excels, where they overlap, and how to think about using them, either independently or together.
+Developers frequently ask how Claude Code compares to GitHub Copilot. It is a fair question, but it is a bit like comparing a power drill to a workshop. They both help you build things, but they operate at fundamentally different levels. If you're new to Claude Code, see [what is Claude Code](/blog/what-is-claude-code). This comparison breaks down where each tool excels, where they overlap, and how to think about using them, either independently or together.
 
 ## Different Philosophies, Different Tools
 
@@ -34,7 +34,7 @@ Copilot's strength is in the moment-to-moment flow of writing code. When you are
 
 Claude Code operates at a higher level of abstraction. Instead of completing the next line, it handles entire tasks.
 
-**Multi-file operations** are Claude Code's bread and butter. When you need to add a feature that touches the database, API, frontend components, and tests, Claude Code handles all of these in a single operation. Copilot works on one file at a time and has no ability to coordinate changes across your project.
+**Multi-file operations** are Claude Code's bread and butter. When you need to add a feature that touches the database, API, frontend components, and tests, Claude Code handles all of these in a single operation. Copilot works on one file at a time and has no ability to coordinate changes across your project. See [fullstack development workflows](/blog/fullstack-with-claude-code) for examples.
 
 **Codebase understanding** goes deep. Claude Code can search through your entire project, understand relationships between modules, trace data flow, and identify patterns. When you ask it to fix a bug, it does not just look at the current file. It finds the root cause wherever it lives.
 
@@ -42,7 +42,7 @@ Claude Code operates at a higher level of abstraction. Instead of completing the
 
 **Git and DevOps integration** means Claude Code handles the full development lifecycle. Creating branches, writing commit messages, opening pull requests, analyzing CI failures, and generating documentation are all within its capabilities. Copilot does not operate outside the editor.
 
-**Natural language task descriptions** allow you to express complex intentions. Rather than writing code and hoping the autocomplete catches on, you describe what you want at whatever level of detail makes sense. This is particularly powerful when you know what you want to achieve but are not sure exactly how to implement it.
+**Natural language task descriptions** allow you to express complex intentions. Rather than writing code and hoping the autocomplete catches on, you describe what you want at whatever level of detail makes sense. This is particularly powerful when you know what you want to achieve but are not sure exactly how to implement it. Learn more about [vibecoding](/blog/vibecoding-guide).
 
 ## The Overlap Zone
 

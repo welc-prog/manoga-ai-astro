@@ -1,6 +1,6 @@
 ---
 title: "Tracking Custom Events with GTM"
-description: "Learn how to create custom event triggers in Google Tag Manager, push events through the data layer, configure event parameters, and send them to Google Analytics 4."
+description: "Create custom event triggers in Google Tag Manager, push events through the data layer, and send them to Google Analytics 4."
 date: "2026-02-15"
 category: "gtm"
 image: "/images/blog/gtm-custom-events.svg"
@@ -30,7 +30,7 @@ This architecture keeps your website code clean. Your developers only need to pu
 
 ## Pushing Custom Events to the Data Layer
 
-The basic syntax for pushing a custom event is straightforward:
+The basic syntax for pushing a custom event to the [data layer](/blog/gtm-data-layer) is straightforward:
 
 ```javascript
 dataLayer.push({
@@ -116,7 +116,7 @@ document.querySelectorAll('.tab-button').forEach(function(tab) {
 
 ## Setting Up Custom Event Triggers in GTM
 
-With events being pushed from your website, you now need to create triggers in GTM that listen for them.
+With events being pushed from your website, you now need to create [triggers](/blog/gtm-triggers-guide) in GTM that listen for them.
 
 ### Creating a Custom Event Trigger
 
@@ -171,7 +171,7 @@ For example:
 
 ### Testing the Full Flow
 
-1. Enter GTM Preview mode and connect to your website.
+1. Enter GTM Preview mode and connect to your website. For detailed testing procedures, see our [debug mode guide](/blog/gtm-debug-mode).
 2. Perform the action that triggers the custom event (click the download link, play the video, etc.).
 3. In Tag Assistant, find the custom event in the event timeline on the left.
 4. Click on it and verify that your tag appears under "Tags Fired".

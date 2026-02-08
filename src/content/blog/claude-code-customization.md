@@ -1,6 +1,6 @@
 ---
 title: "Customizing Claude Code with CLAUDE.md"
-description: "Master the CLAUDE.md configuration system to tailor Claude Code to your projects, enforce coding standards, and create consistent development experiences."
+description: "Master CLAUDE.md configuration to tailor Claude Code to your projects, enforce coding standards, and create consistent development."
 date: "2026-03-01"
 category: "claude-code"
 image: "/images/blog/claude-code-customization.svg"
@@ -112,7 +112,7 @@ Global configuration reduces repetitive instructions. Instead of telling Claude 
 
 ### Model Selection Rules
 
-You can define when different models should be used:
+You can define when different models should be used. For more on [effective prompting strategies](/blog/prompting-claude-code), tailor your model selection to task complexity:
 
 ```markdown
 ## Model Selection
@@ -143,7 +143,7 @@ You can define when different models should be used:
 
 ### Review Checklists
 
-Define what Claude Code should check during reviews:
+Define what Claude Code should check during reviews. [Agents](/blog/claude-code-agents) can automate these checks:
 
 ```markdown
 ## Review Checklist
@@ -157,7 +157,7 @@ Define what Claude Code should check during reviews:
 
 ## Team Configuration Best Practices
 
-When multiple developers share a project, the `CLAUDE.md` becomes a living standards document.
+When multiple developers share a project, the `CLAUDE.md` becomes a living standards document. For more on [team collaboration strategies](/blog/claude-code-teams), maintain shared standards effectively.
 
 **Keep it current.** When the team adopts a new pattern, update the configuration. When a convention changes, reflect it immediately. Stale configuration leads to inconsistent code.
 

@@ -1,6 +1,6 @@
 ---
 title: "Code Reviews Powered by Claude Code"
-description: "Learn how to use Claude Code for automated code reviews that catch security issues, performance problems, and bugs before they reach production."
+description: "Use Claude Code for automated code reviews that catch security issues, performance problems, and bugs before production."
 date: "2026-02-25"
 category: "claude-code"
 image: "/images/blog/code-reviews-claude-code.svg"
@@ -24,7 +24,7 @@ The highest-impact use of Claude Code in the review process is as a pre-review s
 > - Dead code or unused imports
 ```
 
-Claude Code diffs the branch, reads every changed file in full context, and produces a detailed review. It does not just flag style issues. It identifies real problems: null pointer risks, unhandled promise rejections, SQL injection vectors, missing authentication checks, and performance regressions.
+Claude Code diffs the branch, reads every changed file in full context, and produces a detailed review. It does not just flag style issues. It identifies real problems: null pointer risks, unhandled promise rejections, SQL injection vectors, missing authentication checks, and performance regressions. Apply the same thoroughness when [debugging production issues](/blog/debugging-with-claude-code).
 
 The result is a human review that starts from a higher baseline. The reviewer does not spend their limited attention on obvious issues. They focus on the things AI cannot evaluate well: whether the approach is right, whether the API design will scale, whether the feature actually solves the user's problem.
 
@@ -80,7 +80,7 @@ Claude Code can be integrated into your development workflow for systematic revi
 
 This is a quick pass that catches obvious problems: console.log statements left in, commented-out code, missing type annotations, and incomplete error handling.
 
-**Branch reviews** evaluate the full scope of changes before opening a PR:
+**Branch reviews** evaluate the full scope of changes before opening a PR, especially valuable during [refactoring operations](/blog/refactoring-with-claude-code):
 
 ```
 > Compare this branch to main and write a comprehensive review covering code quality, test coverage, documentation, and potential issues
@@ -113,6 +113,7 @@ After extensive use of AI-powered reviews alongside traditional human reviews, p
 - Resource leaks (open connections, event listeners not cleaned up)
 - Import organization issues
 - Hardcoded values that should be configuration
+- Missing [test coverage](/blog/testing-with-claude-code) for new functionality
 
 **Humans are still better at catching:**
 - Architectural decisions that do not scale

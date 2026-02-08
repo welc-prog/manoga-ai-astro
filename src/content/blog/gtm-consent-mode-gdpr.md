@@ -1,6 +1,6 @@
 ---
 title: "GTM Consent Mode for GDPR Compliance"
-description: "Implement Google Consent Mode v2 in GTM for GDPR compliance, including CMP integration, default and update consent commands, and behavioral modeling for data gaps."
+description: "Implement Consent Mode v2 in GTM for GDPR compliance. Includes CMP integration, consent commands, and behavioral modeling for data gaps."
 date: "2026-03-11"
 category: "gtm"
 image: "/images/blog/gtm-consent-mode-gdpr.svg"
@@ -8,7 +8,7 @@ author: "Kenneth Abueg"
 tags: ["gtm", "consent mode", "gdpr", "privacy", "compliance"]
 ---
 
-Privacy regulations like GDPR require websites to obtain user consent before collecting certain types of data. Google Consent Mode is the mechanism that lets your GTM tags respect these consent choices. When properly implemented, tags adjust their behavior based on the user's consent state: collecting full data when consent is granted and sending limited, cookieless pings when consent is denied.
+Privacy regulations like GDPR require websites to obtain user consent before collecting certain types of data. Google Consent Mode is the mechanism that lets your [GTM tags](/blog/what-is-gtm) respect these consent choices. When properly implemented, tags adjust their behavior based on the user's consent state: collecting full data when consent is granted and sending limited, cookieless pings when consent is denied.
 
 Getting consent mode right is not optional for businesses operating in the EU or targeting EU users. Non-compliance carries significant legal risk. But beyond compliance, Consent Mode v2 includes behavioral modeling that helps fill data gaps from users who decline consent, preserving analytical value while respecting privacy choices.
 
@@ -84,7 +84,7 @@ Your CMP (Cookiebot, OneTrust, Didomi, etc.) handles the user-facing consent dia
 
 ### The Consent Update Command
 
-After the user grants or denies consent, the CMP pushes an update:
+After the user grants or denies consent, the CMP pushes an update using the [data layer](/blog/gtm-data-layer):
 
 ```javascript
 gtag('consent', 'update', {
@@ -147,7 +147,7 @@ In GA4 reports, modeled data is indicated with a small icon. You can filter repo
 
 ### GTM Preview Mode
 
-1. Enter Preview mode and load your site.
+1. Enter [Preview mode](/blog/gtm-debug-mode) and load your site.
 2. Check the Consent Initialization event in the timeline. Your default consent tag should fire here.
 3. Verify the consent state in the Consent tab (available in Tag Assistant).
 4. Check that Google tags fire in limited mode (no cookies set).

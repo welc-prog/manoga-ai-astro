@@ -1,6 +1,6 @@
 ---
 title: "Refactoring Legacy Code with AI Assistance"
-description: "A practical guide to using Claude Code for safe, systematic refactoring of legacy codebases, including planning, execution, and testing strategies."
+description: "Practical guide to using Claude Code for safe, systematic refactoring of legacy codebases with planning and testing strategies."
 date: "2026-03-15"
 category: "claude-code"
 image: "/images/blog/refactoring-with-claude-code.svg"
@@ -70,7 +70,7 @@ You cannot safely refactor code without tests, and legacy code typically has poo
 > what the code actually does.
 ```
 
-Characterization tests are different from normal unit tests. They do not test what the code should do. They test what it currently does. This includes any bugs that other code might depend on. Claude Code excels at generating these because it reads the implementation and produces tests that match actual behavior rather than assumed intent.
+Characterization tests are different from normal unit tests. They do not test what the code should do. They test what it currently does. This includes any bugs that other code might depend on. Claude Code excels at generating these because it reads the implementation and produces tests that match actual behavior rather than assumed intent. Learn comprehensive [testing patterns](/blog/testing-with-claude-code) for all scenarios.
 
 For example, if a function returns null when it probably should throw an error, the characterization test captures the null return. During refactoring, if you change that behavior, the test failure alerts you that you are changing existing behavior, which might break callers that expect null.
 
@@ -117,14 +117,14 @@ Claude Code breaks down complex functions by identifying logical groupings, extr
 
 ## Verifying the Refactoring
 
-After each phase, verification confirms that behavior is preserved.
+After each phase, verification confirms that behavior is preserved. Use comprehensive [code review practices](/blog/code-reviews-claude-code) to validate changes.
 
 ```
 > Run all tests. If any fail, analyze the failure and determine whether
 > it represents a genuine behavioral change or a test that needs updating.
 ```
 
-Claude Code distinguishes between test failures caused by behavioral changes (which need investigation) and failures caused by structural changes like moved imports or renamed classes (which need test updates).
+Claude Code distinguishes between test failures caused by behavioral changes (which need investigation) and failures caused by structural changes like moved imports or renamed classes (which need test updates). Apply [debugging strategies](/blog/debugging-with-claude-code) when behavioral changes occur.
 
 Beyond automated tests, ask Claude Code to verify specific concerns:
 

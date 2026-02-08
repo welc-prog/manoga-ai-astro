@@ -1,6 +1,6 @@
 ---
 title: "GTM Triggers: Understanding When Tags Fire"
-description: "A comprehensive guide to Google Tag Manager triggers, covering all trigger types including clicks, pageviews, custom events, timers, and trigger groups with practical examples."
+description: "Complete guide to GTM triggers covering clicks, pageviews, custom events, timers, scroll depth, and trigger groups with examples."
 date: "2026-02-19"
 category: "gtm"
 image: "/images/blog/gtm-triggers-guide.svg"
@@ -70,7 +70,7 @@ This configuration tracks PDF download clicks while ensuring the tracking tag fi
 
 ## Custom Event Triggers
 
-Custom Event triggers listen for events pushed to the data layer using `dataLayer.push({'event': 'event_name'})`. They are the most flexible trigger type because they can be triggered by any action your website code defines.
+Custom Event triggers listen for events pushed to the data layer using `dataLayer.push({'event': 'event_name'})`. They are the most flexible trigger type because they can be triggered by any action your website code defines. Learn more about implementing [custom events](/blog/gtm-custom-events) with the data layer.
 
 ### Setup
 
@@ -80,7 +80,7 @@ Custom Event triggers listen for events pushed to the data layer using `dataLaye
 
 ### Adding Conditions
 
-Custom Event triggers support conditions based on Data Layer Variables. For example, with this data layer push:
+Custom Event triggers support conditions based on [Data Layer Variables](/blog/gtm-variables-guide). For example, with this data layer push:
 
 ```javascript
 dataLayer.push({
@@ -156,6 +156,6 @@ Common uses include:
 
 **Test edge cases.** Your trigger conditions might work for the obvious scenarios but fail on edge cases. What happens if a URL has query parameters? What if the click target is a child element inside the button (like an icon)? Test thoroughly in preview mode.
 
-**Prefer data layer events over DOM-based triggers.** Click and element visibility triggers depend on the DOM structure, which can change with redesigns. Data layer events provide a stable interface that survives front-end changes.
+**Prefer data layer events over DOM-based triggers.** Click and element visibility triggers depend on the DOM structure, which can change with redesigns. [Data layer events](/blog/gtm-data-layer) provide a stable interface that survives front-end changes.
 
 Understanding triggers deeply gives you precise control over when data is collected and sent. Every percentage point of accuracy in your trigger configuration translates directly to more trustworthy analytics data.

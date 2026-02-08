@@ -1,6 +1,6 @@
 ---
 title: "Using Variables in Google Tag Manager"
-description: "Master GTM variables: built-in variables, user-defined variables, data layer variables, custom JavaScript variables, and lookup tables for dynamic tag configuration."
+description: "Master GTM variables: built-in, user-defined, data layer, custom JavaScript, and lookup tables for dynamic tag configuration."
 date: "2026-02-21"
 category: "gtm"
 image: "/images/blog/gtm-variables-guide.svg"
@@ -57,7 +57,7 @@ Enable all the built-in variables you expect to use. There is no performance pen
 
 ## Data Layer Variables
 
-Data Layer Variables read values from the data layer, which is the structured data your website pushes to GTM. They are the most reliable type of user-defined variable because they draw from a controlled, predictable data source.
+Data Layer Variables read values from the [data layer](/blog/gtm-data-layer), which is the structured data your website pushes to GTM. They are the most reliable type of user-defined variable because they draw from a controlled, predictable data source.
 
 ### Creating a Data Layer Variable
 
@@ -188,7 +188,7 @@ Regex Tables are more flexible than Lookup Tables and can match patterns rather 
 
 ### Practical Use Case
 
-You want to send a `content_group` parameter with every GA4 event but your website does not push this to the data layer. Create a Regex Table variable:
+You want to send a `content_group` parameter with every GA4 event but your website does not push this to the [data layer](/blog/gtm-data-layer). Create a Regex Table variable:
 
 - Input Variable: `{{Page Path}}`
 - Rows:
@@ -227,7 +227,7 @@ This convention makes variables self-documenting. When you see `{{DLV - Product 
 
 ## Best Practices
 
-**Enable built-in variables proactively.** Enable all variables you might use, including click and form variables, even if you do not need them yet. When you build a new trigger, having the variables already available saves time.
+**Enable built-in variables proactively.** Enable all variables you might use, including click and form variables, even if you do not need them yet. When you build a new [trigger](/blog/gtm-triggers-guide), having the variables already available saves time.
 
 **Prefer data layer variables over DOM scraping.** Reading from the data layer is reliable and fast. Scraping text from DOM elements is fragile because it breaks when the page design changes.
 

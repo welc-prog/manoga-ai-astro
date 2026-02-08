@@ -1,6 +1,6 @@
 ---
 title: "Getting Started with Claude Code: Setup Guide"
-description: "A step-by-step guide to installing Claude Code, configuring your environment, choosing the right model, and running your first AI-assisted coding session."
+description: "Step-by-step guide to installing Claude Code, configuring your environment, choosing the right model, and running your first session."
 date: "2026-02-07"
 category: "claude-code"
 image: "/images/blog/claude-code-setup.svg"
@@ -8,7 +8,7 @@ author: "Kenneth Abueg"
 tags: ["claude-code", "setup", "installation", "getting-started"]
 ---
 
-Getting Claude Code up and running takes less than five minutes, but taking the time to configure it properly from the start will save you hours later. This guide walks through installation, initial configuration, model selection, and your first productive session. By the end, you will have a fully working setup tailored to your development style.
+Getting [Claude Code](/blog/what-is-claude-code) up and running takes less than five minutes, but taking the time to configure it properly from the start will save you hours later. This guide walks through installation, initial configuration, model selection, and your first productive session. By the end, you will have a fully working setup tailored to your development style.
 
 ## Installation and Requirements
 
@@ -77,7 +77,7 @@ Claude Code supports three models in the Claude 4.6 family, and choosing the rig
 
 **Haiku 4.6** is the speed-optimized model. Use it for quick fixes, running tests, file operations, git commits, and any task where speed matters more than deep reasoning. It costs significantly less than the other models, making it ideal for high-volume operations.
 
-A practical rule of thumb: start with Sonnet for everyday work, upgrade to Opus for anything high-stakes or complex, and drop to Haiku for simple repetitive tasks.
+A practical rule of thumb: start with Sonnet for everyday work, upgrade to Opus for anything high-stakes or complex, and drop to Haiku for simple repetitive tasks. These [model selection patterns](/blog/claude-code-workflows) apply across all development phases.
 
 ## Configuring Your Environment
 
@@ -141,6 +141,6 @@ With setup complete, try a real development task. Navigate to a project you are 
 > Review the last 5 commits for potential security issues
 ```
 
-Watch how Claude Code navigates your codebase, reads relevant files, and produces results that account for your specific project structure. The first session might feel like magic. By the third session, it will feel like a natural part of your workflow.
+Watch how Claude Code navigates your codebase, reads relevant files, and produces results that account for your specific project structure. The first session might feel like magic. By the third session, it will feel like a natural part of your workflow. Master the [essential commands](/blog/claude-code-top-commands) to accelerate your productivity.
 
 The [Claude Code documentation](https://docs.anthropic.com/en/docs/claude-code) covers advanced configuration options, troubleshooting, and examples for various project types. Take time to explore these as you get comfortable with the basics.

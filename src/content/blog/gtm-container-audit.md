@@ -1,6 +1,6 @@
 ---
 title: "How to Audit Your GTM Container"
-description: "A practical guide to auditing your Google Tag Manager container for unused tags, performance issues, naming inconsistencies, and data quality problems."
+description: "Practical guide to auditing your GTM container. Find unused tags, fix performance issues, standardize naming, and improve data quality."
 date: "2026-03-19"
 category: "gtm"
 image: "/images/blog/gtm-container-audit.svg"
@@ -8,13 +8,13 @@ author: "Kenneth Abueg"
 tags: ["gtm", "audit", "tag management", "analytics", "data quality"]
 ---
 
-Google Tag Manager containers accumulate clutter over time. Tags get added for campaigns that ended months ago, triggers fire on pages that no longer exist, and variables sit unused after tracking requirements change. A regular GTM audit keeps your container clean, performant, and reliable.
+[Google Tag Manager](/blog/what-is-gtm) containers accumulate clutter over time. Tags get added for campaigns that ended months ago, triggers fire on pages that no longer exist, and variables sit unused after tracking requirements change. A regular GTM audit keeps your container clean, performant, and reliable.
 
 ## Why Audit Your GTM Container
 
 An unaudited GTM container creates real business problems. Unnecessary tags slow down page load times, outdated tracking sends incorrect data to your analytics platforms, and a disorganized container makes it difficult for team members to implement new tracking correctly.
 
-Performance impact is the most immediate concern. Every tag that fires adds JavaScript execution time to your pages. Research consistently shows that page speed affects both user experience and search engine rankings. Removing unnecessary tags directly improves your Core Web Vitals scores.
+Performance impact is the most immediate concern. Every tag that fires adds JavaScript execution time to your pages. Research consistently shows that [page speed affects](/blog/technical-seo-guide) both user experience and search engine rankings. Removing unnecessary tags directly improves your Core Web Vitals scores.
 
 Data quality is equally important. Stale tags may send events to deactivated analytics properties, create phantom conversions in advertising platforms, or double-count user interactions. Clean data leads to better business decisions.
 
@@ -29,8 +29,8 @@ A thorough GTM audit covers five areas: tag inventory, trigger review, variable 
 Start by listing every tag in your container. For each tag, determine:
 
 - **Is it still needed?** Check whether the associated campaign, tool, or tracking requirement is still active. Tags for expired promotions, deactivated ad accounts, or deprecated analytics properties should be removed.
-- **Is it firing correctly?** Use Preview mode to verify each tag fires on the intended pages and events. Look for tags that fire too broadly or too narrowly.
-- **Is it the current version?** Marketing platforms update their tag templates periodically. Ensure you are using the latest recommended tag type rather than legacy Custom HTML implementations.
+- **Is it firing correctly?** Use [Preview mode](/blog/gtm-debug-mode) to verify each tag fires on the intended pages and events. Look for tags that fire too broadly or too narrowly.
+- **Is it the current version?** Marketing platforms update their tag templates periodically. Ensure you are using the latest recommended tag type rather than legacy [Custom HTML implementations](/blog/gtm-custom-html-tags).
 - **Does it have proper trigger conditions?** Tags should have specific triggers rather than firing on all pages unless that is genuinely required.
 
 Create a spreadsheet documenting each tag's purpose, owner, status, and last verified date. This inventory becomes your reference for future audits.
@@ -71,7 +71,7 @@ Use GTM's folder feature to group related elements. Common folder structures org
 
 ## Performance Assessment
 
-Measure the actual performance impact of your GTM container. Open your site's browser developer tools, navigate to the Network tab, and filter for requests initiated by GTM.
+Measure the actual [performance impact](/blog/gtm-performance) of your GTM container. Open your site's browser developer tools, navigate to the Network tab, and filter for requests initiated by GTM.
 
 Key metrics to evaluate:
 

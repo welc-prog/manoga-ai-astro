@@ -1,6 +1,6 @@
 ---
 title: "Security Best Practices with Claude Code"
-description: "Learn how to maintain security when using Claude Code, including reviewing AI-generated code, managing permissions, using hooks, and handling secrets safely."
+description: "Maintain security with Claude Code: review AI-generated code, manage permissions, use hooks, and handle secrets safely."
 date: "2026-03-11"
 category: "claude-code"
 image: "/images/blog/claude-code-security.svg"
@@ -53,7 +53,7 @@ A frequent pattern to watch for is endpoints that check if a user is authenticat
 
 ### Dependency Security
 
-When Claude Code installs new packages, check them:
+When Claude Code installs new packages, check them. [Security agents](/blog/claude-code-agents) can automate dependency scanning:
 
 ```
 > What license does this package use? Are there any known vulnerabilities?
@@ -123,7 +123,7 @@ Claude Code can scan its own output for accidentally included secrets. Make this
 
 ## Secure Code Patterns
 
-When asking Claude Code to implement security-sensitive features, be explicit about your requirements.
+When asking Claude Code to implement security-sensitive features, be explicit about your requirements. Store security rules in [CLAUDE.md configuration](/blog/claude-code-customization) for consistency.
 
 ### Authentication Implementation
 
@@ -178,4 +178,4 @@ Tools improve, but the fundamental responsibility for security rests with the de
 > system. Check for the OWASP Top 10 vulnerabilities.
 ```
 
-Security is a practice, not a feature. With [Claude Code](https://docs.anthropic.com/en/docs/claude-code) configured and used correctly, it becomes a tool that improves your security posture rather than undermining it. The key is maintaining the same vigilance with AI-generated code that you would apply to any code entering your codebase.
+Security is a practice, not a feature. For teams, establish [shared security standards](/blog/claude-code-teams) to maintain consistency. With [Claude Code](https://docs.anthropic.com/en/docs/claude-code) configured and used correctly, it becomes a tool that improves your security posture rather than undermining it. The key is maintaining the same vigilance with AI-generated code that you would apply to any code entering your codebase.

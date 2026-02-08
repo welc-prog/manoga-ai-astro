@@ -1,6 +1,6 @@
 ---
 title: "E-commerce SEO: Driving Sales Through Search"
-description: "A comprehensive guide to e-commerce SEO covering product page optimization, category pages, product schema markup, faceted navigation, and strategies to drive organic sales."
+description: "Comprehensive e-commerce SEO guide: product page optimization, category pages, schema markup, faceted navigation, and organic sales strategies."
 date: "2026-03-10"
 category: "seo"
 image: "/images/blog/ecommerce-seo.svg"
@@ -16,7 +16,7 @@ The challenges of e-commerce SEO are unique. You are often dealing with thousand
 
 Product pages are the revenue-generating core of your e-commerce site. Each product page is an opportunity to rank for specific purchase-intent queries.
 
-**Write unique product descriptions.** This is the single most impactful thing you can do for product page SEO. Manufacturer descriptions used by every retailer create duplicate content across the web. Write original descriptions that highlight benefits, address common customer questions, and include relevant keywords naturally. Describe the product from the customer's perspective, focusing on how it solves their problem or meets their need.
+**Write unique product descriptions.** This is the single most impactful thing you can do for product page SEO. Manufacturer descriptions used by every retailer create duplicate content across the web. Write original descriptions that highlight benefits, address common customer questions, and include relevant keywords naturally. Describe the product from the customer's perspective, focusing on how it solves their problem or meets their need. Follow our [on-page SEO checklist](/blog/on-page-seo-checklist) for optimal product page structure.
 
 **Optimize title tags with product specifics.** Include the product name, key attributes like brand, size, or color, and a compelling modifier. "Nike Air Max 270 - Men's Running Shoes | Free Shipping" is specific, keyword-rich, and includes an incentive to click.
 
@@ -30,7 +30,7 @@ Product pages are the revenue-generating core of your e-commerce site. Each prod
 
 Category pages are often the highest-opportunity pages in an e-commerce SEO strategy. They target broader, higher-volume keywords and serve as the organizational backbone of your site.
 
-**Treat category pages as content assets.** Many e-commerce sites make category pages that are nothing more than product grids. Add substantial introductory content that explains the category, helps users understand their options, and targets the primary keyword for that category. Two to three paragraphs of genuinely helpful content above or around the product grid can significantly improve rankings.
+**Treat category pages as content assets.** Many e-commerce sites make category pages that are nothing more than product grids. Add substantial introductory content that explains the category, helps users understand their options, and targets the primary keyword for that category. Two to three paragraphs of genuinely helpful content above or around the product grid can significantly improve rankings. Start with thorough [keyword research](/blog/keyword-research-guide) to identify category opportunities.
 
 **Optimize category page titles and headings.** A title like "Women's Running Shoes - Lightweight to Trail | YourStore" is more effective than just "Running Shoes." Be specific enough to match search intent while broad enough to represent the full category.
 
@@ -58,7 +58,7 @@ Structured data is particularly valuable for e-commerce because it enables rich 
 
 Faceted navigation, those filter options for size, color, price range, brand, and other attributes, is essential for e-commerce user experience but creates significant SEO challenges.
 
-**The core problem is URL proliferation.** Every filter combination can create a unique URL, potentially generating thousands or millions of indexable pages with near-duplicate content. A product category with 5 colors, 8 sizes, and 3 price ranges creates 120 potential URL combinations, each showing a slightly different subset of the same products.
+**The core problem is URL proliferation.** Every filter combination can create a unique URL, potentially generating thousands or millions of indexable pages with near-duplicate content. A product category with 5 colors, 8 sizes, and 3 price ranges creates 120 potential URL combinations, each showing a slightly different subset of the same products. Proper [technical SEO](/blog/technical-seo-guide) configuration is essential for managing these challenges.
 
 **Use canonical tags to point filtered pages to the main category page.** When a user applies filters, the resulting page should have a canonical tag pointing to the unfiltered category page. This tells Google that filtered views are not separate pages worthy of individual indexing.
 

@@ -1,6 +1,6 @@
 ---
 title: "MCP Servers: Extending Claude Code Capabilities"
-description: "Learn about the Model Context Protocol (MCP), how MCP servers extend Claude Code, and how to configure and use them for databases, documentation, and more."
+description: "Master the Model Context Protocol: how MCP servers extend Claude Code for databases, documentation, browser automation, and more."
 date: "2026-03-03"
 category: "claude-code"
 image: "/images/blog/mcp-servers-guide.svg"
@@ -8,7 +8,7 @@ author: "Kenneth Abueg"
 tags: ["claude-code", "mcp", "model-context-protocol", "integrations", "extensibility"]
 ---
 
-Claude Code is powerful out of the box, but its real extensibility comes from the Model Context Protocol, or MCP. MCP servers act as bridges between Claude Code and external tools, data sources, and services. They let Claude Code query databases, access up-to-date documentation, automate browsers, interact with APIs, and much more. If you have ever wished Claude Code could access something it normally cannot, MCP is how you make that happen.
+Claude Code is powerful out of the box, but its real extensibility comes from the Model Context Protocol, or MCP. MCP servers act as bridges between Claude Code and external tools, data sources, and services. They let Claude Code query databases, access up-to-date documentation, automate browsers, interact with APIs, and much more. For the basics, see [what is Claude Code](/blog/what-is-claude-code). If you have ever wished Claude Code could access something it normally cannot, MCP is how you make that happen.
 
 ## Understanding MCP
 
@@ -95,7 +95,7 @@ This server is valuable for architecture decisions, debugging complex issues, an
 
 ## Configuration
 
-MCP servers are configured in Claude Code's settings. The configuration specifies how to start each server and what parameters it needs.
+MCP servers are configured in Claude Code's settings. The configuration specifies how to start each server and what parameters it needs. Learn more about [customizing Claude Code](/blog/claude-code-customization).
 
 The configuration file location depends on your setup, but a typical project-level configuration looks like:
 
@@ -161,7 +161,7 @@ This creates a persistent knowledge base that grows with your project.
 
 ### Multi-Tool Workflows
 
-The real power emerges when multiple MCP servers work together. A debugging session might involve the file system server to read code, the database server to check data, and the browser server to reproduce the issue:
+The real power emerges when multiple MCP servers work together. [Agents](/blog/claude-code-agents) can coordinate these tools automatically. A debugging session might involve the file system server to read code, the database server to check data, and the browser server to reproduce the issue:
 
 ```
 > A user reports that their profile picture is not showing. Check the user's record in the database, verify the image URL is valid, and check the frontend component that displays it.

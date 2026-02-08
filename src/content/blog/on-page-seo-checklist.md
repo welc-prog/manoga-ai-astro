@@ -1,6 +1,6 @@
 ---
 title: "On-Page SEO: The Ultimate Checklist for 2026"
-description: "Master every on-page SEO element with this comprehensive checklist covering title tags, meta descriptions, heading structure, internal linking, and image optimization."
+description: "Master on-page SEO elements: title tags, meta descriptions, heading structure, internal linking, and image optimization. Complete checklist."
 date: "2026-02-07"
 category: "seo"
 image: "/images/blog/on-page-seo-checklist.svg"
@@ -8,7 +8,7 @@ author: "Kenneth Abueg"
 tags: ["seo", "on-page seo", "title tags", "meta descriptions", "checklist"]
 ---
 
-On-page SEO is the foundation of any successful search strategy. It encompasses everything you can directly control on your web pages to influence how search engines understand and rank your content. While off-page factors like backlinks matter enormously, neglecting on-page fundamentals is like building a house without a blueprint.
+On-page SEO is the foundation of any successful search strategy. It encompasses everything you can directly control on your web pages to influence how search engines understand and rank your content. While off-page factors like backlinks matter enormously, neglecting on-page fundamentals is like building a house without a blueprint. Pair on-page optimization with strong [technical SEO](/blog/technical-seo-guide) for maximum impact.
 
 This checklist covers every critical on-page element you should optimize in 2026, along with practical guidance on how to implement each one effectively.
 
@@ -20,7 +20,7 @@ The title tag is arguably the single most important on-page SEO element. It appe
 
 Keep your titles under 60 characters to avoid truncation in search results. Place your primary keyword near the beginning of the title, as this carries more weight with search engines and catches the user's eye immediately. Each page on your site should have a unique title tag. Duplicate titles confuse search engines and dilute the ranking potential of both pages.
 
-Write titles for humans first. A title like "Buy Shoes Online | Best Shoes | Cheap Shoes | Shoe Store" is keyword-stuffed and unappealing. A title like "Running Shoes for Every Terrain | Free Shipping" is clear, compelling, and naturally includes a relevant keyword.
+Write titles for humans first. A title like "Buy Shoes Online | Best Shoes | Cheap Shoes | Shoe Store" is keyword-stuffed and unappealing. A title like "Running Shoes for Every Terrain | Free Shipping" is clear, compelling, and naturally includes a relevant keyword. Start with proper [keyword research](/blog/keyword-research-guide) to identify the best terms to target.
 
 **Meta description best practices:**
 
@@ -58,7 +58,7 @@ Images enhance user experience, but they can also slow down your site and create
 
 **Alt text is essential.** Every image should have descriptive alt text that explains what the image shows. Alt text serves users who rely on screen readers, displays when images fail to load, and gives search engines context about the image content. Write alt text that is specific and descriptive without being stuffed with keywords.
 
-**Compress your images.** Large image files are one of the most common causes of slow page loads. Use modern formats like WebP or AVIF, which offer superior compression compared to JPEG and PNG. Serve appropriately sized images based on the display size rather than uploading a 4000-pixel-wide image that displays at 800 pixels.
+**Compress your images.** Large image files are one of the most common causes of slow page loads. Use modern formats like WebP or AVIF, which offer superior compression compared to JPEG and PNG. Serve appropriately sized images based on the display size rather than uploading a 4000-pixel-wide image that displays at 800 pixels. Read our [page speed optimization guide](/blog/page-speed-optimization) for comprehensive image optimization techniques.
 
 **Use descriptive file names.** Name your image files with relevant, hyphenated descriptions. "blue-running-shoes-side-view.webp" is infinitely more useful than "IMG_4521.jpg" for search engines trying to understand image content.
 

@@ -1,6 +1,6 @@
 ---
 title: "The History of AI: From Turing to Claude"
-description: "A journey through the history of artificial intelligence, from Alan Turing's foundational ideas to the modern era of large language models and conversational AI."
+description: "A journey through AI history from Alan Turing's foundational ideas to modern large language models and conversational AI."
 date: "2026-02-16"
 category: "ai"
 image: "/images/blog/history-of-ai.svg"
@@ -40,9 +40,9 @@ Neural networks, which had fallen out of fashion, began their comeback. In 2006,
 
 ## The Deep Learning Era (2010s)
 
-The 2010s saw deep learning transform AI from an academic pursuit into an industry-shaping force. In 2012, a deep neural network called AlexNet won the ImageNet competition by a dramatic margin, demonstrating that deep learning could outperform all previous approaches to image recognition. This single result triggered a wave of investment and research that continues today.
+The 2010s saw [deep learning](/blog/ml-vs-deep-learning) transform AI from an academic pursuit into an industry-shaping force. In 2012, a deep neural network called AlexNet won the ImageNet competition by a dramatic margin, demonstrating that deep learning could outperform all previous approaches to image recognition. This single result triggered a wave of investment and research that continues today.
 
-Milestones came rapidly. Google's DeepMind developed AlphaGo, which defeated the world Go champion in 2016, a feat previously thought decades away. Natural language processing improved steadily with recurrent neural networks and attention mechanisms. Generative adversarial networks (GANs) showed that AI could create realistic images.
+Milestones came rapidly. Google's DeepMind developed AlphaGo, which defeated the world Go champion in 2016, a feat previously thought decades away. [Natural language processing](/blog/nlp-explained) improved steadily with recurrent neural networks and attention mechanisms. Generative adversarial networks (GANs) showed that AI could create realistic images.
 
 The transformer architecture, introduced in 2017, proved to be the most consequential breakthrough of the decade. By enabling efficient parallel processing of sequences and introducing the self-attention mechanism, transformers made it practical to train language models at unprecedented scales. This architecture became the foundation for everything that followed.
 
@@ -50,7 +50,7 @@ The transformer architecture, introduced in 2017, proved to be the most conseque
 
 The 2020s have been defined by the rapid scaling of transformer-based language models. GPT-3, released in 2020, demonstrated that large language models could write coherent essays, translate languages, answer questions, and even write code, all from a single general-purpose model.
 
-[Anthropic](https://www.anthropic.com/company), founded in 2021 by former members of OpenAI, brought a safety-focused approach to AI development. The company introduced Constitutional AI, a technique for aligning AI behavior with human values through a set of principles rather than relying solely on human feedback. Claude, Anthropic's AI assistant, represented a new approach to building helpful, harmless, and honest AI systems.
+Anthropic, founded in 2021 by former members of OpenAI, brought a safety-focused approach to AI development. The company introduced Constitutional AI, a technique for [aligning AI behavior](/blog/ai-safety-alignment) with human values through a set of principles rather than relying solely on human feedback. Claude, Anthropic's AI assistant, represented a new approach to building helpful, harmless, and honest AI systems.
 
 The release of ChatGPT in late 2022 brought large language models into mainstream awareness virtually overnight. Suddenly, millions of people were interacting with AI systems that could hold conversations, explain complex topics, help with writing, and assist with coding. AI went from a technology that most people had heard of but never used to one that hundreds of millions of people interact with daily.
 

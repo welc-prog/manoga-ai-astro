@@ -74,7 +74,7 @@ Random testing catches some issues but misses others. Follow this systematic wor
 
 ### Step 1: Verify Container Loading
 
-After connecting Preview mode, check that the Container Loaded event appears in the timeline. If it does not, the GTM snippet is not installed correctly on the page. Common causes include the snippet being in the wrong location, a JavaScript error blocking execution, or a content security policy blocking the GTM script.
+After connecting Preview mode, check that the Container Loaded event appears in the timeline. If it does not, the GTM snippet is not installed correctly on the page. Review our [GTM setup guide](/blog/gtm-setup-guide) for proper installation steps. Common causes include the snippet being in the wrong location, a JavaScript error blocking execution, or a content security policy blocking the GTM script.
 
 ### Step 2: Check Configuration Tags
 
@@ -108,7 +108,7 @@ GTM Preview mode tells you what GTM sends. GA4 DebugView tells you what GA4 rece
 
 ### Tag Fires When It Should Not
 
-**Cause:** The trigger is too broad. For example, a "Click - All Elements" trigger without conditions fires on every click on the page.
+**Cause:** The [trigger](/blog/gtm-triggers-guide) is too broad. For example, a "Click - All Elements" trigger without conditions fires on every click on the page.
 
 **Fix:** Add conditions to the trigger to narrow it. Use Click Classes, Click ID, or a CSS selector match to target specific elements.
 
@@ -122,7 +122,7 @@ GTM Preview mode tells you what GTM sends. GA4 DebugView tells you what GA4 rece
 
 ### Variable Returns Undefined
 
-**Cause 1:** The data layer key does not match the variable configuration. Data layer variable names are case-sensitive. `formId` is different from `formid`.
+**Cause 1:** The [data layer](/blog/gtm-data-layer) key does not match the [variable](/blog/gtm-variables-guide) configuration. Data layer variable names are case-sensitive. `formId` is different from `formid`.
 
 **Cause 2:** The data is not yet available when the variable is read. This often happens when a tag fires on Container Loaded but the data layer push occurs later.
 

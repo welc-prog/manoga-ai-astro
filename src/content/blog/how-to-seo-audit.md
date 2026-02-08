@@ -1,6 +1,6 @@
 ---
 title: "How to Perform a Complete SEO Audit"
-description: "A comprehensive walkthrough for conducting a full SEO audit covering technical health, on-page optimization, content quality, and backlink analysis with actionable steps and tools."
+description: "Complete walkthrough for conducting a full SEO audit covering technical health, on-page optimization, content quality, and backlinks."
 date: "2026-03-02"
 category: "seo"
 image: "/images/blog/how-to-seo-audit.svg"
@@ -14,7 +14,7 @@ A thorough audit covers technical infrastructure, on-page optimization, content 
 
 ## Technical Health Audit
 
-The technical audit examines whether search engines can efficiently crawl and index your website. Even the best content fails if technical barriers prevent search engines from accessing it.
+The technical audit examines whether search engines can efficiently crawl and index your website. Even the best content fails if technical barriers prevent search engines from accessing it. This is a core component of [technical SEO](/blog/technical-seo-guide).
 
 **Start with crawl analysis.** Use a site crawler to map every URL on your site. Compare the crawled URLs against your sitemap and against what Google has indexed in Search Console. Identify pages that exist but are not indexed, pages that are indexed but should not be, and pages returning error codes.
 
@@ -34,7 +34,7 @@ The technical audit examines whether search engines can efficiently crawl and in
 
 The on-page audit evaluates how well individual pages are optimized for their target keywords and user experience.
 
-**Audit title tags across your site.** Export all page titles and check for duplicates, missing titles, titles that are too long (over 60 characters) or too short (under 30 characters), and titles that do not include relevant keywords. Each page should have a unique, descriptive title that accurately represents its content.
+**Audit title tags across your site.** Export all page titles and check for duplicates, missing titles, titles that are too long (over 60 characters) or too short (under 30 characters), and titles that do not include relevant keywords. Each page should have a unique, descriptive title that accurately represents its content. Follow our [on-page SEO checklist](/blog/on-page-seo-checklist) for detailed optimization criteria.
 
 **Review meta descriptions.** While not a direct ranking factor, meta descriptions influence click-through rates. Check for missing descriptions, duplicates, and descriptions that exceed 155 characters. Each description should be unique and compelling.
 
@@ -74,7 +74,7 @@ The backlink audit evaluates the quality and health of the external links pointi
 
 **Find lost links.** Identify high-quality links that you have lost recently. If an authoritative site removed a link to your content, it may be worth investigating why and whether the link can be recovered.
 
-**Benchmark against competitors.** Compare your backlink metrics against competing sites to understand where you stand and where the biggest gap exists. Focus your link-building efforts on closing the most impactful gaps.
+**Benchmark against competitors.** Compare your backlink metrics against competing sites to understand where you stand and where the biggest gap exists. Focus your [link building efforts](/blog/link-building-strategies) on closing the most impactful gaps.
 
 ## Creating Your Action Plan
 

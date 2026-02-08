@@ -8,7 +8,7 @@ author: "Kenneth Abueg"
 tags: ["claude-code", "debugging", "bug-fixing", "developer-tools"]
 ---
 
-Debugging is where developers spend a disproportionate amount of their time. Studies consistently show that finding and fixing bugs takes more hours than writing new code. The challenge is rarely the fix itself. It is finding the root cause. Claude Code fundamentally changes the debugging experience by bringing deep codebase analysis, hypothesis testing, and targeted fix implementation into a single workflow. This article covers how to use Claude Code effectively for debugging at every level of complexity.
+Debugging is where developers spend a disproportionate amount of their time. Studies consistently show that finding and fixing bugs takes more hours than writing new code. The challenge is rarely the fix itself. It is finding the root cause. Claude Code fundamentally changes the debugging experience by bringing deep codebase analysis, hypothesis testing, and targeted fix implementation into a single workflow. Master [essential commands](/blog/claude-code-top-commands) to streamline your debugging process. This article covers how to use Claude Code effectively for debugging at every level of complexity.
 
 ## The Error Handoff
 
@@ -93,7 +93,7 @@ For complex bugs that resist a single pass, Claude Code supports an iterative de
 
 **Step 4: Fix.** Once the root cause is confirmed, ask Claude Code to implement the fix.
 
-**Step 5: Verify.** Ask Claude Code to write or update tests that guard against regression.
+**Step 5: Verify.** Ask Claude Code to write or update tests that guard against regression. Comprehensive [testing strategies](/blog/testing-with-claude-code) ensure bugs stay fixed.
 
 This loop mirrors how experienced developers debug, but each step happens faster because Claude Code handles the code reading and analysis.
 
@@ -121,6 +121,6 @@ Beyond fixing existing bugs, Claude Code helps prevent future ones. After fixing
 > Are there other places in the codebase with the same pattern that could have the same bug?
 ```
 
-Claude Code searches for similar code patterns across your project and identifies other locations that might be vulnerable to the same issue. This turns a single bug fix into a codebase-wide improvement.
+Claude Code searches for similar code patterns across your project and identifies other locations that might be vulnerable to the same issue. This turns a single bug fix into a codebase-wide improvement. Apply the same prevention mindset during [code reviews](/blog/code-reviews-claude-code).
 
 Debugging does not have to be a solitary, frustrating exercise. With [Claude Code](https://docs.anthropic.com/en/docs/claude-code), you have a tool that reads code faster than you can, remembers every file it has seen, and applies systematic analysis to find the bugs that cost you the most time.

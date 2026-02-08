@@ -1,6 +1,6 @@
 ---
 title: "How Large Language Models Actually Work"
-description: "A detailed yet accessible explanation of how large language models like Claude work, covering transformer architecture, tokenization, training, and inference."
+description: "How large language models like Claude work: transformer architecture, tokenization, training, and inference explained clearly."
 date: "2026-02-12"
 category: "ai"
 image: "/images/blog/how-llms-work.svg"
@@ -12,11 +12,11 @@ Large language models have become one of the most visible applications of artifi
 
 ## The Transformer Architecture
 
-The foundation of every modern LLM is the transformer, an architecture introduced in a 2017 research paper titled "Attention Is All You Need." Before transformers, language models relied on recurrent neural networks that processed text sequentially, one word at a time. This sequential processing was slow and made it difficult for models to capture relationships between words that were far apart in a sentence.
+The foundation of every modern LLM is the transformer, an architecture introduced in a 2017 research paper titled "Attention Is All You Need." Before transformers, language models relied on [recurrent neural networks](/blog/understanding-neural-networks) that processed text sequentially, one word at a time. This sequential processing was slow and made it difficult for models to capture relationships between words that were far apart in a sentence.
 
 Transformers solved this with a mechanism called self-attention. Instead of processing words one by one, a transformer can look at all the words in a sequence simultaneously and calculate how much each word should "attend to" every other word. When processing the sentence "The cat sat on the mat because it was tired," the self-attention mechanism helps the model understand that "it" refers to "the cat" rather than "the mat."
 
-A transformer consists of layers stacked on top of each other, each containing attention mechanisms and feed-forward neural networks. Modern LLMs have dozens or even hundreds of these layers. [Claude models](https://docs.anthropic.com/en/docs/about-claude/models) and other frontier LLMs use transformer-based architectures that have been refined and scaled to handle increasingly complex tasks.
+A transformer consists of layers stacked on top of each other, each containing attention mechanisms and feed-forward neural networks. Modern LLMs have dozens or even hundreds of these layers. Claude models and other frontier LLMs use transformer-based architectures that have been refined and scaled to handle increasingly complex tasks.
 
 Each layer refines the model's internal representation of the text. Early layers tend to capture basic syntactic patterns like subject-verb agreement. Middle layers capture more semantic relationships. Later layers capture high-level abstractions that allow the model to generate coherent, contextually appropriate responses.
 
@@ -40,7 +40,7 @@ This simple objective, next-token prediction, turns out to be remarkably powerfu
 
 **Fine-tuning** comes after pre-training and adapts the model for specific use cases. A common approach is instruction tuning, where the model is trained on examples of instructions paired with high-quality responses. This teaches the model to follow directions rather than simply continuing text.
 
-**Alignment training** is a critical step for models designed to be helpful and safe. Techniques like Reinforcement Learning from Human Feedback (RLHF) and Constitutional AI use human preferences and predefined principles to steer the model's behavior. This is what makes a model respond helpfully to questions rather than generating harmful, biased, or unhelpful content.
+**Alignment training** is a critical step for models designed to be helpful and safe. Techniques like Reinforcement Learning from Human Feedback (RLHF) and Constitutional AI use human preferences and predefined principles to steer the model's behavior. [Understanding AI ethics](/blog/ai-ethics-guide) is essential for developing systems that respond helpfully rather than generating harmful, biased, or unhelpful content.
 
 The entire training process for a frontier LLM requires thousands of specialized GPUs running for weeks or months, consuming enormous amounts of electricity. This computational cost is one reason why only a handful of organizations can train models at the largest scales.
 
@@ -50,7 +50,7 @@ Inference is what happens when you actually use an LLM, when you send it a promp
 
 When you submit a prompt, the model processes all your input tokens through its layers to build an internal representation of your request. It then generates a response one token at a time. For each new token, the model calculates a probability distribution over its entire vocabulary and selects the next token based on those probabilities.
 
-The selection process is not purely deterministic. A parameter called "temperature" controls how random the selection is. At low temperatures, the model almost always picks the most probable token, producing predictable and focused output. At higher temperatures, the model is more willing to select less probable tokens, producing more creative and varied output.
+The selection process is not purely deterministic. A parameter called "temperature" controls how random the selection is. At low temperatures, the model almost always picks the most probable token, producing predictable and focused output. At higher temperatures, the model is more willing to select less probable tokens, producing more creative and varied output. [Effective prompt engineering](/blog/prompt-engineering-guide) considers these parameters when crafting requests.
 
 This token-by-token generation is why LLMs can sometimes produce inconsistencies. Each token is chosen based on the context that came before it, but the model does not have a global plan for the entire response. It is more like an expert improviser than a careful editor.
 

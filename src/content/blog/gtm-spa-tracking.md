@@ -1,6 +1,6 @@
 ---
 title: "GTM for Single Page Applications"
-description: "Solve the unique tracking challenges of Single Page Applications with GTM, including history change triggers, virtual pageviews, and reliable event tracking for SPA frameworks."
+description: "Solve SPA tracking challenges with GTM. Set up history change triggers, virtual pageviews, and reliable event tracking for React, Vue, and Angular."
 date: "2026-02-27"
 category: "gtm"
 image: "/images/blog/gtm-spa-tracking.svg"
@@ -8,9 +8,9 @@ author: "Kenneth Abueg"
 tags: ["gtm", "spa", "single page application", "tracking", "virtual pageviews"]
 ---
 
-Single Page Applications present unique challenges for Google Tag Manager. Unlike traditional websites where each page navigation triggers a full page reload, SPAs dynamically update the content without reloading. This means the standard GTM pageview trigger, which fires on the initial page load, only fires once per session regardless of how many "pages" the user visits.
+Single Page Applications present unique challenges for [Google Tag Manager](/blog/what-is-gtm). Unlike traditional websites where each page navigation triggers a full page reload, SPAs dynamically update the content without reloading. This means the standard GTM pageview trigger, which fires on the initial page load, only fires once per session regardless of how many "pages" the user visits.
 
-If you have ever looked at your analytics for a SPA and seen that virtually every session is a single-page session with a 90% bounce rate, the problem is not user engagement. It is that your tracking does not detect SPA route changes.
+If you have ever looked at your analytics for a SPA and seen that virtually every session is a single-page session with a 90% bounce rate, the problem is not user engagement. It is that your [tracking does not detect](/blog/gtm-triggers-guide) SPA route changes.
 
 For the official history change trigger documentation, see [support.google.com/tagmanager/answer/7679322](https://support.google.com/tagmanager/answer/7679322).
 
@@ -216,7 +216,7 @@ If you need custom parameters with your pageviews (page type, content group, log
 
 Testing is especially important for SPA tracking because there are more points of failure.
 
-1. **Open GTM Preview mode** and connect to your SPA.
+1. **Open [GTM Preview mode](/blog/gtm-debug-mode)** and connect to your SPA.
 2. **Navigate through multiple routes.** In Tag Assistant, you should see History Change events (or your custom virtual pageview events) appearing in the timeline for each navigation.
 3. **Check tag firing.** Your GA4 pageview tag should fire for each route change, not just the initial load.
 4. **Verify data accuracy.** Click on each fired tag and confirm the page URL, page title, and any custom parameters reflect the current page, not the initial page.

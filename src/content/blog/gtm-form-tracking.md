@@ -1,6 +1,6 @@
 ---
 title: "Form Tracking with Google Tag Manager"
-description: "Learn how to track form submissions in GTM using built-in form triggers, custom event tracking, element visibility, and validation-aware approaches for accurate lead data."
+description: "Track form submissions in GTM using built-in form triggers, custom events, element visibility, and validation-aware approaches."
 date: "2026-02-25"
 category: "gtm"
 image: "/images/blog/gtm-form-tracking.svg"
@@ -16,7 +16,7 @@ For the official form trigger documentation, see [support.google.com/tagmanager/
 
 ## The Built-In Form Submission Trigger
 
-GTM includes a native Form Submission trigger that detects when an HTML form is submitted using the browser's standard form submission mechanism.
+GTM includes a native Form Submission [trigger](/blog/gtm-triggers-guide) that detects when an HTML form is submitted using the browser's standard form submission mechanism.
 
 ### How It Works
 
@@ -49,7 +49,7 @@ For these scenarios, you need a custom approach.
 
 ## Custom Data Layer Approach
 
-The most reliable form tracking method is pushing a custom event to the data layer from your form's submission handler. This works regardless of how the form is built or submitted.
+The most reliable form tracking method is pushing a [custom event](/blog/gtm-custom-events) to the [data layer](/blog/gtm-data-layer) from your form's submission handler. This works regardless of how the form is built or submitted.
 
 ### Implementation
 
@@ -224,7 +224,7 @@ Then add a trigger condition: CJS - Form Already Tracked does not equal true.
 
 Form tracking requires careful testing because you are often tracking events that have real consequences (sending emails, creating records, starting workflows).
 
-**Use GTM Preview mode** to walk through the form submission process. Verify the trigger fires at the right moment with the correct data.
+**Use GTM Preview mode** to walk through the form submission process. For comprehensive testing guidance, see our [debug mode guide](/blog/gtm-debug-mode). Verify the trigger fires at the right moment with the correct data.
 
 **Check for false positives.** Submit the form with invalid data to ensure the trigger does not fire on failed validations.
 

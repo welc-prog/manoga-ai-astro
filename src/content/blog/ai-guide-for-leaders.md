@@ -1,6 +1,6 @@
 ---
 title: "Getting Started with AI: A Guide for Leaders"
-description: "A practical guide for business leaders on developing an AI strategy, building the right team, running pilot projects, and avoiding the most common mistakes."
+description: "A practical guide for business leaders on developing an AI strategy, building the right team, and running successful pilot projects."
 date: "2026-03-18"
 category: "ai"
 image: "/images/blog/ai-guide-for-leaders.svg"
@@ -16,7 +16,7 @@ An AI strategy is not a technology strategy. It is a business strategy that iden
 
 **Start with business problems, not technology.** The most common mistake leaders make is pursuing AI for its own sake. "We need to do something with AI" is not a strategy. Instead, identify the specific business challenges where AI might provide a meaningful advantage: reducing costs, improving quality, accelerating processes, or enabling new capabilities.
 
-Review your operations with fresh eyes. Where do your people spend time on repetitive tasks that machines could handle? Where do decisions suffer from insufficient data analysis? Where do customers experience friction that could be reduced? Where do errors create costs that better prediction could prevent? The answers to these questions point toward your highest-value AI opportunities.
+Review your operations with fresh eyes. Where do your people spend time on repetitive tasks that machines could handle? Where do decisions suffer from insufficient data analysis? Where do customers experience friction that could be reduced? Where do errors create costs that better prediction could prevent? The answers to these questions point toward your highest-value AI opportunities. Exploring [practical AI business use cases](/blog/ai-business-use-cases) can help identify these opportunities.
 
 **Prioritize ruthlessly.** You will identify more opportunities than you can pursue simultaneously. Rank them using a matrix of potential impact (high/medium/low) against implementation feasibility (high/medium/low). Start with opportunities that are high impact and high feasibility. These "quick wins" build organizational capability, generate evidence of value, and create momentum for more ambitious projects.
 
@@ -40,7 +40,7 @@ AI initiatives succeed or fail based on the people involved, and the required te
 
 Pilot projects are the bridge between strategy and organizational transformation. Done well, they validate opportunities, build capability, and generate the evidence needed to justify broader investment. Done poorly, they consume resources without producing actionable results.
 
-**Choose pilot projects strategically.** The best pilots are significant enough to demonstrate real value but small enough to complete in 8 to 12 weeks. They should address a genuine business need, have a clear success metric, have a willing and engaged business stakeholder, and use data that is available and reasonably clean.
+**Choose pilot projects strategically.** The best pilots are significant enough to demonstrate real value but small enough to complete in 8 to 12 weeks. They should address a genuine business need, have a clear success metric, have a willing and engaged business stakeholder, and use data that is available and reasonably clean. [Choosing the right AI tools](/blog/choosing-ai-tools) is critical for pilot success.
 
 **Staff pilots with your best people.** The temptation is to assign AI experiments to whoever has spare capacity. Resist this. Pilots set the tone for your organization's AI journey. Assign your most capable, influential people, and give them the support they need to succeed.
 
@@ -72,7 +72,7 @@ Years of organizational AI adoption have revealed consistent patterns of failure
 
 **The pilot purgatory problem.** Some organizations run pilots indefinitely, never transitioning to production deployment. Set clear decision criteria before each pilot: what results would justify production investment, and what results would not.
 
-**The automation anxiety problem.** Employees who fear AI will eliminate their jobs may resist adoption, undermine implementations, or leave. Address these concerns proactively with honest communication about how AI changes roles rather than eliminates them, and invest in reskilling.
+**The automation anxiety problem.** Employees who fear AI will eliminate their jobs may resist adoption, undermine implementations, or leave. Address these concerns proactively with honest communication about how AI changes roles rather than eliminates them, and invest in reskilling. Understanding the scope of [AI-powered automation](/blog/ai-automation-guide) helps set realistic expectations.
 
 **The vendor dependence problem.** Relying entirely on vendor solutions without building internal understanding creates fragility. Even if you use external tools and services, develop enough internal expertise to evaluate vendors, manage implementations, and adapt if providers change their offerings.
 

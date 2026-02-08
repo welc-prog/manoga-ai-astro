@@ -1,6 +1,6 @@
 ---
 title: "The Rise of Generative AI"
-description: "An exploration of generative AI and how it is transforming content creation, software development, and creative industries through text, image, and code generation."
+description: "How generative AI is transforming content creation, software development, and creative industries through text, image, and code generation."
 date: "2026-03-02"
 category: "ai"
 image: "/images/blog/rise-of-generative-ai.svg"
@@ -16,7 +16,7 @@ Traditional AI systems are analytical. They classify, predict, detect, and optim
 
 The distinction matters because generation requires a different kind of capability than analysis. A classification model needs to map inputs to predefined categories. A generative model needs to produce outputs that are coherent, contextually appropriate, and potentially novel. This is a fundamentally harder problem, and the fact that AI systems can now do it well is a significant technical achievement.
 
-Modern generative AI is built on several foundational technologies. **Large language models** (LLMs) based on the transformer architecture generate text by predicting the most likely next token given the preceding context. **Diffusion models** generate images by starting with noise and progressively refining it into a coherent image guided by a text description. **Variational autoencoders** and **generative adversarial networks** (GANs) offer alternative approaches to image and audio generation.
+Modern generative AI is built on several foundational technologies. [Large language models](/blog/how-llms-work) (LLMs) based on the transformer architecture generate text by predicting the most likely next token given the preceding context. **Diffusion models** generate images by starting with noise and progressively refining it into a coherent image guided by a text description. **Variational autoencoders** and **generative adversarial networks** (GANs) offer alternative approaches to image and audio generation.
 
 What unites these approaches is that they learn the statistical patterns in their training data well enough to produce new outputs that are consistent with those patterns. A language model trained on billions of words of text can generate new text that reads naturally. An image model trained on millions of captioned images can generate new images that match a description.
 
@@ -24,11 +24,11 @@ What unites these approaches is that they learn the statistical patterns in thei
 
 Text generation through large language models has become the most visible and widely adopted form of generative AI. The reason is straightforward: text is the medium through which most knowledge work happens, and LLMs are remarkably versatile.
 
-[Anthropic's research](https://www.anthropic.com/research) has focused on developing language models that are not only capable but also helpful, harmless, and honest. This safety-focused approach reflects the understanding that as text generation becomes more powerful, ensuring it is used responsibly becomes more critical.
+Research has focused on developing language models that are not only capable but also helpful, harmless, and honest. This safety-focused approach reflects the understanding that as text generation becomes more powerful, [ensuring it is used responsibly](/blog/ai-ethics-guide) becomes more critical.
 
 In business, text generation has transformed content creation workflows. Marketing teams use it to produce first drafts of blog posts, social media content, email campaigns, and product descriptions. Legal teams use it to draft contracts, summarize case law, and prepare briefs. Customer service teams use it to generate responses, create knowledge base articles, and summarize customer interactions.
 
-The productivity gains are real but often mischaracterized. Generative AI does not replace writers, lawyers, or support agents. It accelerates them. The most effective users treat AI-generated text as a starting point that requires human review, editing, and refinement. The value comes from reducing the time spent on first drafts so that more time can be invested in quality, strategy, and the nuances that machines miss.
+The productivity gains are real but often mischaracterized. Generative AI does not replace writers, lawyers, or support agents. It accelerates them. The most effective users treat AI-generated text as a starting point that requires human review, editing, and refinement. Understanding [AI versus human intelligence](/blog/ai-vs-human-intelligence) helps clarify where machines accelerate work versus where human judgment remains essential. The value comes from reducing the time spent on first drafts so that more time can be invested in quality, strategy, and the nuances that machines miss.
 
 Code generation has become one of the most practically impactful applications. AI tools that suggest code completions, generate functions from descriptions, write tests, and explain existing code have measurably increased developer productivity. Studies report productivity improvements of 20 to 50 percent for tasks well-suited to AI assistance, though the benefits vary significantly depending on the task complexity and the developer's experience.
 

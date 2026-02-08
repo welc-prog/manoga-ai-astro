@@ -8,7 +8,7 @@ author: "Kenneth Abueg"
 tags: ["claude-code", "non-developers", "no-code", "beginners", "vibecoding"]
 ---
 
-You do not need to be a programmer to build software with Claude Code. That statement would have been absurd five years ago, but the landscape has changed. Claude Code lets you describe what you want in plain English, and it handles the technical implementation. Designers are building their own portfolio sites. Product managers are prototyping features. Entrepreneurs are creating MVPs. This article is for anyone who has an idea but lacks traditional coding skills, and wants to understand what is realistically possible with Claude Code today.
+You do not need to be a programmer to build software with Claude Code. That statement would have been absurd five years ago, but the landscape has changed. Claude Code lets you describe what you want in plain English, and it handles the technical implementation. Designers are building their own portfolio sites. Product managers are prototyping features. Entrepreneurs are creating MVPs. For the basics, see [what is Claude Code](/blog/what-is-claude-code). This article is for anyone who has an idea but lacks traditional coding skills, and wants to understand what is realistically possible with Claude Code today.
 
 ## What You Can Actually Build
 
@@ -58,7 +58,7 @@ From here, everything happens in natural language. You describe what you want, a
 
 ## How to Describe What You Want
 
-The art of working with Claude Code as a non-developer is in the description. You do not need technical language, but you do need to be specific about what you want.
+The art of working with Claude Code as a non-developer is in the description. You do not need technical language, but you do need to be specific about what you want. This is the essence of [vibecoding](/blog/vibecoding-guide).
 
 **Vague (produces inconsistent results):**
 ```
@@ -119,7 +119,7 @@ After observing many non-developers use Claude Code, certain patterns consistent
 
 References give Claude Code a concrete target rather than requiring it to interpret abstract descriptions.
 
-**Ask for explanations.** When Claude Code creates something and you do not understand what it did, ask:
+**Ask for explanations.** When Claude Code creates something and you do not understand what it did, ask. For more tips, see [prompting best practices](/blog/prompting-claude-code):
 
 ```
 > Explain what each file does in simple terms

@@ -1,6 +1,6 @@
 ---
 title: "The Environmental Impact of AI"
-description: "An honest assessment of AI's environmental footprint covering energy consumption and carbon emissions alongside the efficiency gains and sustainability applications AI enables."
+description: "Honest assessment of AI's environmental footprint: energy consumption, carbon emissions, and sustainability applications."
 date: "2026-03-14"
 category: "ai"
 image: "/images/blog/ai-environmental-impact.svg"
@@ -12,7 +12,7 @@ Artificial intelligence consumes a significant and growing amount of energy. Tra
 
 ## The Energy Cost of AI
 
-The energy consumption of AI systems has grown dramatically alongside model size and capability. Training a frontier language model involves running thousands of specialized processors for weeks or months, consuming megawatt-hours of electricity. The exact figures are often proprietary, but estimates suggest that training a single large model can consume several gigawatt-hours of electricity and generate hundreds of tons of carbon dioxide, depending on the energy sources powering the data center.
+The energy consumption of AI systems has grown dramatically alongside model size and capability. Training a frontier language model involves running thousands of specialized processors for weeks or months, consuming megawatt-hours of electricity. Understanding [what AI is](/blog/what-is-ai) and how these systems work provides context for their computational requirements. The exact figures are often proprietary, but estimates suggest that training a single large model can consume several gigawatt-hours of electricity and generate hundreds of tons of carbon dioxide, depending on the energy sources powering the data center.
 
 Inference, the process of using a trained model to generate responses, consumes less energy per query than training but adds up quickly at scale. When millions of people use AI assistants daily, each query requiring computational resources, the aggregate inference energy consumption becomes substantial. Some estimates suggest that an AI-powered search query consumes roughly ten times more energy than a traditional web search, though exact comparisons are difficult because the tasks are fundamentally different.
 
@@ -42,7 +42,7 @@ While AI's direct environmental cost is significant, its potential to reduce env
 
 **Energy grid optimization** uses AI to balance electricity supply and demand in real time, integrate variable renewable energy sources, predict maintenance needs, and reduce transmission losses. As electrical grids incorporate more solar and wind power, which are intermittent by nature, AI-driven optimization becomes essential for maintaining grid stability. Some studies suggest that AI optimization can reduce grid emissions by 10 to 20 percent by enabling higher renewable penetration and reducing reliance on fossil fuel backup.
 
-**Building energy management** systems powered by AI reduce heating, cooling, and lighting energy consumption by 15 to 30 percent in commercial buildings. These systems learn occupancy patterns, predict weather, respond to energy prices, and optimize HVAC systems in ways that traditional building management cannot. Given that buildings account for roughly 40 percent of energy consumption in developed countries, this application has significant aggregate impact.
+**Building energy management** systems powered by AI reduce heating, cooling, and lighting energy consumption by 15 to 30 percent in commercial buildings. These systems learn occupancy patterns, predict weather, respond to energy prices, and optimize HVAC systems in ways that traditional building management cannot. Given that buildings account for roughly 40 percent of energy consumption in developed countries, this application has significant aggregate impact. These efficiency gains are among the [practical business use cases for AI](/blog/ai-business-use-cases).
 
 **Industrial process optimization** uses AI to reduce energy and material waste in manufacturing, chemical processing, and other industrial operations. DeepMind's application of AI to optimize cooling systems in Google's data centers, reducing cooling energy by 40 percent, is a well-known example. Similar approaches are being applied across industries where process optimization translates to reduced energy consumption and emissions.
 
@@ -62,7 +62,7 @@ On the benefit side, the potential is enormous but not guaranteed. AI could subs
 
 ## What Responsible Development Looks Like
 
-For AI companies, responsible environmental practices include investing in efficiency research, using renewable energy, being transparent about energy consumption and carbon emissions, and designing systems that minimize computational waste.
+For AI companies, responsible environmental practices include investing in efficiency research, using renewable energy, being transparent about energy consumption and carbon emissions, and designing systems that minimize computational waste. These considerations align with [AI leadership guidance](/blog/ai-guide-for-leaders).
 
 For AI users, responsible practices include choosing efficient tools when they meet your needs (a smaller model that can accomplish a task is preferable to a massive one), being thoughtful about unnecessary usage, and considering the environmental profile of AI providers when making purchasing decisions.
 

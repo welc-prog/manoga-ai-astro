@@ -1,6 +1,6 @@
 ---
 title: "Page Speed Optimization: A Developer's Guide"
-description: "A developer-focused guide to page speed optimization covering image optimization, code splitting, caching strategies, CDN implementation, lazy loading, and modern performance techniques."
+description: "Developer-focused page speed guide: image optimization, code splitting, caching strategies, CDN implementation, lazy loading, and more."
 date: "2026-03-14"
 category: "seo"
 image: "/images/blog/page-speed-optimization.svg"
@@ -8,7 +8,7 @@ author: "Kenneth Abueg"
 tags: ["seo", "page speed", "performance", "web development", "optimization"]
 ---
 
-Page speed is both a ranking factor and a business metric. Google has confirmed that page experience signals, including Core Web Vitals, influence rankings. But the impact of speed extends far beyond SEO. Studies consistently show that slower pages have higher bounce rates, lower conversion rates, and reduced user engagement. Every second of load time matters.
+Page speed is both a ranking factor and a business metric. Google has confirmed that page experience signals, including [Core Web Vitals](/blog/core-web-vitals-guide), influence rankings. But the impact of speed extends far beyond SEO. Studies consistently show that slower pages have higher bounce rates, lower conversion rates, and reduced user engagement. Every second of load time matters.
 
 This guide takes a developer-focused approach to page speed optimization, covering the technical strategies that produce measurable improvements. Google's [performance documentation on web.dev](https://web.dev/articles/performance) provides the technical depth this article complements with practical implementation guidance.
 
@@ -22,7 +22,7 @@ Images typically account for the largest portion of a web page's total weight. O
 
 **Compress aggressively.** Most images can tolerate more compression than you might expect without visible quality loss. For photographic images, a quality setting of 75 to 85 percent in WebP typically produces excellent results at significantly reduced file sizes. Test compression levels visually rather than relying on arbitrary numbers.
 
-**Implement lazy loading.** Images below the fold should not load until the user scrolls near them. Native lazy loading with `loading="lazy"` on image elements is supported by all modern browsers and requires no JavaScript. However, do not lazy load images that are above the fold or part of the Largest Contentful Paint element, as this will delay your LCP metric.
+**Implement lazy loading.** Images below the fold should not load until the user scrolls near them. Native lazy loading with `loading="lazy"` on image elements is supported by all modern browsers and requires no JavaScript. However, do not lazy load images that are above the fold or part of the Largest Contentful Paint element, as this will delay your LCP metric. Understanding [how Google's algorithm evaluates performance](/blog/how-google-algorithm-works) helps prioritize optimization efforts.
 
 **Specify dimensions.** Always include width and height attributes on image elements. This allows the browser to reserve the correct space before the image loads, preventing layout shifts that degrade your CLS score. Use the CSS `aspect-ratio` property for responsive containers that maintain proportions.
 
@@ -50,7 +50,7 @@ Effective caching ensures that returning visitors and subsequent page navigation
 
 **Leverage browser caching for HTML.** While HTML pages should not be cached as aggressively as static assets, short cache durations of a few minutes combined with `stale-while-revalidate` can dramatically improve the experience for users navigating between pages.
 
-**Implement server-side caching.** Cache database queries, API responses, and rendered HTML at the server level to reduce response times. A properly cached server can respond in single-digit milliseconds rather than hundreds of milliseconds.
+**Implement server-side caching.** Cache database queries, API responses, and rendered HTML at the server level to reduce response times. A properly cached server can respond in single-digit milliseconds rather than hundreds of milliseconds. Server optimization is a key component of [technical SEO](/blog/technical-seo-guide).
 
 ## CDN Implementation
 
