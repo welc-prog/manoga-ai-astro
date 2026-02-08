@@ -409,7 +409,7 @@ const prefix = '/da';  // Hardcode for Danish pages
       const service = formData.get('service');
       const message = formData.get('message');
 
-      const mailtoLink = `mailto:contact@manoga.digital?subject=Kontakt fra ${name}&body=Navn: ${name}%0D%0AE-mail: ${email}%0D%0ATelefon: ${phone}%0D%0AYdelse: ${service}%0D%0A%0D%0ABesked:%0D%0A${message}`;
+      const mailtoLink = `mailto:hi@manoga.digital?subject=Kontakt fra ${name}&body=Navn: ${name}%0D%0AE-mail: ${email}%0D%0ATelefon: ${phone}%0D%0AYdelse: ${service}%0D%0A%0D%0ABesked:%0D%0A${message}`;
       window.location.href = mailtoLink;
     });
   }

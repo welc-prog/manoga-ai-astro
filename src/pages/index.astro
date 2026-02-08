@@ -409,7 +409,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
       const service = formData.get('service');
       const message = formData.get('message');
 
-      const mailtoLink = `mailto:contact@manoga.digital?subject=Contact from ${name}&body=Name: ${name}%0D%0AEmail: ${email}%0D%0APhone: ${phone}%0D%0AService: ${service}%0D%0A%0D%0AMessage:%0D%0A${message}`;
+      const mailtoLink = `mailto:hi@manoga.digital?subject=Contact from ${name}&body=Name: ${name}%0D%0AEmail: ${email}%0D%0APhone: ${phone}%0D%0AService: ${service}%0D%0A%0D%0AMessage:%0D%0A${message}`;
       window.location.href = mailtoLink;
     });
   }
