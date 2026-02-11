@@ -25,3 +25,7 @@ node_modules/
 # astro
 .astro/
 .vercel
+
+# Claude Code
+CLAUDE.md
+.claude/

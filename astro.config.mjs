@@ -1,11 +1,14 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
-import astroI18next from 'astro-i18next';
 
 export default defineConfig({
   site: 'https://manoga.digital',
-  integrations: [
-    astroI18next()
-  ],
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en', 'da'],
+    routing: {
+      prefixDefaultLocale: false,
+    },
+  },
   output: 'static'
 });
