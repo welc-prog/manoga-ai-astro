@@ -26,6 +26,10 @@ node_modules/
 .astro/
 .vercel
 
+# Screenshots & review artifacts
+ux-review/
+screenshot*.mjs
+
 # Claude Code
 CLAUDE.md
 .claude/
