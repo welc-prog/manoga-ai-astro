@@ -5,8 +5,18 @@
   "outputDirectory": "dist",
   "redirects": [
     {
-      "source": "/da/blog/:slug*",
-      "destination": "/blog/:slug*",
+      "source": "/da/blog/:slug+/",
+      "destination": "/blog/:slug+",
+      "permanent": true
+    },
+    {
+      "source": "/da/blog/:slug+",
+      "destination": "/blog/:slug+",
+      "permanent": true
+    },
+    {
+      "source": "/da/blog/",
+      "destination": "/blog",
       "permanent": true
     },
     {
