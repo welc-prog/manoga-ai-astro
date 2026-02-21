@@ -21,6 +21,28 @@ const desc = description || t('meta.description', lang);
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={desc} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={desc} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={`https://www.manoga.digital${Astro.url.pathname}`} />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={desc} />
+    <link rel="canonical" href={`https://www.manoga.digital${Astro.url.pathname}`} />
+    {!Astro.url.pathname.startsWith('/da/') && (
+      <>
+        <link rel="alternate" hreflang="en" href={`https://www.manoga.digital${Astro.url.pathname}`} />
+        <link rel="alternate" hreflang="da" href={`https://www.manoga.digital/da${Astro.url.pathname}`} />
+        <link rel="alternate" hreflang="x-default" href={`https://www.manoga.digital${Astro.url.pathname}`} />
+      </>
+    )}
+    {Astro.url.pathname.startsWith('/da/') && (
+      <>
+        <link rel="alternate" hreflang="en" href={`https://www.manoga.digital${Astro.url.pathname.replace(/^\/da/, '')}`} />
+        <link rel="alternate" hreflang="da" href={`https://www.manoga.digital${Astro.url.pathname}`} />
+        <link rel="alternate" hreflang="x-default" href={`https://www.manoga.digital${Astro.url.pathname.replace(/^\/da/, '')}`} />
+      </>
+    )}
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

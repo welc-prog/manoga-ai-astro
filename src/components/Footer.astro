@@ -8,7 +8,7 @@ interface Props {
 
 const { lang = 'en' } = Astro.props;
 const prefix = lang === 'en' ? '' : `/${lang}`;
-const currentYear = 2025;
+const currentYear = new Date().getFullYear();
 ---
 
 <footer class="site-footer">

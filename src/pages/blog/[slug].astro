@@ -3,11 +3,15 @@ import { getCollection, render } from 'astro:content';
 import BlogPost from '../../layouts/BlogPost.astro';
 
 export async function getStaticPaths() {
-  const posts = await getCollection('blog');
-  return posts.map(post => ({
-    params: { slug: post.id.replace(/\.md$/, '') },
-    props: { post },
-  }));
+  const today = new Date()
+  today.setHours(23, 59, 59, 999)
+  const posts = await getCollection('blog')
+  return posts
+    .filter(post => new Date(post.data.date + 'T00:00:00') <= today)
+    .map(post => ({
+      params: { slug: post.id.replace(/\.md$/, '') },
+      props: { post },
+    }))
 }
 
 const { post } = Astro.props;
