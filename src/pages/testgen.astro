@@ -1,0 +1,409 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { t } from '../i18n/index.ts';
+import IconBrain from '../components/icons/IconBrain.astro';
+import IconSearch from '../components/icons/IconSearch.astro';
+import IconCode from '../components/icons/IconCode.astro';
+import IconArrowRight from '../components/icons/IconArrowRight.astro';
+
+const lang = 'en';
+---
+
+<Layout title={t('meta.testgenTitle', lang)} description={t('meta.testgenDescription', lang)} lang={lang}>
+  <!-- Hero -->
+  <section class="page-header">
+    <div class="container">
+      <div class="page-header-with-image">
+        <div class="page-header-content">
+          <span class="page-subtitle">{t('pages.testgen.heroTagline', lang)}</span>
+          <h1><span class="text-gradient">{t('pages.testgen.heroTitle', lang)}</span></h1>
+          <p class="page-header-description">{t('pages.testgen.heroDescription', lang)}</p>
+          <a href="#pricing" class="btn btn-primary btn-glow" style="margin-top: var(--space-md);">
+            {t('pages.testgen.viewPricing', lang)}
+            <IconArrowRight />
+          </a>
+        </div>
+        <div class="page-header-image">
+          <div class="testgen-hero-visual">
+            <svg viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect x="40" y="30" width="320" height="240" rx="12" fill="rgba(18,18,26,0.9)" stroke="rgba(59,130,246,0.3)" stroke-width="1.5"/>
+              <rect x="40" y="30" width="320" height="36" rx="12" fill="rgba(59,130,246,0.1)"/>
+              <circle cx="62" cy="48" r="6" fill="#ef4444"/>
+              <circle cx="80" cy="48" r="6" fill="#eab308"/>
+              <circle cx="98" cy="48" r="6" fill="#22c55e"/>
+              <text x="60" y="95" font-family="monospace" font-size="11" fill="#22c55e">PASS</text>
+              <text x="100" y="95" font-family="monospace" font-size="11" fill="rgba(212,220,232,0.8)">should validate user input</text>
+              <text x="60" y="115" font-family="monospace" font-size="11" fill="#22c55e">PASS</text>
+              <text x="100" y="115" font-family="monospace" font-size="11" fill="rgba(212,220,232,0.8)">should handle API errors</text>
+              <text x="60" y="135" font-family="monospace" font-size="11" fill="#22c55e">PASS</text>
+              <text x="100" y="135" font-family="monospace" font-size="11" fill="rgba(212,220,232,0.8)">should render component</text>
+              <text x="60" y="155" font-family="monospace" font-size="11" fill="#22c55e">PASS</text>
+              <text x="100" y="155" font-family="monospace" font-size="11" fill="rgba(212,220,232,0.8)">should calculate totals</text>
+              <text x="60" y="175" font-family="monospace" font-size="11" fill="#22c55e">PASS</text>
+              <text x="100" y="175" font-family="monospace" font-size="11" fill="rgba(212,220,232,0.8)">should authenticate user</text>
+              <rect x="60" y="200" width="280" height="1" fill="rgba(255,255,255,0.1)"/>
+              <text x="60" y="225" font-family="monospace" font-size="12" fill="#22c55e">Tests: 5 passed, 5 total</text>
+              <text x="60" y="245" font-family="monospace" font-size="12" fill="rgba(212,220,232,0.6)">Coverage: 94.2%</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="section section-mesh">
+    <div class="container">
+      <div class="services-grid reveal">
+        <div class="card">
+          <div class="card-icon">
+            <IconBrain />
+          </div>
+          <h3 class="card-title">{t('pages.testgen.feature1', lang)}</h3>
+          <p class="card-text">{t('pages.testgen.feature1Desc', lang)}</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">
+            <IconSearch />
+          </div>
+          <h3 class="card-title">{t('pages.testgen.feature2', lang)}</h3>
+          <p class="card-text">{t('pages.testgen.feature2Desc', lang)}</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">
+            <IconCode />
+          </div>
+          <h3 class="card-title">{t('pages.testgen.feature3', lang)}</h3>
+          <p class="card-text">{t('pages.testgen.feature3Desc', lang)}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="section section-gradient section-grid">
+    <div class="container">
+      <div class="text-center mb-3">
+        <span class="hero-tagline">{t('common.howItWorks', lang)}</span>
+        <h2>{t('pages.testgen.howItWorksTitle', lang)}</h2>
+      </div>
+
+      <div class="process-grid reveal">
+        <div class="process-step">
+          <div class="process-number">1</div>
+          <h3 class="process-title">{t('pages.testgen.step1', lang)}</h3>
+          <p class="process-text">{t('pages.testgen.step1Desc', lang)}</p>
+        </div>
+        <div class="process-step">
+          <div class="process-number">2</div>
+          <h3 class="process-title">{t('pages.testgen.step2', lang)}</h3>
+          <p class="process-text">{t('pages.testgen.step2Desc', lang)}</p>
+        </div>
+        <div class="process-step">
+          <div class="process-number">3</div>
+          <h3 class="process-title">{t('pages.testgen.step3', lang)}</h3>
+          <p class="process-text">{t('pages.testgen.step3Desc', lang)}</p>
+        </div>
+        <div class="process-step">
+          <div class="process-number">4</div>
+          <h3 class="process-title">{t('pages.testgen.step4', lang)}</h3>
+          <p class="process-text">{t('pages.testgen.step4Desc', lang)}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="section section-mesh" id="pricing">
+    <div class="container">
+      <div class="text-center mb-3">
+        <span class="hero-tagline">{t('pages.testgen.pricingTitle', lang)}</span>
+        <h2>{t('pages.testgen.pricingSubtitle', lang)}</h2>
+      </div>
+
+      <div class="pricing-grid reveal">
+        <!-- One-Time -->
+        <div class="pricing-card">
+          <h3>{t('pages.testgen.oneTimeTitle', lang)}</h3>
+          <div class="pricing-price">
+            {t('pages.testgen.oneTimePrice', lang)}
+            <span class="pricing-period">{t('pages.testgen.oneTimePeriod', lang)}</span>
+          </div>
+          <ul class="pricing-features">
+            <li>{t('pages.testgen.oneTimeFeature1', lang)}</li>
+            <li>{t('pages.testgen.oneTimeFeature2', lang)}</li>
+            <li>{t('pages.testgen.oneTimeFeature3', lang)}</li>
+            <li>{t('pages.testgen.oneTimeFeature4', lang)}</li>
+          </ul>
+          <button class="btn btn-secondary" data-tier="onetime" aria-label="Get started with One-Time plan">
+            {t('pages.testgen.oneTimeCta', lang)}
+            <IconArrowRight />
+          </button>
+        </div>
+
+        <!-- Starter -->
+        <div class="pricing-card">
+          <h3>{t('pages.testgen.starterTitle', lang)}</h3>
+          <div class="pricing-price">
+            {t('pages.testgen.starterPrice', lang)}
+            <span class="pricing-period">{t('pages.testgen.starterPeriod', lang)}</span>
+          </div>
+          <ul class="pricing-features">
+            <li>{t('pages.testgen.starterFeature1', lang)}</li>
+            <li>{t('pages.testgen.starterFeature2', lang)}</li>
+            <li>{t('pages.testgen.starterFeature3', lang)}</li>
+            <li>{t('pages.testgen.starterFeature4', lang)}</li>
+          </ul>
+          <button class="btn btn-secondary" data-tier="starter" aria-label="Subscribe to Starter plan">
+            {t('pages.testgen.starterCta', lang)}
+            <IconArrowRight />
+          </button>
+        </div>
+
+        <!-- Pro (Featured) -->
+        <div class="pricing-card featured">
+          <span class="pricing-badge">{t('pages.testgen.proBadge', lang)}</span>
+          <h3>{t('pages.testgen.proTitle', lang)}</h3>
+          <div class="pricing-price">
+            {t('pages.testgen.proPrice', lang)}
+            <span class="pricing-period">{t('pages.testgen.proPeriod', lang)}</span>
+          </div>
+          <ul class="pricing-features">
+            <li>{t('pages.testgen.proFeature1', lang)}</li>
+            <li>{t('pages.testgen.proFeature2', lang)}</li>
+            <li>{t('pages.testgen.proFeature3', lang)}</li>
+            <li>{t('pages.testgen.proFeature4', lang)}</li>
+          </ul>
+          <button class="btn btn-primary btn-glow" data-tier="pro" aria-label="Subscribe to Pro plan">
+            {t('pages.testgen.proCta', lang)}
+            <IconArrowRight />
+          </button>
+        </div>
+      </div>
+      <div id="checkout-status" class="checkout-status" role="alert" aria-live="polite" style="display: none;"></div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section-gradient section-grid">
+    <div class="container">
+      <div class="text-center mb-3">
+        <span class="hero-tagline">{t('common.gotQuestions', lang)}</span>
+        <h2>{t('common.faq', lang)}</h2>
+      </div>
+
+      <div class="faq-grid reveal">
+        <div class="faq-item">
+          <h3 class="faq-question">{t('pages.testgen.faq1', lang)}</h3>
+          <p class="faq-answer">{t('pages.testgen.faq1Answer', lang)}</p>
+        </div>
+        <div class="faq-item">
+          <h3 class="faq-question">{t('pages.testgen.faq2', lang)}</h3>
+          <p class="faq-answer">{t('pages.testgen.faq2Answer', lang)}</p>
+        </div>
+        <div class="faq-item">
+          <h3 class="faq-question">{t('pages.testgen.faq3', lang)}</h3>
+          <p class="faq-answer">{t('pages.testgen.faq3Answer', lang)}</p>
+        </div>
+        <div class="faq-item">
+          <h3 class="faq-question">{t('pages.testgen.faq4', lang)}</h3>
+          <p class="faq-answer">{t('pages.testgen.faq4Answer', lang)}</p>
+        </div>
+        <div class="faq-item">
+          <h3 class="faq-question">{t('pages.testgen.faq5', lang)}</h3>
+          <p class="faq-answer">{t('pages.testgen.faq5Answer', lang)}</p>
+        </div>
+        <div class="faq-item">
+          <h3 class="faq-question">{t('pages.testgen.faq6', lang)}</h3>
+          <p class="faq-answer">{t('pages.testgen.faq6Answer', lang)}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section section-mesh">
+    <div class="container">
+      <div class="card text-center" style="padding: var(--space-xl); max-width: 800px; margin: 0 auto;">
+        <h2 class="mb-1">{t('pages.testgen.ctaTitle', lang)}</h2>
+        <p style="font-size: 1.25rem; margin-bottom: var(--space-md);">{t('pages.testgen.ctaSubtitle', lang)}</p>
+        <a href="#pricing" class="btn btn-primary btn-glow">
+          View Pricing
+          <IconArrowRight />
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- JSON-LD: Product -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "TestGen AI",
+    "description": "AI-powered test suite generation delivered as pull requests.",
+    "brand": { "@type": "Organization", "name": "Manoga" },
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "One-Time",
+        "price": "199.00",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      },
+      {
+        "@type": "Offer",
+        "name": "Starter",
+        "price": "99.00",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      },
+      {
+        "@type": "Offer",
+        "name": "Pro",
+        "price": "249.00",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      }
+    ]
+  })} />
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What languages and frameworks do you support?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We support all major languages and frameworks including TypeScript, JavaScript, Python, Go, Rust, and more. Our AI detects your stack automatically."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does delivery take?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "One-time orders are delivered within 48 hours. Subscription plans get priority delivery, typically within 24 hours."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What about code quality and test coverage?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Every test suite is reviewed by a senior engineer before delivery. We target meaningful coverage of critical paths, not just line count."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is my code private and secure?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely. We only access your repository for analysis. Your code is never stored, shared, or used for training. We can work with private repos via deploy keys."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is your refund policy?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "If you're not satisfied with the delivered test suite, we'll revise it once at no extra cost. If you're still unhappy, we offer a full refund within 7 days."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I cancel my subscription?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can cancel anytime from your Stripe billing portal. No questions asked, no cancellation fees."
+        }
+      }
+    ]
+  })} />
+</Layout>
+
+<script>
+  const checkoutStatus = document.getElementById('checkout-status');
+
+  function showCheckoutError() {
+    if (checkoutStatus) {
+      checkoutStatus.textContent = 'Something went wrong. Please try again or contact us at hi@manoga.digital.';
+      checkoutStatus.style.display = 'block';
+      checkoutStatus.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }
+
+  document.querySelectorAll('[data-tier]').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      const tier = (btn as HTMLElement).dataset.tier;
+      const button = btn as HTMLButtonElement;
+      button.disabled = true;
+      button.style.opacity = '0.7';
+      if (checkoutStatus) checkoutStatus.style.display = 'none';
+
+      try {
+        const res = await fetch('/api/testgen-checkout', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ tier }),
+        });
+
+        const data = await res.json();
+
+        if (data.url) {
+          window.location.href = data.url;
+        } else {
+          showCheckoutError();
+          button.disabled = false;
+          button.style.opacity = '1';
+        }
+      } catch {
+        showCheckoutError();
+        button.disabled = false;
+        button.style.opacity = '1';
+      }
+    });
+  });
+</script>
+
+<style>
+.testgen-hero-visual {
+  background: var(--bg-surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-subtle);
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.testgen-hero-visual svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.checkout-status {
+  max-width: 600px;
+  margin: var(--space-lg) auto 0;
+  padding: var(--space-md);
+  border-radius: var(--radius-md);
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: rgb(239, 68, 68);
+  text-align: center;
+  font-size: 1rem;
+}
+
+.faq-grid {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+@media (max-width: 768px) {
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
