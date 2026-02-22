@@ -9,9 +9,10 @@ interface Props {
   title: string;
   description?: string;
   lang?: string;
+  noindex?: boolean;
 }
 
-const { title, description, lang = 'en' } = Astro.props;
+const { title, description, lang = 'en', noindex = false } = Astro.props;
 const desc = description || t('meta.description', lang);
 ---
 
@@ -25,7 +26,10 @@ const desc = description || t('meta.description', lang);
     <meta property="og:description" content={desc} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={`https://www.manoga.digital${Astro.url.pathname}`} />
-    <meta name="twitter:card" content="summary" />
+    <meta property="og:image" content="https://www.manoga.digital/images/ai-hero.webp" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={desc} />
     <link rel="canonical" href={`https://www.manoga.digital${Astro.url.pathname}`} />
@@ -47,12 +51,21 @@ const desc = description || t('meta.description', lang);
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-    <title>{title} | Manoga AI</title>
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
+    <title>{title} | Manoga</title>
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Manoga",
+      "url": "https://www.manoga.digital",
+      "description": "Digital agency specializing in AI consulting, SEO, and web design",
+      "sameAs": ["https://www.linkedin.com/company/manoga"]
+    })} />
     <Analytics />
   </head>
   <body>
     <Header lang={lang} />
-    <main>
+    <main id="main">
       <slot />
     </main>
     <Footer lang={lang} />

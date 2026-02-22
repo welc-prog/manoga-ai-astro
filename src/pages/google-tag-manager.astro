@@ -21,7 +21,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
           <p class="page-header-description">{t('marketing.gtm', lang)}</p>
         </div>
         <div class="page-header-image">
-          <img src="/images/gtm.webp" alt="Google Tag Manager" />
+          <img src="/images/gtm.webp" alt="Google Tag Manager" loading="eager" />
         </div>
       </div>
     </div>
@@ -83,7 +83,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
           <div class="benefit-icon">
             <IconShield />
           </div>
-          <h4>{t('pages.gtm.benefit1', lang)}</h4>
+          <h3>{t('pages.gtm.benefit1', lang)}</h3>
           <p>{t('pages.gtm.benefit1Desc', lang)}</p>
         </div>
 
@@ -91,7 +91,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
           <div class="benefit-icon">
             <IconCode />
           </div>
-          <h4>{t('pages.gtm.benefit2', lang)}</h4>
+          <h3>{t('pages.gtm.benefit2', lang)}</h3>
           <p>{t('pages.gtm.benefit2Desc', lang)}</p>
         </div>
 
@@ -99,7 +99,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
           <div class="benefit-icon">
             <IconBarChart />
           </div>
-          <h4>{t('pages.gtm.benefit3', lang)}</h4>
+          <h3>{t('pages.gtm.benefit3', lang)}</h3>
           <p>{t('pages.gtm.benefit3Desc', lang)}</p>
         </div>
 
@@ -107,7 +107,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
           <div class="benefit-icon">
             <IconTarget />
           </div>
-          <h4>{t('pages.gtm.benefit4', lang)}</h4>
+          <h3>{t('pages.gtm.benefit4', lang)}</h3>
           <p>{t('pages.gtm.benefit4Desc', lang)}</p>
         </div>
       </div>
@@ -124,19 +124,19 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
 
       <div class="services-grid reveal">
         <div class="card">
-          <h4 class="card-title">{t('pages.gtm.service1', lang)}</h4>
+          <h3 class="card-title">{t('pages.gtm.service1', lang)}</h3>
           <p class="card-text">{t('pages.gtm.service1Desc', lang)}</p>
         </div>
         <div class="card">
-          <h4 class="card-title">{t('pages.gtm.service2', lang)}</h4>
+          <h3 class="card-title">{t('pages.gtm.service2', lang)}</h3>
           <p class="card-text">{t('pages.gtm.service2Desc', lang)}</p>
         </div>
         <div class="card">
-          <h4 class="card-title">{t('pages.gtm.service3', lang)}</h4>
+          <h3 class="card-title">{t('pages.gtm.service3', lang)}</h3>
           <p class="card-text">{t('pages.gtm.service3Desc', lang)}</p>
         </div>
         <div class="card">
-          <h4 class="card-title">{t('pages.gtm.service4', lang)}</h4>
+          <h3 class="card-title">{t('pages.gtm.service4', lang)}</h3>
           <p class="card-text">{t('pages.gtm.service4Desc', lang)}</p>
         </div>
       </div>
@@ -153,22 +153,22 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
 
       <div class="faq-grid reveal">
         <div class="faq-item">
-          <h4 class="faq-question">{t('pages.gtm.faq1', lang)}</h4>
+          <h3 class="faq-question">{t('pages.gtm.faq1', lang)}</h3>
           <p class="faq-answer">{t('pages.gtm.faq1Answer', lang)}</p>
         </div>
 
         <div class="faq-item">
-          <h4 class="faq-question">{t('pages.gtm.faq2', lang)}</h4>
+          <h3 class="faq-question">{t('pages.gtm.faq2', lang)}</h3>
           <p class="faq-answer">{t('pages.gtm.faq2Answer', lang)}</p>
         </div>
 
         <div class="faq-item">
-          <h4 class="faq-question">{t('pages.gtm.faq3', lang)}</h4>
+          <h3 class="faq-question">{t('pages.gtm.faq3', lang)}</h3>
           <p class="faq-answer">{t('pages.gtm.faq3Answer', lang)}</p>
         </div>
 
         <div class="faq-item">
-          <h4 class="faq-question">{t('pages.gtm.faq4', lang)}</h4>
+          <h3 class="faq-question">{t('pages.gtm.faq4', lang)}</h3>
           <p class="faq-answer">{t('pages.gtm.faq4Answer', lang)}</p>
         </div>
       </div>
@@ -188,6 +188,45 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
       </div>
     </div>
   </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Do I need a developer to implement GTM?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Basic implementations can be done without developer help. Complex setups may need minimal developer involvement for data layer implementation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I know if my current tracking is wrong?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Common signs include mismatched numbers between platforms, missing conversions, duplicate events, or difficulty answering basic questions about user behavior."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What about privacy regulations like GDPR?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "I set up tracking with consent mode and cookie banners to ensure compliance with privacy regulations."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you provide documentation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Every implementation comes with documentation explaining what's tracking, how it works, and how to make common changes."
+        }
+      }
+    ]
+  })} />
 </Layout>
 
 <style>
@@ -235,7 +274,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
   color: white;
 }
 
-.benefit-item h4 {
+.benefit-item h3 {
   margin-bottom: var(--space-sm);
   color: var(--text-primary);
 }

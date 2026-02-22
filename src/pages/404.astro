@@ -2,13 +2,19 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="404 - Page Not Found" description="The page you are looking for does not exist." lang="en">
+<Layout title="404 - Page Not Found" description="The page you are looking for does not exist." lang="en" noindex={true}>
   <section class="not-found-section section">
     <div class="container" style="text-align: center; padding: 6rem 1rem;">
       <p class="not-found-code text-gradient">404</p>
       <h1 class="not-found-title">Page Not Found</h1>
       <p class="not-found-message">The page you are looking for doesn't exist or has been moved.</p>
       <a href="/" class="btn btn-primary">Back to Homepage</a>
+      <div style="margin-top: 2rem; display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+        <a href="/blog" style="color: var(--accent); font-size: 0.9rem;">Blog</a>
+        <a href="/seo" style="color: var(--accent); font-size: 0.9rem;">SEO</a>
+        <a href="/ai-consulting" style="color: var(--accent); font-size: 0.9rem;">AI Consulting</a>
+        <a href="/contact" style="color: var(--accent); font-size: 0.9rem;">Contact</a>
+      </div>
     </div>
   </section>
 </Layout>

@@ -23,7 +23,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
           <p class="page-header-description">{t('services.workshopsDesc', lang)}</p>
         </div>
         <div class="page-header-image">
-          <img src="/images/workshops.webp" alt={t('services.workshops', lang)} />
+          <img src="/images/workshops.webp" alt={t('services.workshops', lang)} loading="eager" />
         </div>
       </div>
     </div>
@@ -85,7 +85,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
           <div class="benefit-icon">
             <IconBarChart />
           </div>
-          <h4>{t('pages.workshops.benefit1', lang)}</h4>
+          <h3>{t('pages.workshops.benefit1', lang)}</h3>
           <p>{t('pages.workshops.benefit1Desc', lang)}</p>
         </div>
 
@@ -93,7 +93,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
           <div class="benefit-icon">
             <IconWorkshop />
           </div>
-          <h4>{t('pages.workshops.benefit2', lang)}</h4>
+          <h3>{t('pages.workshops.benefit2', lang)}</h3>
           <p>{t('pages.workshops.benefit2Desc', lang)}</p>
         </div>
 
@@ -101,7 +101,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
           <div class="benefit-icon">
             <IconShield />
           </div>
-          <h4>{t('pages.workshops.benefit3', lang)}</h4>
+          <h3>{t('pages.workshops.benefit3', lang)}</h3>
           <p>{t('pages.workshops.benefit3Desc', lang)}</p>
         </div>
 
@@ -109,7 +109,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
           <div class="benefit-icon">
             <IconTarget />
           </div>
-          <h4>{t('pages.workshops.benefit4', lang)}</h4>
+          <h3>{t('pages.workshops.benefit4', lang)}</h3>
           <p>{t('pages.workshops.benefit4Desc', lang)}</p>
         </div>
       </div>
@@ -126,19 +126,19 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
 
       <div class="services-grid reveal">
         <div class="card">
-          <h4 class="card-title">{t('pages.workshops.workshop1', lang)}</h4>
+          <h3 class="card-title">{t('pages.workshops.workshop1', lang)}</h3>
           <p class="card-text">{t('pages.workshops.workshop1Desc', lang)}</p>
         </div>
         <div class="card">
-          <h4 class="card-title">{t('pages.workshops.workshop2', lang)}</h4>
+          <h3 class="card-title">{t('pages.workshops.workshop2', lang)}</h3>
           <p class="card-text">{t('pages.workshops.workshop2Desc', lang)}</p>
         </div>
         <div class="card">
-          <h4 class="card-title">{t('pages.workshops.workshop3', lang)}</h4>
+          <h3 class="card-title">{t('pages.workshops.workshop3', lang)}</h3>
           <p class="card-text">{t('pages.workshops.workshop3Desc', lang)}</p>
         </div>
         <div class="card">
-          <h4 class="card-title">{t('pages.workshops.workshop4', lang)}</h4>
+          <h3 class="card-title">{t('pages.workshops.workshop4', lang)}</h3>
           <p class="card-text">{t('pages.workshops.workshop4Desc', lang)}</p>
         </div>
       </div>
@@ -155,22 +155,22 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
 
       <div class="faq-grid reveal">
         <div class="faq-item">
-          <h4 class="faq-question">{t('pages.workshops.faq1', lang)}</h4>
+          <h3 class="faq-question">{t('pages.workshops.faq1', lang)}</h3>
           <p class="faq-answer">{t('pages.workshops.faq1Answer', lang)}</p>
         </div>
 
         <div class="faq-item">
-          <h4 class="faq-question">{t('pages.workshops.faq2', lang)}</h4>
+          <h3 class="faq-question">{t('pages.workshops.faq2', lang)}</h3>
           <p class="faq-answer">{t('pages.workshops.faq2Answer', lang)}</p>
         </div>
 
         <div class="faq-item">
-          <h4 class="faq-question">{t('pages.workshops.faq3', lang)}</h4>
+          <h3 class="faq-question">{t('pages.workshops.faq3', lang)}</h3>
           <p class="faq-answer">{t('pages.workshops.faq3Answer', lang)}</p>
         </div>
 
         <div class="faq-item">
-          <h4 class="faq-question">{t('pages.workshops.faq4', lang)}</h4>
+          <h3 class="faq-question">{t('pages.workshops.faq4', lang)}</h3>
           <p class="faq-answer">{t('pages.workshops.faq4Answer', lang)}</p>
         </div>
       </div>
@@ -190,6 +190,45 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
       </div>
     </div>
   </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How many participants can join a workshop?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ideal group size is 5-15 participants for hands-on workshops. Larger groups work for presentation-style sessions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do participants need technical backgrounds?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Not for most workshops. I tailor content to your team's existing knowledge and roles."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can workshops be conducted remotely?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Remote workshops work well with proper planning and the right collaborative tools."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What tools will participants learn?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Depending on the workshop: ChatGPT, Claude, Midjourney, various AI-powered productivity tools, and specialized platforms relevant to your industry."
+        }
+      }
+    ]
+  })} />
 </Layout>
 
 <style>
@@ -237,7 +276,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
   color: white;
 }
 
-.benefit-item h4 {
+.benefit-item h3 {
   margin-bottom: var(--space-sm);
   color: var(--text-primary);
 }

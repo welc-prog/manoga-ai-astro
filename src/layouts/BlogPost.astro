@@ -4,6 +4,14 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Analytics from '@vercel/analytics/astro';
 
+interface RelatedPost {
+  slug: string;
+  title: string;
+  date: string;
+  image: string;
+  category: string;
+}
+
 interface Props {
   title: string;
   description: string;
@@ -11,9 +19,11 @@ interface Props {
   category: string;
   image: string;
   author: string;
+  readingTime?: number;
+  relatedPosts?: RelatedPost[];
 }
 
-const { title, description, date, category, image, author } = Astro.props;
+const { title, description, date, category, image, author, readingTime, relatedPosts = [] } = Astro.props;
 
 const siteUrl = 'https://www.manoga.digital'
 
@@ -44,7 +54,7 @@ const formattedDate = new Date(date).toLocaleDateString('en-US', {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
-    <meta property="og:title" content={`${title} | Manoga AI Blog`} />
+    <meta property="og:title" content={`${title} | Manoga Blog`} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={`${siteUrl}${image}`} />
     <meta property="og:type" content="article" />
@@ -57,7 +67,17 @@ const formattedDate = new Date(date).toLocaleDateString('en-US', {
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-    <title>{title} | Manoga AI Blog</title>
+    <title>{title} | Manoga Blog</title>
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": title,
+      "description": description,
+      "datePublished": date,
+      "author": { "@type": "Person", "name": author },
+      "image": image ? `https://www.manoga.digital${image}` : undefined,
+      "publisher": { "@type": "Organization", "name": "Manoga" }
+    })} />
     <Analytics />
   </head>
   <body>
@@ -71,6 +91,7 @@ const formattedDate = new Date(date).toLocaleDateString('en-US', {
                 {categoryLabels[category]}
               </span>
               <time datetime={date}>{formattedDate}</time>
+              {readingTime && <span class="blog-reading-time">{readingTime} min read</span>}
             </div>
             <h1 class="blog-post-title">{title}</h1>
             <p class="blog-post-description">{description}</p>
@@ -97,6 +118,31 @@ const formattedDate = new Date(date).toLocaleDateString('en-US', {
             <a href="/blog" class="btn btn-primary">Browse Published Articles</a>
           </div>
         </div>
+        {relatedPosts.length > 0 && (
+          <div class="blog-related" id="post-related">
+            <div class="container container-narrow">
+              <h2 class="blog-related-title">Related Articles</h2>
+              <div class="blog-related-grid">
+                {relatedPosts.map(post => (
+                  <a href={`/blog/${post.slug}`} class="blog-related-card">
+                    <div class="blog-related-image">
+                      <img src={post.image} alt={post.title} width="600" height="315" loading="lazy" />
+                      <span class="blog-card-category" style={`--cat-color: ${categoryColors[post.category]}`}>
+                        {categoryLabels[post.category]}
+                      </span>
+                    </div>
+                    <div class="blog-related-body">
+                      <time datetime={post.date}>
+                        {new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
+                      </time>
+                      <h3>{post.title}</h3>
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
         <div class="blog-post-footer" id="post-footer">
           <div class="container container-narrow">
             <a href="/blog" class="btn btn-secondary">Back to Blog</a>

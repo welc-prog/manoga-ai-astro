@@ -23,7 +23,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
           <p class="page-header-description">{t('marketing.seo', lang)}</p>
         </div>
         <div class="page-header-image">
-          <img src="/images/seo-analytics.webp" alt="SEO Analytics" />
+          <img src="/images/seo-analytics.webp" alt="SEO Analytics" loading="eager" />
         </div>
       </div>
     </div>
@@ -85,7 +85,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
           <div class="benefit-icon">
             <IconBarChart />
           </div>
-          <h4>{t('pages.seo.benefit1', lang)}</h4>
+          <h3>{t('pages.seo.benefit1', lang)}</h3>
           <p>{t('pages.seo.benefit1Desc', lang)}</p>
         </div>
 
@@ -93,7 +93,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
           <div class="benefit-icon">
             <IconTarget />
           </div>
-          <h4>{t('pages.seo.benefit2', lang)}</h4>
+          <h3>{t('pages.seo.benefit2', lang)}</h3>
           <p>{t('pages.seo.benefit2Desc', lang)}</p>
         </div>
 
@@ -101,7 +101,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
           <div class="benefit-icon">
             <IconBrain />
           </div>
-          <h4>{t('pages.seo.benefit3', lang)}</h4>
+          <h3>{t('pages.seo.benefit3', lang)}</h3>
           <p>{t('pages.seo.benefit3Desc', lang)}</p>
         </div>
 
@@ -109,7 +109,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
           <div class="benefit-icon">
             <IconShield />
           </div>
-          <h4>{t('pages.seo.benefit4', lang)}</h4>
+          <h3>{t('pages.seo.benefit4', lang)}</h3>
           <p>{t('pages.seo.benefit4Desc', lang)}</p>
         </div>
       </div>
@@ -126,19 +126,19 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
 
       <div class="services-grid reveal">
         <div class="card">
-          <h4 class="card-title">{t('pages.seo.service1', lang)}</h4>
+          <h3 class="card-title">{t('pages.seo.service1', lang)}</h3>
           <p class="card-text">{t('pages.seo.service1Desc', lang)}</p>
         </div>
         <div class="card">
-          <h4 class="card-title">{t('pages.seo.service2', lang)}</h4>
+          <h3 class="card-title">{t('pages.seo.service2', lang)}</h3>
           <p class="card-text">{t('pages.seo.service2Desc', lang)}</p>
         </div>
         <div class="card">
-          <h4 class="card-title">{t('pages.seo.service3', lang)}</h4>
+          <h3 class="card-title">{t('pages.seo.service3', lang)}</h3>
           <p class="card-text">{t('pages.seo.service3Desc', lang)}</p>
         </div>
         <div class="card">
-          <h4 class="card-title">{t('pages.seo.service4', lang)}</h4>
+          <h3 class="card-title">{t('pages.seo.service4', lang)}</h3>
           <p class="card-text">{t('pages.seo.service4Desc', lang)}</p>
         </div>
       </div>
@@ -155,22 +155,22 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
 
       <div class="faq-grid reveal">
         <div class="faq-item">
-          <h4 class="faq-question">{t('pages.seo.faq1', lang)}</h4>
+          <h3 class="faq-question">{t('pages.seo.faq1', lang)}</h3>
           <p class="faq-answer">{t('pages.seo.faq1Answer', lang)}</p>
         </div>
 
         <div class="faq-item">
-          <h4 class="faq-question">{t('pages.seo.faq2', lang)}</h4>
+          <h3 class="faq-question">{t('pages.seo.faq2', lang)}</h3>
           <p class="faq-answer">{t('pages.seo.faq2Answer', lang)}</p>
         </div>
 
         <div class="faq-item">
-          <h4 class="faq-question">{t('pages.seo.faq3', lang)}</h4>
+          <h3 class="faq-question">{t('pages.seo.faq3', lang)}</h3>
           <p class="faq-answer">{t('pages.seo.faq3Answer', lang)}</p>
         </div>
 
         <div class="faq-item">
-          <h4 class="faq-question">{t('pages.seo.faq4', lang)}</h4>
+          <h3 class="faq-question">{t('pages.seo.faq4', lang)}</h3>
           <p class="faq-answer">{t('pages.seo.faq4Answer', lang)}</p>
         </div>
       </div>
@@ -190,6 +190,45 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
       </div>
     </div>
   </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How long does SEO take to show results?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "SEO is a long-term investment. Most clients see initial improvements within 3-4 months, with significant results typically appearing after 6-12 months."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you guarantee #1 rankings?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No legitimate SEO professional can guarantee specific rankings. I focus on sustainable growth and measurable improvements in traffic and conversions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you build backlinks?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "I focus on earning links through quality content and outreach, not buying or manipulating links which can harm your site."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you measure SEO success?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Beyond rankings, I track organic traffic, conversions from organic search, and overall visibility improvements. Real business metrics matter most."
+        }
+      }
+    ]
+  })} />
 </Layout>
 
 <style>
@@ -237,7 +276,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
   color: white;
 }
 
-.benefit-item h4 {
+.benefit-item h3 {
   margin-bottom: var(--space-sm);
   color: var(--text-primary);
 }

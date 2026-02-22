@@ -22,7 +22,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
           <p class="page-header-description">{t('marketing.googleAds', lang)}</p>
         </div>
         <div class="page-header-image">
-          <img src="/images/google-ads.webp" alt="Google Ads" />
+          <img src="/images/google-ads.webp" alt="Google Ads" loading="eager" />
         </div>
       </div>
     </div>
@@ -84,7 +84,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
           <div class="benefit-icon">
             <IconShield />
           </div>
-          <h4>{t('pages.googleAds.benefit1', lang)}</h4>
+          <h3>{t('pages.googleAds.benefit1', lang)}</h3>
           <p>{t('pages.googleAds.benefit1Desc', lang)}</p>
         </div>
 
@@ -92,7 +92,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
           <div class="benefit-icon">
             <IconTarget />
           </div>
-          <h4>{t('pages.googleAds.benefit2', lang)}</h4>
+          <h3>{t('pages.googleAds.benefit2', lang)}</h3>
           <p>{t('pages.googleAds.benefit2Desc', lang)}</p>
         </div>
 
@@ -100,7 +100,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
           <div class="benefit-icon">
             <IconBarChart />
           </div>
-          <h4>{t('pages.googleAds.benefit3', lang)}</h4>
+          <h3>{t('pages.googleAds.benefit3', lang)}</h3>
           <p>{t('pages.googleAds.benefit3Desc', lang)}</p>
         </div>
 
@@ -108,7 +108,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
           <div class="benefit-icon">
             <IconSearch />
           </div>
-          <h4>{t('pages.googleAds.benefit4', lang)}</h4>
+          <h3>{t('pages.googleAds.benefit4', lang)}</h3>
           <p>{t('pages.googleAds.benefit4Desc', lang)}</p>
         </div>
       </div>
@@ -125,19 +125,19 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
 
       <div class="services-grid reveal">
         <div class="card">
-          <h4 class="card-title">{t('pages.googleAds.service1', lang)}</h4>
+          <h3 class="card-title">{t('pages.googleAds.service1', lang)}</h3>
           <p class="card-text">{t('pages.googleAds.service1Desc', lang)}</p>
         </div>
         <div class="card">
-          <h4 class="card-title">{t('pages.googleAds.service2', lang)}</h4>
+          <h3 class="card-title">{t('pages.googleAds.service2', lang)}</h3>
           <p class="card-text">{t('pages.googleAds.service2Desc', lang)}</p>
         </div>
         <div class="card">
-          <h4 class="card-title">{t('pages.googleAds.service3', lang)}</h4>
+          <h3 class="card-title">{t('pages.googleAds.service3', lang)}</h3>
           <p class="card-text">{t('pages.googleAds.service3Desc', lang)}</p>
         </div>
         <div class="card">
-          <h4 class="card-title">{t('pages.googleAds.service4', lang)}</h4>
+          <h3 class="card-title">{t('pages.googleAds.service4', lang)}</h3>
           <p class="card-text">{t('pages.googleAds.service4Desc', lang)}</p>
         </div>
       </div>
@@ -154,22 +154,22 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
 
       <div class="faq-grid reveal">
         <div class="faq-item">
-          <h4 class="faq-question">{t('pages.googleAds.faq1', lang)}</h4>
+          <h3 class="faq-question">{t('pages.googleAds.faq1', lang)}</h3>
           <p class="faq-answer">{t('pages.googleAds.faq1Answer', lang)}</p>
         </div>
 
         <div class="faq-item">
-          <h4 class="faq-question">{t('pages.googleAds.faq2', lang)}</h4>
+          <h3 class="faq-question">{t('pages.googleAds.faq2', lang)}</h3>
           <p class="faq-answer">{t('pages.googleAds.faq2Answer', lang)}</p>
         </div>
 
         <div class="faq-item">
-          <h4 class="faq-question">{t('pages.googleAds.faq3', lang)}</h4>
+          <h3 class="faq-question">{t('pages.googleAds.faq3', lang)}</h3>
           <p class="faq-answer">{t('pages.googleAds.faq3Answer', lang)}</p>
         </div>
 
         <div class="faq-item">
-          <h4 class="faq-question">{t('pages.googleAds.faq4', lang)}</h4>
+          <h3 class="faq-question">{t('pages.googleAds.faq4', lang)}</h3>
           <p class="faq-answer">{t('pages.googleAds.faq4Answer', lang)}</p>
         </div>
       </div>
@@ -189,6 +189,45 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
       </div>
     </div>
   </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What budget do I need for Google Ads?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "There's no minimum, but I typically recommend at least 5,000 DKK monthly ad spend to gather enough data for meaningful optimization. Management fees are separate."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How quickly will I see results?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Initial results often appear within the first week, but true optimization takes 2-3 months of data gathering and refinement."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you work with all types of Google Ads?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes – Search, Display, Shopping, Performance Max, YouTube, and Discovery campaigns. I recommend the right mix based on your goals."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What's your management fee structure?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "I offer both flat monthly fees and percentage-of-spend models depending on your situation. Let's discuss what works best for your budget."
+        }
+      }
+    ]
+  })} />
 </Layout>
 
 <style>
@@ -236,7 +275,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
   color: white;
 }
 
-.benefit-item h4 {
+.benefit-item h3 {
   margin-bottom: var(--space-sm);
   color: var(--text-primary);
 }

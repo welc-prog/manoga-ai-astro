@@ -21,7 +21,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
           <p class="page-header-description">{t('marketing.webDesign', lang)}</p>
         </div>
         <div class="page-header-image">
-          <img src="/images/webdesign.webp" alt="Web Design" />
+          <img src="/images/webdesign.webp" alt="Web Design" loading="eager" />
         </div>
       </div>
     </div>
@@ -83,7 +83,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
           <div class="benefit-icon">
             <IconTarget />
           </div>
-          <h4>{t('pages.webdesign.benefit1', lang)}</h4>
+          <h3>{t('pages.webdesign.benefit1', lang)}</h3>
           <p>{t('pages.webdesign.benefit1Desc', lang)}</p>
         </div>
 
@@ -91,7 +91,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
           <div class="benefit-icon">
             <IconBarChart />
           </div>
-          <h4>{t('pages.webdesign.benefit2', lang)}</h4>
+          <h3>{t('pages.webdesign.benefit2', lang)}</h3>
           <p>{t('pages.webdesign.benefit2Desc', lang)}</p>
         </div>
 
@@ -99,7 +99,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
           <div class="benefit-icon">
             <IconLayout />
           </div>
-          <h4>{t('pages.webdesign.benefit3', lang)}</h4>
+          <h3>{t('pages.webdesign.benefit3', lang)}</h3>
           <p>{t('pages.webdesign.benefit3Desc', lang)}</p>
         </div>
 
@@ -107,7 +107,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
           <div class="benefit-icon">
             <IconCode />
           </div>
-          <h4>{t('pages.webdesign.benefit4', lang)}</h4>
+          <h3>{t('pages.webdesign.benefit4', lang)}</h3>
           <p>{t('pages.webdesign.benefit4Desc', lang)}</p>
         </div>
       </div>
@@ -124,19 +124,19 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
 
       <div class="services-grid reveal">
         <div class="card">
-          <h4 class="card-title">{t('pages.webdesign.service1', lang)}</h4>
+          <h3 class="card-title">{t('pages.webdesign.service1', lang)}</h3>
           <p class="card-text">{t('pages.webdesign.service1Desc', lang)}</p>
         </div>
         <div class="card">
-          <h4 class="card-title">{t('pages.webdesign.service2', lang)}</h4>
+          <h3 class="card-title">{t('pages.webdesign.service2', lang)}</h3>
           <p class="card-text">{t('pages.webdesign.service2Desc', lang)}</p>
         </div>
         <div class="card">
-          <h4 class="card-title">{t('pages.webdesign.service3', lang)}</h4>
+          <h3 class="card-title">{t('pages.webdesign.service3', lang)}</h3>
           <p class="card-text">{t('pages.webdesign.service3Desc', lang)}</p>
         </div>
         <div class="card">
-          <h4 class="card-title">{t('pages.webdesign.service4', lang)}</h4>
+          <h3 class="card-title">{t('pages.webdesign.service4', lang)}</h3>
           <p class="card-text">{t('pages.webdesign.service4Desc', lang)}</p>
         </div>
       </div>
@@ -153,22 +153,22 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
 
       <div class="faq-grid reveal">
         <div class="faq-item">
-          <h4 class="faq-question">{t('pages.webdesign.faq1', lang)}</h4>
+          <h3 class="faq-question">{t('pages.webdesign.faq1', lang)}</h3>
           <p class="faq-answer">{t('pages.webdesign.faq1Answer', lang)}</p>
         </div>
 
         <div class="faq-item">
-          <h4 class="faq-question">{t('pages.webdesign.faq2', lang)}</h4>
+          <h3 class="faq-question">{t('pages.webdesign.faq2', lang)}</h3>
           <p class="faq-answer">{t('pages.webdesign.faq2Answer', lang)}</p>
         </div>
 
         <div class="faq-item">
-          <h4 class="faq-question">{t('pages.webdesign.faq3', lang)}</h4>
+          <h3 class="faq-question">{t('pages.webdesign.faq3', lang)}</h3>
           <p class="faq-answer">{t('pages.webdesign.faq3Answer', lang)}</p>
         </div>
 
         <div class="faq-item">
-          <h4 class="faq-question">{t('pages.webdesign.faq4', lang)}</h4>
+          <h3 class="faq-question">{t('pages.webdesign.faq4', lang)}</h3>
           <p class="faq-answer">{t('pages.webdesign.faq4Answer', lang)}</p>
         </div>
       </div>
@@ -188,6 +188,45 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
       </div>
     </div>
   </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What platform do you build websites on?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "I primarily use Nuxt 3 and Vue.js for custom sites, which delivers excellent performance and SEO. For simpler needs, I can work with WordPress or other platforms."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does a website project take?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Simple landing pages can be completed in 1-2 weeks. Full custom websites typically take 4-8 weeks depending on complexity."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you provide hosting?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "I can recommend and set up hosting, typically on Vercel or similar modern platforms that offer excellent performance and security."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What about content and images?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "I can work with your existing content, help with content strategy, or recommend copywriters. Stock images or custom photography can be incorporated."
+        }
+      }
+    ]
+  })} />
 </Layout>
 
 <style>
@@ -235,7 +274,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
   color: white;
 }
 
-.benefit-item h4 {
+.benefit-item h3 {
   margin-bottom: var(--space-sm);
   color: var(--text-primary);
 }

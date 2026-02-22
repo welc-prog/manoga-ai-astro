@@ -22,7 +22,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
           <p class="page-header-description">{t('marketing.metaAds', lang)}</p>
         </div>
         <div class="page-header-image">
-          <img src="/images/meta-advertising.webp" alt="Meta Advertising" />
+          <img src="/images/meta-advertising.webp" alt="Meta Advertising" loading="eager" />
         </div>
       </div>
     </div>
@@ -84,7 +84,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
           <div class="benefit-icon">
             <IconTarget />
           </div>
-          <h4>{t('pages.metaAds.benefit1', lang)}</h4>
+          <h3>{t('pages.metaAds.benefit1', lang)}</h3>
           <p>{t('pages.metaAds.benefit1Desc', lang)}</p>
         </div>
 
@@ -92,7 +92,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
           <div class="benefit-icon">
             <IconBarChart />
           </div>
-          <h4>{t('pages.metaAds.benefit2', lang)}</h4>
+          <h3>{t('pages.metaAds.benefit2', lang)}</h3>
           <p>{t('pages.metaAds.benefit2Desc', lang)}</p>
         </div>
 
@@ -100,7 +100,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
           <div class="benefit-icon">
             <IconLayout />
           </div>
-          <h4>{t('pages.metaAds.benefit3', lang)}</h4>
+          <h3>{t('pages.metaAds.benefit3', lang)}</h3>
           <p>{t('pages.metaAds.benefit3Desc', lang)}</p>
         </div>
 
@@ -108,7 +108,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
           <div class="benefit-icon">
             <IconCode />
           </div>
-          <h4>{t('pages.metaAds.benefit4', lang)}</h4>
+          <h3>{t('pages.metaAds.benefit4', lang)}</h3>
           <p>{t('pages.metaAds.benefit4Desc', lang)}</p>
         </div>
       </div>
@@ -125,19 +125,19 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
 
       <div class="services-grid reveal">
         <div class="card">
-          <h4 class="card-title">{t('pages.metaAds.service1', lang)}</h4>
+          <h3 class="card-title">{t('pages.metaAds.service1', lang)}</h3>
           <p class="card-text">{t('pages.metaAds.service1Desc', lang)}</p>
         </div>
         <div class="card">
-          <h4 class="card-title">{t('pages.metaAds.service2', lang)}</h4>
+          <h3 class="card-title">{t('pages.metaAds.service2', lang)}</h3>
           <p class="card-text">{t('pages.metaAds.service2Desc', lang)}</p>
         </div>
         <div class="card">
-          <h4 class="card-title">{t('pages.metaAds.service3', lang)}</h4>
+          <h3 class="card-title">{t('pages.metaAds.service3', lang)}</h3>
           <p class="card-text">{t('pages.metaAds.service3Desc', lang)}</p>
         </div>
         <div class="card">
-          <h4 class="card-title">{t('pages.metaAds.service4', lang)}</h4>
+          <h3 class="card-title">{t('pages.metaAds.service4', lang)}</h3>
           <p class="card-text">{t('pages.metaAds.service4Desc', lang)}</p>
         </div>
       </div>
@@ -154,22 +154,22 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
 
       <div class="faq-grid reveal">
         <div class="faq-item">
-          <h4 class="faq-question">{t('pages.metaAds.faq1', lang)}</h4>
+          <h3 class="faq-question">{t('pages.metaAds.faq1', lang)}</h3>
           <p class="faq-answer">{t('pages.metaAds.faq1Answer', lang)}</p>
         </div>
 
         <div class="faq-item">
-          <h4 class="faq-question">{t('pages.metaAds.faq2', lang)}</h4>
+          <h3 class="faq-question">{t('pages.metaAds.faq2', lang)}</h3>
           <p class="faq-answer">{t('pages.metaAds.faq2Answer', lang)}</p>
         </div>
 
         <div class="faq-item">
-          <h4 class="faq-question">{t('pages.metaAds.faq3', lang)}</h4>
+          <h3 class="faq-question">{t('pages.metaAds.faq3', lang)}</h3>
           <p class="faq-answer">{t('pages.metaAds.faq3Answer', lang)}</p>
         </div>
 
         <div class="faq-item">
-          <h4 class="faq-question">{t('pages.metaAds.faq4', lang)}</h4>
+          <h3 class="faq-question">{t('pages.metaAds.faq4', lang)}</h3>
           <p class="faq-answer">{t('pages.metaAds.faq4Answer', lang)}</p>
         </div>
       </div>
@@ -189,6 +189,45 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
       </div>
     </div>
   </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How has iOS 14 affected Meta advertising?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Tracking has become more challenging, but effective strategies exist. I use server-side tracking, Conversions API, and platform features to maintain performance."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What budget do I need for Meta ads?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "I recommend at least 3,000-5,000 DKK monthly to test and optimize effectively. Smaller budgets can work for very focused local campaigns."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you create the ad creative?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "I can provide creative direction and guidance, work with your existing assets, or recommend creative partners depending on your needs."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you measure success?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We define KPIs based on your goals – whether that's cost per lead, ROAS, brand lift, or other metrics that matter to your business."
+        }
+      }
+    ]
+  })} />
 </Layout>
 
 <style>
@@ -236,7 +275,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
   color: white;
 }
 
-.benefit-item h4 {
+.benefit-item h3 {
   margin-bottom: var(--space-sm);
   color: var(--text-primary);
 }

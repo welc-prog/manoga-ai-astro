@@ -16,6 +16,18 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 const { Content } = await render(post);
+
+const wordCount = (post.body || '').split(/\s+/).length;
+const readingTime = Math.ceil(wordCount / 200);
+
+const now = new Date();
+now.setHours(23, 59, 59, 999);
+const allPosts = await getCollection('blog');
+const relatedPosts = allPosts
+  .filter(p => p.data.category === post.data.category && p.id !== post.id)
+  .filter(p => new Date(p.data.date + 'T00:00:00') <= now)
+  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
+  .slice(0, 3);
 ---
 
 <BlogPost
@@ -25,6 +37,14 @@ const { Content } = await render(post);
   category={post.data.category}
   image={post.data.image}
   author={post.data.author}
+  readingTime={readingTime}
+  relatedPosts={relatedPosts.map(p => ({
+    slug: p.id.replace(/\.md$/, ''),
+    title: p.data.title,
+    date: p.data.date,
+    image: p.data.image,
+    category: p.data.category,
+  }))}
 >
   <Content />
 </BlogPost>

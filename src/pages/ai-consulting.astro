@@ -24,7 +24,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
           <p class="page-header-description">{t('services.aiConsultingDesc', lang)}</p>
         </div>
         <div class="page-header-image">
-          <img src="/images/ai-consulting.webp" alt={t('services.aiConsulting', lang)} />
+          <img src="/images/ai-consulting.webp" alt={t('services.aiConsulting', lang)} loading="eager" />
         </div>
       </div>
     </div>
@@ -86,7 +86,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
           <div class="benefit-icon">
             <IconTarget />
           </div>
-          <h4>{t('pages.aiConsulting.benefit1', lang)}</h4>
+          <h3>{t('pages.aiConsulting.benefit1', lang)}</h3>
           <p>{t('pages.aiConsulting.benefit1Desc', lang)}</p>
         </div>
 
@@ -94,7 +94,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
           <div class="benefit-icon">
             <IconShield />
           </div>
-          <h4>{t('pages.aiConsulting.benefit2', lang)}</h4>
+          <h3>{t('pages.aiConsulting.benefit2', lang)}</h3>
           <p>{t('pages.aiConsulting.benefit2Desc', lang)}</p>
         </div>
 
@@ -102,7 +102,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
           <div class="benefit-icon">
             <IconWorkshop />
           </div>
-          <h4>{t('pages.aiConsulting.benefit3', lang)}</h4>
+          <h3>{t('pages.aiConsulting.benefit3', lang)}</h3>
           <p>{t('pages.aiConsulting.benefit3Desc', lang)}</p>
         </div>
 
@@ -110,7 +110,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
           <div class="benefit-icon">
             <IconBarChart />
           </div>
-          <h4>{t('pages.aiConsulting.benefit4', lang)}</h4>
+          <h3>{t('pages.aiConsulting.benefit4', lang)}</h3>
           <p>{t('pages.aiConsulting.benefit4Desc', lang)}</p>
         </div>
       </div>
@@ -128,22 +128,22 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
       <div class="process-grid reveal">
         <div class="process-step">
           <div class="process-number">1</div>
-          <h4 class="process-title">{t('pages.aiConsulting.processStep1', lang)}</h4>
+          <h3 class="process-title">{t('pages.aiConsulting.processStep1', lang)}</h3>
           <p class="process-text">{t('pages.aiConsulting.processStep1Desc', lang)}</p>
         </div>
         <div class="process-step">
           <div class="process-number">2</div>
-          <h4 class="process-title">{t('pages.aiConsulting.processStep2', lang)}</h4>
+          <h3 class="process-title">{t('pages.aiConsulting.processStep2', lang)}</h3>
           <p class="process-text">{t('pages.aiConsulting.processStep2Desc', lang)}</p>
         </div>
         <div class="process-step">
           <div class="process-number">3</div>
-          <h4 class="process-title">{t('pages.aiConsulting.processStep3', lang)}</h4>
+          <h3 class="process-title">{t('pages.aiConsulting.processStep3', lang)}</h3>
           <p class="process-text">{t('pages.aiConsulting.processStep3Desc', lang)}</p>
         </div>
         <div class="process-step">
           <div class="process-number">4</div>
-          <h4 class="process-title">{t('pages.aiConsulting.processStep4', lang)}</h4>
+          <h3 class="process-title">{t('pages.aiConsulting.processStep4', lang)}</h3>
           <p class="process-text">{t('pages.aiConsulting.processStep4Desc', lang)}</p>
         </div>
       </div>
@@ -160,22 +160,22 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
 
       <div class="faq-grid reveal">
         <div class="faq-item">
-          <h4 class="faq-question">{t('pages.aiConsulting.faq1', lang)}</h4>
+          <h3 class="faq-question">{t('pages.aiConsulting.faq1', lang)}</h3>
           <p class="faq-answer">{t('pages.aiConsulting.faq1Answer', lang)}</p>
         </div>
 
         <div class="faq-item">
-          <h4 class="faq-question">{t('pages.aiConsulting.faq2', lang)}</h4>
+          <h3 class="faq-question">{t('pages.aiConsulting.faq2', lang)}</h3>
           <p class="faq-answer">{t('pages.aiConsulting.faq2Answer', lang)}</p>
         </div>
 
         <div class="faq-item">
-          <h4 class="faq-question">{t('pages.aiConsulting.faq3', lang)}</h4>
+          <h3 class="faq-question">{t('pages.aiConsulting.faq3', lang)}</h3>
           <p class="faq-answer">{t('pages.aiConsulting.faq3Answer', lang)}</p>
         </div>
 
         <div class="faq-item">
-          <h4 class="faq-question">{t('pages.aiConsulting.faq4', lang)}</h4>
+          <h3 class="faq-question">{t('pages.aiConsulting.faq4', lang)}</h3>
           <p class="faq-answer">{t('pages.aiConsulting.faq4Answer', lang)}</p>
         </div>
       </div>
@@ -195,6 +195,45 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
       </div>
     </div>
   </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How long does an AI consulting engagement typically last?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Initial assessments usually take 2-4 weeks. Full strategic engagements can range from 1-3 months depending on scope. Implementation support is ongoing as needed."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do we need technical staff to benefit from AI consulting?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Part of my job is translating technical AI concepts into business terms. I work with executive teams, marketing departments, operations – anyone who can benefit from AI."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What industries do you have experience with?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "My background spans e-commerce, SaaS, professional services, and more. AI principles apply across industries, though specific applications vary."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you stay current with AI developments?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "I'm actively building AI-powered applications and constantly experimenting with new tools and techniques. This hands-on experience means I can separate hype from reality."
+        }
+      }
+    ]
+  })} />
 </Layout>
 
 <style>
@@ -242,7 +281,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
   color: white;
 }
 
-.benefit-item h4 {
+.benefit-item h3 {
   margin-bottom: var(--space-sm);
   color: var(--text-primary);
 }
