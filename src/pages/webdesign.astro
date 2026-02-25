@@ -6,6 +6,7 @@ import IconCode from '../components/icons/IconCode.astro';
 import IconBarChart from '../components/icons/IconBarChart.astro';
 import IconTarget from '../components/icons/IconTarget.astro';
 import IconArrowRight from '../components/icons/IconArrowRight.astro';
+import IconExternal from '../components/icons/IconExternal.astro';
 
 const lang = 'en';
 const prefix = lang === 'en' ? '' : `/${lang}`;
@@ -138,6 +139,29 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
         <div class="card">
           <h3 class="card-title">{t('pages.webdesign.service4', lang)}</h3>
           <p class="card-text">{t('pages.webdesign.service4Desc', lang)}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Demos CTA Section -->
+  <section class="section section-gradient section-grid">
+    <div class="container">
+      <div class="card text-center reveal" style="padding: var(--space-xl); max-width: 800px; margin: 0 auto;">
+        <span class="hero-tagline">See Our Work</span>
+        <h2 class="text-gradient" style="margin-bottom: var(--space-md);">Explore Our Live Demos</h2>
+        <p style="font-size: 1.1rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: var(--space-lg);">
+          See the quality of our work in action. From e-commerce webshops to service business sites, every demo is built with the same modern tech stack we use for real client projects — fast, beautiful, and conversion-focused.
+        </p>
+        <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap;">
+          <a href="/demos" class="btn btn-primary btn-glow">
+            View Live Demos
+            <IconExternal />
+          </a>
+          <a href={`${prefix}/contact`} class="btn btn-secondary">
+            Get Free Quote
+            <IconArrowRight />
+          </a>
         </div>
       </div>
     </div>
