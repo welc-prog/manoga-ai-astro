@@ -1,0 +1,873 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { t } from '../i18n/index.ts';
+import IconArrowRight from '../components/icons/IconArrowRight.astro';
+import IconExternal from '../components/icons/IconExternal.astro';
+import IconCode from '../components/icons/IconCode.astro';
+import IconLayout from '../components/icons/IconLayout.astro';
+import IconBarChart from '../components/icons/IconBarChart.astro';
+import IconTarget from '../components/icons/IconTarget.astro';
+import IconShield from '../components/icons/IconShield.astro';
+
+const lang = 'en';
+const prefix = lang === 'en' ? '' : `/${lang}`;
+---
+
+<Layout
+  title="Live Website Demos: Modern, Fast & Affordable Web Design | Manoga"
+  description="See what Manoga builds for businesses like yours. Explore live demos — a modern webshop with Stripe payments and a professional electrician service website. AI-built, lightning-fast, budget-friendly."
+  lang={lang}
+>
+  <!-- Hero / Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <span class="page-subtitle">Live Demos</span>
+      <h1>Your New Website, <span class="text-gradient">Built Smarter</span></h1>
+      <p class="page-header-description">
+        Stop overpaying for slow, outdated websites. We use AI-assisted development and modern frameworks to deliver
+        professional websites <strong>in days, not months</strong> — at a fraction of the traditional cost.
+        Explore our live demos below.
+      </p>
+    </div>
+  </section>
+
+  <!-- Value Proposition -->
+  <section class="section section-mesh">
+    <div class="container">
+      <div class="text-center mb-3">
+        <span class="hero-tagline">Why Manoga?</span>
+        <h2>Websites That <span class="text-gradient">Actually Perform</span></h2>
+        <p style="max-width: 700px; margin: 0 auto;">Traditional agencies charge premium prices for cookie-cutter templates. We build custom, modern websites using the same tech behind Netflix, Airbnb, and Stripe — and we do it faster because AI handles the heavy lifting.</p>
+      </div>
+
+      <div class="benefits-grid reveal">
+        <div class="benefit-item">
+          <div class="benefit-icon">
+            <IconBarChart />
+          </div>
+          <h3>10x Faster Delivery</h3>
+          <p>AI-assisted development means your site goes from concept to launch in days. No more waiting 3-6 months for a basic website.</p>
+        </div>
+
+        <div class="benefit-item">
+          <div class="benefit-icon">
+            <IconTarget />
+          </div>
+          <h3>50-70% Lower Cost</h3>
+          <p>By leveraging AI and modern tooling, we cut development time dramatically. The savings go straight to your bottom line.</p>
+        </div>
+
+        <div class="benefit-item">
+          <div class="benefit-icon">
+            <IconCode />
+          </div>
+          <h3>Enterprise-Grade Tech</h3>
+          <p>Nuxt, Vue, Tailwind CSS, Stripe — the same frameworks powering billion-dollar companies. Your small business deserves the same quality.</p>
+        </div>
+
+        <div class="benefit-item">
+          <div class="benefit-icon">
+            <IconLayout />
+          </div>
+          <h3>SEO-Ready From Day One</h3>
+          <p>Every site is built with search engine optimization baked in. Fast load times, clean code, and structured data — Google loves our sites.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Demo 1: Webshop -->
+  <section class="section section-gradient section-grid" id="webshop">
+    <div class="container">
+      <div class="demo-showcase reveal">
+        <div class="demo-preview">
+          <div class="demo-browser">
+            <div class="demo-browser-bar">
+              <span class="demo-dot"></span>
+              <span class="demo-dot"></span>
+              <span class="demo-dot"></span>
+              <span class="demo-url">demo-webshop.manoga.digital</span>
+            </div>
+            <div class="demo-screen demo-screen-shop">
+              <div class="demo-hero-mock">
+                <div class="demo-mock-badge">E-Commerce</div>
+                <div class="demo-mock-title">Modern Webshop</div>
+                <div class="demo-mock-subtitle">Nuxt + Stripe</div>
+                <div class="demo-mock-grid">
+                  <div class="demo-mock-card"></div>
+                  <div class="demo-mock-card"></div>
+                  <div class="demo-mock-card"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="demo-info">
+          <span class="demo-label">Demo #1 — E-Commerce</span>
+          <h2>Webshop with Stripe Payments</h2>
+          <p class="demo-description">A complete online store built with Nuxt 4 and integrated Stripe checkout. Product catalogs, shopping cart, secure payments — everything a modern webshop needs, ready to sell.</p>
+
+          <div class="demo-features">
+            <div class="demo-feature">
+              <span class="demo-feature-icon">&#9889;</span>
+              <div>
+                <strong>5 Fully Designed Pages</strong>
+                <span>Home, Products, Product Detail, About Us, Contact</span>
+              </div>
+            </div>
+            <div class="demo-feature">
+              <span class="demo-feature-icon">&#128176;</span>
+              <div>
+                <strong>Stripe Checkout Integration</strong>
+                <span>Secure payment processing with test mode support</span>
+              </div>
+            </div>
+            <div class="demo-feature">
+              <span class="demo-feature-icon">&#128722;</span>
+              <div>
+                <strong>Full Cart System</strong>
+                <span>Add to cart, quantity controls, persistent basket</span>
+              </div>
+            </div>
+            <div class="demo-feature">
+              <span class="demo-feature-icon">&#128241;</span>
+              <div>
+                <strong>Mobile-First Responsive</strong>
+                <span>Looks stunning on every device, every screen size</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="demo-tech-tags">
+            <span class="tech-tag">Nuxt 4</span>
+            <span class="tech-tag">Vue 3</span>
+            <span class="tech-tag">Tailwind CSS 4</span>
+            <span class="tech-tag">Stripe</span>
+            <span class="tech-tag">TypeScript</span>
+          </div>
+
+          <div class="demo-actions">
+            <a href="/contact" class="btn btn-primary btn-glow">
+              I Want This For My Business
+              <IconArrowRight />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Demo 2: Electrician / Service Business -->
+  <section class="section section-mesh" id="electrician">
+    <div class="container">
+      <div class="demo-showcase demo-showcase-reverse reveal">
+        <div class="demo-preview">
+          <div class="demo-browser">
+            <div class="demo-browser-bar">
+              <span class="demo-dot"></span>
+              <span class="demo-dot"></span>
+              <span class="demo-dot"></span>
+              <span class="demo-url">demo-electrician.manoga.digital</span>
+            </div>
+            <div class="demo-screen demo-screen-service">
+              <div class="demo-hero-mock demo-hero-dark">
+                <div class="demo-mock-badge demo-badge-yellow">Service Business</div>
+                <div class="demo-mock-title">PowerUp Electric</div>
+                <div class="demo-mock-subtitle">Professional Services</div>
+                <div class="demo-mock-grid">
+                  <div class="demo-mock-card demo-card-dark"></div>
+                  <div class="demo-mock-card demo-card-dark"></div>
+                  <div class="demo-mock-card demo-card-dark"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="demo-info">
+          <span class="demo-label">Demo #2 — Service Business</span>
+          <h2>Professional Electrician Website</h2>
+          <p class="demo-description">A high-converting service business website designed to generate leads. Emergency callouts, service listings, trust signals, and contact forms — built to turn visitors into customers.</p>
+
+          <div class="demo-features">
+            <div class="demo-feature">
+              <span class="demo-feature-icon">&#9889;</span>
+              <div>
+                <strong>5 Conversion-Optimized Pages</strong>
+                <span>Home, Services, About Us, Contact, Blog</span>
+              </div>
+            </div>
+            <div class="demo-feature">
+              <span class="demo-feature-icon">&#128222;</span>
+              <div>
+                <strong>Lead Generation Focused</strong>
+                <span>Quote request forms, click-to-call, emergency banner</span>
+              </div>
+            </div>
+            <div class="demo-feature">
+              <span class="demo-feature-icon">&#128170;</span>
+              <div>
+                <strong>Trust Signals Built In</strong>
+                <span>Licensed, bonded, insured badges + testimonials</span>
+              </div>
+            </div>
+            <div class="demo-feature">
+              <span class="demo-feature-icon">&#128269;</span>
+              <div>
+                <strong>Local SEO Optimized</strong>
+                <span>Structured data, location pages, Google Business ready</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="demo-tech-tags">
+            <span class="tech-tag">Nuxt 4</span>
+            <span class="tech-tag">Vue 3</span>
+            <span class="tech-tag">Tailwind CSS 4</span>
+            <span class="tech-tag">TypeScript</span>
+            <span class="tech-tag">SSG</span>
+          </div>
+
+          <div class="demo-actions">
+            <a href="/contact" class="btn btn-primary btn-glow">
+              I Want This For My Business
+              <IconArrowRight />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison Section -->
+  <section class="section section-gradient section-grid">
+    <div class="container">
+      <div class="text-center mb-3">
+        <span class="hero-tagline">The Difference</span>
+        <h2>Traditional Agency vs. <span class="text-gradient">Manoga</span></h2>
+        <p style="max-width: 700px; margin: 0 auto;">See why businesses are switching to AI-powered web development.</p>
+      </div>
+
+      <div class="comparison-table reveal">
+        <div class="comparison-column comparison-old">
+          <div class="comparison-header">
+            <h3>Traditional Agency</h3>
+          </div>
+          <ul class="comparison-list">
+            <li class="comparison-con">3-6 months delivery time</li>
+            <li class="comparison-con">$10,000 - $50,000+ budget</li>
+            <li class="comparison-con">WordPress with bloated plugins</li>
+            <li class="comparison-con">Slow page loads (3-5+ seconds)</li>
+            <li class="comparison-con">Cookie-cutter templates</li>
+            <li class="comparison-con">Monthly maintenance fees</li>
+            <li class="comparison-con">SEO as an expensive add-on</li>
+          </ul>
+        </div>
+
+        <div class="comparison-column comparison-new">
+          <div class="comparison-header comparison-header-accent">
+            <h3>Manoga <span class="text-gradient">AI</span></h3>
+            <span class="comparison-badge">Recommended</span>
+          </div>
+          <ul class="comparison-list">
+            <li class="comparison-pro">1-2 weeks delivery</li>
+            <li class="comparison-pro">Fraction of the cost</li>
+            <li class="comparison-pro">Modern stack (Nuxt, Vue, Tailwind)</li>
+            <li class="comparison-pro">Blazing fast (&lt; 1 second loads)</li>
+            <li class="comparison-pro">Custom-built, pixel-perfect</li>
+            <li class="comparison-pro">Zero maintenance headaches</li>
+            <li class="comparison-pro">SEO baked in from day one</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who Is This For Section -->
+  <section class="section section-mesh">
+    <div class="container">
+      <div class="text-center mb-3">
+        <span class="hero-tagline">Perfect For</span>
+        <h2>Who Are These Demos For?</h2>
+      </div>
+
+      <div class="services-grid reveal">
+        <div class="card">
+          <h3 class="card-title">Startups & New Businesses</h3>
+          <p class="card-text">Need a professional web presence fast without breaking the bank? Our webshop demo shows what's possible from day one — complete e-commerce with payment processing.</p>
+        </div>
+
+        <div class="card">
+          <h3 class="card-title">Service Companies</h3>
+          <p class="card-text">Electricians, plumbers, contractors, consultants — our service business demo is built to generate leads. Prominent CTAs, trust signals, and mobile-first design for customers who search on their phones.</p>
+        </div>
+
+        <div class="card">
+          <h3 class="card-title">Existing Businesses</h3>
+          <p class="card-text">Outgrown your old website? Migrating from WordPress to modern tech means faster loads, better SEO, lower hosting costs, and zero plugin security headaches.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="section section-gradient section-grid">
+    <div class="container">
+      <div class="text-center mb-3">
+        <span class="hero-tagline">How It Works</span>
+        <h2>From Idea to Launch in <span class="text-gradient">3 Steps</span></h2>
+      </div>
+
+      <div class="process-grid reveal">
+        <div class="process-step">
+          <div class="process-number">1</div>
+          <h3 class="process-title">Tell Us What You Need</h3>
+          <p class="process-text">Share your vision — what your business does, who your customers are, and what you want the site to achieve. We'll handle the rest.</p>
+        </div>
+        <div class="process-step">
+          <div class="process-number">2</div>
+          <h3 class="process-title">We Build It Fast</h3>
+          <p class="process-text">Using AI-assisted vibecoding, we craft a custom website in days. You get a preview link to review and request changes — unlimited revisions included.</p>
+        </div>
+        <div class="process-step">
+          <div class="process-number">3</div>
+          <h3 class="process-title">Launch & Grow</h3>
+          <p class="process-text">We deploy your site on lightning-fast infrastructure. SEO, analytics, and performance monitoring included. Your website starts working for you immediately.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section-mesh">
+    <div class="container">
+      <div class="text-center mb-3">
+        <span class="hero-tagline">Got Questions?</span>
+        <h2>Frequently Asked Questions</h2>
+      </div>
+
+      <div class="faq-grid reveal">
+        <div class="faq-item">
+          <h3 class="faq-question">How much does a website cost?</h3>
+          <p class="faq-answer">Our AI-assisted approach lets us deliver professional websites at 50-70% less than traditional agencies. Exact pricing depends on your needs — contact us for a free, no-obligation quote.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-question">How fast can you deliver?</h3>
+          <p class="faq-answer">Most websites go from kickoff to launch in 1-2 weeks. Simple landing pages can be ready in days. Complex e-commerce projects with custom integrations may take 3-4 weeks.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-question">What technology do you use?</h3>
+          <p class="faq-answer">We build with Nuxt 4 (Vue.js), Tailwind CSS 4, and TypeScript — the same enterprise-grade stack used by major tech companies. For payments, we integrate Stripe. For hosting, we use Vercel for instant global deployment.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-question">Can I update the site myself?</h3>
+          <p class="faq-answer">Absolutely. We can set up a simple content management system, or we offer affordable maintenance plans where we handle all updates for you. Most clients prefer the hassle-free approach.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-question">Is SEO included?</h3>
+          <p class="faq-answer">Yes — every site ships with technical SEO built in: meta tags, structured data, sitemap, fast load times, mobile optimization, and clean URLs. We also offer ongoing SEO services for businesses that want to dominate search results.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-question">Do you only build webshops and service sites?</h3>
+          <p class="faq-answer">No — we build everything from landing pages and portfolios to SaaS dashboards and booking systems. The demos here showcase two common use cases, but we tailor every project to your specific business needs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="cta-orb cta-orb-1"></div>
+    <div class="cta-orb cta-orb-2"></div>
+    <div class="cta-orb cta-orb-3"></div>
+    <div class="container">
+      <div class="cta-card">
+        <h2>Ready for a Website That Actually Works?</h2>
+        <p>Get a professional, modern website built with AI — faster, cheaper, and better than traditional agencies. Free consultation, no strings attached.</p>
+        <div class="cta-buttons">
+          <a href="/contact" class="btn btn-primary btn-glow">
+            Get Your Free Quote
+            <IconArrowRight />
+          </a>
+          <a href="tel:+4550587900" class="btn btn-secondary">
+            &#128222; +45 50 58 79 00
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much does a website cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our AI-assisted approach lets us deliver professional websites at 50-70% less than traditional agencies. Exact pricing depends on your needs — contact us for a free, no-obligation quote."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How fast can you deliver a website?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most websites go from kickoff to launch in 1-2 weeks. Simple landing pages can be ready in days. Complex e-commerce projects may take 3-4 weeks."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What technology do you use to build websites?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We build with Nuxt 4 (Vue.js), Tailwind CSS 4, and TypeScript — enterprise-grade technology. For payments we integrate Stripe. For hosting we use Vercel for instant global deployment."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is SEO included in the website?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes — every site ships with technical SEO built in: meta tags, structured data, sitemap, fast load times, mobile optimization, and clean URLs."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I update the website myself?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely. We can set up a simple content management system, or we offer affordable maintenance plans where we handle all updates for you."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you only build webshops and service websites?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No — we build everything from landing pages and portfolios to SaaS dashboards and booking systems. We tailor every project to your specific business needs."
+        }
+      }
+    ]
+  })} />
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Live Website Demos | Manoga",
+    "description": "Explore live demo websites built by Manoga — a modern webshop with Stripe and a professional service business site. AI-built, fast, affordable.",
+    "url": "https://www.manoga.digital/demos",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Manoga",
+      "url": "https://www.manoga.digital"
+    },
+    "offers": {
+      "@type": "Offer",
+      "name": "Custom Website Development",
+      "description": "Professional websites built with AI-assisted development. Modern tech, fast delivery, affordable pricing.",
+      "priceCurrency": "DKK",
+      "availability": "https://schema.org/InStock"
+    }
+  })} />
+</Layout>
+
+<style>
+/* Demo Showcase Layout */
+.demo-showcase {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+  align-items: center;
+}
+
+.demo-showcase-reverse {
+  direction: rtl;
+}
+
+.demo-showcase-reverse > * {
+  direction: ltr;
+}
+
+/* Browser Mockup */
+.demo-browser {
+  background: var(--bg-surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-subtle);
+  overflow: hidden;
+  transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease);
+}
+
+.demo-browser:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 60px rgba(59, 130, 246, 0.15);
+}
+
+.demo-browser-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.demo-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.demo-dot:first-child { background: #ff5f56; }
+.demo-dot:nth-child(2) { background: #ffbd2e; }
+.demo-dot:nth-child(3) { background: #27c93f; }
+
+.demo-url {
+  margin-left: 12px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  flex: 1;
+}
+
+.demo-screen {
+  aspect-ratio: 16/10;
+  position: relative;
+  overflow: hidden;
+}
+
+.demo-screen-shop {
+  background: linear-gradient(135deg, #4f46e5 0%, #6366f1 40%, #818cf8 100%);
+}
+
+.demo-screen-service {
+  background: linear-gradient(135deg, #1a365d 0%, #2563eb 50%, #3b82f6 100%);
+}
+
+.demo-hero-mock {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 0.75rem;
+}
+
+.demo-hero-dark {
+  background: linear-gradient(135deg, #1a365d, #0f172a);
+}
+
+.demo-mock-badge {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+}
+
+.demo-badge-yellow {
+  background: rgba(234, 179, 8, 0.3);
+  color: #fbbf24;
+}
+
+.demo-mock-title {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.demo-mock-subtitle {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+}
+
+.demo-mock-grid {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.demo-mock-card {
+  width: 80px;
+  height: 56px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+}
+
+.demo-card-dark {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Demo Info */
+.demo-info {
+  padding: var(--space-md) 0;
+}
+
+.demo-label {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: var(--space-sm);
+  display: block;
+}
+
+.demo-info h2 {
+  margin-bottom: var(--space-md);
+}
+
+.demo-description {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: var(--space-lg);
+}
+
+.demo-features {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.demo-feature {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+}
+
+.demo-feature-icon {
+  font-size: 1.5rem;
+  line-height: 1;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.demo-feature strong {
+  display: block;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+
+.demo-feature span {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.demo-tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: var(--space-lg);
+}
+
+.tech-tag {
+  background: var(--accent-light);
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-accent);
+}
+
+.demo-actions {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+/* Comparison Table */
+.comparison-table {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.comparison-column {
+  background: var(--bg-surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-subtle);
+  overflow: hidden;
+}
+
+.comparison-new {
+  border-color: var(--border-accent);
+  box-shadow: 0 0 30px rgba(59, 130, 246, 0.1);
+}
+
+.comparison-header {
+  padding: var(--space-md);
+  text-align: center;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.comparison-header h3 {
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.comparison-header-accent {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(139, 92, 246, 0.1));
+  position: relative;
+}
+
+.comparison-badge {
+  display: inline-block;
+  background: var(--accent);
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 2px 10px;
+  border-radius: var(--radius-full);
+  margin-top: 6px;
+}
+
+.comparison-list {
+  list-style: none;
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.comparison-list li {
+  padding-left: 28px;
+  position: relative;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.comparison-con::before {
+  content: '✕';
+  position: absolute;
+  left: 0;
+  color: #ef4444;
+  font-weight: 700;
+}
+
+.comparison-pro::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #22c55e;
+  font-weight: 700;
+}
+
+/* Benefits grid (reuse from webdesign.astro pattern) */
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-lg);
+}
+
+.benefit-item {
+  text-align: center;
+  padding: var(--space-lg);
+}
+
+.benefit-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto var(--space-md);
+  background: var(--gradient-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.benefit-icon :global(svg) {
+  width: 28px;
+  height: 28px;
+  color: white;
+}
+
+.benefit-item h3 {
+  margin-bottom: var(--space-sm);
+  color: var(--text-primary);
+}
+
+.benefit-item p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* FAQ grid */
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-lg);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background: var(--bg-surface);
+  padding: var(--space-lg);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-subtle);
+}
+
+.faq-question {
+  color: var(--text-primary);
+  margin-bottom: var(--space-sm);
+  font-size: 1.1rem;
+}
+
+.faq-answer {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .demo-showcase,
+  .demo-showcase-reverse {
+    grid-template-columns: 1fr;
+    direction: ltr;
+  }
+
+  .demo-showcase-reverse > * {
+    direction: ltr;
+  }
+
+  .demo-mock-title {
+    font-size: 1.2rem;
+  }
+
+  .demo-mock-card {
+    width: 60px;
+    height: 42px;
+  }
+
+  .comparison-table {
+    grid-template-columns: 1fr;
+  }
+
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
