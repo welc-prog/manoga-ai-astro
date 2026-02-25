@@ -1,0 +1,1 @@
+import{u as r}from"./ULC4lsGb.js";import{x as s}from"./B_b_muff.js";function d(t){const u=s(()=>t?typeof t=="string"?t:t.value:"all"),{data:e,status:a}=r("/api/products",{query:{category:u},watch:[u]},"$Et7-A8wfoG"),{data:o}=r("/api/products",{query:{featured:"true"}},"$M6G4VU_f2l");return{products:e,featured:o,status:a}}export{d as u};
