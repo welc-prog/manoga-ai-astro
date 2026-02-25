@@ -1,1 +1,0 @@
-import{u as r}from"./iiro_4Tr.js";import{s as o}from"./Csp30WdR.js";function d(t){const u=o(()=>t?typeof t=="string"?t:t.value:"all"),{data:e,status:s}=r("/api/products",{query:{category:u},watch:[u]},"$Et7-A8wfoG"),{data:a}=r("/api/products",{query:{featured:"true"}},"$M6G4VU_f2l");return{products:e,featured:a,status:s}}export{d as u};

@@ -91,15 +91,9 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
                 <span class="demo-url">manoga.digital/demos/webshop</span>
               </div>
               <div class="demo-screen demo-screen-shop">
-                <div class="demo-hero-mock">
-                  <div class="demo-mock-badge">E-Commerce</div>
-                  <div class="demo-mock-title">Modern Webshop</div>
-                  <div class="demo-mock-subtitle">Nuxt + Stripe</div>
-                  <div class="demo-mock-grid">
-                    <div class="demo-mock-card"></div>
-                    <div class="demo-mock-card"></div>
-                    <div class="demo-mock-card"></div>
-                  </div>
+                <img src="/images/demos/webshop-hero.webp" alt="Webshop demo preview" class="demo-screen-img" loading="lazy" />
+                <div class="demo-screen-overlay">
+                  <span class="demo-screen-label">E-Commerce Demo</span>
                 </div>
               </div>
               <div class="demo-browser-cta">
@@ -183,15 +177,9 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
                 <span class="demo-url">manoga.digital/demos/electrician</span>
               </div>
               <div class="demo-screen demo-screen-service">
-                <div class="demo-hero-mock demo-hero-dark">
-                  <div class="demo-mock-badge demo-badge-yellow">Service Business</div>
-                  <div class="demo-mock-title">PowerUp Electric</div>
-                  <div class="demo-mock-subtitle">Professional Services</div>
-                  <div class="demo-mock-grid">
-                    <div class="demo-mock-card demo-card-dark"></div>
-                    <div class="demo-mock-card demo-card-dark"></div>
-                    <div class="demo-mock-card demo-card-dark"></div>
-                  </div>
+                <img src="/images/demos/electrician-hero.webp" alt="Electrician demo preview" class="demo-screen-img" loading="lazy" />
+                <div class="demo-screen-overlay">
+                  <span class="demo-screen-label">Service Business Demo</span>
                 </div>
               </div>
               <div class="demo-browser-cta">
@@ -616,63 +604,32 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
   background: linear-gradient(135deg, #1a365d 0%, #2563eb 50%, #3b82f6 100%);
 }
 
-.demo-hero-mock {
-  padding: 8%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.demo-screen-img {
+  width: 100%;
   height: 100%;
-  gap: 0.75rem;
+  object-fit: cover;
+  transition: transform 0.6s var(--ease);
 }
 
-.demo-hero-dark {
-  background: linear-gradient(135deg, #1a365d, #0f172a);
+.demo-browser-link:hover .demo-screen-img {
+  transform: scale(1.05);
 }
 
-.demo-mock-badge {
-  background: rgba(255, 255, 255, 0.2);
+.demo-screen-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem 1.5rem 1rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+}
+
+.demo-screen-label {
   color: white;
-  font-size: clamp(0.6rem, 1.2vw, 0.7rem);
+  font-size: 0.85rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  padding: 4px 12px;
-  border-radius: var(--radius-full);
-}
-
-.demo-badge-yellow {
-  background: rgba(234, 179, 8, 0.3);
-  color: #fbbf24;
-}
-
-.demo-mock-title {
-  color: white;
-  font-size: clamp(1rem, 2.5vw, 1.5rem);
-  font-weight: 800;
-  text-align: center;
-}
-
-.demo-mock-subtitle {
-  color: rgba(255, 255, 255, 0.7);
-  font-size: clamp(0.75rem, 1.5vw, 0.9rem);
-}
-
-.demo-mock-grid {
-  display: flex;
-  gap: clamp(0.4rem, 1.2vw, 0.75rem);
-  margin-top: 0.5rem;
-}
-
-.demo-mock-card {
-  width: clamp(50px, 14%, 80px);
-  aspect-ratio: 10/7;
-  background: rgba(255, 255, 255, 0.15);
-  border-radius: 8px;
-}
-
-.demo-card-dark {
-  background: rgba(255, 255, 255, 0.08);
+  letter-spacing: 0.08em;
 }
 
 /* Browser CTA bar */
@@ -971,10 +928,6 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
 @media (max-width: 768px) {
   .demo-preview {
     max-width: 100%;
-  }
-
-  .demo-mock-card {
-    width: clamp(40px, 20%, 60px);
   }
 
   .demo-actions {
