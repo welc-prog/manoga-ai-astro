@@ -59,6 +59,68 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
     </div>
   </section>
 
+  <!-- Live Demos Showcase -->
+  <section class="section section-mesh demos-showcase-section">
+    <div class="container">
+      <div class="text-center mb-3">
+        <span class="hero-tagline">See Our Work</span>
+        <h2>Live Demos — <span class="text-gradient">Try Them Now</span></h2>
+        <p style="max-width: 620px; margin: 0 auto;">Every demo below is a real, interactive website. Not a mockup, not a video — the real thing. Built with the same tech we use for client projects.</p>
+      </div>
+
+      <div class="demos-preview-grid reveal">
+        <a href="/demos/webshop/" class="demos-preview-card">
+          <div class="demos-preview-bar">
+            <span class="demos-dot"></span><span class="demos-dot"></span><span class="demos-dot"></span>
+            <span class="demos-preview-url">manoga.digital/demos/webshop</span>
+          </div>
+          <div class="demos-preview-screen">
+            <img src="/images/demos/webshop-hero.webp" alt="E-commerce webshop demo" loading="lazy" />
+            <div class="demos-preview-overlay">
+              <span class="demos-live-dot"></span>
+              <span>E-Commerce Demo</span>
+            </div>
+          </div>
+          <div class="demos-preview-footer">
+            <div>
+              <strong>Webshop with Stripe</strong>
+              <span>Nuxt 4 · Tailwind · Stripe Checkout</span>
+            </div>
+            <span class="demos-explore-arrow">&rarr;</span>
+          </div>
+        </a>
+
+        <a href="/demos/electrician/" class="demos-preview-card">
+          <div class="demos-preview-bar">
+            <span class="demos-dot"></span><span class="demos-dot"></span><span class="demos-dot"></span>
+            <span class="demos-preview-url">manoga.digital/demos/electrician</span>
+          </div>
+          <div class="demos-preview-screen">
+            <img src="/images/demos/electrician-hero.webp" alt="Electrician service business demo" loading="lazy" />
+            <div class="demos-preview-overlay">
+              <span class="demos-live-dot"></span>
+              <span>Service Business Demo</span>
+            </div>
+          </div>
+          <div class="demos-preview-footer">
+            <div>
+              <strong>Electrician Website</strong>
+              <span>Nuxt 4 · Lead Generation · Blog</span>
+            </div>
+            <span class="demos-explore-arrow">&rarr;</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="text-center" style="margin-top: var(--space-xl);">
+        <a href="/demos" class="btn btn-primary btn-glow">
+          View Full Demo Page
+          <IconExternal />
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- About Section -->
   <section class="section section-gradient section-grid">
     <div class="container">
@@ -139,29 +201,6 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
         <div class="card">
           <h3 class="card-title">{t('pages.webdesign.service4', lang)}</h3>
           <p class="card-text">{t('pages.webdesign.service4Desc', lang)}</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Demos CTA Section -->
-  <section class="section section-gradient section-grid">
-    <div class="container">
-      <div class="card text-center reveal" style="padding: var(--space-xl); max-width: 800px; margin: 0 auto;">
-        <span class="hero-tagline">See Our Work</span>
-        <h2 class="text-gradient" style="margin-bottom: var(--space-md);">Explore Our Live Demos</h2>
-        <p style="font-size: 1.1rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: var(--space-lg);">
-          See the quality of our work in action. From e-commerce webshops to service business sites, every demo is built with the same modern tech stack we use for real client projects — fast, beautiful, and conversion-focused.
-        </p>
-        <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap;">
-          <a href="/demos" class="btn btn-primary btn-glow">
-            View Live Demos
-            <IconExternal />
-          </a>
-          <a href={`${prefix}/contact`} class="btn btn-secondary">
-            Get Free Quote
-            <IconArrowRight />
-          </a>
         </div>
       </div>
     </div>
@@ -337,6 +376,154 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
 @media (max-width: 768px) {
   .faq-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+.demos-showcase-section {
+  border-top: 1px solid rgba(59, 130, 246, 0.15);
+  border-bottom: 1px solid rgba(59, 130, 246, 0.15);
+}
+
+.demos-preview-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.demos-preview-card {
+  display: block;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-subtle);
+  overflow: hidden;
+  background: var(--bg-surface);
+  transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease), border-color 0.35s var(--ease);
+  text-decoration: none;
+  color: inherit;
+}
+
+.demos-preview-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 28px 64px rgba(59, 130, 246, 0.22);
+  border-color: var(--border-accent);
+}
+
+.demos-preview-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.demos-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  flex-shrink: 0;
+}
+
+.demos-dot:first-child { background: #ff5f56; }
+.demos-dot:nth-child(2) { background: #ffbd2e; }
+.demos-dot:nth-child(3) { background: #27c93f; }
+
+.demos-preview-url {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-left: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+}
+
+.demos-preview-screen {
+  position: relative;
+  aspect-ratio: 16/10;
+  overflow: hidden;
+}
+
+.demos-preview-screen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s var(--ease);
+}
+
+.demos-preview-card:hover .demos-preview-screen img {
+  transform: scale(1.05);
+}
+
+.demos-preview-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, transparent 50%);
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  padding: 1.5rem;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.3s var(--ease);
+}
+
+.demos-preview-card:hover .demos-preview-overlay {
+  opacity: 1;
+}
+
+.demos-live-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #22c55e;
+  flex-shrink: 0;
+  animation: demos-pulse 2s ease-in-out infinite;
+}
+
+@keyframes demos-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.5); }
+  50% { box-shadow: 0 0 0 6px rgba(34, 197, 94, 0); }
+}
+
+.demos-preview-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.demos-preview-footer strong {
+  display: block;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  margin-bottom: 2px;
+}
+
+.demos-preview-footer span {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+.demos-explore-arrow {
+  font-size: 1.5rem;
+  color: var(--accent);
+  transition: transform 0.3s var(--ease);
+}
+
+.demos-preview-card:hover .demos-explore-arrow {
+  transform: translateX(4px);
+}
+
+@media (max-width: 768px) {
+  .demos-preview-grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
   }
 }
 </style>

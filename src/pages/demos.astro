@@ -29,50 +29,23 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
         professional websites <strong>in days, not months</strong> — at a fraction of the traditional cost.
         Explore our live demos below.
       </p>
-    </div>
-  </section>
 
-  <!-- Value Proposition -->
-  <section class="section section-mesh">
-    <div class="container">
-      <div class="text-center mb-3">
-        <span class="hero-tagline">Why Manoga?</span>
-        <h2>Websites That <span class="text-gradient">Actually Perform</span></h2>
-        <p style="max-width: 700px; margin: 0 auto;">Traditional agencies charge premium prices for cookie-cutter templates. We build custom, modern websites using the same tech behind Netflix, Airbnb, and Stripe — and we do it faster because AI handles the heavy lifting.</p>
+      <div class="hero-cta-row">
+        <a href="#webshop" class="btn btn-primary btn-glow">See Live Demos<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></a>
+        <a href="/contact" class="btn btn-secondary">Get Your Free Quote</a>
       </div>
 
-      <div class="benefits-grid reveal">
-        <div class="benefit-item">
-          <div class="benefit-icon">
-            <IconBarChart />
-          </div>
-          <h3>10x Faster Delivery</h3>
-          <p>AI-assisted development means your site goes from concept to launch in days. No more waiting 3-6 months for a basic website.</p>
-        </div>
-
-        <div class="benefit-item">
-          <div class="benefit-icon">
-            <IconTarget />
-          </div>
-          <h3>50-70% Lower Cost</h3>
-          <p>By leveraging AI and modern tooling, we cut development time dramatically. The savings go straight to your bottom line.</p>
-        </div>
-
-        <div class="benefit-item">
-          <div class="benefit-icon">
-            <IconCode />
-          </div>
-          <h3>Enterprise-Grade Tech</h3>
-          <p>Nuxt, Vue, Tailwind CSS, Stripe — the same frameworks powering billion-dollar companies. Your small business deserves the same quality.</p>
-        </div>
-
-        <div class="benefit-item">
-          <div class="benefit-icon">
-            <IconLayout />
-          </div>
-          <h3>SEO-Ready From Day One</h3>
-          <p>Every site is built with search engine optimization baked in. Fast load times, clean code, and structured data — Google loves our sites.</p>
-        </div>
+      <div class="hero-demo-previews">
+        <a href="#webshop" class="hero-demo-thumb">
+          <div class="hero-demo-bar"><span class="demo-dot"></span><span class="demo-dot"></span><span class="demo-dot"></span><span class="hero-demo-url">manoga.digital/demos/webshop</span></div>
+          <div class="hero-demo-screen"><img src="/images/demos/webshop-hero.webp" alt="Webshop demo preview" loading="eager" /></div>
+          <div class="hero-demo-label"><span class="live-dot"></span>E-Commerce Demo</div>
+        </a>
+        <a href="#electrician" class="hero-demo-thumb">
+          <div class="hero-demo-bar"><span class="demo-dot"></span><span class="demo-dot"></span><span class="demo-dot"></span><span class="hero-demo-url">manoga.digital/demos/electrician</span></div>
+          <div class="hero-demo-screen"><img src="/images/demos/electrician-hero.webp" alt="Electrician demo preview" loading="eager" /></div>
+          <div class="hero-demo-label"><span class="live-dot"></span>Service Business Demo</div>
+        </a>
       </div>
     </div>
   </section>
@@ -91,12 +64,13 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
                 <span class="demo-url">manoga.digital/demos/webshop</span>
               </div>
               <div class="demo-screen demo-screen-shop">
-                <img src="/images/demos/webshop-hero.webp" alt="Webshop demo preview" class="demo-screen-img" loading="lazy" />
+                <img src="/images/demos/webshop-hero.webp" alt="Webshop demo preview" class="demo-screen-img" loading="eager" />
                 <div class="demo-screen-overlay">
                   <span class="demo-screen-label">E-Commerce Demo</span>
                 </div>
               </div>
               <div class="demo-browser-cta">
+                <span class="live-dot"></span>
                 <span>Explore Live Demo</span>
                 <IconExternal />
               </div>
@@ -108,6 +82,12 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
           <span class="demo-label">Demo #1 — E-Commerce</span>
           <h2>Webshop with Stripe Payments</h2>
           <p class="demo-description">A complete online store built with Nuxt 4 and integrated Stripe checkout. Product catalogs, shopping cart, secure payments — everything a modern webshop needs, ready to sell.</p>
+
+          <div class="perf-badges">
+            <div class="perf-badge"><span class="perf-score">100</span><span class="perf-label">Performance</span></div>
+            <div class="perf-badge"><span class="perf-score">100</span><span class="perf-label">SEO</span></div>
+            <div class="perf-badge"><span class="perf-score">100</span><span class="perf-label">Accessibility</span></div>
+          </div>
 
           <div class="demo-features">
             <div class="demo-feature">
@@ -183,6 +163,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
                 </div>
               </div>
               <div class="demo-browser-cta">
+                <span class="live-dot"></span>
                 <span>Explore Live Demo</span>
                 <IconExternal />
               </div>
@@ -194,6 +175,12 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
           <span class="demo-label">Demo #2 — Service Business</span>
           <h2>Professional Electrician Website</h2>
           <p class="demo-description">A high-converting service business website designed to generate leads. Emergency callouts, service listings, trust signals, and contact forms — built to turn visitors into customers.</p>
+
+          <div class="perf-badges">
+            <div class="perf-badge"><span class="perf-score">100</span><span class="perf-label">Performance</span></div>
+            <div class="perf-badge"><span class="perf-score">100</span><span class="perf-label">SEO</span></div>
+            <div class="perf-badge"><span class="perf-score">100</span><span class="perf-label">Accessibility</span></div>
+          </div>
 
           <div class="demo-features">
             <div class="demo-feature">
@@ -244,6 +231,51 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
               <IconArrowRight />
             </a>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Value Proposition -->
+  <section class="section section-mesh">
+    <div class="container">
+      <div class="text-center mb-3">
+        <span class="hero-tagline">Why Manoga?</span>
+        <h2>Websites That <span class="text-gradient">Actually Perform</span></h2>
+        <p style="max-width: 700px; margin: 0 auto;">Traditional agencies charge premium prices for cookie-cutter templates. We build custom, modern websites using the same tech behind Netflix, Airbnb, and Stripe — and we do it faster because AI handles the heavy lifting.</p>
+      </div>
+
+      <div class="benefits-grid reveal">
+        <div class="benefit-item">
+          <div class="benefit-icon">
+            <IconBarChart />
+          </div>
+          <h3>10x Faster Delivery</h3>
+          <p>AI-assisted development means your site goes from concept to launch in days. No more waiting 3-6 months for a basic website.</p>
+        </div>
+
+        <div class="benefit-item">
+          <div class="benefit-icon">
+            <IconTarget />
+          </div>
+          <h3>50-70% Lower Cost</h3>
+          <p>By leveraging AI and modern tooling, we cut development time dramatically. The savings go straight to your bottom line.</p>
+        </div>
+
+        <div class="benefit-item">
+          <div class="benefit-icon">
+            <IconCode />
+          </div>
+          <h3>Enterprise-Grade Tech</h3>
+          <p>Nuxt, Vue, Tailwind CSS, Stripe — the same frameworks powering billion-dollar companies. Your small business deserves the same quality.</p>
+        </div>
+
+        <div class="benefit-item">
+          <div class="benefit-icon">
+            <IconLayout />
+          </div>
+          <h3>SEO-Ready From Day One</h3>
+          <p>Every site is built with search engine optimization baked in. Fast load times, clean code, and structured data — Google loves our sites.</p>
         </div>
       </div>
     </div>
@@ -413,6 +445,23 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
   </section>
 
   <!-- Structured Data -->
+  <div class="demo-sticky-bar" id="demoStickyBar">
+    <span>Ready to explore?</span>
+    <a href="/demos/webshop/" class="btn btn-primary" style="padding: 6px 16px; font-size: 0.85rem;">Webshop Demo</a>
+    <a href="/demos/electrician/" class="btn btn-secondary" style="padding: 6px 16px; font-size: 0.85rem;">Electrician Demo</a>
+  </div>
+
+  <script>
+    const bar = document.getElementById('demoStickyBar');
+    const trigger = document.getElementById('webshop');
+    if (bar && trigger) {
+      const observer = new IntersectionObserver(([e]) => {
+        bar.classList.toggle('visible', !e.isIntersecting && window.scrollY > 400);
+      }, { threshold: 0 });
+      observer.observe(trigger);
+    }
+  </script>
+
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -510,7 +559,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
 /* Demo Showcase Layout */
 .demo-showcase {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.35fr 1fr;
   gap: var(--space-xl);
   align-items: center;
 }
@@ -529,8 +578,8 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
 }
 
 .demo-browser-link:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 24px 64px rgba(59, 130, 246, 0.2);
+  transform: translateY(-8px);
+  box-shadow: 0 32px 80px rgba(59, 130, 246, 0.28), 0 0 0 1px rgba(59, 130, 246, 0.15);
 }
 
 .demo-browser-link:hover .demo-browser-cta {
@@ -640,9 +689,9 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
   gap: 8px;
   padding: 10px 16px;
   border-top: 1px solid var(--border-subtle);
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-weight: 600;
-  color: var(--text-muted);
+  color: var(--text-secondary);
   transition: background 0.3s var(--ease), color 0.3s var(--ease);
 }
 
@@ -979,5 +1028,180 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
     padding: 8px 12px;
     font-size: 0.8rem;
   }
+}
+
+/* Hero CTA row */
+.hero-cta-row {
+  display: flex;
+  gap: var(--space-sm);
+  justify-content: center;
+  margin-top: var(--space-lg);
+}
+
+.hero-cta-row .btn svg {
+  margin-left: 4px;
+}
+
+/* Hero demo previews */
+.hero-demo-previews {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+  margin-top: var(--space-xl);
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-demo-thumb {
+  display: block;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-subtle);
+  overflow: hidden;
+  transition: transform 0.35s var(--ease), border-color 0.35s var(--ease), box-shadow 0.35s var(--ease);
+  background: var(--bg-surface);
+  text-decoration: none;
+  color: inherit;
+}
+
+.hero-demo-thumb:hover {
+  transform: translateY(-6px);
+  border-color: var(--border-accent);
+  box-shadow: 0 20px 48px rgba(59, 130, 246, 0.22);
+}
+
+.hero-demo-bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.hero-demo-url {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  margin-left: 8px;
+}
+
+.hero-demo-screen {
+  aspect-ratio: 16/10;
+  overflow: hidden;
+}
+
+.hero-demo-screen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s var(--ease);
+}
+
+.hero-demo-thumb:hover .hero-demo-screen img {
+  transform: scale(1.05);
+}
+
+.hero-demo-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border-top: 1px solid var(--border-subtle);
+}
+
+/* Live pulse indicator */
+.live-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #22c55e;
+  flex-shrink: 0;
+  animation: live-pulse 2s ease-in-out infinite;
+}
+
+@keyframes live-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.5); }
+  50% { box-shadow: 0 0 0 6px rgba(34, 197, 94, 0); }
+}
+
+/* Performance badges */
+.perf-badges {
+  display: flex;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-lg);
+}
+
+.perf-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 8px 16px;
+  min-width: 80px;
+}
+
+.perf-score {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #22c55e;
+  line-height: 1;
+}
+
+.perf-label {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-family: var(--font-mono);
+}
+
+/* Sticky demo bar */
+.demo-sticky-bar {
+  position: fixed;
+  bottom: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 500;
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  background: rgba(10, 10, 15, 0.95);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--border-accent);
+  border-radius: var(--radius-full);
+  padding: 10px 20px;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  transition: bottom 0.4s var(--ease);
+  white-space: nowrap;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5);
+}
+
+.demo-sticky-bar.visible {
+  bottom: 24px;
+}
+
+@media (max-width: 768px) {
+  .hero-demo-previews { grid-template-columns: 1fr; max-width: 400px; }
+  .hero-cta-row { flex-direction: column; align-items: center; }
+  .perf-badges { gap: 6px; }
+  .perf-badge { padding: 6px 10px; min-width: 70px; }
+  .demo-sticky-bar { padding: 8px 14px; font-size: 0.8rem; gap: 8px; }
+}
+
+@media (max-width: 600px) {
+  .hero-demo-previews { max-width: 100%; }
+  .demo-sticky-bar span:first-child { display: none; }
 }
 </style>
