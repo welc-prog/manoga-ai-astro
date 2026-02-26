@@ -52,6 +52,32 @@ const prefix = '/da';  // Hardcode for Danish pages
     </div>
   </section>
 
+  <!-- Mini Result -->
+  <section class="section section-sm">
+    <div class="container">
+      <div class="mini-result">
+        <div class="mini-result-label">Kundeudbytte</div>
+        <div class="mini-result-content">
+          <div class="mini-result-stat">
+            <span class="mini-result-number">60%</span>
+            <span class="mini-result-desc">tidsbesparelse på workflows</span>
+          </div>
+          <div class="mini-result-divider"></div>
+          <div class="mini-result-stat">
+            <span class="mini-result-number">3 uger</span>
+            <span class="mini-result-desc">fra audit til første AI-værktøj</span>
+          </div>
+          <div class="mini-result-divider"></div>
+          <div class="mini-result-stat">
+            <span class="mini-result-number">ROI</span>
+            <span class="mini-result-desc">positiv inden for 90 dage</span>
+          </div>
+        </div>
+        <p class="mini-result-context">Enterprise AI-integration — marketing automation + indholdsworkflows</p>
+      </div>
+    </div>
+  </section>
+
   <!-- Core Services -->
   <section class="section">
     <div class="container">
@@ -139,6 +165,11 @@ const prefix = '/da';  // Hardcode for Danish pages
     </div>
   </section>
 
+  <!-- Mid-page CTA -->
+  <div class="mid-cta">
+    <a href="/da/contact" class="btn btn-primary btn-sm">Book Gratis Konsultation &rarr;</a>
+  </div>
+
   <!-- Process Section -->
   <section class="section">
     <div class="container">
@@ -152,21 +183,25 @@ const prefix = '/da';  // Hardcode for Danish pages
           <div class="process-number">1</div>
           <h4 class="process-title">{t('pages.aiConsulting.processStep1', lang)}</h4>
           <p class="process-text">{t('pages.aiConsulting.processStep1Desc', lang)}</p>
+          <span class="process-deliverable">&rarr; AI-parathedsscore + Mulighedskort</span>
         </div>
         <div class="process-step">
           <div class="process-number">2</div>
           <h4 class="process-title">{t('pages.aiConsulting.processStep2', lang)}</h4>
           <p class="process-text">{t('pages.aiConsulting.processStep2Desc', lang)}</p>
+          <span class="process-deliverable">&rarr; Skræddersyet AI-strategidokument</span>
         </div>
         <div class="process-step">
           <div class="process-number">3</div>
           <h4 class="process-title">{t('pages.aiConsulting.processStep3', lang)}</h4>
           <p class="process-text">{t('pages.aiConsulting.processStep3Desc', lang)}</p>
+          <span class="process-deliverable">&rarr; Fungerende prototyper + Teamtræning</span>
         </div>
         <div class="process-step">
           <div class="process-number">4</div>
           <h4 class="process-title">{t('pages.aiConsulting.processStep4', lang)}</h4>
           <p class="process-text">{t('pages.aiConsulting.processStep4Desc', lang)}</p>
+          <span class="process-deliverable">&rarr; Månedlige performancerapporter</span>
         </div>
       </div>
     </div>
@@ -221,6 +256,14 @@ const prefix = '/da';  // Hardcode for Danish pages
 
 <style>
 .page-header .text-gradient { color: #a78bfa; }
+.page-header { position: relative; overflow: hidden; border-bottom: 2px solid rgba(167, 139, 250, 0.4); }
+.page-header::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(-45deg, transparent, transparent 30px, rgba(167, 139, 250, 0.03) 30px, rgba(167, 139, 250, 0.03) 31px);
+  pointer-events: none;
+}
 
 .content-section {
   max-width: 800px;
@@ -278,17 +321,22 @@ const prefix = '/da';  // Hardcode for Danish pages
 
 .faq-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: var(--space-lg);
-  max-width: 1000px;
+  grid-template-columns: 1fr;
+  gap: 0;
+  max-width: 800px;
   margin: 0 auto;
 }
 
 .faq-item {
-  background: var(--bg-surface);
-  padding: var(--space-lg);
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--border-subtle);
+  background: transparent;
+  padding: var(--space-lg) 0;
+  border-radius: 0;
+  border: none;
+  border-bottom: 1px solid var(--border);
+}
+
+.faq-item:last-child {
+  border-bottom: none;
 }
 
 .faq-question {
@@ -300,11 +348,5 @@ const prefix = '/da';  // Hardcode for Danish pages
 .faq-answer {
   color: var(--text-secondary);
   line-height: 1.6;
-}
-
-@media (max-width: 768px) {
-  .faq-grid {
-    grid-template-columns: 1fr;
-  }
 }
 </style>

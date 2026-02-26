@@ -29,7 +29,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
   </section>
 
   <!-- Core Services -->
-  <section class="section section-mesh">
+  <section class="section">
     <div class="container">
       <div class="services-grid reveal">
         <div class="card">
@@ -60,7 +60,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
   </section>
 
   <!-- Live Demos Showcase -->
-  <section class="section section-mesh demos-showcase-section">
+  <section class="section demos-showcase-section">
     <div class="container">
       <div class="text-center mb-3">
         <span class="hero-tagline">See Our Work</span>
@@ -113,7 +113,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
       </div>
 
       <div class="text-center" style="margin-top: var(--space-xl);">
-        <a href="/demos" class="btn btn-primary btn-glow">
+        <a href="/demos" class="btn btn-primary">
           View Full Demo Page
           <IconExternal />
         </a>
@@ -122,7 +122,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
   </section>
 
   <!-- About Section -->
-  <section class="section section-gradient section-grid">
+  <section class="section">
     <div class="container">
       <div class="content-section reveal">
         <h2 class="section-title">{t('pages.webdesign.aboutTitle', lang)}</h2>
@@ -133,7 +133,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
   </section>
 
   <!-- Benefits Section -->
-  <section class="section section-mesh">
+  <section class="section">
     <div class="container">
       <div class="text-center mb-3">
         <span class="hero-tagline">{t('common.benefits', lang)}</span>
@@ -178,7 +178,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
   </section>
 
   <!-- Services Section -->
-  <section class="section section-gradient section-grid">
+  <section class="section">
     <div class="container">
       <div class="text-center mb-3">
         <span class="hero-tagline">{t('services.whatWeDo', lang)}</span>
@@ -207,7 +207,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
   </section>
 
   <!-- FAQ Section -->
-  <section class="section section-mesh">
+  <section class="section">
     <div class="container">
       <div class="text-center mb-3">
         <span class="hero-tagline">{t('common.gotQuestions', lang)}</span>
@@ -239,12 +239,12 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
   </section>
 
   <!-- CTA -->
-  <section class="section section-gradient section-grid">
+  <section class="section">
     <div class="container">
       <div class="card text-center" style="padding: var(--space-xl); max-width: 800px; margin: 0 auto;">
         <h2 class="mb-1">{t('cta.title', lang)}</h2>
         <p style="font-size: 1.25rem; margin-bottom: var(--space-md);">{t('cta.subtitle', lang)}</p>
-        <a href={`${prefix}/contact`} class="btn btn-primary btn-glow">
+        <a href={`${prefix}/contact`} class="btn btn-primary">
           {t('cta.button', lang)}
           <IconArrowRight />
         </a>
@@ -349,17 +349,22 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
 
 .faq-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: var(--space-lg);
-  max-width: 1000px;
+  grid-template-columns: 1fr;
+  gap: 0;
+  max-width: 800px;
   margin: 0 auto;
 }
 
 .faq-item {
-  background: var(--bg-surface);
-  padding: var(--space-lg);
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--border-subtle);
+  background: transparent;
+  padding: var(--space-lg) 0;
+  border-radius: 0;
+  border: none;
+  border-bottom: 1px solid var(--border);
+}
+
+.faq-item:last-child {
+  border-bottom: none;
 }
 
 .faq-question {
@@ -371,12 +376,6 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
 .faq-answer {
   color: var(--text-secondary);
   line-height: 1.6;
-}
-
-@media (max-width: 768px) {
-  .faq-grid {
-    grid-template-columns: 1fr;
-  }
 }
 
 .demos-showcase-section {

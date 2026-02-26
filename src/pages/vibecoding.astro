@@ -51,6 +51,32 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
     </div>
   </section>
 
+  <!-- Mini Result -->
+  <section class="section section-sm">
+    <div class="container">
+      <div class="mini-result">
+        <div class="mini-result-label">Latest Build</div>
+        <div class="mini-result-content">
+          <div class="mini-result-stat">
+            <span class="mini-result-number">4 weeks</span>
+            <span class="mini-result-desc">from zero to production</span>
+          </div>
+          <div class="mini-result-divider"></div>
+          <div class="mini-result-stat">
+            <span class="mini-result-number">100</span>
+            <span class="mini-result-desc">Lighthouse score</span>
+          </div>
+          <div class="mini-result-divider"></div>
+          <div class="mini-result-stat">
+            <span class="mini-result-number">5 langs</span>
+            <span class="mini-result-desc">multilingual support</span>
+          </div>
+        </div>
+        <p class="mini-result-context">WeLoveEverythingCrypto — full platform built with vibecoding</p>
+      </div>
+    </div>
+  </section>
+
   <!-- Core Services -->
   <section class="section">
     <div class="container">
@@ -89,6 +115,32 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
         <h2 class="section-title">{t('pages.vibecoding.aboutTitle', lang)}</h2>
         <p class="section-text">{t('pages.vibecoding.aboutDesc', lang)}</p>
         <p class="section-text">{t('pages.vibecoding.aboutDesc2', lang)}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- What Gets Shipped -->
+  <section class="section section-sm">
+    <div class="container">
+      <div class="text-center mb-3">
+        <h2>What Gets <span class="text-gradient">Shipped</span></h2>
+      </div>
+      <div class="shipping-examples">
+        <div class="shipping-example">
+          <span class="shipping-timeline">Week 1-2</span>
+          <h4>MVP Launch</h4>
+          <p>Core features, authentication, responsive design, deployed to production</p>
+        </div>
+        <div class="shipping-example">
+          <span class="shipping-timeline">Week 3-4</span>
+          <h4>Full Product</h4>
+          <p>Advanced features, integrations, analytics, SEO optimization, performance tuning</p>
+        </div>
+        <div class="shipping-example">
+          <span class="shipping-timeline">Ongoing</span>
+          <h4>Growth & Support</h4>
+          <p>Feature iterations, monitoring, bug fixes, scaling infrastructure</p>
+        </div>
       </div>
     </div>
   </section>
@@ -137,6 +189,11 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
       </div>
     </div>
   </section>
+
+  <!-- Mid-page CTA -->
+  <div class="mid-cta">
+    <a href="/contact" class="btn btn-primary btn-sm">Book Free Consultation &rarr;</a>
+  </div>
 
   <!-- Services Section -->
   <section class="section">
@@ -287,6 +344,18 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
 </Layout>
 
 <style>
+.page-header { position: relative; overflow: hidden; border-right: 4px solid var(--accent); }
+.page-header::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(0deg, transparent 24px, rgba(201, 165, 92, 0.02) 24px, rgba(201, 165, 92, 0.02) 25px, transparent 25px),
+    linear-gradient(90deg, transparent 24px, rgba(201, 165, 92, 0.02) 24px, rgba(201, 165, 92, 0.02) 25px, transparent 25px);
+  background-size: 25px 25px;
+  pointer-events: none;
+}
+
 .content-section {
   max-width: 800px;
   margin: 0 auto;
@@ -343,17 +412,22 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
 
 .faq-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: var(--space-lg);
-  max-width: 1000px;
+  grid-template-columns: 1fr;
+  gap: 0;
+  max-width: 800px;
   margin: 0 auto;
 }
 
 .faq-item {
-  background: var(--bg-surface);
-  padding: var(--space-lg);
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--border-subtle);
+  background: transparent;
+  padding: var(--space-lg) 0;
+  border-radius: 0;
+  border: none;
+  border-bottom: 1px solid var(--border);
+}
+
+.faq-item:last-child {
+  border-bottom: none;
 }
 
 .faq-question {
@@ -365,11 +439,5 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
 .faq-answer {
   color: var(--text-secondary);
   line-height: 1.6;
-}
-
-@media (max-width: 768px) {
-  .faq-grid {
-    grid-template-columns: 1fr;
-  }
 }
 </style>

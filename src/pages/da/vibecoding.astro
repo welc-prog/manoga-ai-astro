@@ -51,6 +51,32 @@ const prefix = '/da';  // Hardcode for Danish pages
     </div>
   </section>
 
+  <!-- Mini Result -->
+  <section class="section section-sm">
+    <div class="container">
+      <div class="mini-result">
+        <div class="mini-result-label">Seneste build</div>
+        <div class="mini-result-content">
+          <div class="mini-result-stat">
+            <span class="mini-result-number">4 uger</span>
+            <span class="mini-result-desc">fra nul til produktion</span>
+          </div>
+          <div class="mini-result-divider"></div>
+          <div class="mini-result-stat">
+            <span class="mini-result-number">100</span>
+            <span class="mini-result-desc">Lighthouse score</span>
+          </div>
+          <div class="mini-result-divider"></div>
+          <div class="mini-result-stat">
+            <span class="mini-result-number">5 sprog</span>
+            <span class="mini-result-desc">flersproget support</span>
+          </div>
+        </div>
+        <p class="mini-result-context">WeLoveEverythingCrypto — komplet platform bygget med vibecoding</p>
+      </div>
+    </div>
+  </section>
+
   <!-- Core Services -->
   <section class="section">
     <div class="container">
@@ -89,6 +115,32 @@ const prefix = '/da';  // Hardcode for Danish pages
         <h2 class="section-title">{t('pages.vibecoding.aboutTitle', lang)}</h2>
         <p class="section-text">{t('pages.vibecoding.aboutDesc', lang)}</p>
         <p class="section-text">{t('pages.vibecoding.aboutDesc2', lang)}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hvad der bliver leveret -->
+  <section class="section section-sm">
+    <div class="container">
+      <div class="text-center mb-3">
+        <h2>Hvad der bliver <span class="text-gradient">leveret</span></h2>
+      </div>
+      <div class="shipping-examples">
+        <div class="shipping-example">
+          <span class="shipping-timeline">Uge 1-2</span>
+          <h4>MVP Launch</h4>
+          <p>Kernefunktioner, autentificering, responsivt design, deployet til produktion</p>
+        </div>
+        <div class="shipping-example">
+          <span class="shipping-timeline">Uge 3-4</span>
+          <h4>Fuldt Produkt</h4>
+          <p>Avancerede funktioner, integrationer, analyse, SEO-optimering, performance-tuning</p>
+        </div>
+        <div class="shipping-example">
+          <span class="shipping-timeline">Løbende</span>
+          <h4>Vækst & Support</h4>
+          <p>Feature-iterationer, overvågning, fejlrettelser, skalering af infrastruktur</p>
+        </div>
       </div>
     </div>
   </section>
@@ -137,6 +189,11 @@ const prefix = '/da';  // Hardcode for Danish pages
       </div>
     </div>
   </section>
+
+  <!-- Mid-page CTA -->
+  <div class="mid-cta">
+    <a href="/da/contact" class="btn btn-primary btn-sm">Book Gratis Konsultation &rarr;</a>
+  </div>
 
   <!-- Services Section -->
   <section class="section">
@@ -248,6 +305,18 @@ const prefix = '/da';  // Hardcode for Danish pages
 </Layout>
 
 <style>
+.page-header { position: relative; overflow: hidden; border-right: 4px solid var(--accent); }
+.page-header::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(0deg, transparent 24px, rgba(201, 165, 92, 0.02) 24px, rgba(201, 165, 92, 0.02) 25px, transparent 25px),
+    linear-gradient(90deg, transparent 24px, rgba(201, 165, 92, 0.02) 24px, rgba(201, 165, 92, 0.02) 25px, transparent 25px);
+  background-size: 25px 25px;
+  pointer-events: none;
+}
+
 .content-section {
   max-width: 800px;
   margin: 0 auto;
@@ -304,17 +373,22 @@ const prefix = '/da';  // Hardcode for Danish pages
 
 .faq-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: var(--space-lg);
-  max-width: 1000px;
+  grid-template-columns: 1fr;
+  gap: 0;
+  max-width: 800px;
   margin: 0 auto;
 }
 
 .faq-item {
-  background: var(--bg-surface);
-  padding: var(--space-lg);
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--border-subtle);
+  background: transparent;
+  padding: var(--space-lg) 0;
+  border-radius: 0;
+  border: none;
+  border-bottom: 1px solid var(--border);
+}
+
+.faq-item:last-child {
+  border-bottom: none;
 }
 
 .faq-question {
@@ -326,11 +400,5 @@ const prefix = '/da';  // Hardcode for Danish pages
 .faq-answer {
   color: var(--text-secondary);
   line-height: 1.6;
-}
-
-@media (max-width: 768px) {
-  .faq-grid {
-    grid-template-columns: 1fr;
-  }
 }
 </style>

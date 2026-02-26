@@ -18,11 +18,16 @@ const prefix = '/da';  // Hardcode for Danish pages
     </div>
   </section>
 
-  <section class="section section-mesh">
+  <section class="section">
     <div class="container">
       <div class="contact-grid">
         <div class="contact-info reveal-left">
           <p style="font-size: 1.1rem;">{t('contact.subtitle', lang)}</p>
+
+          <div class="response-badge">
+            <span class="response-badge-icon">⚡</span>
+            <span>Gennemsnitlig svartid: <strong>under 4 timer</strong></span>
+          </div>
 
           <div class="contact-item">
             <div class="contact-icon">
@@ -71,6 +76,11 @@ const prefix = '/da';  // Hardcode for Danish pages
         </div>
 
         <div class="reveal-right">
+          <div class="form-trust-strip">
+            <span class="form-trust-item">&#10003; Gratis indledende konsultation</span>
+            <span class="form-trust-item">&#10003; Svar inden for 4 timer</span>
+            <span class="form-trust-item">&#10003; Ingen forpligtelse</span>
+          </div>
           <form class="contact-form" id="contact-form"
             data-sending={t('contact.sending', lang)}
             data-success-title={t('contact.successTitle', lang)}
@@ -132,8 +142,29 @@ const prefix = '/da';  // Hardcode for Danish pages
     </div>
   </section>
 
+  <!-- What Happens Next -->
+  <section class="section section-sm">
+    <div class="container">
+      <h3 class="text-center" style="margin-bottom: var(--space-lg); color: var(--text-primary);">{t('contact.whatHappensNext', lang)}</h3>
+      <div class="next-steps-grid">
+        <div class="next-step">
+          <div class="next-step-number">1</div>
+          <p>{t('contact.step1', lang)}</p>
+        </div>
+        <div class="next-step">
+          <div class="next-step-number">2</div>
+          <p>{t('contact.step2', lang)}</p>
+        </div>
+        <div class="next-step">
+          <div class="next-step-number">3</div>
+          <p>{t('contact.step3', lang)}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Additional Information Section -->
-  <section class="section section-gradient section-grid">
+  <section class="section">
     <div class="container">
       <div class="additional-info-grid reveal">
         <div class="additional-info-item">
@@ -283,5 +314,45 @@ const prefix = '/da';  // Hardcode for Danish pages
 @keyframes fadeInStatus {
   from { opacity: 0; transform: translateY(-8px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+.next-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.next-step {
+  text-align: center;
+  padding: var(--space-md);
+}
+
+.next-step-number {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
+  margin: 0 auto var(--space-sm);
+}
+
+.next-step p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .next-steps-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
 }
 </style>

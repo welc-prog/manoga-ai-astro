@@ -2755,6 +2755,215 @@ button.btn-primary {
 }
 
 /* ============================================
+   METHODOLOGY GRID (SEO)
+   ============================================ */
+.methodology-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-md);
+}
+
+.methodology-step {
+    padding: var(--space-lg) var(--space-md);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    position: relative;
+}
+
+.methodology-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--accent-light);
+    line-height: 1;
+    margin-bottom: var(--space-sm);
+    opacity: 0.3;
+}
+
+.methodology-step h3 {
+    color: var(--text-primary);
+    margin-bottom: var(--space-xs);
+    font-size: 1.125rem;
+}
+
+.methodology-step p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* ============================================
+   CAMPAIGN GRID (Google Ads)
+   ============================================ */
+.campaign-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-md);
+    align-items: stretch;
+}
+
+.campaign-type {
+    padding: var(--space-lg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    text-align: center;
+    transition: border-color 0.3s ease;
+}
+
+.campaign-type.featured {
+    border-color: var(--accent);
+    background: var(--accent-subtle);
+}
+
+.campaign-badge {
+    display: inline-block;
+    padding: 6px 16px;
+    background: var(--accent-light);
+    color: var(--accent);
+    border-radius: var(--radius-full);
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--space-md);
+}
+
+.campaign-type.featured .campaign-badge {
+    background: var(--accent);
+    color: var(--bg-primary);
+}
+
+.campaign-type p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+    .methodology-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .methodology-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .campaign-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .methodology-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ============================================
+   CASE STUDY
+   ============================================ */
+.case-study {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+}
+
+.case-study-grid {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: var(--space-xl);
+}
+
+.case-study-content h3 {
+    color: var(--accent);
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: var(--space-xs);
+    margin-top: var(--space-lg);
+}
+
+.case-study-content h3:first-child {
+    margin-top: 0;
+}
+
+.case-study-content p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+.case-metrics {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+    padding-top: var(--space-lg);
+    border-top: 1px solid var(--border);
+}
+
+.case-metric {
+    text-align: center;
+}
+
+.case-metric-number {
+    display: block;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--accent);
+}
+
+.case-metric-label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.case-study-sidebar {
+    border-left: 1px solid var(--border);
+    padding-left: var(--space-lg);
+}
+
+.case-detail {
+    margin-bottom: var(--space-md);
+}
+
+.case-detail strong {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 4px;
+}
+
+.case-detail p {
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .case-study {
+        padding: var(--space-lg);
+    }
+    .case-study-grid {
+        grid-template-columns: 1fr;
+    }
+    .case-study-sidebar {
+        border-left: none;
+        border-top: 1px solid var(--border);
+        padding-left: 0;
+        padding-top: var(--space-lg);
+    }
+    .case-metrics {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ============================================
    REDUCED MOTION
    ============================================ */
 @media (prefers-reduced-motion: reduce) {
@@ -2768,4 +2977,894 @@ button.btn-primary {
         opacity: 1 !important;
         transform: none !important;
     }
+}
+
+/* ============================================
+   ROUND 6 — MOBILE PREMIUM TYPOGRAPHY PASS
+   ============================================ */
+
+/* Mobile-first: bigger base type, better scanning */
+@media (max-width: 768px) {
+  /* Larger base text for readability */
+  body {
+    font-size: 1.0625rem; /* 17px instead of 16px */
+    line-height: 1.7;
+  }
+
+  /* Hero section — more breathing room */
+  .hero {
+    min-height: auto;
+    padding: var(--space-xl) 0 var(--space-lg);
+  }
+  .hero-title {
+    font-size: clamp(2rem, 8vw, 3rem);
+    line-height: 1.15;
+  }
+  .hero-description {
+    font-size: 1.05rem;
+    line-height: 1.7;
+  }
+
+  /* Section headings — stronger hierarchy */
+  h2 {
+    font-size: 1.75rem;
+    line-height: 1.2;
+    margin-bottom: var(--space-md);
+  }
+  h3 {
+    font-size: 1.25rem;
+    line-height: 1.3;
+  }
+
+  /* Sections — reduce vertical padding for tighter feel */
+  .section {
+    padding: var(--space-lg) 0;
+  }
+  .section-sm {
+    padding: var(--space-md) 0;
+  }
+
+  /* Page headers — compact */
+  .page-header {
+    padding: var(--space-lg) 0 var(--space-md);
+  }
+  .page-header h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+  .page-header-description {
+    font-size: 1rem;
+  }
+  .page-header-with-image {
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+  .page-header-image {
+    max-width: 200px;
+    margin: 0 auto;
+  }
+
+  /* Credibility strip — glanceable */
+  .credibility-items {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-md);
+  }
+  .credibility-number {
+    font-size: 1.5rem;
+  }
+  .credibility-label {
+    font-size: 0.8rem;
+  }
+  .credibility-divider {
+    display: none;
+  }
+
+  /* Proof strip — stack on mobile */
+  .proof-items {
+    flex-direction: column;
+    gap: var(--space-md);
+    text-align: center;
+  }
+  .proof-number {
+    font-size: 1.5rem;
+  }
+  .proof-label {
+    font-size: 0.85rem;
+  }
+  .proof-divider {
+    display: none;
+  }
+
+  /* Card improvements */
+  .card {
+    padding: var(--space-md);
+  }
+  .card-title {
+    font-size: 1.15rem;
+  }
+  .card-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  .services-grid {
+    gap: var(--space-md);
+  }
+
+  /* Benefits grid — 2 columns on mobile */
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+  }
+  .benefit-item {
+    padding: var(--space-md);
+  }
+  .benefit-item h3 {
+    font-size: 1rem;
+  }
+  .benefit-item p {
+    font-size: 0.85rem;
+  }
+  .benefit-icon {
+    width: 48px;
+    height: 48px;
+  }
+  .benefit-icon :global(svg) {
+    width: 22px;
+    height: 22px;
+  }
+
+  /* Process grid — compact */
+  .process-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+  .process-step {
+    padding: var(--space-md);
+  }
+
+  /* Methodology grid — compact */
+  .methodology-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+  }
+  .methodology-step {
+    padding: var(--space-md);
+  }
+  .methodology-number {
+    font-size: 1.5rem;
+  }
+
+  /* Campaign grid — stack */
+  .campaign-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
+  /* Case study — stack sidebar */
+  .case-study-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+  .case-metrics {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+  }
+  .case-metric-number {
+    font-size: 1.5rem;
+  }
+
+  /* Blog mobile improvements */
+  .blog-featured {
+    grid-template-columns: 1fr;
+  }
+  .blog-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+  .blog-card-body h3 {
+    font-size: 1.1rem;
+  }
+  .blog-card-body p {
+    font-size: 0.9rem;
+    /* Clamp descriptions on mobile */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /* Contact — tighter */
+  .contact-grid {
+    gap: var(--space-lg);
+  }
+
+  /* Showcase/portfolio — larger images */
+  .showcase-grid {
+    gap: var(--space-md);
+  }
+  .showcase-item {
+    min-height: 250px;
+  }
+
+  /* CTA section — compact */
+  .cta-card {
+    padding: var(--space-lg);
+  }
+  .cta-card h2 {
+    font-size: 1.5rem;
+  }
+  .cta-buttons {
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  /* Buttons — bigger touch targets */
+  .btn {
+    padding: 0.875rem 1.75rem;
+    font-size: 0.95rem;
+  }
+
+  /* FAQ — better mobile readability */
+  .faq-question {
+    font-size: 1.05rem;
+  }
+  .faq-answer {
+    font-size: 0.95rem;
+  }
+}
+
+/* Small phones (< 400px) */
+@media (max-width: 400px) {
+  .hero-title {
+    font-size: 1.75rem;
+  }
+  .credibility-items {
+    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+  }
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+  .methodology-grid {
+    grid-template-columns: 1fr;
+  }
+  .case-metrics {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================
+   ROUND 6 — BREAK TEMPLATE REPETITION
+   Visual rhythm differentiation across pages
+   ============================================ */
+
+/* 1. Hero Accent Line — gold gradient separator below hero title */
+.hero-accent-line {
+  width: 80px;
+  height: 2px;
+  margin-top: var(--space-md);
+  background: linear-gradient(90deg, var(--accent), transparent);
+  border-radius: 1px;
+}
+
+/* 2. Portfolio — alternating project detail layout */
+.project-detail:nth-child(even) {
+  background: transparent;
+  border: none;
+  border-left: 3px solid var(--accent);
+  border-radius: 0;
+  padding-left: var(--space-lg);
+}
+
+/* 3. Blog cards — every 3rd card spans 2 columns for visual rhythm */
+@media (min-width: 769px) {
+  .blog-grid .blog-card:nth-child(3n+1) {
+    grid-column: span 2;
+  }
+  .blog-grid .blog-card:nth-child(3n+1) .blog-card-image {
+    aspect-ratio: 21 / 9;
+  }
+}
+
+/* ============================================
+   EVIDENCE UPGRADE — Deliverables & Proof
+   ============================================ */
+
+/* SEO Methodology Deliverables */
+.methodology-deliverable {
+    display: block;
+    margin-top: var(--space-sm);
+    font-size: 0.85rem;
+    color: var(--accent);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+/* Google Ads Expectation Strip */
+.expectation-strip {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-xl);
+    text-align: center;
+}
+.expectation-item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+}
+.expectation-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+}
+.expectation-value {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+@media (max-width: 768px) {
+    .expectation-strip {
+        flex-direction: column;
+        gap: var(--space-md);
+    }
+}
+
+/* Vibecoding Shipping Examples */
+.shipping-examples {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+    max-width: 900px;
+    margin: 0 auto;
+}
+.shipping-example {
+    text-align: center;
+    padding: var(--space-lg);
+    border-top: 2px solid var(--accent);
+}
+.shipping-timeline {
+    display: inline-block;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: var(--space-sm);
+}
+.shipping-example h4 {
+    color: var(--text-primary);
+    margin-bottom: var(--space-xs);
+}
+.shipping-example p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+@media (max-width: 768px) {
+    .shipping-examples {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* AI Consulting Process Deliverables */
+.process-deliverable {
+    display: block;
+    margin-top: var(--space-sm);
+    font-size: 0.85rem;
+    color: var(--accent);
+    font-weight: 600;
+}
+
+/* Contact Response Badge */
+.response-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    background: var(--accent-light);
+    border: 1px solid var(--border-accent);
+    border-radius: var(--radius-full);
+    padding: var(--space-xs) var(--space-md);
+    font-size: 0.85rem;
+    color: var(--text-primary);
+    margin-top: var(--space-md);
+    margin-bottom: var(--space-md);
+}
+.response-badge-icon {
+    font-size: 1rem;
+}
+
+/* ============================================
+   VISUAL RHYTHM BREAKS
+   ============================================ */
+
+/* Client quote block — asymmetric */
+.quote-block {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    padding: var(--space-xl) 0;
+}
+
+.client-quote {
+    font-size: 1.35rem;
+    font-style: italic;
+    line-height: 1.7;
+    color: var(--text-primary);
+    margin-bottom: var(--space-md);
+    position: relative;
+}
+
+.client-quote::before {
+    content: '\201C';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 4rem;
+    color: var(--accent);
+    opacity: 0.3;
+    font-family: Georgia, serif;
+    line-height: 1;
+}
+
+.quote-attribution {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.quote-attribution strong {
+    color: var(--accent);
+}
+
+/* Card text clamping for cleaner scanning */
+.services-grid .card-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Blog featured — premium hero treatment */
+.blog-featured .blog-card {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-accent);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.blog-featured .blog-card-body h3 {
+    font-size: 1.5rem;
+    line-height: 1.3;
+}
+
+.blog-featured .blog-card-link {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+/* Blog grid cards — tighter, more consistent */
+.blog-grid .blog-card {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    transition: border-color var(--transition);
+}
+
+.blog-grid .blog-card:hover {
+    border-color: var(--border-hover);
+}
+
+/* Blog metadata — stronger contrast */
+.blog-card-body time {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.blog-reading-time {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+}
+
+/* Subtle section depth variation */
+.proof-strip + .section,
+.credibility-strip + .section {
+    background: var(--bg-secondary);
+}
+
+/* Mini result evidence cards */
+.mini-result {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: var(--space-lg);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-accent);
+  border-radius: var(--radius-lg);
+}
+
+.mini-result-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: var(--space-md);
+}
+
+.mini-result-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-xl);
+}
+
+.mini-result-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.mini-result-number {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.mini-result-desc {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.mini-result-divider {
+  width: 1px;
+  height: 40px;
+  background: var(--border);
+}
+
+.mini-result-context {
+  margin-top: var(--space-md);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .mini-result-content {
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+  .mini-result-divider {
+    width: 40px;
+    height: 1px;
+  }
+  .mini-result-number {
+    font-size: 1.5rem;
+  }
+}
+
+/* ===================================================
+   Mobile Compression — reduce scroll burden on mobile
+   =================================================== */
+
+/* Mobile: compress about section text with line-clamp */
+@media (max-width: 768px) {
+  .content-section .section-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: var(--space-sm);
+  }
+}
+
+/* Mid-page CTA — quick access on mobile */
+.mid-cta {
+  text-align: center;
+  padding: var(--space-md) 0;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mid-cta {
+    display: block;
+  }
+}
+
+.btn-sm {
+  padding: 0.625rem 1.25rem;
+  font-size: 0.85rem;
+}
+
+/* Homepage: horizontal scroll for marketing cards on mobile */
+@media (max-width: 768px) {
+  .section:not(#services) > .container > .services-grid.stagger {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: var(--space-md);
+    padding-bottom: var(--space-sm);
+  }
+
+  .section:not(#services) > .container > .services-grid.stagger > .card {
+    min-width: 260px;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+  }
+}
+
+/* Form field contrast — stronger default border */
+.form-input,
+.form-textarea,
+.form-select {
+  border-color: var(--border-hover);
+}
+
+/* Round 8 — Stronger heading hierarchy */
+h2 {
+  font-size: 2.25rem;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+}
+
+.section .text-center h2 {
+  font-size: 2.5rem;
+}
+
+.hero-tagline {
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+}
+
+/* Section subtitles — tighter */
+.section .text-center > p {
+  font-size: 1rem;
+  max-width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Hide second about paragraph — too verbose, hurts scanning */
+.content-section .section-text + .section-text {
+  display: none;
+}
+
+/* Hero inline proof */
+.hero-proof {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-lg);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.hero-proof-item {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.hero-proof-divider {
+  color: var(--text-muted);
+}
+
+@media (max-width: 768px) {
+  .hero-proof {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-xs);
+    font-size: 0.8rem;
+  }
+}
+
+/* ============================================
+   ROUND 8 — BLOG & SECTION ENHANCEMENTS
+   ============================================ */
+
+/* Blog category filter enhancement */
+.blog-filter-btn {
+  font-size: 0.85rem;
+  letter-spacing: 0.03em;
+  padding: 0.5rem 1.25rem;
+  border-radius: var(--radius-full);
+  transition: all var(--transition);
+}
+
+.blog-filter-btn.active {
+  background: var(--accent);
+  color: var(--bg-primary);
+  font-weight: 600;
+}
+
+.blog-filter-btn:not(.active):hover {
+  background: var(--bg-elevated);
+  color: var(--text-primary);
+}
+
+/* Blog section title treatment */
+.blog-hero .section-title {
+  font-size: 2.5rem;
+  letter-spacing: -0.03em;
+}
+
+.blog-hero .section-subtitle {
+  max-width: 500px;
+  margin: var(--space-sm) auto 0;
+  font-size: 1rem;
+}
+
+/* Subtle section top borders for rhythm */
+.section + .section {
+  border-top: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+/* ============================================
+   ROUND 9 — Blog premium polish
+   ============================================ */
+.blog-featured {
+  margin-bottom: var(--space-xl);
+}
+
+.blog-featured .blog-card {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 0;
+  min-height: 320px;
+}
+
+.blog-featured .blog-card-image {
+  border-radius: var(--radius-lg) 0 0 var(--radius-lg);
+  overflow: hidden;
+}
+
+.blog-featured .blog-card-image img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.blog-featured .blog-card-body {
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.blog-featured .blog-card-body h3 {
+  font-size: 1.75rem;
+  line-height: 1.2;
+  margin-bottom: var(--space-sm);
+}
+
+.blog-featured .blog-card-body p {
+  font-size: 1rem;
+  line-height: 1.6;
+  -webkit-line-clamp: 4;
+}
+
+@media (max-width: 768px) {
+  .blog-featured .blog-card {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+  .blog-featured .blog-card-image {
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  }
+}
+
+/* Blog grid — tighter, more consistent cards */
+.blog-grid {
+  gap: var(--space-md);
+}
+
+.blog-grid .blog-card-image img {
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+.blog-grid .blog-card-body {
+  padding: var(--space-md);
+}
+
+.blog-grid .blog-card-body h3 {
+  font-size: 1.1rem;
+  line-height: 1.3;
+  margin-bottom: var(--space-xs);
+}
+
+/* ============================================
+   ROUND 9 — Form trust strip
+   ============================================ */
+.form-trust-strip {
+  display: flex;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+  padding-bottom: var(--space-md);
+  border-bottom: 1px solid var(--border);
+}
+
+.form-trust-item {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.form-trust-item::first-letter {
+  color: var(--accent);
+}
+
+@media (max-width: 768px) {
+  .form-trust-strip {
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+}
+
+/* ============================================
+   ROUND 9 — Stronger card backgrounds for contrast
+   ============================================ */
+.benefits-grid .benefit-item {
+  background: var(--bg-card);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+}
+
+.process-step {
+  background: var(--bg-card);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+}
+
+.methodology-step {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+}
+
+/* ============================================
+   ROUND 9 — Portfolio mobile — compress case study text
+   ============================================ */
+@media (max-width: 768px) {
+  .case-study-content p {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .case-study-content h3 {
+    font-size: 1.1rem;
+    margin-top: var(--space-md);
+    margin-bottom: var(--space-xs);
+  }
+}
+
+/* ============================================
+   ROUND 9 — Mobile section reduction (services)
+   ============================================ */
+@media (max-width: 768px) {
+  .section .services-grid:not(.stagger) {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-sm);
+  }
+  .section .services-grid:not(.stagger) .card {
+    padding: var(--space-sm) var(--space-md);
+  }
+  .section .services-grid:not(.stagger) .card-title {
+    font-size: 1rem;
+  }
+  .section .services-grid:not(.stagger) .card-text {
+    font-size: 0.85rem;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
 }

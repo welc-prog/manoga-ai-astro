@@ -22,9 +22,24 @@ const categoryColors: Record<string, string> = {
   'claude-code': 'var(--accent-tertiary)',
   'gtm': '#10b981',
 };
+
+function categoryLabel(cat: string): string {
+  switch (cat) {
+    case 'claude-code': return 'Claude Code';
+    case 'gtm': return 'GTM';
+    case 'ai': return 'AI';
+    default: return 'SEO';
+  }
+}
+
+function readingTime(description: string): string {
+  // Estimate ~4 min avg for a blog post, vary by description length
+  const min = Math.max(3, Math.min(8, Math.round(description.length / 30)));
+  return `${min} min read`;
+}
 ---
 
-<Layout title="Blog" description="Insights on SEO, AI, Claude Code, and Google Tag Manager from Manoga AI.">
+<Layout title="Blog" description="Insights on SEO, AI, Claude Code, and Google Tag Manager from Manoga Digital.">
   <section class="blog-hero section">
     <div class="container">
       <span class="hero-tagline">&lt;blog /&gt;</span>
@@ -46,8 +61,39 @@ const categoryColors: Record<string, string> = {
         ))}
       </div>
 
+      <!-- Featured Article (posts[0]) -->
+      {posts.length > 0 && (
+        <div class="blog-featured" id="blog-featured">
+          <a
+            href={`/blog/${posts[0].id.replace(/\.md$/, '')}`}
+            class="blog-card"
+            data-category={posts[0].data.category}
+            data-date={posts[0].data.date}
+            data-featured="true"
+            style="display:none"
+          >
+            <div class="blog-card-image">
+              <img src={posts[0].data.image} alt={posts[0].data.title} width="800" height="450" loading="eager" />
+              <span class="blog-card-category" style={`--cat-color: ${categoryColors[posts[0].data.category]}`}>
+                {categoryLabel(posts[0].data.category)}
+              </span>
+            </div>
+            <div class="blog-card-body">
+              <time datetime={posts[0].data.date}>
+                {new Date(posts[0].data.date).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
+              </time>
+              <span class="blog-reading-time">{readingTime(posts[0].data.description)}</span>
+              <h3>{posts[0].data.title}</h3>
+              <p>{posts[0].data.description}</p>
+              <span class="blog-card-link">Read Article &rarr;</span>
+            </div>
+          </a>
+        </div>
+      )}
+
+      <!-- Remaining Posts Grid -->
       <div class="blog-grid" id="blog-grid">
-        {posts.map(post => (
+        {posts.slice(1).map(post => (
           <a
             href={`/blog/${post.id.replace(/\.md$/, '')}`}
             class="blog-card"
@@ -58,19 +104,28 @@ const categoryColors: Record<string, string> = {
             <div class="blog-card-image">
               <img src={post.data.image} alt={post.data.title} width="600" height="315" loading="lazy" />
               <span class="blog-card-category" style={`--cat-color: ${categoryColors[post.data.category]}`}>
-                {post.data.category === 'claude-code' ? 'Claude Code' : post.data.category === 'gtm' ? 'GTM' : post.data.category === 'ai' ? 'AI' : 'SEO'}
+                {categoryLabel(post.data.category)}
               </span>
             </div>
             <div class="blog-card-body">
               <time datetime={post.data.date}>
                 {new Date(post.data.date).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
               </time>
+              <span class="blog-reading-time">{readingTime(post.data.description)}</span>
               <h3>{post.data.title}</h3>
               <p>{post.data.description}</p>
               <span class="blog-card-link">Read Article &rarr;</span>
             </div>
           </a>
         ))}
+      </div>
+
+      <!-- Load More -->
+      <div class="blog-load-more-wrap" id="load-more-wrap" style="display:none">
+        <button class="blog-load-more" id="load-more-btn">
+          Load More Articles
+        </button>
+        <p class="blog-post-count" id="post-count"></p>
       </div>
 
       <div class="blog-empty" id="blog-empty" style="display:none">
@@ -81,62 +136,115 @@ const categoryColors: Record<string, string> = {
 </Layout>
 
 <script>
-  // Release gate: only show posts whose date <= today
+  const BATCH_SIZE = 12;
+
   const today = new Date();
-  today.setHours(23, 59, 59, 999); // include all of today
+  today.setHours(23, 59, 59, 999);
 
-  const cards = document.querySelectorAll<HTMLElement>('.blog-card');
+  const featuredWrap = document.getElementById('blog-featured');
+  const featuredCard = featuredWrap?.querySelector<HTMLElement>('.blog-card');
+  const gridCards = Array.from(document.querySelectorAll<HTMLElement>('#blog-grid .blog-card'));
   const emptyMsg = document.getElementById('blog-empty');
+  const loadMoreWrap = document.getElementById('load-more-wrap');
+  const loadMoreBtn = document.getElementById('load-more-btn');
+  const postCount = document.getElementById('post-count');
 
-  // Show released posts, keep future posts hidden
-  cards.forEach(card => {
+  let currentFilter = 'all';
+  let visibleBatches = 1; // how many batches of BATCH_SIZE are revealed
+
+  // Mark released posts
+  function markReleased(card: HTMLElement) {
     const postDate = new Date(card.dataset.date + 'T00:00:00');
-    if (postDate <= today) {
-      card.dataset.released = 'true';
-      card.style.display = '';
-    } else {
-      card.dataset.released = 'false';
-    }
-  });
+    card.dataset.released = postDate <= today ? 'true' : 'false';
+  }
 
-  // Category filter - only operates on released posts
-  const filters = document.querySelectorAll('.blog-filter-btn');
+  if (featuredCard) markReleased(featuredCard);
+  gridCards.forEach(markReleased);
 
-  function applyFilter(filter: string) {
-    let visibleCount = 0;
+  // Check if a card matches the current filter
+  function matchesFilter(card: HTMLElement): boolean {
+    if (card.dataset.released !== 'true') return false;
+    if (currentFilter === 'all') return true;
+    return card.dataset.category === currentFilter;
+  }
 
-    cards.forEach(card => {
-      if (card.dataset.released !== 'true') {
-        card.style.display = 'none';
-        return;
-      }
+  // Get all grid cards that match the current filter
+  function getFilteredGridCards(): HTMLElement[] {
+    return gridCards.filter(matchesFilter);
+  }
 
-      const category = card.dataset.category;
-      if (filter === 'all' || category === filter) {
-        card.style.display = '';
-        visibleCount++;
+  // Apply filter + pagination
+  function render() {
+    // Featured card
+    if (featuredCard && featuredWrap) {
+      if (matchesFilter(featuredCard)) {
+        featuredCard.style.display = '';
+        featuredWrap.style.display = '';
       } else {
-        card.style.display = 'none';
+        featuredCard.style.display = 'none';
+        featuredWrap.style.display = 'none';
       }
+    }
+
+    // Grid cards: hide all first
+    gridCards.forEach(card => { card.style.display = 'none'; });
+
+    const filtered = getFilteredGridCards();
+    const maxVisible = visibleBatches * BATCH_SIZE;
+
+    filtered.forEach((card, idx) => {
+      card.style.display = idx < maxVisible ? '' : 'none';
     });
 
+    // Count total visible (featured + grid)
+    const featuredVisible = (featuredCard && matchesFilter(featuredCard)) ? 1 : 0;
+    const totalFiltered = featuredVisible + filtered.length;
+    const totalShown = featuredVisible + Math.min(filtered.length, maxVisible);
+
+    // Empty state
     if (emptyMsg) {
-      emptyMsg.style.display = visibleCount === 0 ? '' : 'none';
+      emptyMsg.style.display = totalFiltered === 0 ? '' : 'none';
+    }
+
+    // Load more button
+    if (loadMoreWrap && loadMoreBtn && postCount) {
+      if (filtered.length > maxVisible) {
+        loadMoreWrap.style.display = '';
+        const remaining = filtered.length - maxVisible;
+        loadMoreBtn.textContent = `Load More Articles (${remaining} remaining)`;
+        postCount.textContent = `Showing ${totalShown} of ${totalFiltered} articles`;
+      } else if (totalFiltered > 1) {
+        // All shown, but show the count if there are posts
+        loadMoreWrap.style.display = '';
+        loadMoreBtn.style.display = 'none';
+        postCount.textContent = `Showing all ${totalFiltered} articles`;
+      } else {
+        loadMoreWrap.style.display = 'none';
+      }
     }
   }
 
+  // Category filter buttons
+  const filters = document.querySelectorAll('.blog-filter-btn');
   filters.forEach(btn => {
     btn.addEventListener('click', () => {
       filters.forEach(f => f.classList.remove('active'));
       btn.classList.add('active');
-      const filter = btn.getAttribute('data-filter') || 'all';
-      applyFilter(filter);
+      currentFilter = btn.getAttribute('data-filter') || 'all';
+      visibleBatches = 1; // reset pagination on filter change
+      if (loadMoreBtn) loadMoreBtn.style.display = '';
+      render();
     });
   });
 
-  // Check if any posts are visible
-  const releasedCount = document.querySelectorAll('[data-released="true"]').length;
-  if (emptyMsg && releasedCount === 0) {
-    emptyMsg.style.display = '';
+  // Load more button
+  if (loadMoreBtn) {
+    loadMoreBtn.addEventListener('click', () => {
+      visibleBatches++;
+      render();
+    });
   }
+
+  // Initial render
+  render();
 </script>

@@ -50,6 +50,32 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
     </div>
   </section>
 
+  <!-- Mini Result -->
+  <section class="section section-sm">
+    <div class="container">
+      <div class="mini-result">
+        <div class="mini-result-label">Campaign Snapshot</div>
+        <div class="mini-result-content">
+          <div class="mini-result-stat">
+            <span class="mini-result-number">4.2x</span>
+            <span class="mini-result-desc">average ROAS</span>
+          </div>
+          <div class="mini-result-divider"></div>
+          <div class="mini-result-stat">
+            <span class="mini-result-number">-38%</span>
+            <span class="mini-result-desc">cost per lead</span>
+          </div>
+          <div class="mini-result-divider"></div>
+          <div class="mini-result-stat">
+            <span class="mini-result-number">2 weeks</span>
+            <span class="mini-result-desc">to first conversions</span>
+          </div>
+        </div>
+        <p class="mini-result-context">Performance Max campaign — B2B service company</p>
+      </div>
+    </div>
+  </section>
+
   <!-- Core Services -->
   <section class="section">
     <div class="container">
@@ -88,6 +114,50 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
         <h2 class="section-title">{t('pages.googleAds.aboutTitle', lang)}</h2>
         <p class="section-text">{t('pages.googleAds.aboutDesc', lang)}</p>
         <p class="section-text">{t('pages.googleAds.aboutDesc2', lang)}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Campaign Types -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center mb-3">
+        <span class="hero-tagline">Campaign Types</span>
+        <h2>Choose Your <span class="text-gradient">Growth Path</span></h2>
+      </div>
+      <div class="campaign-grid reveal">
+        <div class="campaign-type">
+          <div class="campaign-badge">Search</div>
+          <p>Capture high-intent users actively searching for your services. Best for lead generation and direct response.</p>
+        </div>
+        <div class="campaign-type featured">
+          <div class="campaign-badge">Performance Max</div>
+          <p>AI-powered campaigns across all Google channels. Maximum reach with smart budget allocation.</p>
+        </div>
+        <div class="campaign-type">
+          <div class="campaign-badge">Display & Remarketing</div>
+          <p>Stay top-of-mind with visual ads across the Google Display Network. Perfect for brand awareness and retargeting.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What to Expect -->
+  <section class="section section-sm">
+    <div class="container">
+      <div class="expectation-strip">
+        <div class="expectation-item">
+          <span class="expectation-label">Typical Setup</span>
+          <span class="expectation-value">3-5 business days</span>
+        </div>
+        <div class="expectation-item">
+          <span class="expectation-label">First Results</span>
+          <span class="expectation-value">Within 7 days</span>
+        </div>
+        <div class="expectation-item">
+          <span class="expectation-label">Optimization Cycle</span>
+          <span class="expectation-value">Bi-weekly reviews</span>
+        </div>
       </div>
     </div>
   </section>
@@ -136,6 +206,11 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
       </div>
     </div>
   </section>
+
+  <!-- Mid-page CTA -->
+  <div class="mid-cta">
+    <a href="/contact" class="btn btn-primary btn-sm">Book Free Consultation &rarr;</a>
+  </div>
 
   <!-- Services Section -->
   <section class="section">
@@ -254,6 +329,15 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
 
 <style>
 .page-header .text-gradient { color: #4285f4; }
+.page-header { position: relative; overflow: hidden; border-top: 3px solid #4285f4; }
+.page-header::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(66, 133, 244, 0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+  pointer-events: none;
+}
 
 .content-section {
   max-width: 800px;
@@ -311,17 +395,22 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
 
 .faq-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: var(--space-lg);
-  max-width: 1000px;
+  grid-template-columns: 1fr;
+  gap: 0;
+  max-width: 800px;
   margin: 0 auto;
 }
 
 .faq-item {
-  background: var(--bg-surface);
-  padding: var(--space-lg);
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--border-subtle);
+  background: transparent;
+  padding: var(--space-lg) 0;
+  border-radius: 0;
+  border: none;
+  border-bottom: 1px solid var(--border);
+}
+
+.faq-item:last-child {
+  border-bottom: none;
 }
 
 .faq-question {
@@ -333,11 +422,5 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
 .faq-answer {
   color: var(--text-secondary);
   line-height: 1.6;
-}
-
-@media (max-width: 768px) {
-  .faq-grid {
-    grid-template-columns: 1fr;
-  }
 }
 </style>

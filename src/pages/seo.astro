@@ -51,6 +51,32 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
     </div>
   </section>
 
+  <!-- Mini Result -->
+  <section class="section section-sm">
+    <div class="container">
+      <div class="mini-result">
+        <div class="mini-result-label">Recent Result</div>
+        <div class="mini-result-content">
+          <div class="mini-result-stat">
+            <span class="mini-result-number">+340%</span>
+            <span class="mini-result-desc">organic traffic growth</span>
+          </div>
+          <div class="mini-result-divider"></div>
+          <div class="mini-result-stat">
+            <span class="mini-result-number">Page 1</span>
+            <span class="mini-result-desc">for 12 target keywords</span>
+          </div>
+          <div class="mini-result-divider"></div>
+          <div class="mini-result-stat">
+            <span class="mini-result-number">6 months</span>
+            <span class="mini-result-desc">to achieve results</span>
+          </div>
+        </div>
+        <p class="mini-result-context">Multilingual content platform — from launch to page 1 rankings</p>
+      </div>
+    </div>
+  </section>
+
   <!-- Core Services -->
   <section class="section">
     <div class="container">
@@ -89,6 +115,42 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
         <h2 class="section-title">{t('pages.seo.aboutTitle', lang)}</h2>
         <p class="section-text">{t('pages.seo.aboutDesc', lang)}</p>
         <p class="section-text">{t('pages.seo.aboutDesc2', lang)}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEO Methodology -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center mb-3">
+        <span class="hero-tagline">Our Approach</span>
+        <h2>The SEO <span class="text-gradient">Methodology</span></h2>
+      </div>
+      <div class="methodology-grid reveal">
+        <div class="methodology-step">
+          <div class="methodology-number">01</div>
+          <h3>Audit</h3>
+          <p>Deep technical analysis of your site's SEO health, identifying issues and opportunities.</p>
+          <span class="methodology-deliverable">Deliverable: 50+ point technical audit report</span>
+        </div>
+        <div class="methodology-step">
+          <div class="methodology-number">02</div>
+          <h3>Strategy</h3>
+          <p>Custom roadmap based on your competitive landscape and business objectives.</p>
+          <span class="methodology-deliverable">Deliverable: 90-day keyword & content roadmap</span>
+        </div>
+        <div class="methodology-step">
+          <div class="methodology-number">03</div>
+          <h3>Execute</h3>
+          <p>Technical fixes, content creation, and link building — all data-driven.</p>
+          <span class="methodology-deliverable">Deliverable: Monthly implementation sprints</span>
+        </div>
+        <div class="methodology-step">
+          <div class="methodology-number">04</div>
+          <h3>Measure</h3>
+          <p>Monthly reporting with clear KPIs. We adjust strategy based on real data.</p>
+          <span class="methodology-deliverable">Deliverable: KPI dashboard with weekly updates</span>
+        </div>
       </div>
     </div>
   </section>
@@ -137,6 +199,11 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
       </div>
     </div>
   </section>
+
+  <!-- Mid-page CTA -->
+  <div class="mid-cta">
+    <a href="/contact" class="btn btn-primary btn-sm">Book Free Consultation &rarr;</a>
+  </div>
 
   <!-- Services Section -->
   <section class="section">
@@ -255,6 +322,14 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
 
 <style>
 .page-header .text-gradient { color: #7cb342; }
+.page-header { position: relative; overflow: hidden; border-left: 4px solid #7cb342; }
+.page-header::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(124, 179, 66, 0.03) 20px, rgba(124, 179, 66, 0.03) 21px);
+  pointer-events: none;
+}
 
 .content-section {
   max-width: 800px;
@@ -312,17 +387,22 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
 
 .faq-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: var(--space-lg);
-  max-width: 1000px;
+  grid-template-columns: 1fr;
+  gap: 0;
+  max-width: 800px;
   margin: 0 auto;
 }
 
 .faq-item {
-  background: var(--bg-surface);
-  padding: var(--space-lg);
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--border-subtle);
+  background: transparent;
+  padding: var(--space-lg) 0;
+  border-radius: 0;
+  border: none;
+  border-bottom: 1px solid var(--border);
+}
+
+.faq-item:last-child {
+  border-bottom: none;
 }
 
 .faq-question {
@@ -334,11 +414,5 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
 .faq-answer {
   color: var(--text-secondary);
   line-height: 1.6;
-}
-
-@media (max-width: 768px) {
-  .faq-grid {
-    grid-template-columns: 1fr;
-  }
 }
 </style>

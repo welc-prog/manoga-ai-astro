@@ -50,6 +50,32 @@ const prefix = '/da';  // Hardcode for Danish pages
     </div>
   </section>
 
+  <!-- Mini Result -->
+  <section class="section section-sm">
+    <div class="container">
+      <div class="mini-result">
+        <div class="mini-result-label">Kampagne-snapshot</div>
+        <div class="mini-result-content">
+          <div class="mini-result-stat">
+            <span class="mini-result-number">4.2x</span>
+            <span class="mini-result-desc">gennemsnitlig ROAS</span>
+          </div>
+          <div class="mini-result-divider"></div>
+          <div class="mini-result-stat">
+            <span class="mini-result-number">-38%</span>
+            <span class="mini-result-desc">pris pr. lead</span>
+          </div>
+          <div class="mini-result-divider"></div>
+          <div class="mini-result-stat">
+            <span class="mini-result-number">2 uger</span>
+            <span class="mini-result-desc">til første konverteringer</span>
+          </div>
+        </div>
+        <p class="mini-result-context">Performance Max kampagne — B2B servicevirksomhed</p>
+      </div>
+    </div>
+  </section>
+
   <!-- Core Services -->
   <section class="section">
     <div class="container">
@@ -88,6 +114,50 @@ const prefix = '/da';  // Hardcode for Danish pages
         <h2 class="section-title">{t('pages.googleAds.aboutTitle', lang)}</h2>
         <p class="section-text">{t('pages.googleAds.aboutDesc', lang)}</p>
         <p class="section-text">{t('pages.googleAds.aboutDesc2', lang)}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kampagnetyper -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center mb-3">
+        <span class="hero-tagline">Kampagnetyper</span>
+        <h2>Vælg din <span class="text-gradient">Vækstvej</span></h2>
+      </div>
+      <div class="campaign-grid reveal">
+        <div class="campaign-type">
+          <div class="campaign-badge">Search</div>
+          <p>Fang brugere med høj købsintention, der aktivt søger efter dine ydelser. Bedst til leadgenerering og direkte respons.</p>
+        </div>
+        <div class="campaign-type featured">
+          <div class="campaign-badge">Performance Max</div>
+          <p>AI-drevne kampagner på tværs af alle Google-kanaler. Maksimal rækkevidde med intelligent budgetallokering.</p>
+        </div>
+        <div class="campaign-type">
+          <div class="campaign-badge">Display & Remarketing</div>
+          <p>Bliv top-of-mind med visuelle annoncer på tværs af Google Display Netværket. Perfekt til brandbevidsthed og retargeting.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hvad du kan forvente -->
+  <section class="section section-sm">
+    <div class="container">
+      <div class="expectation-strip">
+        <div class="expectation-item">
+          <span class="expectation-label">Typisk opsætning</span>
+          <span class="expectation-value">3-5 hverdage</span>
+        </div>
+        <div class="expectation-item">
+          <span class="expectation-label">Første resultater</span>
+          <span class="expectation-value">Inden for 7 dage</span>
+        </div>
+        <div class="expectation-item">
+          <span class="expectation-label">Optimerings-cyklus</span>
+          <span class="expectation-value">Ugentlige gennemgange</span>
+        </div>
       </div>
     </div>
   </section>
@@ -136,6 +206,11 @@ const prefix = '/da';  // Hardcode for Danish pages
       </div>
     </div>
   </section>
+
+  <!-- Mid-page CTA -->
+  <div class="mid-cta">
+    <a href="/da/contact" class="btn btn-primary btn-sm">Book Gratis Konsultation &rarr;</a>
+  </div>
 
   <!-- Services Section -->
   <section class="section">
@@ -215,6 +290,15 @@ const prefix = '/da';  // Hardcode for Danish pages
 
 <style>
 .page-header .text-gradient { color: #4285f4; }
+.page-header { position: relative; overflow: hidden; border-top: 3px solid #4285f4; }
+.page-header::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(66, 133, 244, 0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+  pointer-events: none;
+}
 
 .content-section {
   max-width: 800px;
@@ -272,17 +356,22 @@ const prefix = '/da';  // Hardcode for Danish pages
 
 .faq-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: var(--space-lg);
-  max-width: 1000px;
+  grid-template-columns: 1fr;
+  gap: 0;
+  max-width: 800px;
   margin: 0 auto;
 }
 
 .faq-item {
-  background: var(--bg-surface);
-  padding: var(--space-lg);
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--border-subtle);
+  background: transparent;
+  padding: var(--space-lg) 0;
+  border-radius: 0;
+  border: none;
+  border-bottom: 1px solid var(--border);
+}
+
+.faq-item:last-child {
+  border-bottom: none;
 }
 
 .faq-question {
@@ -294,11 +383,5 @@ const prefix = '/da';  // Hardcode for Danish pages
 .faq-answer {
   color: var(--text-secondary);
   line-height: 1.6;
-}
-
-@media (max-width: 768px) {
-  .faq-grid {
-    grid-template-columns: 1fr;
-  }
 }
 </style>

@@ -31,7 +31,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
       </p>
 
       <div class="hero-cta-row">
-        <a href="#webshop" class="btn btn-primary btn-glow">See Live Demos<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></a>
+        <a href="#webshop" class="btn btn-primary">See Live Demos<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></a>
         <a href="/contact" class="btn btn-secondary">Get Your Free Quote</a>
       </div>
 
@@ -51,7 +51,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
   </section>
 
   <!-- Demo 1: Webshop -->
-  <section class="section section-gradient section-grid" id="webshop">
+  <section class="section" id="webshop">
     <div class="container">
       <div class="demo-showcase reveal">
         <div class="demo-preview">
@@ -133,7 +133,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
               Explore Live Demo
               <IconExternal />
             </a>
-            <a href="/contact" class="btn btn-primary btn-glow">
+            <a href="/contact" class="btn btn-primary">
               I Want This For My Business
               <IconArrowRight />
             </a>
@@ -144,7 +144,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
   </section>
 
   <!-- Demo 2: Electrician / Service Business -->
-  <section class="section section-mesh" id="electrician">
+  <section class="section" id="electrician">
     <div class="container">
       <div class="demo-showcase demo-showcase-reverse reveal">
         <div class="demo-preview">
@@ -226,7 +226,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
               Explore Live Demo
               <IconExternal />
             </a>
-            <a href="/contact" class="btn btn-primary btn-glow">
+            <a href="/contact" class="btn btn-primary">
               I Want This For My Business
               <IconArrowRight />
             </a>
@@ -237,7 +237,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
   </section>
 
   <!-- Value Proposition -->
-  <section class="section section-mesh">
+  <section class="section">
     <div class="container">
       <div class="text-center mb-3">
         <span class="hero-tagline">Why Manoga?</span>
@@ -282,7 +282,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
   </section>
 
   <!-- Comparison Section -->
-  <section class="section section-gradient section-grid">
+  <section class="section">
     <div class="container">
       <div class="text-center mb-3">
         <span class="hero-tagline">The Difference</span>
@@ -326,7 +326,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
   </section>
 
   <!-- Who Is This For Section -->
-  <section class="section section-mesh">
+  <section class="section">
     <div class="container">
       <div class="text-center mb-3">
         <span class="hero-tagline">Perfect For</span>
@@ -353,7 +353,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
   </section>
 
   <!-- Process -->
-  <section class="section section-gradient section-grid">
+  <section class="section">
     <div class="container">
       <div class="text-center mb-3">
         <span class="hero-tagline">How It Works</span>
@@ -381,7 +381,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
   </section>
 
   <!-- FAQ -->
-  <section class="section section-mesh">
+  <section class="section">
     <div class="container">
       <div class="text-center mb-3">
         <span class="hero-tagline">Got Questions?</span>
@@ -432,7 +432,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
         <h2>Ready for a Website That Actually Works?</h2>
         <p>Get a professional, modern website built with AI — faster, cheaper, and better than traditional agencies. Free consultation, no strings attached.</p>
         <div class="cta-buttons">
-          <a href="/contact" class="btn btn-primary btn-glow">
+          <a href="/contact" class="btn btn-primary">
             Get Your Free Quote
             <IconArrowRight />
           </a>
@@ -900,21 +900,25 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
   line-height: 1.6;
 }
 
-/* FAQ grid */
+/* FAQ grid — accordion style */
 .faq-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: var(--space-lg);
-  max-width: 1000px;
+  grid-template-columns: 1fr;
+  gap: 0;
+  max-width: 800px;
   margin: 0 auto;
 }
 
 .faq-item {
-  background: var(--bg-surface);
-  padding: var(--space-lg);
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--border-subtle);
-  transition: border-color 0.3s var(--ease);
+  background: transparent;
+  padding: var(--space-lg) 0;
+  border-radius: 0;
+  border: none;
+  border-bottom: 1px solid var(--border);
+}
+
+.faq-item:last-child {
+  border-bottom: none;
 }
 
 .faq-item:hover {
@@ -987,10 +991,6 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
     width: 100%;
     justify-content: center;
     text-align: center;
-  }
-
-  .faq-grid {
-    grid-template-columns: 1fr;
   }
 
   .benefits-grid {

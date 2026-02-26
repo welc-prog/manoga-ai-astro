@@ -37,16 +37,23 @@
     "testgen": "TestGen AI"
   },
   "hero": {
-    "tagline": "AI-Powered Digital Transformation",
-    "title": "Build The Future With",
-    "description": "We combine 15+ years of digital marketing expertise with cutting-edge AI to create solutions that actually work. From vibecoding to workshops, we're your partner in the AI revolution.",
-    "cta": "Start Your Project",
-    "secondary": "View Our Work"
+    "tagline": "Boutique Digital Agency — Denmark",
+    "title": "Strategy Meets",
+    "titleAccent": "Execution",
+    "description": "15+ years of digital marketing expertise, now accelerated with AI. We deliver measurable growth through SEO, paid media, and modern web development — with the speed and precision only an AI-native team can offer.",
+    "cta": "Book a Free Consultation",
+    "secondary": "See Our Work"
+  },
+  "credibility": {
+    "years": "Years in Digital Marketing",
+    "projects": "Projects Delivered",
+    "seoExpert": "Certified Specialist",
+    "aiNative": "Native Development"
   },
   "services": {
     "whatWeDo": "What We Do",
-    "title": "AI-Powered Services",
-    "subtitle": "From rapid prototyping with vibecoding to comprehensive AI consulting, we deliver results that matter.",
+    "title": "Our Services",
+    "subtitle": "Full-service digital expertise — from strategy to execution. Every engagement is tailored to your business goals.",
     "aiConsulting": "AI Consulting",
     "advertising": "Advertising",
     "webDesign": "Web Design",
@@ -59,7 +66,7 @@
     "tagline": "Digital Marketing",
     "yearsOf": "Years of",
     "expertise": "Expertise",
-    "subtitle": "Deep digital marketing knowledge combined with AI-powered optimization for maximum impact.",
+    "subtitle": "Proven digital marketing strategies refined over 15+ years, now enhanced with modern AI tools for sharper results.",
     "seo": "Data-driven search optimization that gets you found. Technical SEO, content strategy, and AI-powered insights.",
     "googleAds": "Performance-focused PPC campaigns that convert. Smart bidding, audience targeting, and continuous optimization.",
     "metaAds": "Facebook & Instagram campaigns that reach your audience. Creative strategy, audience building, and ROI tracking.",
@@ -78,7 +85,7 @@
     "tagline": "Our Work",
     "featured": "Featured",
     "projects": "Projects",
-    "subtitle": "Real products built with vibecoding and AI. See what's possible when experience meets innovation.",
+    "subtitle": "Selected work from our portfolio. Each project represents a real business challenge solved with strategy, craft, and technology.",
     "welcSubtitle": "Cryptocurrency News & Analysis",
     "liveProject": "Live Project",
     "welcDesc": "Comprehensive cryptocurrency news platform built with Nuxt 3, featuring real-time data, multi-language support, and AI-powered content generation.",
@@ -110,7 +117,7 @@
   },
   "cta": {
     "title": "Ready to Transform Your Business?",
-    "subtitle": "Let's discuss how AI and vibecoding can accelerate your next project.",
+    "subtitle": "Let's discuss how we can accelerate your next project with 15+ years of digital expertise.",
     "button": "Get Started Today"
   },
   "contact": {
@@ -137,15 +144,19 @@
     "responseTimeDesc": "I typically respond within 24 hours on business days. For urgent matters, feel free to call directly.",
     "freeConsultation": "Free Consultation",
     "freeConsultationDesc": "Not sure what you need? Book a free 30-minute discovery call to discuss your challenges and explore potential solutions.",
-    "workingWith": "Working With Manoga AI",
+    "workingWith": "Working With Manoga Digital",
     "workingWithDesc": "When you reach out, we'll start with a discovery conversation to understand your needs. From there, I'll provide a clear proposal with timeline and pricing. No surprises, no hidden fees – just honest, transparent collaboration.",
     "preferredContact": "Preferred Contact Methods",
     "preferredContactDesc": "Phone for quick questions, email for detailed inquiries, or LinkedIn for professional networking. Choose whatever works best for you.",
     "globalReach": "Global Reach, Danish Roots",
-    "globalReachDesc": "Based in Denmark but working with clients across Europe and beyond. Remote collaboration is our specialty – timezone differences are no obstacle."
+    "globalReachDesc": "Based in Denmark but working with clients across Europe and beyond. Remote collaboration is our specialty – timezone differences are no obstacle.",
+    "whatHappensNext": "What Happens Next",
+    "step1": "We'll respond within 24 hours with initial thoughts on your project.",
+    "step2": "A free 30-minute discovery call to understand your goals and challenges.",
+    "step3": "A clear proposal with scope, timeline, and transparent pricing — no surprises."
   },
   "footer": {
-    "description": "Transforming businesses through vibecoding, AI consulting, and hands-on workshops. 15+ years of digital marketing expertise meets cutting-edge artificial intelligence.",
+    "description": "Boutique digital agency based in Denmark. 15+ years of marketing expertise combined with AI-native development. Strategy, execution, and measurable results.",
     "digitalMarketing": "Digital Marketing",
     "seoServices": "SEO Services",
     "aiServices": "AI Services",

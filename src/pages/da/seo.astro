@@ -51,6 +51,32 @@ const prefix = '/da';  // Hardcode for Danish pages
     </div>
   </section>
 
+  <!-- Mini Result -->
+  <section class="section section-sm">
+    <div class="container">
+      <div class="mini-result">
+        <div class="mini-result-label">Seneste resultat</div>
+        <div class="mini-result-content">
+          <div class="mini-result-stat">
+            <span class="mini-result-number">+340%</span>
+            <span class="mini-result-desc">vækst i organisk trafik</span>
+          </div>
+          <div class="mini-result-divider"></div>
+          <div class="mini-result-stat">
+            <span class="mini-result-number">Side 1</span>
+            <span class="mini-result-desc">for 12 mål-keywords</span>
+          </div>
+          <div class="mini-result-divider"></div>
+          <div class="mini-result-stat">
+            <span class="mini-result-number">6 måneder</span>
+            <span class="mini-result-desc">til at opnå resultater</span>
+          </div>
+        </div>
+        <p class="mini-result-context">Flersproget indholdsplatform — fra launch til side 1 placeringer</p>
+      </div>
+    </div>
+  </section>
+
   <!-- Core Services -->
   <section class="section">
     <div class="container">
@@ -89,6 +115,42 @@ const prefix = '/da';  // Hardcode for Danish pages
         <h2 class="section-title">{t('pages.seo.aboutTitle', lang)}</h2>
         <p class="section-text">{t('pages.seo.aboutDesc', lang)}</p>
         <p class="section-text">{t('pages.seo.aboutDesc2', lang)}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEO Metodikken -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center mb-3">
+        <span class="hero-tagline">Vores tilgang</span>
+        <h2>SEO <span class="text-gradient">Metodikken</span></h2>
+      </div>
+      <div class="methodology-grid reveal">
+        <div class="methodology-step">
+          <div class="methodology-number">01</div>
+          <h3>Revision</h3>
+          <p>Dybdegående teknisk analyse af dit sites SEO-sundhed, der identificerer problemer og muligheder.</p>
+          <span class="methodology-deliverable">Leverance: 50+ punkts teknisk audit-rapport</span>
+        </div>
+        <div class="methodology-step">
+          <div class="methodology-number">02</div>
+          <h3>Strategi</h3>
+          <p>Skræddersyet plan baseret på jeres konkurrencesituation og forretningsmål.</p>
+          <span class="methodology-deliverable">Leverance: 90-dages keyword & indholdsplan</span>
+        </div>
+        <div class="methodology-step">
+          <div class="methodology-number">03</div>
+          <h3>Eksekvering</h3>
+          <p>Tekniske rettelser, indholdsproduktion og linkbuilding — alt datadrevet.</p>
+          <span class="methodology-deliverable">Leverance: Månedlige implementerings-sprints</span>
+        </div>
+        <div class="methodology-step">
+          <div class="methodology-number">04</div>
+          <h3>Måling</h3>
+          <p>Månedlig rapportering med klare KPI'er. Vi justerer strategien ud fra data.</p>
+          <span class="methodology-deliverable">Leverance: KPI-dashboard med ugentlige opdateringer</span>
+        </div>
       </div>
     </div>
   </section>
@@ -137,6 +199,11 @@ const prefix = '/da';  // Hardcode for Danish pages
       </div>
     </div>
   </section>
+
+  <!-- Mid-page CTA -->
+  <div class="mid-cta">
+    <a href="/da/contact" class="btn btn-primary btn-sm">Book Gratis Konsultation &rarr;</a>
+  </div>
 
   <!-- Services Section -->
   <section class="section">
@@ -216,6 +283,14 @@ const prefix = '/da';  // Hardcode for Danish pages
 
 <style>
 .page-header .text-gradient { color: #7cb342; }
+.page-header { position: relative; overflow: hidden; border-left: 4px solid #7cb342; }
+.page-header::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(124, 179, 66, 0.03) 20px, rgba(124, 179, 66, 0.03) 21px);
+  pointer-events: none;
+}
 
 .content-section {
   max-width: 800px;
@@ -273,17 +348,22 @@ const prefix = '/da';  // Hardcode for Danish pages
 
 .faq-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: var(--space-lg);
-  max-width: 1000px;
+  grid-template-columns: 1fr;
+  gap: 0;
+  max-width: 800px;
   margin: 0 auto;
 }
 
 .faq-item {
-  background: var(--bg-surface);
-  padding: var(--space-lg);
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--border-subtle);
+  background: transparent;
+  padding: var(--space-lg) 0;
+  border-radius: 0;
+  border: none;
+  border-bottom: 1px solid var(--border);
+}
+
+.faq-item:last-child {
+  border-bottom: none;
 }
 
 .faq-question {
@@ -295,11 +375,5 @@ const prefix = '/da';  // Hardcode for Danish pages
 .faq-answer {
   color: var(--text-secondary);
   line-height: 1.6;
-}
-
-@media (max-width: 768px) {
-  .faq-grid {
-    grid-template-columns: 1fr;
-  }
 }
 </style>

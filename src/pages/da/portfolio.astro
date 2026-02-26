@@ -24,7 +24,7 @@ const prefix = '/da';  // Hardcode for Danish pages
   </section>
 
   <!-- About Section -->
-  <section class="section section-mesh">
+  <section class="section">
     <div class="container">
       <div class="content-section reveal">
         <h2 class="section-title">{t('portfolio.aboutTitle', lang)}</h2>
@@ -34,7 +34,7 @@ const prefix = '/da';  // Hardcode for Danish pages
   </section>
 
   <!-- Project Showcase -->
-  <section class="section section-gradient section-grid bg-portfolio">
+  <section class="section">
     <div class="container">
       <div class="showcase-grid reveal">
         <!-- WELC -->
@@ -79,8 +79,70 @@ const prefix = '/da';  // Hardcode for Danish pages
     </div>
   </section>
 
+  <!-- Flagship Case Study -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center mb-3">
+        <span class="hero-tagline">Case Study</span>
+        <h2>WeLoveEverythingCrypto: <span class="text-gradient">Dybt Dyk</span></h2>
+      </div>
+      <div class="case-study reveal">
+        <div class="case-study-grid">
+          <div class="case-study-content">
+            <h3>Udfordringen</h3>
+            <p>Build a multilingual cryptocurrency news platform that could compete with established players, delivering real-time data and AI-generated analysis across 5 languages — in weeks, not months.</p>
+
+            <h3>Tilgangen</h3>
+            <p>Using vibecoding (AI-assisted development) with Nuxt 3, we built the entire platform from scratch with SEO-first architecture, real-time price feeds, and automated content pipelines. Every page is statically generated for maximum performance and SEO value.</p>
+
+            <h3>Resultaterne</h3>
+            <div class="case-metrics">
+              <div class="case-metric">
+                <span class="case-metric-number">1000+</span>
+                <span class="case-metric-label">Artikler publiceret</span>
+              </div>
+              <div class="case-metric">
+                <span class="case-metric-number">5</span>
+                <span class="case-metric-label">Sprog</span>
+              </div>
+              <div class="case-metric">
+                <span class="case-metric-number">&lt;1s</span>
+                <span class="case-metric-label">Indl&aelig;sningstid</span>
+              </div>
+              <div class="case-metric">
+                <span class="case-metric-number">100</span>
+                <span class="case-metric-label">Lighthouse-score</span>
+              </div>
+            </div>
+          </div>
+          <div class="case-study-sidebar">
+            <div class="case-detail">
+              <strong>Kunde</strong>
+              <p>WeLoveEverythingCrypto</p>
+            </div>
+            <div class="case-detail">
+              <strong>Tidsramme</strong>
+              <p>4 ugers f&oslash;rste build</p>
+            </div>
+            <div class="case-detail">
+              <strong>Teknologi</strong>
+              <p>Nuxt 3 · Vue 3 · TypeScript · Vercel</p>
+            </div>
+            <div class="case-detail">
+              <strong>Ydelser</strong>
+              <p>Vibecoding · SEO · Content Strategy</p>
+            </div>
+            <a href="https://weloveeverythingcrypto.com" target="_blank" rel="noopener" class="btn btn-primary" style="margin-top: var(--space-md);">
+              Bes&oslash;g live site →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Detailed Project Descriptions -->
-  <section class="section section-mesh">
+  <section class="section">
     <div class="container">
       <div class="project-details">
         <div class="project-detail reveal">
@@ -100,7 +162,7 @@ const prefix = '/da';  // Hardcode for Danish pages
   </section>
 
   <!-- Technologies Section -->
-  <section class="section section-gradient section-grid bg-techstack">
+  <section class="section">
     <div class="container">
       <div class="text-center mb-3">
         <span class="hero-tagline">{t('common.howItWorks', lang)}</span>
@@ -138,12 +200,12 @@ const prefix = '/da';  // Hardcode for Danish pages
   </section>
 
   <!-- CTA -->
-  <section class="section section-mesh">
+  <section class="section">
     <div class="container">
       <div class="card text-center" style="padding: var(--space-xl); max-width: 800px; margin: 0 auto;">
         <h2 class="mb-1">{t('cta.title', lang)}</h2>
         <p style="font-size: 1.25rem; margin-bottom: var(--space-md);">{t('cta.subtitle', lang)}</p>
-        <a href={`${prefix}/contact`} class="btn btn-primary btn-glow">
+        <a href={`${prefix}/contact`} class="btn btn-primary">
           {t('cta.button', lang)}
           <IconArrowRight />
         </a>
@@ -153,6 +215,9 @@ const prefix = '/da';  // Hardcode for Danish pages
 </Layout>
 
 <style>
+.page-header .text-gradient { color: #f59e0b; }
+.page-header { border-bottom: 3px solid #f59e0b; }
+
 .content-section {
   max-width: 800px;
   margin: 0 auto;

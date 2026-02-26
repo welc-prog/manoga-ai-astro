@@ -32,16 +32,23 @@
         "getStarted": "Kom i gang"
     },
     "hero": {
-        "tagline": "AI-drevet digital transformation",
-        "title": "Skab fremtiden med",
-        "description": "Vi kombinerer 15+ \u00e5rs erfaring i digital marketing med AI for at bygge l\u00f8sninger, der virker i praksis. Fra vibecoding til workshops - vi er din partner i AI-skiftet.",
-        "cta": "Start dit projekt",
+        "tagline": "Boutique digitalt bureau — Danmark",
+        "title": "Strategi m\u00f8der",
+        "titleAccent": "Eksekvering",
+        "description": "15+ \u00e5rs erfaring med digital marketing, nu accelereret med AI. Vi leverer m\u00e5lbar v\u00e6kst gennem SEO, betalt annoncering og moderne webudvikling — med den hastighed og pr\u00e6cision kun et AI-f\u00f8dt team kan tilbyde.",
+        "cta": "Book en gratis samtale",
         "secondary": "Se vores arbejde"
+    },
+    "credibility": {
+        "years": "Års erfaring i digital marketing",
+        "projects": "Projekter leveret",
+        "seoExpert": "Certificeret specialist",
+        "aiNative": "AI-drevet udvikling"
     },
     "services": {
         "whatWeDo": "Det vi leverer",
-        "title": "AI-drevne ydelser",
-        "subtitle": "Fra hurtig prototyping med vibecoding til strategisk AI-r\u00e5dgivning - vi leverer resultater, der kan m\u00e6rkes.",
+        "title": "Vores ydelser",
+        "subtitle": "Fuld digital ekspertise — fra strategi til eksekvering. Hver indsats er skr\u00e6ddersyet til jeres forretningsm\u00e5l.",
         "aiConsulting": "AI-r\u00e5dgivning",
         "advertising": "Annoncering",
         "webDesign": "Webdesign",
@@ -54,7 +61,7 @@
         "tagline": "Digital marketing",
         "yearsOf": "\u00e5rs",
         "expertise": "ekspertise",
-        "subtitle": "Dyb ekspertise i digital marketing kombineret med AI-drevet optimering for maksimal effekt.",
+        "subtitle": "Gennempr\u00f8vede digitale strategier forfinet over 15+ \u00e5r, nu forst\u00e6rket med moderne AI-v\u00e6rkt\u00f8jer for sk\u00e6rpere resultater.",
         "seo": "Datadrevet SEO, der g\u00f8r dig synlig. Teknisk SEO, indholdsstrategi og AI-drevne indsigter.",
         "googleAds": "Performancefokuserede PPC-kampagner, der konverterer. Smart budgivning, skarp m\u00e5lretning og l\u00f8bende optimering.",
         "metaAds": "Facebook- og Instagram-kampagner, der rammer m\u00e5lgruppen. Kreativ strategi, m\u00e5lgruppeopbygning og ROI-m\u00e5ling.",
@@ -105,7 +112,7 @@
     },
     "cta": {
         "title": "Klar til at l\u00f8fte din forretning?",
-        "subtitle": "Lad os tale om, hvordan AI og vibecoding kan accelerere dit n\u00e6ste projekt.",
+        "subtitle": "Lad os tale om, hvordan vi kan accelerere dit n\u00e6ste projekt med 15+ \u00e5rs digital ekspertise.",
         "button": "Kom i gang i dag"
     },
     "contact": {
@@ -137,7 +144,11 @@
         "preferredContact": "Foretrukne kontaktveje",
         "preferredContactDesc": "Telefon til hurtige sp\u00f8rgsm\u00e5l, e-mail til detaljerede henvendelser og LinkedIn til professionel dialog. V\u00e6lg det, der passer jer bedst.",
         "globalReach": "Global r\u00e6kkevidde, danske r\u00f8dder",
-        "globalReachDesc": "Baseret i Danmark, men vi arbejder med kunder i hele Europa og videre. Fjernsamarbejde er en styrke - tidszoner er ikke en hindring."
+        "globalReachDesc": "Baseret i Danmark, men vi arbejder med kunder i hele Europa og videre. Fjernsamarbejde er en styrke - tidszoner er ikke en hindring.",
+        "whatHappensNext": "Hvad sker der nu",
+        "step1": "Vi svarer inden for 24 timer med vores første tanker om dit projekt.",
+        "step2": "Et gratis 30-minutters opkald for at forstå dine mål og udfordringer.",
+        "step3": "Et klart tilbud med omfang, tidsplan og gennemsigtig pris — ingen overraskelser."
     },
     "footer": {
         "description": "Vi hj\u00e6lper virksomheder med vibecoding, AI-r\u00e5dgivning og praksisn\u00e6re workshops. 15+ \u00e5rs erfaring i digital marketing m\u00f8der banebrydende AI.",
