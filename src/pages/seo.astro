@@ -29,8 +29,30 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
     </div>
   </section>
 
+  <!-- Results Approach -->
+  <section class="proof-strip">
+    <div class="container">
+      <div class="proof-items">
+        <div class="proof-item">
+          <span class="proof-number">3-6</span>
+          <span class="proof-label">Months to Page 1 Results</span>
+        </div>
+        <div class="proof-divider"></div>
+        <div class="proof-item">
+          <span class="proof-number">15+</span>
+          <span class="proof-label">Years SEO Experience</span>
+        </div>
+        <div class="proof-divider"></div>
+        <div class="proof-item">
+          <span class="proof-number">ROI</span>
+          <span class="proof-label">Focused Strategy</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Core Services -->
-  <section class="section section-mesh">
+  <section class="section">
     <div class="container">
       <div class="services-grid reveal">
         <div class="card">
@@ -61,7 +83,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
   </section>
 
   <!-- About Section -->
-  <section class="section section-gradient section-grid">
+  <section class="section">
     <div class="container">
       <div class="content-section reveal">
         <h2 class="section-title">{t('pages.seo.aboutTitle', lang)}</h2>
@@ -72,7 +94,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
   </section>
 
   <!-- Benefits Section -->
-  <section class="section section-mesh bg-benefits">
+  <section class="section">
     <div class="container">
       <div class="text-center mb-3">
         <span class="hero-tagline">{t('common.benefits', lang)}</span>
@@ -117,7 +139,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
   </section>
 
   <!-- Services Section -->
-  <section class="section section-gradient section-grid">
+  <section class="section">
     <div class="container">
       <div class="text-center mb-3">
         <span class="hero-tagline">{t('services.whatWeDo', lang)}</span>
@@ -146,7 +168,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
   </section>
 
   <!-- FAQ Section -->
-  <section class="section section-mesh bg-faq">
+  <section class="section">
     <div class="container">
       <div class="text-center mb-3">
         <span class="hero-tagline">{t('common.gotQuestions', lang)}</span>
@@ -178,12 +200,12 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
   </section>
 
   <!-- CTA -->
-  <section class="section section-gradient section-grid">
+  <section class="section">
     <div class="container">
       <div class="card text-center" style="padding: var(--space-xl); max-width: 800px; margin: 0 auto;">
         <h2 class="mb-1">{t('cta.title', lang)}</h2>
         <p style="font-size: 1.25rem; margin-bottom: var(--space-md);">{t('cta.subtitle', lang)}</p>
-        <a href={`${prefix}/contact`} class="btn btn-primary btn-glow">
+        <a href={`${prefix}/contact`} class="btn btn-primary">
           {t('cta.button', lang)}
           <IconArrowRight />
         </a>
@@ -232,6 +254,8 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
 </Layout>
 
 <style>
+.page-header .text-gradient { color: #7cb342; }
+
 .content-section {
   max-width: 800px;
   margin: 0 auto;

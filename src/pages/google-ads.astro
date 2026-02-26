@@ -28,6 +28,28 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
     </div>
   </section>
 
+  <!-- Results Approach -->
+  <section class="proof-strip">
+    <div class="container">
+      <div class="proof-items">
+        <div class="proof-item">
+          <span class="proof-number">ROAS</span>
+          <span class="proof-label">Optimized Campaigns</span>
+        </div>
+        <div class="proof-divider"></div>
+        <div class="proof-item">
+          <span class="proof-number">0</span>
+          <span class="proof-label">Long-term Contracts</span>
+        </div>
+        <div class="proof-divider"></div>
+        <div class="proof-item">
+          <span class="proof-number">24h</span>
+          <span class="proof-label">Response Time</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Core Services -->
   <section class="section">
     <div class="container">
@@ -60,7 +82,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
   </section>
 
   <!-- About Section -->
-  <section class="section section-gradient section-grid">
+  <section class="section">
     <div class="container">
       <div class="content-section reveal">
         <h2 class="section-title">{t('pages.googleAds.aboutTitle', lang)}</h2>
@@ -116,7 +138,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
   </section>
 
   <!-- Services Section -->
-  <section class="section section-gradient section-grid">
+  <section class="section">
     <div class="container">
       <div class="text-center mb-3">
         <span class="hero-tagline">{t('services.whatWeDo', lang)}</span>
@@ -177,12 +199,12 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
   </section>
 
   <!-- CTA -->
-  <section class="section section-gradient section-grid">
+  <section class="section">
     <div class="container">
       <div class="card text-center" style="padding: var(--space-xl); max-width: 800px; margin: 0 auto;">
         <h2 class="mb-1">{t('cta.title', lang)}</h2>
         <p style="font-size: 1.25rem; margin-bottom: var(--space-md);">{t('cta.subtitle', lang)}</p>
-        <a href={`${prefix}/contact`} class="btn btn-primary btn-glow">
+        <a href={`${prefix}/contact`} class="btn btn-primary">
           {t('cta.button', lang)}
           <IconArrowRight />
         </a>
@@ -231,6 +253,8 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
 </Layout>
 
 <style>
+.page-header .text-gradient { color: #4285f4; }
+
 .content-section {
   max-width: 800px;
   margin: 0 auto;
