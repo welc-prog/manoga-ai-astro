@@ -5444,3 +5444,237 @@ h2 {
     max-width: 100% !important;
   }
 }
+
+/* ================================================================
+   ROUND 17 — NEW PAGE HEROES
+   Meta Ads, Web Design, GTM, Workshops
+   ================================================================ */
+
+/* ----------------------------------------
+   1. SHARED BASE — position + overflow
+   ---------------------------------------- */
+.page-header.hero-meta-ads,
+.page-header.hero-webdesign,
+.page-header.hero-gtm,
+.page-header.hero-workshops {
+  position: relative;
+  overflow: hidden;
+}
+
+/* ----------------------------------------
+   2. BACKGROUND IMAGES
+   ---------------------------------------- */
+.page-header.hero-meta-ads {
+  background: url('/images/heroes/meta-ads-hero.webp') center/cover no-repeat;
+}
+
+.page-header.hero-webdesign {
+  background: url('/images/heroes/webdesign-hero.webp') center/cover no-repeat;
+}
+
+.page-header.hero-gtm {
+  background: url('/images/heroes/gtm-hero.webp') center/cover no-repeat;
+}
+
+.page-header.hero-workshops {
+  background: url('/images/heroes/workshops-hero.webp') center/cover no-repeat;
+}
+
+/* ----------------------------------------
+   3. DARK OVERLAY
+   ---------------------------------------- */
+.page-header.hero-meta-ads::after,
+.page-header.hero-webdesign::after,
+.page-header.hero-gtm::after,
+.page-header.hero-workshops::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 80% at 50% 50%, rgba(10,10,12,0.88) 0%, transparent 100%),
+    linear-gradient(180deg, rgba(10,10,12,0.75) 0%, rgba(10,10,12,0.92) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* ----------------------------------------
+   4. CONTENT ABOVE OVERLAY
+   ---------------------------------------- */
+.page-header.hero-meta-ads > *,
+.page-header.hero-webdesign > *,
+.page-header.hero-gtm > *,
+.page-header.hero-workshops > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* ----------------------------------------
+   5. FROSTED GLASS SCRIM PANELS
+   ---------------------------------------- */
+.page-header.hero-meta-ads .page-header-content,
+.page-header.hero-webdesign .page-header-content,
+.page-header.hero-gtm .page-header-content,
+.page-header.hero-workshops .page-header-content {
+  background: rgba(10, 10, 12, 0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: var(--space-xl) var(--space-lg);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  max-width: 620px;
+}
+
+/* ----------------------------------------
+   6. DISTINCT ACCENT STYLES PER PAGE
+   ---------------------------------------- */
+
+/* META ADS — centered, Facebook blue top border */
+.page-header.hero-meta-ads .page-header-content {
+  border-top: 3px solid #1877F2;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.page-header.hero-meta-ads .page-subtitle {
+  justify-content: center;
+}
+
+.page-header.hero-meta-ads .page-header-description {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* WEB DESIGN — left-aligned (like SEO page), gold accent */
+.page-header.hero-webdesign .page-header-content {
+  text-align: left;
+  margin: 0;
+  max-width: 600px;
+}
+
+.page-header.hero-webdesign .page-subtitle::before {
+  content: '';
+  display: inline-block;
+  width: 32px;
+  height: 2px;
+  background: var(--accent);
+  margin-right: 12px;
+  vertical-align: middle;
+}
+
+/* GTM — centered, multicolor gradient top border (blue to green) */
+.page-header.hero-gtm .page-header-content {
+  border-top: 3px solid transparent;
+  border-image: linear-gradient(90deg, #4285f4, #34a853) 1;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.page-header.hero-gtm .page-subtitle {
+  justify-content: center;
+}
+
+.page-header.hero-gtm .page-header-description {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* WORKSHOPS — left-aligned, gold left border (like AI Consulting) */
+.page-header.hero-workshops .page-header-content {
+  border-left: 4px solid var(--accent);
+  padding-left: var(--space-xl);
+  text-align: left;
+  margin: 0;
+  max-width: 600px;
+}
+
+/* Workshops monospace subtitle (like Vibecoding — tech/education feel) */
+.page-header.hero-workshops .page-subtitle {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  background: rgba(201, 165, 92, 0.08);
+  padding: 0.3rem 0.75rem;
+  border-radius: var(--radius-sm);
+  display: inline-block;
+}
+
+/* ----------------------------------------
+   7. BACKGROUND ANIMATION (match existing heroes)
+   ---------------------------------------- */
+.page-header.hero-meta-ads,
+.page-header.hero-webdesign,
+.page-header.hero-gtm,
+.page-header.hero-workshops {
+  animation: heroBgShift 20s ease-in-out infinite alternate;
+}
+
+/* ----------------------------------------
+   8. HIDE DECORATIVE IMAGES (match existing pattern)
+   ---------------------------------------- */
+.page-header.hero-meta-ads .page-header-image,
+.page-header.hero-webdesign .page-header-image,
+.page-header.hero-gtm .page-header-image,
+.page-header.hero-workshops .page-header-image {
+  display: none;
+}
+
+/* ----------------------------------------
+   9. MOBILE OVERRIDES
+   ---------------------------------------- */
+@media (max-width: 768px) {
+  /* All 4 new heroes — mobile background handling */
+  .page-header.hero-meta-ads,
+  .page-header.hero-webdesign,
+  .page-header.hero-gtm,
+  .page-header.hero-workshops {
+    background-position: center center;
+    background-size: cover;
+    animation: none;
+  }
+
+  /* All scrim panels go full-width + centered text on mobile */
+  .page-header.hero-meta-ads .page-header-content,
+  .page-header.hero-webdesign .page-header-content,
+  .page-header.hero-gtm .page-header-content,
+  .page-header.hero-workshops .page-header-content {
+    max-width: 100%;
+    text-align: center;
+    padding: var(--space-lg) var(--space-md);
+    border-radius: var(--radius-md);
+  }
+
+  /* Meta Ads — top border stays, just full-width */
+  .page-header.hero-meta-ads .page-header-content {
+    border-top: 3px solid #1877F2;
+  }
+
+  /* Web Design — remove subtitle bar on mobile */
+  .page-header.hero-webdesign .page-subtitle::before {
+    display: none;
+  }
+
+  /* GTM — gradient top border stays, just full-width */
+  .page-header.hero-gtm .page-header-content {
+    border-top: 3px solid transparent;
+    border-image: linear-gradient(90deg, #4285f4, #34a853) 1;
+  }
+
+  /* Workshops — left border becomes top border on mobile */
+  .page-header.hero-workshops .page-header-content {
+    border-left: none;
+    border-top: 4px solid var(--accent);
+    padding-left: var(--space-md);
+    padding-top: var(--space-lg);
+  }
+}
+
+/* Reduce motion — disable animation for new heroes */
+@media (prefers-reduced-motion: reduce) {
+  .page-header.hero-meta-ads,
+  .page-header.hero-webdesign,
+  .page-header.hero-gtm,
+  .page-header.hero-workshops {
+    animation: none !important;
+  }
+}

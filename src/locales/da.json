@@ -15,13 +15,13 @@
         "metaAdsTitle": "Meta Ads-bureau: Facebook- og Instagram-annoncer | Manoga",
         "metaAdsDescription": "Skab leads og salg med strategisk Meta-annoncering. Vi laver effektive Facebook- og Instagram-kampagner for dit brand. Kontakt os i dag.",
         "webdesignTitle": "AI-drevet webdesign og udvikling i Danmark | Manoga",
-        "webdesignDescription": "F\u00e5 en moderne, konverteringsfokuseret hjemmeside bygget op til 10x hurtigere med AI-assisteret vibecoding. Nuxt 3- og Vue.js-eksperter. F\u00e5 et tilbud.",
+        "webdesignDescription": "F\u00e5 en moderne, konverteringsfokuseret hjemmeside bygget op til 10x hurtigere med AI-assisteret vibecoding. Nuxt 4- og Vue.js-eksperter. F\u00e5 et tilbud.",
         "gtmTitle": "Google Tag Manager-konsulent i Danmark | Manoga",
         "gtmDescription": "Sikre data med professionel GTM-service. Vi h\u00e5ndterer GTM-ops\u00e6tning, GA4-integration og avanceret konverteringssporing. Kontakt os nu.",
         "contactTitle": "Kontakt os for en gratis samtale | Manoga Digital",
         "contactDescription": "Klar til at v\u00e6kste med AI og digital marketing? Kontakt Manoga Digital for en gratis og uforpligtende snak om dit projekt.",
         "portfolioTitle": "Cases og portef\u00f8lje | Manoga Digital",
-        "portfolioDescription": "Se vores projekter inden for AI-udvikling, SEO og digital marketing. Udforsk arbejdet med Nuxt 3, Vue.js og mere."
+        "portfolioDescription": "Se vores projekter inden for AI-udvikling, SEO og digital marketing. Udforsk arbejdet med Nuxt 4, Vue.js og mere."
     },
     "nav": {
         "home": "Hjem",
@@ -83,19 +83,19 @@
         "subtitle": "Rigtige produkter bygget med vibecoding og AI. Se, hvad der er muligt, n\u00e5r erfaring m\u00f8der innovation.",
         "welcSubtitle": "Kryptonyheder og analyse",
         "liveProject": "Liveprojekt",
-        "welcDesc": "Omfattende kryptonyhedsplatform bygget med Nuxt 3 - med realtidsdata, flersproget support og AI-genereret indhold.",
+        "welcDesc": "Omfattende kryptonyhedsplatform bygget med Nuxt 4 - med realtidsdata, flersproget support og AI-genereret indhold.",
         "visitSite": "Bes\u00f8g siden",
         "comingSoon": "Kommer snart",
         "handballDesc": "Avanceret platform til h\u00e5ndboldstatistik og -analyse. Realtidssporing, spillerpr\u00e6stationer og AI-drevne forudsigelser.",
         "inDevelopment": "Under udvikling",
         "aboutTitle": "Projekter der viser vores kompetencer",
         "aboutDesc": "Hvert projekt i portef\u00f8ljen viser vores fokus p\u00e5 kvalitet og innovation. Vi bygger ikke bare websites og apps - vi skaber digitale oplevelser, der l\u00f8ser konkrete problemer og leverer m\u00e5lbare resultater. Portef\u00f8ljen viser, hvad der er muligt, n\u00e5r AI m\u00f8der solid erfaring.",
-        "welcFullDesc": "WeLoveEverythingCrypto er en omfattende nyheds- og analyseplatform for kryptovaluta, der betjener tusindvis af l\u00e6sere dagligt. Bygget i Nuxt 3 for h\u00f8j performance og SEO. Platformen integrerer realtidspriser, underst\u00f8tter fem sprog og bruger AI til indhold og markedsanalyse. Projektet viser vores styrke i skalerbare, indholdstunge l\u00f8sninger med komplekse dataintegrationer.",
+        "welcFullDesc": "WeLoveEverythingCrypto er en omfattende nyheds- og analyseplatform for kryptovaluta, der betjener tusindvis af l\u00e6sere dagligt. Bygget i Nuxt 4 for h\u00f8j performance og SEO. Platformen integrerer realtidspriser, underst\u00f8tter fem sprog og bruger AI til indhold og markedsanalyse. Projektet viser vores styrke i skalerbare, indholdstunge l\u00f8sninger med komplekse dataintegrationer.",
         "handballFullDesc": "Handball Stats App er et ambiti\u00f8st projekt, der bringer avanceret analyse til tr\u00e6nere og hold. Funktioner omfatter realtidssporing med live-statistik, spillerpr\u00e6stationsm\u00e5linger med historiske sammenligninger, AI-drevet taktisk analyse og forudsigelser samt st\u00e6rke datavisualiseringer. Bygget i moderne Vue 3 og optimeret til mobil under livekampe.",
         "lmctfyDesc": "Et sjovt linkdelingsv\u00e6rkt\u00f8j, der sender sp\u00f8rgsm\u00e5l videre til Claude AI. Gener\u00e9r passiv-aggressive delbare links p\u00e5 sekunder.",
         "lmctfyFullDesc": "Let Me Claude That For You er et sjovt, viralt v\u00e6rkt\u00f8j, der genererer delbare links, som sender folk hen til Claude AI i stedet for at bede dig. Bygget som et vibecoding-weekendprojekt, og viser hurtig udvikling med rent design og kopiering med \u00e9t klik. En humoristisk opdatering af det klassiske LMGTFY-koncept til AI-\u00e6raen.",
         "technologiesTitle": "Teknologier vi bruger",
-        "technologiesDesc": "Vores projekter bruger moderne, gennemtestede teknologier valgt for performance, vedligeholdelse og udvikleroplevelse. Vi arbejder med Vue 3, Nuxt 3, TypeScript og Tailwind CSS og integrerer AI via de nyeste modeller og API'er."
+        "technologiesDesc": "Vores projekter bruger moderne, gennemtestede teknologier valgt for performance, vedligeholdelse og udvikleroplevelse. Vi arbejder med Vue 3, Nuxt 4, TypeScript og Tailwind CSS og integrerer AI via de nyeste modeller og API'er."
     },
     "process": {
         "tagline": "S\u00e5dan arbejder vi",
@@ -357,7 +357,7 @@
             "service4": "L\u00f8bende vedligeholdelse",
             "service4Desc": "Hold sitet sikkert, opdateret og i topform over tid.",
             "faq1": "Hvilken platform bygger I hjemmesider p\u00e5?",
-            "faq1Answer": "Vi bruger prim\u00e6rt Nuxt 3 og Vue.js til tilpassede sites, hvilket giver h\u00f8j performance og SEO. Til simplere behov kan vi ogs\u00e5 arbejde med WordPress eller andre platforme.",
+            "faq1Answer": "Vi bruger prim\u00e6rt Nuxt 4 og Vue.js til tilpassede sites, hvilket giver h\u00f8j performance og SEO. Til simplere behov kan vi ogs\u00e5 arbejde med WordPress eller andre platforme.",
             "faq2": "Hvor lang tid tager et website-projekt?",
             "faq2Answer": "En simpel landingsside kan v\u00e6re klar p\u00e5 1-2 uger. Et komplet website tager typisk 4-8 uger afh\u00e6ngigt af kompleksitet.",
             "faq3": "Tilbyder I hosting?",
@@ -401,7 +401,7 @@
             "faq3": "Supporterer I applikationerne efter lancering?",
             "faq3Answer": "Ja. Vi tilbyder l\u00f8bende support- og vedligeholdelsespakker, s\u00e5 applikationen k\u00f8rer stabilt og kan udvikles over tid.",
             "faq4": "Hvilke teknologier bruger I?",
-            "faq4Answer": "Prim\u00e6rt Vue.js, Nuxt 3, Python og moderne cloud-platforme. Vi v\u00e6lger de rigtige v\u00e6rkt\u00f8jer til hvert projekt i stedet for at tvinge alt ind i \u00e9n stak."
+            "faq4Answer": "Prim\u00e6rt Vue.js, Nuxt 4, Python og moderne cloud-platforme. Vi v\u00e6lger de rigtige v\u00e6rkt\u00f8jer til hvert projekt i stedet for at tvinge alt ind i \u00e9n stak."
         },
         "workshops": {
             "promptEngineering": "Prompt engineering",

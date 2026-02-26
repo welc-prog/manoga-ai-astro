@@ -12,17 +12,13 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
 ---
 
 <Layout title={t('meta.gtmTitle', lang)} description={t('meta.gtmDescription', lang)} lang={lang}>
-  <section class="page-header">
+  <section class="page-header hero-gtm">
     <div class="container">
-      <div class="page-header-with-image">
-        <div class="page-header-content">
-          <span class="page-subtitle">{t('marketing.tagline', lang)}</span>
-          <h1>Google Tag <span class="text-gradient">Manager</span></h1>
-          <p class="page-header-description">{t('marketing.gtm', lang)}</p>
-        </div>
-        <div class="page-header-image">
-          <img src="/images/gtm.webp" alt="Google Tag Manager" loading="eager" />
-        </div>
+      <div class="page-header-content">
+        <span class="page-subtitle">{t('marketing.tagline', lang)}</span>
+        <h1>Google Tag <span class="text-gradient">Manager</span></h1>
+        <p class="page-header-description">{t('marketing.gtm', lang)}</p>
+        <a href="/contact" class="btn btn-primary mt-1">Get Expert GTM Setup &rarr;</a>
       </div>
     </div>
   </section>

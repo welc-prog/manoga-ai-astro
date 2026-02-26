@@ -14,8 +14,8 @@
     "googleAdsDescription": "Maximize your ROI with expert Google Ads management. We handle Search, Display, and Performance Max campaigns. Get a free account review.",
     "metaAdsTitle": "Meta Ads Agency: Facebook & Instagram Ads Experts | Manoga",
     "metaAdsDescription": "Drive leads and sales with targeted Meta Ads. We manage Facebook, Instagram, and Advantage+ campaigns for maximum impact. Let's discuss your goals.",
-    "webdesignTitle": "Modern Web Design with Nuxt 3 & Vue.js | Manoga",
-    "webdesignDescription": "We build fast, modern, and SEO-friendly websites using Nuxt 3 and Vue.js. Elevate your online presence with a stunning new design. Get a free quote today.",
+    "webdesignTitle": "Modern Web Design with Nuxt 4 & Vue.js | Manoga",
+    "webdesignDescription": "We build fast, modern, and SEO-friendly websites using Nuxt 4 and Vue.js. Elevate your online presence with a stunning new design. Get a free quote today.",
     "gtmTitle": "Google Tag Manager & GA4 Conversion Tracking | Manoga",
     "gtmDescription": "Ensure accurate data with expert GTM services. We set up GA4 event and conversion tracking for better insights. Fix your tracking today.",
     "contactTitle": "Contact Manoga | Free Digital Strategy Consultation",
@@ -88,19 +88,19 @@
     "subtitle": "Selected work from our portfolio. Each project represents a real business challenge solved with strategy, craft, and technology.",
     "welcSubtitle": "Cryptocurrency News & Analysis",
     "liveProject": "Live Project",
-    "welcDesc": "Comprehensive cryptocurrency news platform built with Nuxt 3, featuring real-time data, multi-language support, and AI-powered content generation.",
+    "welcDesc": "Comprehensive cryptocurrency news platform built with Nuxt 4, featuring real-time data, multi-language support, and AI-powered content generation.",
     "visitSite": "Visit Site",
     "comingSoon": "Coming Soon",
     "handballDesc": "Advanced handball statistics and analytics platform. Real-time match tracking, player performance metrics, and AI-powered predictions.",
     "inDevelopment": "In Development",
     "aboutTitle": "Projects That Demonstrate Our Capabilities",
     "aboutDesc": "Every project in our portfolio represents our commitment to excellence and innovation. We don't just build websites and applications – we create digital experiences that solve real problems and deliver measurable results. Our portfolio showcases projects that push boundaries and demonstrate what's possible when AI meets experienced development.",
-    "welcFullDesc": "WeLoveEverythingCrypto is a comprehensive cryptocurrency news and analysis platform serving thousands of readers daily. Built with Nuxt 3 for optimal performance and SEO, the platform features real-time price data integration, multi-language support across 5 languages, and AI-powered content generation for market analysis. The site demonstrates our expertise in building scalable, content-rich applications with complex data integrations.",
+    "welcFullDesc": "WeLoveEverythingCrypto is a comprehensive cryptocurrency news and analysis platform serving thousands of readers daily. Built with Nuxt 4 for optimal performance and SEO, the platform features real-time price data integration, multi-language support across 5 languages, and AI-powered content generation for market analysis. The site demonstrates our expertise in building scalable, content-rich applications with complex data integrations.",
     "handballFullDesc": "The Handball Stats App is an ambitious project bringing advanced analytics to handball coaches and teams. Features include real-time match tracking with live statistics, player performance metrics with historical comparisons, AI-powered tactical analysis and predictions, and beautiful data visualizations. Built with modern Vue 3 and optimized for mobile use during live matches.",
     "lmctfyDesc": "A humorous link-sharing tool that redirects questions to Claude AI. Generate passive-aggressive shareable links in seconds.",
     "lmctfyFullDesc": "Let Me Claude That For You is a fun, viral-ready tool that generates shareable links directing people to ask Claude AI instead of bothering you. Built as a weekend vibecoding project, it showcases rapid development with clean design and one-click link copying. A lighthearted take on the classic LMGTFY concept, updated for the AI era.",
     "technologiesTitle": "Technologies We Use",
-    "technologiesDesc": "Our projects leverage modern, battle-tested technologies chosen for performance, maintainability, and developer experience. We work with Vue 3, Nuxt 3, TypeScript, TailwindCSS, and integrate AI capabilities using the latest models and APIs."
+    "technologiesDesc": "Our projects leverage modern, battle-tested technologies chosen for performance, maintainability, and developer experience. We work with Vue 3, Nuxt 4, TypeScript, TailwindCSS, and integrate AI capabilities using the latest models and APIs."
   },
   "process": {
     "tagline": "How We Work",
@@ -362,7 +362,7 @@
       "service4": "Ongoing Maintenance",
       "service4Desc": "Keeping your site secure, updated, and performing at its best.",
       "faq1": "What platform do you build websites on?",
-      "faq1Answer": "I primarily use Nuxt 3 and Vue.js for custom sites, which delivers excellent performance and SEO. For simpler needs, I can work with WordPress or other platforms.",
+      "faq1Answer": "I primarily use Nuxt 4 and Vue.js for custom sites, which delivers excellent performance and SEO. For simpler needs, I can work with WordPress or other platforms.",
       "faq2": "How long does a website project take?",
       "faq2Answer": "Simple landing pages can be completed in 1-2 weeks. Full custom websites typically take 4-8 weeks depending on complexity.",
       "faq3": "Do you provide hosting?",
@@ -406,7 +406,7 @@
       "faq3": "Do you support the applications after launch?",
       "faq3Answer": "Yes. I offer ongoing support and maintenance packages to keep your application running smoothly and evolving with your needs.",
       "faq4": "What technologies do you use?",
-      "faq4Answer": "Primarily Vue.js, Nuxt 3, Python, and modern cloud platforms. I choose the right tools for each project rather than forcing everything into one stack."
+      "faq4Answer": "Primarily Vue.js, Nuxt 4, Python, and modern cloud platforms. I choose the right tools for each project rather than forcing everything into one stack."
     },
     "workshops": {
       "promptEngineering": "Prompt Engineering",

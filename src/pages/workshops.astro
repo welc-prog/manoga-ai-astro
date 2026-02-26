@@ -14,17 +14,13 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
 ---
 
 <Layout title={t('meta.workshopsTitle', lang)} description={t('meta.workshopsDescription', lang)} lang={lang}>
-  <section class="page-header">
+  <section class="page-header hero-workshops">
     <div class="container">
-      <div class="page-header-with-image">
-        <div class="page-header-content">
-          <span class="page-subtitle">{t('services.whatWeDo', lang)}</span>
-          <h1>{t('services.workshops', lang)}</h1>
-          <p class="page-header-description">{t('services.workshopsDesc', lang)}</p>
-        </div>
-        <div class="page-header-image">
-          <img src="/images/workshops.webp" alt={t('services.workshops', lang)} loading="eager" />
-        </div>
+      <div class="page-header-content">
+        <span class="page-subtitle">{t('services.whatWeDo', lang)}</span>
+        <h1>{t('services.workshops', lang)}</h1>
+        <p class="page-header-description">{t('services.workshopsDesc', lang)}</p>
+        <a href="/contact" class="btn btn-primary mt-1">Book a Workshop &rarr;</a>
       </div>
     </div>
   </section>
