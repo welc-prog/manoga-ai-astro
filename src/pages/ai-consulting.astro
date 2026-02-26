@@ -15,18 +15,13 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
 ---
 
 <Layout title={t('meta.aiConsultingTitle', lang)} description={t('meta.aiConsultingDescription', lang)} lang={lang}>
-  <section class="page-header">
+  <section class="page-header hero-ai-consulting">
     <div class="container">
-      <div class="page-header-with-image">
-        <div class="page-header-content">
-          <span class="page-subtitle">{t('services.whatWeDo', lang)}</span>
-          <h1>{t('services.aiConsulting', lang)}</h1>
-          <p class="page-header-description">{t('services.aiConsultingDesc', lang)}</p>
-          <a href="/contact" class="btn btn-primary mt-1">Book a Free AI Consultation →</a>
-        </div>
-        <div class="page-header-image">
-          <img src="/images/ai-consulting.webp" alt={t('services.aiConsulting', lang)} loading="eager" />
-        </div>
+      <div class="page-header-content">
+        <span class="page-subtitle">{t('services.whatWeDo', lang)}</span>
+        <h1>{t('services.aiConsulting', lang)}</h1>
+        <p class="page-header-description">{t('services.aiConsultingDesc', lang)}</p>
+        <a href="/contact" class="btn btn-primary mt-1">Book a Free AI Consultation →</a>
       </div>
     </div>
   </section>

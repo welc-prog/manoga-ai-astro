@@ -40,12 +40,13 @@ function readingTime(description: string): string {
 ---
 
 <Layout title="Blog" description="Insights on SEO, AI, Claude Code, and Google Tag Manager from Manoga Digital.">
-  <section class="blog-hero section">
+  <section class="blog-hero section hero-blog">
     <div class="container">
       <span class="hero-tagline">&lt;blog /&gt;</span>
       <h1 class="section-title">Insights & <span class="text-gradient">Resources</span></h1>
       <p class="section-subtitle">Expert articles on SEO, AI, Claude Code, and Google Tag Manager to help you stay ahead.</p>
       <p class="hero-post-count">{posts.length} articles and counting</p>
+      <a href={`/blog/${posts[0].slug}`} class="blog-hero-featured-cta">Read Latest Article →</a>
     </div>
   </section>
 

@@ -14,18 +14,13 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
 ---
 
 <Layout title={t('meta.vibecodingTitle', lang)} description={t('meta.vibecodingDescription', lang)} lang={lang}>
-  <section class="page-header">
+  <section class="page-header hero-vibecoding">
     <div class="container">
-      <div class="page-header-with-image">
-        <div class="page-header-content">
-          <span class="page-subtitle">{t('services.whatWeDo', lang)}</span>
-          <h1><span class="text-gradient">Vibecoding</span></h1>
-          <p class="page-header-description">{t('services.vibecoding', lang)}</p>
-          <a href="/contact" class="btn btn-primary mt-1">Start Your Project →</a>
-        </div>
-        <div class="page-header-image">
-          <img src="/images/vibecoding.webp" alt="Vibecoding - AI-assisted development" loading="eager" />
-        </div>
+      <div class="page-header-content">
+        <span class="page-subtitle">{t('services.whatWeDo', lang)}</span>
+        <h1><span class="text-gradient">Vibecoding</span></h1>
+        <p class="page-header-description">{t('services.vibecoding', lang)}</p>
+        <a href="/contact" class="btn btn-primary mt-1">Start Your Project →</a>
       </div>
     </div>
   </section>

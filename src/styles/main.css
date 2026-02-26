@@ -4135,3 +4135,1312 @@ h2 {
     text-align: center;
   }
 }
+
+/* ================================================================
+   HERO OVERHAUL v2 — Score Target: 9+
+   Custom backgrounds, distinct silhouettes, tighter typography,
+   breathing room, CTA strategy
+   Appended 2026-02-26 — DO NOT EDIT ABOVE, only override below
+   ================================================================ */
+
+/* ----------------------------------------
+   1. CUSTOM HERO BACKGROUNDS
+   ---------------------------------------- */
+
+/* Homepage hero background */
+.hero {
+  background: url('/images/heroes/homepage-hero.webp') center/cover no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Homepage overlay — heavier for text legibility */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 50% 70% at 30% 50%, rgba(10,10,12,0.85) 0%, transparent 100%),
+    linear-gradient(180deg, rgba(10,10,12,0.7) 0%, rgba(10,10,12,0.88) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Homepage hero content above overlay */
+.hero > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Service page hero backgrounds — shared overlay via ::after */
+.page-header.hero-seo,
+.page-header.hero-google-ads,
+.page-header.hero-ai-consulting,
+.page-header.hero-vibecoding,
+.page-header.hero-portfolio {
+  position: relative;
+  overflow: hidden;
+}
+
+.page-header.hero-seo {
+  background: url('/images/heroes/seo-hero.webp') center/cover no-repeat;
+}
+
+.page-header.hero-google-ads {
+  background: url('/images/heroes/google-ads-hero.webp') center/cover no-repeat;
+}
+
+.page-header.hero-ai-consulting {
+  background: url('/images/heroes/ai-consulting-hero.webp') center/cover no-repeat;
+}
+
+.page-header.hero-vibecoding {
+  background: url('/images/heroes/vibecoding-hero.webp') center/cover no-repeat;
+}
+
+.page-header.hero-portfolio {
+  background: url('/images/heroes/portfolio-hero.webp') center/cover no-repeat;
+}
+
+/* Dark overlay for all service hero backgrounds — HEAVY for legibility */
+.page-header.hero-seo::after,
+.page-header.hero-google-ads::after,
+.page-header.hero-ai-consulting::after,
+.page-header.hero-vibecoding::after,
+.page-header.hero-portfolio::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 80% at 50% 50%, rgba(10,10,12,0.88) 0%, transparent 100%),
+    linear-gradient(180deg, rgba(10,10,12,0.75) 0%, rgba(10,10,12,0.92) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Service hero content sits above overlay */
+.page-header.hero-seo > *,
+.page-header.hero-google-ads > *,
+.page-header.hero-ai-consulting > *,
+.page-header.hero-vibecoding > *,
+.page-header.hero-portfolio > * {
+  position: relative;
+  z-index: 2;
+}
+
+
+/* ----------------------------------------
+   2. DISTINCT LAYOUT SILHOUETTES
+   ---------------------------------------- */
+
+/* Homepage (.hero) — decorative vertical gold line on right */
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 15%;
+  right: 8%;
+  width: 2px;
+  height: 40%;
+  background: linear-gradient(180deg, transparent, var(--accent), transparent);
+  opacity: 0.3;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* SEO — centered text, single column */
+.page-header.hero-seo .page-header-with-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.page-header.hero-seo .page-header-content {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.page-header.hero-seo .page-header-description {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page-header.hero-seo .page-subtitle {
+  justify-content: center;
+}
+
+/* Google Ads — right-aligned text, stats on left */
+.page-header.hero-google-ads .page-header-with-image {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  direction: ltr;
+}
+
+.page-header.hero-google-ads .page-header-content {
+  order: 2;
+  text-align: right;
+}
+
+.page-header.hero-google-ads .page-header-image {
+  order: 1;
+}
+
+.page-header.hero-google-ads .page-subtitle {
+  justify-content: flex-end;
+}
+
+.page-header.hero-google-ads .page-subtitle::before {
+  order: 2;
+  margin-left: 10px;
+}
+
+.page-header.hero-google-ads .page-header-description {
+  margin-left: auto;
+}
+
+.page-header.hero-google-ads .page-header-content .btn {
+  float: right;
+}
+
+/* AI Consulting — centered, wider max-width for description */
+.page-header.hero-ai-consulting .page-header-with-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.page-header.hero-ai-consulting .page-header-content {
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.page-header.hero-ai-consulting .page-header-description {
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page-header.hero-ai-consulting .page-subtitle {
+  justify-content: center;
+}
+
+/* Vibecoding — left-aligned, code-style monospace subtitle */
+.page-header.hero-vibecoding .page-subtitle {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+}
+
+.page-header.hero-vibecoding .page-subtitle::before {
+  content: '>';
+  width: auto;
+  height: auto;
+  background: none;
+  font-family: var(--font-mono);
+  color: var(--accent);
+  opacity: 0.7;
+}
+
+/* Portfolio — centered, minimal, extra breathing room */
+.page-header.hero-portfolio {
+  padding: 180px 0 100px;
+}
+
+.page-header.hero-portfolio .page-header-with-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.page-header.hero-portfolio .page-header-content {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.page-header.hero-portfolio .page-header-description {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page-header.hero-portfolio .page-subtitle {
+  justify-content: center;
+}
+
+/* Blog — editorial style, centered, larger italic subtitle */
+.page-header.hero-blog,
+.blog-hero {
+  text-align: center;
+}
+
+.page-header.hero-blog .page-header-content {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.page-header.hero-blog .page-header-description,
+.blog-hero .section-subtitle {
+  font-style: italic;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page-header.hero-blog .page-subtitle {
+  justify-content: center;
+}
+
+/* Contact — warm, inviting, centered with warm gradient overlay */
+.page-header.hero-contact {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.page-header.hero-contact::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(201, 165, 92, 0.05) 0%,
+    rgba(10, 10, 12, 0.0) 40%,
+    rgba(201, 165, 92, 0.03) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+.page-header.hero-contact > * {
+  position: relative;
+  z-index: 2;
+}
+
+.page-header.hero-contact .page-header-with-image,
+.page-header.hero-contact .page-header-content {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.page-header.hero-contact .page-header-with-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-header.hero-contact .page-subtitle {
+  justify-content: center;
+}
+
+.page-header.hero-contact .page-header-description {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* ----------------------------------------
+   3. TIGHTER TYPOGRAPHY & HIERARCHY
+   ---------------------------------------- */
+
+/* Service page h1 — bigger, bolder */
+.page-header h1 {
+  font-size: clamp(2.75rem, 6vw, 4rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+}
+
+/* Page subtitle — refined, uppercased label */
+.page-header .page-subtitle {
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* Page description — constrained, readable */
+.page-header-description {
+  max-width: 500px;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+/* Homepage hero description — slightly wider */
+.hero-description {
+  max-width: 520px;
+}
+
+/* Hide inline hero images (replaced by background images) */
+.page-header.hero-seo .page-header-image,
+.page-header.hero-google-ads .page-header-image,
+.page-header.hero-ai-consulting .page-header-image,
+.page-header.hero-vibecoding .page-header-image,
+.page-header.hero-portfolio .page-header-image {
+  display: none;
+}
+
+
+/* ----------------------------------------
+   4. BREATHING ROOM — PUSH STATS BELOW FOLD
+   ---------------------------------------- */
+
+/* Service pages — full viewport hero feel */
+.page-header {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  padding: 160px 0 80px;
+}
+
+/* Homepage hero — confirm flex alignment */
+.hero {
+  display: flex;
+  align-items: center;
+  min-height: 80vh;
+}
+
+/* Remove border-bottom from proof strips (visual separation no longer needed) */
+.proof-strip {
+  border-bottom: none;
+}
+
+.hero-proof {
+  border-bottom: none;
+}
+
+
+/* ----------------------------------------
+   5. CTA STRATEGY
+   ---------------------------------------- */
+
+/* Bold, dominant primary CTA in heroes */
+.page-header-content .btn.btn-primary {
+  padding: 1rem 2.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+/* Blog hero CTA style */
+.blog-hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--bg-primary);
+  background: var(--accent);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: all 0.3s var(--ease);
+  margin-top: var(--space-md);
+}
+
+.blog-hero-cta:hover {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 20px rgba(201, 165, 92, 0.3);
+}
+
+
+/* ----------------------------------------
+   6. MOBILE OVERRIDES (max-width: 768px)
+   ---------------------------------------- */
+@media (max-width: 768px) {
+
+  /* All hero backgrounds — ensure proper cover on mobile */
+  .hero,
+  .page-header.hero-seo,
+  .page-header.hero-google-ads,
+  .page-header.hero-ai-consulting,
+  .page-header.hero-vibecoding,
+  .page-header.hero-portfolio {
+    background-position: center center;
+    background-size: cover;
+  }
+
+  /* Service page headers — mobile override */
+  .page-header {
+    min-height: 60vh;
+    padding: 120px 0 60px;
+    text-align: center;
+  }
+
+  /* All hero text centered on mobile */
+  .page-header-content,
+  .page-header.hero-seo .page-header-content,
+  .page-header.hero-google-ads .page-header-content,
+  .page-header.hero-ai-consulting .page-header-content,
+  .page-header.hero-vibecoding .page-header-content,
+  .page-header.hero-portfolio .page-header-content,
+  .page-header.hero-blog .page-header-content,
+  .page-header.hero-contact .page-header-content {
+    text-align: center;
+    max-width: 100%;
+  }
+
+  /* Collapse distinct layouts to centered column on mobile */
+  .page-header.hero-google-ads .page-header-with-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .page-header.hero-google-ads .page-header-content {
+    order: 1;
+    text-align: center;
+  }
+
+  .page-header.hero-google-ads .page-header-image {
+    order: 2;
+  }
+
+  .page-header.hero-google-ads .page-subtitle {
+    justify-content: center;
+  }
+
+  .page-header.hero-google-ads .page-subtitle::before {
+    order: 0;
+    margin-left: 0;
+  }
+
+  .page-header.hero-google-ads .page-header-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .page-header.hero-google-ads .page-header-content .btn {
+    float: none;
+  }
+
+  /* Portfolio extra padding reduced on mobile */
+  .page-header.hero-portfolio {
+    padding: 120px 0 60px;
+  }
+
+  /* Full-width CTA on mobile */
+  .page-header-content .btn.btn-primary {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Description max-width reset for mobile */
+  .hero-description,
+  .page-header-description {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Hide decorative gold line on mobile */
+  .hero::after {
+    display: none;
+  }
+
+  /* Blog hero CTA full width */
+  .blog-hero-cta {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+
+/* ----------------------------------------
+   7. SMALL PHONES (max-width: 380px)
+   ---------------------------------------- */
+@media (max-width: 380px) {
+
+  /* Reduce hero heights */
+  .hero {
+    min-height: 50vh;
+  }
+
+  .page-header {
+    min-height: 50vh;
+    padding: 100px 0 50px;
+  }
+
+  /* Smaller title for small screens */
+  .page-header h1 {
+    font-size: clamp(1.75rem, 8vw, 2.5rem);
+  }
+
+  .hero-title {
+    font-size: clamp(1.75rem, 8vw, 2.5rem);
+  }
+
+  /* Tighter CTA padding */
+  .page-header-content .btn.btn-primary {
+    padding: 0.875rem 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  .blog-hero-cta {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* ================================================================
+   ROUND 12 FIXES — Target: 9.0+
+   1. Stronger text contrast on image heroes
+   2. Mobile proof strip redesign
+   3. Blog hero CTA + Contact hero CTA
+   4. More layout divergence
+   ================================================================ */
+
+/* 1. STRONGER TEXT CONTRAST ON HEROES */
+
+/* Body text on hero backgrounds needs to be brighter */
+.page-header .page-header-description {
+  color: var(--text-primary);
+  opacity: 0.85;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+.page-header .page-subtitle {
+  text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+}
+
+.page-header h1 {
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+/* 2. MOBILE PROOF STRIP REDESIGN — 2-column grid instead of cramped 3-col */
+@media (max-width: 768px) {
+  .proof-items {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+    text-align: center;
+  }
+
+  .proof-divider {
+    display: none;
+  }
+
+  .proof-item {
+    padding: var(--space-sm);
+    background: var(--bg-card);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
+  }
+
+  .proof-item:last-child {
+    grid-column: 1 / -1;
+    max-width: 200px;
+    margin: 0 auto;
+  }
+
+  .proof-number {
+    font-size: 1.5rem;
+  }
+
+  .proof-label {
+    font-size: 0.7rem;
+  }
+}
+
+/* 3a. BLOG HERO — Add featured article CTA and more editorial feel */
+.blog-hero.hero-blog {
+  padding-bottom: var(--space-xl);
+}
+
+.blog-hero .section-subtitle {
+  font-style: italic;
+  color: var(--text-secondary);
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.blog-hero-featured-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: var(--space-md);
+  padding: 0.875rem 2rem;
+  background: var(--accent);
+  color: var(--bg-primary);
+  font-weight: 700;
+  font-size: 0.95rem;
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.blog-hero-featured-cta:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(201, 165, 92, 0.25);
+}
+
+/* 3b. CONTACT HERO — Add CTA to reduce emptiness */
+.page-header.hero-contact .page-header-content {
+  text-align: center;
+}
+
+.contact-hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: var(--space-lg);
+  padding: 1rem 2.5rem;
+  background: var(--accent);
+  color: var(--bg-primary);
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.contact-hero-cta:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(201, 165, 92, 0.25);
+}
+
+/* 4. MORE LAYOUT DIVERGENCE */
+
+/* SEO hero — left-align instead of centered (distinct from Google Ads) */
+.page-header.hero-seo .page-header-content {
+  text-align: left;
+  align-items: flex-start;
+  max-width: 600px;
+}
+
+.page-header.hero-seo .page-subtitle::before {
+  content: '';
+  display: inline-block;
+  width: 32px;
+  height: 2px;
+  background: #7cb342;
+  margin-right: 12px;
+  vertical-align: middle;
+}
+
+/* AI Consulting — add a subtle left accent border */
+.page-header.hero-ai-consulting .page-header-content {
+  border-left: 3px solid var(--accent);
+  padding-left: var(--space-lg);
+}
+
+/* Vibecoding — monospace feel stronger */
+.page-header.hero-vibecoding .page-subtitle {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  color: var(--accent);
+}
+
+.page-header.hero-vibecoding .page-header-description {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+/* Portfolio — minimal, center, extra top padding */
+.page-header.hero-portfolio {
+  padding-top: 200px;
+  padding-bottom: 120px;
+}
+
+.page-header.hero-portfolio .page-header-description {
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+/* Contact — editorial warmth with subtitle */
+.page-header.hero-contact {
+  min-height: 50vh;
+  padding-bottom: var(--space-lg);
+}
+
+.contact-hero-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  max-width: 500px;
+  margin: var(--space-sm) auto 0;
+  line-height: 1.6;
+}
+
+/* Mobile overrides for round 12 */
+@media (max-width: 768px) {
+  /* SEO left-align stays but narrows */
+  .page-header.hero-seo .page-header-content {
+    text-align: center;
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .page-header.hero-seo .page-subtitle::before {
+    display: none;
+  }
+
+  /* AI Consulting border becomes top border on mobile */
+  .page-header.hero-ai-consulting .page-header-content {
+    border-left: none;
+    border-top: 3px solid var(--accent);
+    padding-left: 0;
+    padding-top: var(--space-md);
+  }
+
+  /* Portfolio less extreme padding */
+  .page-header.hero-portfolio {
+    padding-top: 130px;
+    padding-bottom: 80px;
+  }
+
+  .blog-hero-featured-cta {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .contact-hero-cta {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* ================================================================
+   ROUND 13 FIXES — Push to 9.0+
+   1. Localized text scrims on busy heroes
+   2. Mobile fold efficiency
+   3. Typographic consistency
+   ================================================================ */
+
+/* 1. LOCALIZED TEXT SCRIMS — dark panel behind text on busy heroes */
+.page-header.hero-seo .page-header-content,
+.page-header.hero-ai-consulting .page-header-content,
+.page-header.hero-vibecoding .page-header-content {
+  background: rgba(10, 10, 12, 0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: var(--space-xl) var(--space-lg);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  max-width: 620px;
+}
+
+/* Center the scrim panels in centered heroes */
+.page-header.hero-ai-consulting .page-header-content {
+  margin: 0 auto;
+}
+
+/* SEO stays left-aligned — no auto margin */
+.page-header.hero-seo .page-header-content {
+  margin: 0;
+}
+
+/* 2. MOBILE FOLD EFFICIENCY */
+@media (max-width: 768px) {
+  /* Reduce hero heights on mobile — don't hog the fold */
+  .page-header {
+    min-height: auto !important;
+    padding: 100px 0 48px !important;
+  }
+
+  .hero {
+    min-height: auto !important;
+    padding-top: 100px !important;
+    padding-bottom: 48px !important;
+  }
+
+  /* Blog badge — move below title instead of above */
+  .blog-hero .hero-tagline {
+    order: -1;
+    font-size: 0.7rem;
+    padding: 0.35rem 0.75rem;
+  }
+
+  /* Scrim panels — full width on mobile */
+  .page-header.hero-seo .page-header-content,
+  .page-header.hero-ai-consulting .page-header-content,
+  .page-header.hero-vibecoding .page-header-content {
+    max-width: 100%;
+    padding: var(--space-lg) var(--space-md);
+    border-radius: var(--radius-md);
+  }
+
+  /* Portfolio — less padding on mobile */
+  .page-header.hero-portfolio {
+    padding-top: 100px !important;
+    padding-bottom: 48px !important;
+  }
+
+  /* Proof strip cards slightly smaller */
+  .proof-item {
+    padding: var(--space-xs) var(--space-sm);
+  }
+}
+
+/* 3. TYPOGRAPHIC CONSISTENCY */
+
+/* Remove monospace from Vibecoding body — it hurts premium feel */
+.page-header.hero-vibecoding .page-header-description {
+  font-family: var(--font-main);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+/* Keep monospace only for the subtitle (it adds character without hurting readability) */
+
+/* Standardize ALL hero CTAs to exact same sizing */
+.page-header-content .btn.btn-primary,
+.blog-hero-featured-cta,
+.contact-hero-cta {
+  padding: 0.9rem 2.25rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+/* Standardize ALL hero heading scales */
+.page-header h1,
+.blog-hero .section-title {
+  font-size: clamp(2.5rem, 5.5vw, 3.75rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.08;
+}
+
+/* Standardize ALL hero descriptions */
+.page-header .page-header-description,
+.blog-hero .section-subtitle {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  max-width: 500px;
+}
+
+/* Ensure centered heroes center the description */
+.page-header.hero-google-ads .page-header-description,
+.page-header.hero-ai-consulting .page-header-description,
+.blog-hero .section-subtitle {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Mobile type scale — consistent */
+@media (max-width: 768px) {
+  .page-header h1,
+  .hero-title,
+  .blog-hero .section-title {
+    font-size: clamp(1.875rem, 8vw, 2.75rem) !important;
+    letter-spacing: -0.02em;
+  }
+
+  .page-header .page-header-description,
+  .hero-description,
+  .blog-hero .section-subtitle {
+    font-size: 0.95rem;
+    max-width: 100%;
+  }
+
+  .page-header-content .btn.btn-primary,
+  .blog-hero-featured-cta,
+  .contact-hero-cta {
+    padding: 0.8rem 1.75rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .page-header h1,
+  .hero-title,
+  .blog-hero .section-title {
+    font-size: clamp(1.625rem, 7.5vw, 2.25rem) !important;
+  }
+}
+
+/* ================================================================
+   ROUND 14 — FINAL PUSH TO 9.0+
+   1. More art direction divergence for underperformers
+   2. Cut copy density on Portfolio/Blog/Homepage
+   3. Premium micro-animations
+   ================================================================ */
+
+/* 1a. HOMEPAGE — add scrim panel like service pages */
+.hero .hero-text {
+  background: rgba(10, 10, 12, 0.55);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  padding: var(--space-xl) var(--space-lg);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  max-width: 600px;
+}
+
+/* 1b. GOOGLE ADS — add scrim panel */
+.page-header.hero-google-ads .page-header-content {
+  background: rgba(10, 10, 12, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: var(--space-xl) var(--space-lg);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+/* 1c. PORTFOLIO — add background + scrim, make it more gallery-like */
+.page-header.hero-portfolio .page-header-content {
+  background: rgba(10, 10, 12, 0.5);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  padding: var(--space-xl) var(--space-lg);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  max-width: 560px;
+}
+
+/* 1d. BLOG — tighter hero, editorial feel */
+.blog-hero.hero-blog {
+  background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+  border-bottom: 1px solid var(--border);
+}
+
+.blog-hero .hero-tagline {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-accent);
+  padding: 0.4rem 1rem;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  display: inline-block;
+  margin-bottom: var(--space-md);
+}
+
+/* 1e. CONTACT — warm gradient background */
+.page-header.hero-contact {
+  background: linear-gradient(165deg, var(--bg-primary) 0%, rgba(201, 165, 92, 0.04) 50%, var(--bg-primary) 100%);
+}
+
+/* 2. CUT COPY DENSITY */
+
+/* Portfolio description — shorter on desktop */
+.page-header.hero-portfolio .page-header-description {
+  max-width: 420px;
+  font-size: 1rem;
+}
+
+/* Blog subtitle — tighter */
+.blog-hero .section-subtitle {
+  max-width: 440px;
+  font-size: 1rem;
+}
+
+/* Homepage description — already tight, just ensure max-width */
+.hero .hero-description {
+  max-width: 460px;
+  font-size: 1rem;
+}
+
+/* 3. PREMIUM MICRO-ANIMATIONS */
+
+/* Hero content fade-in on load */
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero .hero-text,
+.page-header .page-header-content {
+  animation: heroFadeUp 0.8s ease-out both;
+}
+
+/* Staggered fade for subtitle, title, description, CTA */
+.hero .hero-tagline,
+.page-header .page-subtitle {
+  animation: heroFadeUp 0.6s ease-out 0.1s both;
+}
+
+.hero .hero-title,
+.page-header h1,
+.blog-hero .section-title {
+  animation: heroFadeUp 0.7s ease-out 0.2s both;
+}
+
+.hero .hero-description,
+.page-header .page-header-description,
+.blog-hero .section-subtitle {
+  animation: heroFadeUp 0.7s ease-out 0.35s both;
+}
+
+.hero .hero-buttons,
+.page-header-content .btn,
+.blog-hero-featured-cta,
+.contact-hero-cta {
+  animation: heroFadeUp 0.7s ease-out 0.5s both;
+}
+
+/* Subtle background parallax effect via CSS */
+@keyframes heroBgShift {
+  0% { background-position: center 48%; }
+  100% { background-position: center 52%; }
+}
+
+.page-header.hero-seo,
+.page-header.hero-google-ads,
+.page-header.hero-ai-consulting,
+.page-header.hero-vibecoding,
+.page-header.hero-portfolio,
+.hero {
+  animation: heroBgShift 20s ease-in-out infinite alternate;
+}
+
+/* Gold glow pulse on primary CTAs */
+@keyframes ctaGlow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(201, 165, 92, 0); }
+  50% { box-shadow: 0 0 20px 4px rgba(201, 165, 92, 0.15); }
+}
+
+.page-header-content .btn.btn-primary,
+.blog-hero-featured-cta,
+.contact-hero-cta {
+  animation: heroFadeUp 0.7s ease-out 0.5s both, ctaGlow 4s ease-in-out 2s infinite;
+}
+
+/* Mobile — disable parallax (performance), keep fade-in */
+@media (max-width: 768px) {
+  .page-header.hero-seo,
+  .page-header.hero-google-ads,
+  .page-header.hero-ai-consulting,
+  .page-header.hero-vibecoding,
+  .page-header.hero-portfolio,
+  .hero {
+    animation: none;
+    background-position: center center;
+  }
+
+  .hero .hero-text,
+  .page-header.hero-google-ads .page-header-content,
+  .page-header.hero-portfolio .page-header-content {
+    max-width: 100%;
+    padding: var(--space-lg) var(--space-md);
+  }
+}
+
+/* Reduced motion — respect user preference */
+@media (prefers-reduced-motion: reduce) {
+  .hero .hero-text,
+  .page-header .page-header-content,
+  .hero .hero-tagline,
+  .page-header .page-subtitle,
+  .hero .hero-title,
+  .page-header h1,
+  .blog-hero .section-title,
+  .hero .hero-description,
+  .page-header .page-header-description,
+  .blog-hero .section-subtitle,
+  .hero .hero-buttons,
+  .page-header-content .btn,
+  .blog-hero-featured-cta,
+  .contact-hero-cta {
+    animation: none !important;
+  }
+
+  .page-header.hero-seo,
+  .page-header.hero-google-ads,
+  .page-header.hero-ai-consulting,
+  .page-header.hero-vibecoding,
+  .page-header.hero-portfolio,
+  .hero {
+    animation: none !important;
+  }
+}
+
+/* ================================================================
+   ROUND 15 — REMOVE SCRIMS FROM NON-IMAGE HEROES
+   The scrim card formula became too repetitive.
+   Only keep scrims on heroes WITH background images.
+   ================================================================ */
+
+/* UNDO: Homepage scrim — go back to clean text, no card */
+.hero .hero-text {
+  background: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  border: none !important;
+  max-width: 560px;
+}
+
+/* UNDO: Portfolio scrim — clean, open layout */
+.page-header.hero-portfolio .page-header-content {
+  background: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  border: none !important;
+  max-width: 640px;
+}
+
+/* Portfolio — bigger, bolder, more gallery-like */
+.page-header.hero-portfolio h1 {
+  font-size: clamp(3rem, 6vw, 4.5rem);
+}
+
+.page-header.hero-portfolio .page-header-description {
+  max-width: 500px;
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+}
+
+/* Blog — remove any card feel, pure editorial */
+.blog-hero.hero-blog {
+  text-align: center;
+  padding: 140px 0 var(--space-xl);
+}
+
+/* Contact — no scrim, clean editorial warmth */
+.page-header.hero-contact {
+  text-align: center;
+  padding: 140px 0 var(--space-xl);
+}
+
+.page-header.hero-contact h1 {
+  font-size: clamp(2.75rem, 5.5vw, 4rem);
+}
+
+/* Google Ads scrim — keep but make it more distinct from service pages */
+.page-header.hero-google-ads .page-header-content {
+  border-left: 3px solid #4285f4;
+  text-align: left;
+  margin: 0;
+  max-width: 580px;
+}
+
+/* Mobile cleanup */
+@media (max-width: 768px) {
+  .hero .hero-text {
+    max-width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+
+  .page-header.hero-portfolio .page-header-content {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .page-header.hero-portfolio h1 {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+
+  .page-header.hero-google-ads .page-header-content {
+    border-left: none;
+    border-top: 3px solid #4285f4;
+    text-align: center;
+    max-width: 100%;
+    padding-left: var(--space-md);
+  }
+}
+
+/* ================================================================
+   ROUND 16 — FINAL TWEAKS TO CROSS 9.0
+   1. AI Consulting gold border more prominent
+   2. Vibecoding monospace subtitle bigger + more prominent  
+   3. Portfolio/Blog/Contact distinct typographic rhythm
+   ================================================================ */
+
+/* 1. AI CONSULTING — make the gold border unmistakable */
+.page-header.hero-ai-consulting .page-header-content {
+  border-left: 4px solid var(--accent) !important;
+  padding-left: var(--space-xl) !important;
+  text-align: left !important;
+  margin: 0 !important;
+  max-width: 600px !important;
+}
+
+/* 2. VIBECODING — bigger monospace subtitle, more prominent */
+.page-header.hero-vibecoding .page-subtitle {
+  font-family: var(--font-mono) !important;
+  font-size: 0.9rem !important;
+  letter-spacing: 0.12em !important;
+  color: var(--accent) !important;
+  background: rgba(201, 165, 92, 0.08);
+  padding: 0.3rem 0.75rem;
+  border-radius: var(--radius-sm);
+  display: inline-block;
+}
+
+/* Vibecoding scrim — left aligned like SEO for more distinctness */
+.page-header.hero-vibecoding .page-header-content {
+  text-align: left !important;
+  margin: 0 !important;
+}
+
+/* 3a. PORTFOLIO — unique large serif-like feel via weight contrast */
+.page-header.hero-portfolio h1 {
+  letter-spacing: -0.04em !important;
+  line-height: 1.0 !important;
+}
+
+.page-header.hero-portfolio .page-subtitle {
+  letter-spacing: 0.25em !important;
+  font-size: 0.7rem !important;
+}
+
+/* 3b. BLOG — editorial: larger italic subtitle, tighter spacing */
+.blog-hero .section-subtitle {
+  font-style: italic !important;
+  font-size: 1.1rem !important;
+  letter-spacing: 0.01em;
+  color: var(--text-muted) !important;
+  max-width: 480px !important;
+  line-height: 1.7 !important;
+}
+
+.blog-hero .section-title {
+  letter-spacing: -0.04em !important;
+  margin-bottom: var(--space-xs) !important;
+}
+
+/* 3c. CONTACT — warmer, larger heading, tighter subtitle */
+.page-header.hero-contact h1 {
+  letter-spacing: -0.04em !important;
+  line-height: 1.0 !important;
+}
+
+.contact-hero-subtitle {
+  font-size: 1.05rem !important;
+  letter-spacing: 0.02em;
+  color: var(--text-muted) !important;
+}
+
+/* Mobile overrides for round 16 */
+@media (max-width: 768px) {
+  .page-header.hero-ai-consulting .page-header-content {
+    border-left: none !important;
+    border-top: 4px solid var(--accent) !important;
+    padding-left: var(--space-md) !important;
+    padding-top: var(--space-lg) !important;
+    text-align: center !important;
+    max-width: 100% !important;
+  }
+
+  .page-header.hero-vibecoding .page-header-content {
+    text-align: center !important;
+    max-width: 100% !important;
+  }
+}
