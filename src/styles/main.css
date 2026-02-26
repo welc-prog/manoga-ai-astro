@@ -3868,3 +3868,270 @@ h2 {
     overflow: hidden;
   }
 }
+
+/* ============================================
+   HERO IMPROVEMENTS — DESKTOP & MOBILE
+   ============================================ */
+
+/* Homepage hero — more commanding presence */
+.hero {
+  min-height: 80vh;
+  padding-top: 160px;
+  padding-bottom: var(--space-2xl);
+  position: relative;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(ellipse at 20% 50%, rgba(201, 165, 92, 0.06) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.hero-title {
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+  margin-bottom: var(--space-md);
+}
+
+.hero-accent-line {
+  width: 100px;
+  height: 3px;
+  margin-bottom: var(--space-md);
+  background: linear-gradient(90deg, var(--accent), var(--accent-hover), transparent);
+}
+
+.hero-description {
+  font-size: 1.2rem;
+  line-height: 1.65;
+  max-width: 520px;
+  margin-bottom: var(--space-md);
+}
+
+.hero-proof {
+  margin-bottom: var(--space-lg);
+  padding: var(--space-sm) 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.hero-proof-item {
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+/* Service page headers — bigger, bolder */
+.page-header {
+  padding: 140px 0 var(--space-xl);
+}
+
+.page-header h1 {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.page-header-with-image {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: var(--space-xl);
+  align-items: center;
+}
+
+.page-header-image {
+  aspect-ratio: 4/3;
+  border-radius: var(--radius-xl);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.page-header-image img {
+  border-radius: var(--radius-xl);
+}
+
+.page-header-description {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  max-width: 500px;
+}
+
+.page-subtitle {
+  font-size: 0.85rem;
+  margin-bottom: var(--space-md);
+}
+
+/* ============================================
+   HERO — MOBILE OVERHAUL
+   ============================================ */
+@media (max-width: 768px) {
+  /* Homepage hero mobile */
+  .hero {
+    min-height: auto;
+    padding-top: 120px;
+    padding-bottom: var(--space-xl);
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-text {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-tagline {
+    justify-content: center;
+  }
+
+  .hero-title {
+    font-size: clamp(2.25rem, 9vw, 3.25rem);
+    line-height: 1.08;
+    text-align: center;
+  }
+
+  .hero-accent-line {
+    margin: 0 auto var(--space-md);
+  }
+
+  .hero-description {
+    font-size: 1.05rem;
+    text-align: center;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-proof {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .hero-buttons .btn {
+    flex: 1;
+    text-align: center;
+    justify-content: center;
+    min-width: 0;
+  }
+
+  /* Service page headers mobile — CRITICAL FIX */
+  .page-header {
+    padding: 100px 0 var(--space-lg);
+    text-align: center;
+  }
+
+  .page-header-with-image {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+    text-align: center;
+  }
+
+  .page-header-content {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .page-header-image {
+    max-width: 280px;
+    margin: 0 auto;
+    aspect-ratio: 4/3;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+  }
+
+  .page-header h1 {
+    font-size: clamp(2rem, 8vw, 2.75rem);
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+  }
+
+  .page-header-description {
+    font-size: 1rem;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .page-subtitle {
+    justify-content: center;
+  }
+
+  .page-subtitle::before {
+    display: none;
+  }
+}
+
+/* Small phones */
+@media (max-width: 400px) {
+  .hero {
+    padding-top: 100px;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+  }
+
+  .page-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .page-header-image {
+    max-width: 220px;
+  }
+}
+
+/* Hero availability notice */
+.hero-availability {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: var(--space-md);
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--border);
+}
+
+/* Blog post count */
+.hero-post-count {
+  font-size: 0.85rem;
+  color: var(--accent);
+  font-weight: 600;
+  margin-top: var(--space-sm);
+}
+
+/* Service hero CTA — ensure spacing */
+.page-header-content .btn {
+  margin-top: var(--space-md);
+}
+
+@media (max-width: 768px) {
+  .page-header-content .btn {
+    display: inline-flex;
+  }
+
+  .hero-availability {
+    text-align: center;
+  }
+}
