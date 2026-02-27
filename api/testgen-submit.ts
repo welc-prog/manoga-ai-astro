@@ -1,6 +1,6 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-import Stripe from 'stripe';
 import { Resend } from 'resend';
+import Stripe from 'stripe';
 
 function escapeHtml(str: string): string {
   return str
@@ -23,7 +23,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   }
 
   // Timestamp check — form submitted too fast means bot (< 3 seconds)
-  const loadTime = parseInt(_t, 10);
+  const loadTime = Number.parseInt(_t, 10);
   if (!loadTime || Date.now() - loadTime < 3000) {
     return res.status(200).json({ success: true });
   }
@@ -37,7 +37,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(400).json({ error: 'Repository URL must be a GitHub URL' });
   }
 
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const emailRegex = /^[^\s@]+@[^\s@][^\s.@]*\.[^\s@]+$/;
   if (!emailRegex.test(email)) {
     return res.status(400).json({ error: 'Invalid email address' });
   }
@@ -66,7 +66,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     if (!session || session.payment_status !== 'paid') {
       return res.status(403).json({ error: 'Payment not verified' });
     }
-  } catch {
+  }
+  catch {
     return res.status(403).json({ error: 'Invalid payment session' });
   }
 
@@ -104,7 +105,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     });
 
     return res.status(200).json({ success: true });
-  } catch (error) {
+  }
+  catch (error) {
     console.error('Email send error:', error);
     return res.status(500).json({ error: 'Failed to send submission' });
   }

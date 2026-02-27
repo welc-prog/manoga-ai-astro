@@ -1,0 +1,62 @@
+name: QA
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+
+  typecheck:
+    name: Type Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npx tsc --noEmit
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+
+  no-suppressions:
+    name: No Suppressions
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check for eslint-disable comments
+        run: |
+          if grep -rn "eslint-disable" src/ api/ --include="*.ts" --include="*.astro" --include="*.js" --include="*.mjs"; then
+            echo "ERROR: eslint-disable comments found. Fix the issues instead of suppressing them."
+            exit 1
+          fi
+      - name: Check for TypeScript suppressions
+        run: |
+          if grep -rn "@ts-ignore\|@ts-expect-error\|@ts-nocheck" src/ api/ --include="*.ts" --include="*.astro" --include="*.js" --include="*.mjs"; then
+            echo "ERROR: TypeScript suppression comments found. Fix the type issues instead."
+            exit 1
+          fi

@@ -22,7 +22,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   }
 
   // Timestamp check — form submitted too fast means bot (< 3 seconds)
-  const loadTime = parseInt(_t, 10);
+  const loadTime = Number.parseInt(_t, 10);
   if (!loadTime || Date.now() - loadTime < 3000) {
     return res.status(200).json({ success: true });
   }
@@ -33,7 +33,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   }
 
   // Basic email format validation
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const emailRegex = /^[^\s@]+@[^\s@][^\s.@]*\.[^\s@]+$/;
   if (!emailRegex.test(email)) {
     return res.status(400).json({ error: 'Invalid email address' });
   }
@@ -72,7 +72,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     });
 
     return res.status(200).json({ success: true });
-  } catch (error) {
+  }
+  catch (error) {
     console.error('Email send error:', error);
     return res.status(500).json({ error: 'Failed to send message' });
   }

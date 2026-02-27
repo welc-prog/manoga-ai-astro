@@ -1,7 +1,7 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-import Stripe from 'stripe';
 import { buffer } from 'micro';
 import { Resend } from 'resend';
+import Stripe from 'stripe';
 
 export const config = {
   api: { bodyParser: false },
@@ -33,7 +33,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   try {
     const rawBody = await buffer(req);
     event = stripe.webhooks.constructEvent(rawBody, sig, process.env.STRIPE_TESTGEN_WEBHOOK_SECRET);
-  } catch (err) {
+  }
+  catch (err) {
     console.error('Webhook signature verification failed:', err);
     return res.status(400).json({ error: 'Invalid signature' });
   }
@@ -66,7 +67,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
           <p style="margin-top: 16px; color: #666;">Customer will submit repo details via the form next.</p>
         `,
       });
-    } catch (emailErr) {
+    }
+    catch (emailErr) {
       console.error('Failed to send sale notification:', emailErr);
     }
   }
