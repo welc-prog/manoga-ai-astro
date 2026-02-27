@@ -1,12 +1,12 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import { t } from '../i18n/index.ts';
-import IconLayout from '../components/icons/IconLayout.astro';
-import IconCode from '../components/icons/IconCode.astro';
-import IconBarChart from '../components/icons/IconBarChart.astro';
-import IconTarget from '../components/icons/IconTarget.astro';
 import IconArrowRight from '../components/icons/IconArrowRight.astro';
+import IconBarChart from '../components/icons/IconBarChart.astro';
+import IconCode from '../components/icons/IconCode.astro';
 import IconExternal from '../components/icons/IconExternal.astro';
+import IconLayout from '../components/icons/IconLayout.astro';
+import IconTarget from '../components/icons/IconTarget.astro';
+import { t } from '../i18n/index.ts';
+import Layout from '../layouts/Layout.astro';
 
 const lang = 'en';
 const prefix = lang === 'en' ? '' : `/${lang}`;
@@ -254,44 +254,47 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
     </div>
   </section>
 
-  <script type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
+  <script
+    type="application/ld+json"
+    set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    'mainEntity': [
       {
-        "@type": "Question",
-        "name": "What platform do you build websites on?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "I primarily use Nuxt 4 and Vue.js for custom sites, which delivers excellent performance and SEO. For simpler needs, I can work with WordPress or other platforms."
-        }
+        '@type': 'Question',
+        'name': 'What platform do you build websites on?',
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': 'I primarily use Nuxt 4 and Vue.js for custom sites, which delivers excellent performance and SEO. For simpler needs, I can work with WordPress or other platforms.',
+        },
       },
       {
-        "@type": "Question",
-        "name": "How long does a website project take?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Simple landing pages can be completed in 1-2 weeks. Full custom websites typically take 4-8 weeks depending on complexity."
-        }
+        '@type': 'Question',
+        'name': 'How long does a website project take?',
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': 'Simple landing pages can be completed in 1-2 weeks. Full custom websites typically take 4-8 weeks depending on complexity.',
+        },
       },
       {
-        "@type": "Question",
-        "name": "Do you provide hosting?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "I can recommend and set up hosting, typically on Vercel or similar modern platforms that offer excellent performance and security."
-        }
+        '@type': 'Question',
+        'name': 'Do you provide hosting?',
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': 'I can recommend and set up hosting, typically on Vercel or similar modern platforms that offer excellent performance and security.',
+        },
       },
       {
-        "@type": "Question",
-        "name": "What about content and images?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "I can work with your existing content, help with content strategy, or recommend copywriters. Stock images or custom photography can be incorporated."
-        }
-      }
-    ]
-  })} />
+        '@type': 'Question',
+        'name': 'What about content and images?',
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': 'I can work with your existing content, help with content strategy, or recommend copywriters. Stock images or custom photography can be incorporated.',
+        },
+      },
+    ],
+  })}
+  />
 </Layout>
 
 <style>

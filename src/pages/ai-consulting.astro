@@ -1,14 +1,14 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import { t } from '../i18n/index.ts';
-import IconBrain from '../components/icons/IconBrain.astro';
-import IconSearch from '../components/icons/IconSearch.astro';
-import IconCode from '../components/icons/IconCode.astro';
-import IconTarget from '../components/icons/IconTarget.astro';
-import IconShield from '../components/icons/IconShield.astro';
-import IconWorkshop from '../components/icons/IconWorkshop.astro';
-import IconBarChart from '../components/icons/IconBarChart.astro';
 import IconArrowRight from '../components/icons/IconArrowRight.astro';
+import IconBarChart from '../components/icons/IconBarChart.astro';
+import IconBrain from '../components/icons/IconBrain.astro';
+import IconCode from '../components/icons/IconCode.astro';
+import IconSearch from '../components/icons/IconSearch.astro';
+import IconShield from '../components/icons/IconShield.astro';
+import IconTarget from '../components/icons/IconTarget.astro';
+import IconWorkshop from '../components/icons/IconWorkshop.astro';
+import { t } from '../i18n/index.ts';
+import Layout from '../layouts/Layout.astro';
 
 const lang = 'en';
 const prefix = lang === 'en' ? '' : `/${lang}`;
@@ -249,44 +249,47 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
     </div>
   </section>
 
-  <script type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
+  <script
+    type="application/ld+json"
+    set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    'mainEntity': [
       {
-        "@type": "Question",
-        "name": "How long does an AI consulting engagement typically last?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Initial assessments usually take 2-4 weeks. Full strategic engagements can range from 1-3 months depending on scope. Implementation support is ongoing as needed."
-        }
+        '@type': 'Question',
+        'name': 'How long does an AI consulting engagement typically last?',
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': 'Initial assessments usually take 2-4 weeks. Full strategic engagements can range from 1-3 months depending on scope. Implementation support is ongoing as needed.',
+        },
       },
       {
-        "@type": "Question",
-        "name": "Do we need technical staff to benefit from AI consulting?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No. Part of my job is translating technical AI concepts into business terms. I work with executive teams, marketing departments, operations – anyone who can benefit from AI."
-        }
+        '@type': 'Question',
+        'name': 'Do we need technical staff to benefit from AI consulting?',
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': 'No. Part of my job is translating technical AI concepts into business terms. I work with executive teams, marketing departments, operations – anyone who can benefit from AI.',
+        },
       },
       {
-        "@type": "Question",
-        "name": "What industries do you have experience with?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "My background spans e-commerce, SaaS, professional services, and more. AI principles apply across industries, though specific applications vary."
-        }
+        '@type': 'Question',
+        'name': 'What industries do you have experience with?',
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': 'My background spans e-commerce, SaaS, professional services, and more. AI principles apply across industries, though specific applications vary.',
+        },
       },
       {
-        "@type": "Question",
-        "name": "How do you stay current with AI developments?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "I'm actively building AI-powered applications and constantly experimenting with new tools and techniques. This hands-on experience means I can separate hype from reality."
-        }
-      }
-    ]
-  })} />
+        '@type': 'Question',
+        'name': 'How do you stay current with AI developments?',
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': 'I\'m actively building AI-powered applications and constantly experimenting with new tools and techniques. This hands-on experience means I can separate hype from reality.',
+        },
+      },
+    ],
+  })}
+  />
 </Layout>
 
 <style>

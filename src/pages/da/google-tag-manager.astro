@@ -1,14 +1,14 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import { t } from '../../i18n/index.ts';
+import IconArrowRight from '../../components/icons/IconArrowRight.astro';
 import IconBarChart from '../../components/icons/IconBarChart.astro';
-import IconTarget from '../../components/icons/IconTarget.astro';
 import IconCode from '../../components/icons/IconCode.astro';
 import IconShield from '../../components/icons/IconShield.astro';
-import IconArrowRight from '../../components/icons/IconArrowRight.astro';
+import IconTarget from '../../components/icons/IconTarget.astro';
+import { t } from '../../i18n/index.ts';
+import Layout from '../../layouts/Layout.astro';
 
-const lang = 'da';  // Hardcode for Danish pages
-const prefix = '/da';  // Hardcode for Danish pages
+const lang = 'da'; // Hardcode for Danish pages
+const prefix = '/da'; // Hardcode for Danish pages
 ---
 
 <Layout title={t('meta.gtmTitle', lang)} description={t('meta.gtmDescription', lang)} lang={lang}>

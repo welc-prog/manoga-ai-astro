@@ -1,15 +1,15 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import { t } from '../../i18n/index.ts';
-import IconTag from '../../components/icons/IconTag.astro';
-import IconLayout from '../../components/icons/IconLayout.astro';
-import IconBarChart from '../../components/icons/IconBarChart.astro';
-import IconTarget from '../../components/icons/IconTarget.astro';
-import IconCode from '../../components/icons/IconCode.astro';
 import IconArrowRight from '../../components/icons/IconArrowRight.astro';
+import IconBarChart from '../../components/icons/IconBarChart.astro';
+import IconCode from '../../components/icons/IconCode.astro';
+import IconLayout from '../../components/icons/IconLayout.astro';
+import IconTag from '../../components/icons/IconTag.astro';
+import IconTarget from '../../components/icons/IconTarget.astro';
+import { t } from '../../i18n/index.ts';
+import Layout from '../../layouts/Layout.astro';
 
-const lang = 'da';  // Hardcode for Danish pages
-const prefix = '/da';  // Hardcode for Danish pages
+const lang = 'da'; // Hardcode for Danish pages
+const prefix = '/da'; // Hardcode for Danish pages
 ---
 
 <Layout title={t('meta.metaAdsTitle', lang)} description={t('meta.metaAdsDescription', lang)} lang={lang}>

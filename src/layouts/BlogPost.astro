@@ -1,8 +1,8 @@
 ---
-import '../styles/main.css';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
 import Analytics from '@vercel/analytics/astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import '../styles/main.css';
 
 interface RelatedPost {
   slug: string;
@@ -25,7 +25,7 @@ interface Props {
 
 const { title, description, date, category, image, author, readingTime, relatedPosts = [] } = Astro.props;
 
-const siteUrl = 'https://www.manoga.digital'
+const siteUrl = 'https://www.manoga.digital';
 
 const categoryLabels: Record<string, string> = {
   'seo': 'SEO',
@@ -68,16 +68,19 @@ const formattedDate = new Date(date).toLocaleDateString('en-US', {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
     <title>{title} | Manoga Blog</title>
-    <script type="application/ld+json" set:html={JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "BlogPosting",
-      "headline": title,
-      "description": description,
-      "datePublished": date,
-      "author": { "@type": "Person", "name": author },
-      "image": image ? `https://www.manoga.digital${image}` : undefined,
-      "publisher": { "@type": "Organization", "name": "Manoga" }
-    })} />
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'BlogPosting',
+      'headline': title,
+      'description': description,
+      'datePublished': date,
+      'author': { '@type': 'Person', 'name': author },
+      'image': image ? `https://www.manoga.digital${image}` : undefined,
+      'publisher': { '@type': 'Organization', 'name': 'Manoga' },
+    })}
+    />
     <Analytics />
   </head>
   <body>
@@ -152,7 +155,7 @@ const formattedDate = new Date(date).toLocaleDateString('en-US', {
     </main>
     <Footer lang="en" />
     <script define:vars={{ date }}>
-      const postDate = new Date(date + 'T00:00:00');
+      const postDate = new Date(`${date}T00:00:00`);
       const today = new Date();
       today.setHours(23, 59, 59, 999);
 

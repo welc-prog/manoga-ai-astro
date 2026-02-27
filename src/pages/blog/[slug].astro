@@ -3,15 +3,15 @@ import { getCollection, render } from 'astro:content';
 import BlogPost from '../../layouts/BlogPost.astro';
 
 export async function getStaticPaths() {
-  const today = new Date()
-  today.setHours(23, 59, 59, 999)
-  const posts = await getCollection('blog')
+  const today = new Date();
+  today.setHours(23, 59, 59, 999);
+  const posts = await getCollection('blog');
   return posts
-    .filter(post => new Date(post.data.date + 'T00:00:00') <= today)
+    .filter(post => new Date(`${post.data.date}T00:00:00`) <= today)
     .map(post => ({
       params: { slug: post.id.replace(/\.md$/, '') },
       props: { post },
-    }))
+    }));
 }
 
 const { post } = Astro.props;
@@ -25,7 +25,7 @@ now.setHours(23, 59, 59, 999);
 const allPosts = await getCollection('blog');
 const relatedPosts = allPosts
   .filter(p => p.data.category === post.data.category && p.id !== post.id)
-  .filter(p => new Date(p.data.date + 'T00:00:00') <= now)
+  .filter(p => new Date(`${p.data.date}T00:00:00`) <= now)
   .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
   .slice(0, 3);
 ---

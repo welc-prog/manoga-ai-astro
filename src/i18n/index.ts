@@ -1,9 +1,9 @@
-import en from '../locales/en.json';
 import da from '../locales/da.json';
+import en from '../locales/en.json';
 
 const translations: Record<string, Record<string, any>> = {
   en,
-  da
+  da,
 };
 
 export function t(key: string, lang: string = 'en'): string {
@@ -13,13 +13,15 @@ export function t(key: string, lang: string = 'en'): string {
   for (const k of keys) {
     if (value && typeof value === 'object' && k in value) {
       value = value[k];
-    } else {
+    }
+    else {
       // Fallback to English if key not found in current language
-      value = translations['en'];
+      value = translations.en;
       for (const k2 of keys) {
         if (value && typeof value === 'object' && k2 in value) {
           value = value[k2];
-        } else {
+        }
+        else {
           return key; // Return key if not found
         }
       }
@@ -31,5 +33,5 @@ export function t(key: string, lang: string = 'en'): string {
 }
 
 export function getTranslations(lang: string = 'en') {
-  return translations[lang] || translations['en'];
+  return translations[lang] || translations.en;
 }

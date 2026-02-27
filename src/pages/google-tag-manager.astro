@@ -1,11 +1,11 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import { t } from '../i18n/index.ts';
+import IconArrowRight from '../components/icons/IconArrowRight.astro';
 import IconBarChart from '../components/icons/IconBarChart.astro';
-import IconTarget from '../components/icons/IconTarget.astro';
 import IconCode from '../components/icons/IconCode.astro';
 import IconShield from '../components/icons/IconShield.astro';
-import IconArrowRight from '../components/icons/IconArrowRight.astro';
+import IconTarget from '../components/icons/IconTarget.astro';
+import { t } from '../i18n/index.ts';
+import Layout from '../layouts/Layout.astro';
 
 const lang = 'en';
 const prefix = lang === 'en' ? '' : `/${lang}`;
@@ -191,44 +191,47 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
     </div>
   </section>
 
-  <script type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
+  <script
+    type="application/ld+json"
+    set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    'mainEntity': [
       {
-        "@type": "Question",
-        "name": "Do I need a developer to implement GTM?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Basic implementations can be done without developer help. Complex setups may need minimal developer involvement for data layer implementation."
-        }
+        '@type': 'Question',
+        'name': 'Do I need a developer to implement GTM?',
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': 'Basic implementations can be done without developer help. Complex setups may need minimal developer involvement for data layer implementation.',
+        },
       },
       {
-        "@type": "Question",
-        "name": "How do I know if my current tracking is wrong?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Common signs include mismatched numbers between platforms, missing conversions, duplicate events, or difficulty answering basic questions about user behavior."
-        }
+        '@type': 'Question',
+        'name': 'How do I know if my current tracking is wrong?',
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': 'Common signs include mismatched numbers between platforms, missing conversions, duplicate events, or difficulty answering basic questions about user behavior.',
+        },
       },
       {
-        "@type": "Question",
-        "name": "What about privacy regulations like GDPR?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "I set up tracking with consent mode and cookie banners to ensure compliance with privacy regulations."
-        }
+        '@type': 'Question',
+        'name': 'What about privacy regulations like GDPR?',
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': 'I set up tracking with consent mode and cookie banners to ensure compliance with privacy regulations.',
+        },
       },
       {
-        "@type": "Question",
-        "name": "Do you provide documentation?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. Every implementation comes with documentation explaining what's tracking, how it works, and how to make common changes."
-        }
-      }
-    ]
-  })} />
+        '@type': 'Question',
+        'name': 'Do you provide documentation?',
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': 'Yes. Every implementation comes with documentation explaining what\'s tracking, how it works, and how to make common changes.',
+        },
+      },
+    ],
+  })}
+  />
 </Layout>
 
 <style>

@@ -1,16 +1,13 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import { t } from '../i18n/index.ts';
 import IconArrowRight from '../components/icons/IconArrowRight.astro';
-import IconExternal from '../components/icons/IconExternal.astro';
-import IconCode from '../components/icons/IconCode.astro';
-import IconLayout from '../components/icons/IconLayout.astro';
 import IconBarChart from '../components/icons/IconBarChart.astro';
+import IconCode from '../components/icons/IconCode.astro';
+import IconExternal from '../components/icons/IconExternal.astro';
+import IconLayout from '../components/icons/IconLayout.astro';
 import IconTarget from '../components/icons/IconTarget.astro';
-import IconShield from '../components/icons/IconShield.astro';
+import Layout from '../layouts/Layout.astro';
 
 const lang = 'en';
-const prefix = lang === 'en' ? '' : `/${lang}`;
 ---
 
 <Layout
@@ -31,7 +28,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
       </p>
 
       <div class="hero-cta-row">
-        <a href="#webshop" class="btn btn-primary">See Live Demos<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></a>
+        <a href="#webshop" class="btn btn-primary">See Live Demos<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg></a>
         <a href="/contact" class="btn btn-secondary">Get Your Free Quote</a>
       </div>
 
@@ -462,80 +459,86 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
     }
   </script>
 
-  <script type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
+  <script
+    type="application/ld+json"
+    set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    'mainEntity': [
       {
-        "@type": "Question",
-        "name": "How much does a website cost?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Our AI-assisted approach lets us deliver professional websites at 50-70% less than traditional agencies. Exact pricing depends on your needs — contact us for a free, no-obligation quote."
-        }
+        '@type': 'Question',
+        'name': 'How much does a website cost?',
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': 'Our AI-assisted approach lets us deliver professional websites at 50-70% less than traditional agencies. Exact pricing depends on your needs — contact us for a free, no-obligation quote.',
+        },
       },
       {
-        "@type": "Question",
-        "name": "How fast can you deliver a website?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Most websites go from kickoff to launch in 1-2 weeks. Simple landing pages can be ready in days. Complex e-commerce projects may take 3-4 weeks."
-        }
+        '@type': 'Question',
+        'name': 'How fast can you deliver a website?',
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': 'Most websites go from kickoff to launch in 1-2 weeks. Simple landing pages can be ready in days. Complex e-commerce projects may take 3-4 weeks.',
+        },
       },
       {
-        "@type": "Question",
-        "name": "What technology do you use to build websites?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "We build with Nuxt 4 (Vue.js), Tailwind CSS 4, and TypeScript — enterprise-grade technology. For payments we integrate Stripe. For hosting we use Vercel for instant global deployment."
-        }
+        '@type': 'Question',
+        'name': 'What technology do you use to build websites?',
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': 'We build with Nuxt 4 (Vue.js), Tailwind CSS 4, and TypeScript — enterprise-grade technology. For payments we integrate Stripe. For hosting we use Vercel for instant global deployment.',
+        },
       },
       {
-        "@type": "Question",
-        "name": "Is SEO included in the website?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes — every site ships with technical SEO built in: meta tags, structured data, sitemap, fast load times, mobile optimization, and clean URLs."
-        }
+        '@type': 'Question',
+        'name': 'Is SEO included in the website?',
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': 'Yes — every site ships with technical SEO built in: meta tags, structured data, sitemap, fast load times, mobile optimization, and clean URLs.',
+        },
       },
       {
-        "@type": "Question",
-        "name": "Can I update the website myself?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Absolutely. We can set up a simple content management system, or we offer affordable maintenance plans where we handle all updates for you."
-        }
+        '@type': 'Question',
+        'name': 'Can I update the website myself?',
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': 'Absolutely. We can set up a simple content management system, or we offer affordable maintenance plans where we handle all updates for you.',
+        },
       },
       {
-        "@type": "Question",
-        "name": "Do you only build webshops and service websites?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No — we build everything from landing pages and portfolios to SaaS dashboards and booking systems. We tailor every project to your specific business needs."
-        }
-      }
-    ]
-  })} />
+        '@type': 'Question',
+        'name': 'Do you only build webshops and service websites?',
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': 'No — we build everything from landing pages and portfolios to SaaS dashboards and booking systems. We tailor every project to your specific business needs.',
+        },
+      },
+    ],
+  })}
+  />
 
-  <script type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Live Website Demos | Manoga",
-    "description": "Explore live demo websites built by Manoga — a modern webshop with Stripe and a professional service business site. AI-built, fast, affordable.",
-    "url": "https://www.manoga.digital/demos",
-    "publisher": {
-      "@type": "Organization",
-      "name": "Manoga",
-      "url": "https://www.manoga.digital"
+  <script
+    type="application/ld+json"
+    set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    'name': 'Live Website Demos | Manoga',
+    'description': 'Explore live demo websites built by Manoga — a modern webshop with Stripe and a professional service business site. AI-built, fast, affordable.',
+    'url': 'https://www.manoga.digital/demos',
+    'publisher': {
+      '@type': 'Organization',
+      'name': 'Manoga',
+      'url': 'https://www.manoga.digital',
     },
-    "offers": {
-      "@type": "Offer",
-      "name": "Custom Website Development",
-      "description": "Professional websites built with AI-assisted development. Modern tech, fast delivery, affordable pricing.",
-      "priceCurrency": "DKK",
-      "availability": "https://schema.org/InStock"
-    }
-  })} />
+    'offers': {
+      '@type': 'Offer',
+      'name': 'Custom Website Development',
+      'description': 'Professional websites built with AI-assisted development. Modern tech, fast delivery, affordable pricing.',
+      'priceCurrency': 'DKK',
+      'availability': 'https://schema.org/InStock',
+    },
+  })}
+  />
 </Layout>
 
 <style>

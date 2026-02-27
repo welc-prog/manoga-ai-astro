@@ -1,13 +1,13 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import { t } from '../i18n/index.ts';
+import IconArrowRight from '../components/icons/IconArrowRight.astro';
+import IconBarChart from '../components/icons/IconBarChart.astro';
+import IconBrain from '../components/icons/IconBrain.astro';
 import IconCode from '../components/icons/IconCode.astro';
 import IconLayout from '../components/icons/IconLayout.astro';
-import IconBrain from '../components/icons/IconBrain.astro';
-import IconTarget from '../components/icons/IconTarget.astro';
-import IconBarChart from '../components/icons/IconBarChart.astro';
 import IconShield from '../components/icons/IconShield.astro';
-import IconArrowRight from '../components/icons/IconArrowRight.astro';
+import IconTarget from '../components/icons/IconTarget.astro';
+import { t } from '../i18n/index.ts';
+import Layout from '../layouts/Layout.astro';
 
 const lang = 'en';
 const prefix = lang === 'en' ? '' : `/${lang}`;
@@ -299,44 +299,47 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
     </div>
   </section>
 
-  <script type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
+  <script
+    type="application/ld+json"
+    set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    'mainEntity': [
       {
-        "@type": "Question",
-        "name": "Is vibecoding just using ChatGPT to write code?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "It's much more than that. Vibecoding requires understanding architecture, code quality, security, and user experience. AI is a powerful tool, but expertise is still essential."
-        }
+        '@type': 'Question',
+        'name': 'Is vibecoding just using ChatGPT to write code?',
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': 'It\'s much more than that. Vibecoding requires understanding architecture, code quality, security, and user experience. AI is a powerful tool, but expertise is still essential.',
+        },
       },
       {
-        "@type": "Question",
-        "name": "What kinds of applications can you build?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Web applications, internal tools, content platforms, dashboards, automation systems, and more. If it runs in a browser or on a server, I can likely build it."
-        }
+        '@type': 'Question',
+        'name': 'What kinds of applications can you build?',
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': 'Web applications, internal tools, content platforms, dashboards, automation systems, and more. If it runs in a browser or on a server, I can likely build it.',
+        },
       },
       {
-        "@type": "Question",
-        "name": "Do you support the applications after launch?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. I offer ongoing support and maintenance packages to keep your application running smoothly and evolving with your needs."
-        }
+        '@type': 'Question',
+        'name': 'Do you support the applications after launch?',
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': 'Yes. I offer ongoing support and maintenance packages to keep your application running smoothly and evolving with your needs.',
+        },
       },
       {
-        "@type": "Question",
-        "name": "What technologies do you use?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Primarily Vue.js, Nuxt 4, Python, and modern cloud platforms. I choose the right tools for each project rather than forcing everything into one stack."
-        }
-      }
-    ]
-  })} />
+        '@type': 'Question',
+        'name': 'What technologies do you use?',
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': 'Primarily Vue.js, Nuxt 4, Python, and modern cloud platforms. I choose the right tools for each project rather than forcing everything into one stack.',
+        },
+      },
+    ],
+  })}
+  />
 </Layout>
 
 <style>

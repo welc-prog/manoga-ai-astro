@@ -1,7 +1,7 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import { t } from '../../i18n/index.ts';
 import IconArrowRight from '../../components/icons/IconArrowRight.astro';
+import { t } from '../../i18n/index.ts';
+import Layout from '../../layouts/Layout.astro';
 
 const lang = 'en';
 ---
@@ -18,7 +18,9 @@ const lang = 'en';
   <section class="section">
     <div class="container">
       <div class="submit-form-wrapper">
-        <form class="contact-form" id="testgen-form"
+        <form
+          class="contact-form"
+          id="testgen-form"
           data-sending={t('pages.testgen.submitting', lang)}
           data-success-title={t('pages.testgen.submitSuccess', lang)}
           data-success-msg={t('pages.testgen.submitSuccessMsg', lang)}
@@ -91,59 +93,65 @@ const lang = 'en';
 </Layout>
 
 <script>
-  const form = document.getElementById('testgen-form') as HTMLFormElement;
-  const statusEl = document.getElementById('form-status') as HTMLDivElement;
-  const timestampEl = document.getElementById('form-timestamp') as HTMLInputElement;
-  const sessionIdEl = document.getElementById('session-id') as HTMLInputElement;
+const form = document.getElementById('testgen-form') as HTMLFormElement;
+const statusEl = document.getElementById('form-status') as HTMLDivElement;
+const timestampEl = document.getElementById('form-timestamp') as HTMLInputElement;
+const sessionIdEl = document.getElementById('session-id') as HTMLInputElement;
 
-  // Set timestamp for anti-bot
-  if (timestampEl) timestampEl.value = String(Date.now());
+// Set timestamp for anti-bot
+if (timestampEl)
+  timestampEl.value = String(Date.now());
 
-  // Read session_id from URL params
-  const urlParams = new URLSearchParams(window.location.search);
-  const sessionId = urlParams.get('session_id');
-  if (sessionIdEl && sessionId) sessionIdEl.value = sessionId;
+// Read session_id from URL params
+const urlParams = new URLSearchParams(window.location.search);
+const sessionId = urlParams.get('session_id');
+if (sessionIdEl && sessionId)
+  sessionIdEl.value = sessionId;
 
-  if (form) {
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
+if (form) {
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
 
-      const submitBtn = form.querySelector('button[type="submit"]') as HTMLButtonElement;
-      const btnText = submitBtn.querySelector('.btn-text') as HTMLSpanElement;
-      const originalHtml = btnText.innerHTML;
-      submitBtn.disabled = true;
-      btnText.textContent = form.dataset.sending || 'Submitting...';
-      statusEl.style.display = 'none';
+    const submitBtn = form.querySelector('button[type="submit"]') as HTMLButtonElement;
+    const btnText = submitBtn.querySelector('.btn-text') as HTMLSpanElement;
+    const originalHtml = btnText.innerHTML;
+    submitBtn.disabled = true;
+    btnText.textContent = form.dataset.sending || 'Submitting...';
+    statusEl.style.display = 'none';
 
-      const formData = new FormData(form);
-      const data = Object.fromEntries(formData.entries());
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
 
-      try {
-        const res = await fetch('/api/testgen-submit', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(data),
-        });
+    try {
+      const res = await fetch('/api/testgen-submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
 
-        if (res.ok) {
-          statusEl.className = 'form-status form-status-success';
-          statusEl.innerHTML = `<strong>${form.dataset.successTitle}</strong><p>${form.dataset.successMsg}</p>`;
-          statusEl.style.display = 'block';
-          form.reset();
-          if (timestampEl) timestampEl.value = String(Date.now());
-        } else {
-          throw new Error('Request failed');
-        }
-      } catch {
-        statusEl.className = 'form-status form-status-error';
-        statusEl.innerHTML = `<strong>${form.dataset.errorTitle}</strong><p>${form.dataset.errorMsg}</p>`;
+      if (res.ok) {
+        statusEl.className = 'form-status form-status-success';
+        statusEl.innerHTML = `<strong>${form.dataset.successTitle}</strong><p>${form.dataset.successMsg}</p>`;
         statusEl.style.display = 'block';
-      } finally {
-        submitBtn.disabled = false;
-        btnText.innerHTML = originalHtml;
+        form.reset();
+        if (timestampEl)
+          timestampEl.value = String(Date.now());
       }
-    });
-  }
+      else {
+        throw new Error('Request failed');
+      }
+    }
+    catch {
+      statusEl.className = 'form-status form-status-error';
+      statusEl.innerHTML = `<strong>${form.dataset.errorTitle}</strong><p>${form.dataset.errorMsg}</p>`;
+      statusEl.style.display = 'block';
+    }
+    finally {
+      submitBtn.disabled = false;
+      btnText.innerHTML = originalHtml;
+    }
+  });
+}
 </script>
 
 <style>

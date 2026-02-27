@@ -1,11 +1,11 @@
 ---
-import Layout from '../../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
 
-const today = new Date()
-today.setHours(23, 59, 59, 999)
+const today = new Date();
+today.setHours(23, 59, 59, 999);
 const posts = (await getCollection('blog'))
-  .filter(post => new Date(post.data.date + 'T00:00:00') <= today)
+  .filter(post => new Date(`${post.data.date}T00:00:00`) <= today)
   .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
 
 const categories = [
@@ -138,115 +138,124 @@ function readingTime(description: string): string {
 </Layout>
 
 <script>
-  const BATCH_SIZE = 12;
+const BATCH_SIZE = 12;
 
-  const today = new Date();
-  today.setHours(23, 59, 59, 999);
+const today = new Date();
+today.setHours(23, 59, 59, 999);
 
-  const featuredWrap = document.getElementById('blog-featured');
-  const featuredCard = featuredWrap?.querySelector<HTMLElement>('.blog-card');
-  const gridCards = Array.from(document.querySelectorAll<HTMLElement>('#blog-grid .blog-card'));
-  const emptyMsg = document.getElementById('blog-empty');
-  const loadMoreWrap = document.getElementById('load-more-wrap');
-  const loadMoreBtn = document.getElementById('load-more-btn');
-  const postCount = document.getElementById('post-count');
+const featuredWrap = document.getElementById('blog-featured');
+const featuredCard = featuredWrap?.querySelector<HTMLElement>('.blog-card');
+const gridCards = Array.from(document.querySelectorAll<HTMLElement>('#blog-grid .blog-card'));
+const emptyMsg = document.getElementById('blog-empty');
+const loadMoreWrap = document.getElementById('load-more-wrap');
+const loadMoreBtn = document.getElementById('load-more-btn');
+const postCount = document.getElementById('post-count');
 
-  let currentFilter = 'all';
-  let visibleBatches = 1; // how many batches of BATCH_SIZE are revealed
+let currentFilter = 'all';
+let visibleBatches = 1; // how many batches of BATCH_SIZE are revealed
 
-  // Mark released posts
-  function markReleased(card: HTMLElement) {
-    const postDate = new Date(card.dataset.date + 'T00:00:00');
-    card.dataset.released = postDate <= today ? 'true' : 'false';
-  }
+// Mark released posts
+function markReleased(card: HTMLElement) {
+  const postDate = new Date(`${card.dataset.date}T00:00:00`);
+  card.dataset.released = postDate <= today ? 'true' : 'false';
+}
 
-  if (featuredCard) markReleased(featuredCard);
-  gridCards.forEach(markReleased);
+if (featuredCard)
+  markReleased(featuredCard);
+gridCards.forEach(markReleased);
 
-  // Check if a card matches the current filter
-  function matchesFilter(card: HTMLElement): boolean {
-    if (card.dataset.released !== 'true') return false;
-    if (currentFilter === 'all') return true;
-    return card.dataset.category === currentFilter;
-  }
+// Check if a card matches the current filter
+function matchesFilter(card: HTMLElement): boolean {
+  if (card.dataset.released !== 'true')
+    return false;
+  if (currentFilter === 'all')
+    return true;
+  return card.dataset.category === currentFilter;
+}
 
-  // Get all grid cards that match the current filter
-  function getFilteredGridCards(): HTMLElement[] {
-    return gridCards.filter(matchesFilter);
-  }
+// Get all grid cards that match the current filter
+function getFilteredGridCards(): HTMLElement[] {
+  return gridCards.filter(matchesFilter);
+}
 
-  // Apply filter + pagination
-  function render() {
-    // Featured card
-    if (featuredCard && featuredWrap) {
-      if (matchesFilter(featuredCard)) {
-        featuredCard.style.display = '';
-        featuredWrap.style.display = '';
-      } else {
-        featuredCard.style.display = 'none';
-        featuredWrap.style.display = 'none';
-      }
+// Apply filter + pagination
+function render() {
+  // Featured card
+  if (featuredCard && featuredWrap) {
+    if (matchesFilter(featuredCard)) {
+      featuredCard.style.display = '';
+      featuredWrap.style.display = '';
     }
-
-    // Grid cards: hide all first
-    gridCards.forEach(card => { card.style.display = 'none'; });
-
-    const filtered = getFilteredGridCards();
-    const maxVisible = visibleBatches * BATCH_SIZE;
-
-    filtered.forEach((card, idx) => {
-      card.style.display = idx < maxVisible ? '' : 'none';
-    });
-
-    // Count total visible (featured + grid)
-    const featuredVisible = (featuredCard && matchesFilter(featuredCard)) ? 1 : 0;
-    const totalFiltered = featuredVisible + filtered.length;
-    const totalShown = featuredVisible + Math.min(filtered.length, maxVisible);
-
-    // Empty state
-    if (emptyMsg) {
-      emptyMsg.style.display = totalFiltered === 0 ? '' : 'none';
-    }
-
-    // Load more button
-    if (loadMoreWrap && loadMoreBtn && postCount) {
-      if (filtered.length > maxVisible) {
-        loadMoreWrap.style.display = '';
-        const remaining = filtered.length - maxVisible;
-        loadMoreBtn.textContent = `Load More Articles (${remaining} remaining)`;
-        postCount.textContent = `Showing ${totalShown} of ${totalFiltered} articles`;
-      } else if (totalFiltered > 1) {
-        // All shown, but show the count if there are posts
-        loadMoreWrap.style.display = '';
-        loadMoreBtn.style.display = 'none';
-        postCount.textContent = `Showing all ${totalFiltered} articles`;
-      } else {
-        loadMoreWrap.style.display = 'none';
-      }
+    else {
+      featuredCard.style.display = 'none';
+      featuredWrap.style.display = 'none';
     }
   }
 
-  // Category filter buttons
-  const filters = document.querySelectorAll('.blog-filter-btn');
-  filters.forEach(btn => {
-    btn.addEventListener('click', () => {
-      filters.forEach(f => f.classList.remove('active'));
-      btn.classList.add('active');
-      currentFilter = btn.getAttribute('data-filter') || 'all';
-      visibleBatches = 1; // reset pagination on filter change
-      if (loadMoreBtn) loadMoreBtn.style.display = '';
-      render();
-    });
+  // Grid cards: hide all first
+  gridCards.forEach((card) => {
+    card.style.display = 'none';
   });
 
-  // Load more button
-  if (loadMoreBtn) {
-    loadMoreBtn.addEventListener('click', () => {
-      visibleBatches++;
-      render();
-    });
+  const filtered = getFilteredGridCards();
+  const maxVisible = visibleBatches * BATCH_SIZE;
+
+  filtered.forEach((card, idx) => {
+    card.style.display = idx < maxVisible ? '' : 'none';
+  });
+
+  // Count total visible (featured + grid)
+  const featuredVisible = (featuredCard && matchesFilter(featuredCard)) ? 1 : 0;
+  const totalFiltered = featuredVisible + filtered.length;
+  const totalShown = featuredVisible + Math.min(filtered.length, maxVisible);
+
+  // Empty state
+  if (emptyMsg) {
+    emptyMsg.style.display = totalFiltered === 0 ? '' : 'none';
   }
 
-  // Initial render
-  render();
+  // Load more button
+  if (loadMoreWrap && loadMoreBtn && postCount) {
+    if (filtered.length > maxVisible) {
+      loadMoreWrap.style.display = '';
+      const remaining = filtered.length - maxVisible;
+      loadMoreBtn.textContent = `Load More Articles (${remaining} remaining)`;
+      postCount.textContent = `Showing ${totalShown} of ${totalFiltered} articles`;
+    }
+    else if (totalFiltered > 1) {
+      // All shown, but show the count if there are posts
+      loadMoreWrap.style.display = '';
+      loadMoreBtn.style.display = 'none';
+      postCount.textContent = `Showing all ${totalFiltered} articles`;
+    }
+    else {
+      loadMoreWrap.style.display = 'none';
+    }
+  }
+}
+
+// Category filter buttons
+const filters = document.querySelectorAll('.blog-filter-btn');
+filters.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    filters.forEach(f => f.classList.remove('active'));
+    btn.classList.add('active');
+    currentFilter = btn.getAttribute('data-filter') || 'all';
+    visibleBatches = 1; // reset pagination on filter change
+    if (loadMoreBtn)
+      loadMoreBtn.style.display = '';
+    render();
+  });
+});
+
+// Load more button
+if (loadMoreBtn) {
+  loadMoreBtn.addEventListener('click', () => {
+    visibleBatches++;
+    render();
+  });
+}
+
+// Initial render
+render();
 </script>

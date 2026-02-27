@@ -1,13 +1,12 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import { t } from '../../i18n/index.ts';
-import IconPhone from '../../components/icons/IconPhone.astro';
+import IconArrowRight from '../../components/icons/IconArrowRight.astro';
 import IconLinkedIn from '../../components/icons/IconLinkedIn.astro';
 import IconLocation from '../../components/icons/IconLocation.astro';
-import IconArrowRight from '../../components/icons/IconArrowRight.astro';
+import IconPhone from '../../components/icons/IconPhone.astro';
+import { t } from '../../i18n/index.ts';
+import Layout from '../../layouts/Layout.astro';
 
-const lang = 'da';  // Hardcode for Danish pages
-const prefix = '/da';  // Hardcode for Danish pages
+const lang = 'da'; // Hardcode for Danish pages
 ---
 
 <Layout title={t('meta.contactTitle', lang)} description={t('meta.contactDescription', lang)} lang={lang}>
@@ -83,7 +82,9 @@ const prefix = '/da';  // Hardcode for Danish pages
             <span class="form-trust-item">&#10003; Svar inden for 4 timer</span>
             <span class="form-trust-item">&#10003; Ingen forpligtelse</span>
           </div>
-          <form class="contact-form" id="contact-form"
+          <form
+            class="contact-form"
+            id="contact-form"
             data-sending={t('contact.sending', lang)}
             data-success-title={t('contact.successTitle', lang)}
             data-success-msg={t('contact.successMessage', lang)}
@@ -187,52 +188,57 @@ const prefix = '/da';  // Hardcode for Danish pages
 </Layout>
 
 <script>
-  const form = document.getElementById('contact-form') as HTMLFormElement;
-  const statusEl = document.getElementById('form-status') as HTMLDivElement;
-  const timestampEl = document.getElementById('form-timestamp') as HTMLInputElement;
+const form = document.getElementById('contact-form') as HTMLFormElement;
+const statusEl = document.getElementById('form-status') as HTMLDivElement;
+const timestampEl = document.getElementById('form-timestamp') as HTMLInputElement;
 
-  if (timestampEl) timestampEl.value = String(Date.now());
+if (timestampEl)
+  timestampEl.value = String(Date.now());
 
-  if (form) {
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
+if (form) {
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
 
-      const submitBtn = form.querySelector('button[type="submit"]') as HTMLButtonElement;
-      const btnText = submitBtn.querySelector('.btn-text') as HTMLSpanElement;
-      const originalHtml = btnText.innerHTML;
-      submitBtn.disabled = true;
-      btnText.textContent = form.dataset.sending || 'Sender...';
-      statusEl.style.display = 'none';
+    const submitBtn = form.querySelector('button[type="submit"]') as HTMLButtonElement;
+    const btnText = submitBtn.querySelector('.btn-text') as HTMLSpanElement;
+    const originalHtml = btnText.innerHTML;
+    submitBtn.disabled = true;
+    btnText.textContent = form.dataset.sending || 'Sender...';
+    statusEl.style.display = 'none';
 
-      const formData = new FormData(form);
-      const data = Object.fromEntries(formData.entries());
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
 
-      try {
-        const res = await fetch('/api/contact', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(data),
-        });
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
 
-        if (res.ok) {
-          statusEl.className = 'form-status form-status-success';
-          statusEl.innerHTML = `<strong>${form.dataset.successTitle}</strong><p>${form.dataset.successMsg}</p>`;
-          statusEl.style.display = 'block';
-          form.reset();
-          if (timestampEl) timestampEl.value = String(Date.now());
-        } else {
-          throw new Error('Request failed');
-        }
-      } catch {
-        statusEl.className = 'form-status form-status-error';
-        statusEl.innerHTML = `<strong>${form.dataset.errorTitle}</strong><p>${form.dataset.errorMsg}</p>`;
+      if (res.ok) {
+        statusEl.className = 'form-status form-status-success';
+        statusEl.innerHTML = `<strong>${form.dataset.successTitle}</strong><p>${form.dataset.successMsg}</p>`;
         statusEl.style.display = 'block';
-      } finally {
-        submitBtn.disabled = false;
-        btnText.innerHTML = originalHtml;
+        form.reset();
+        if (timestampEl)
+          timestampEl.value = String(Date.now());
       }
-    });
-  }
+      else {
+        throw new Error('Request failed');
+      }
+    }
+    catch {
+      statusEl.className = 'form-status form-status-error';
+      statusEl.innerHTML = `<strong>${form.dataset.errorTitle}</strong><p>${form.dataset.errorMsg}</p>`;
+      statusEl.style.display = 'block';
+    }
+    finally {
+      submitBtn.disabled = false;
+      btnText.innerHTML = originalHtml;
+    }
+  });
+}
 </script>
 
 <style>

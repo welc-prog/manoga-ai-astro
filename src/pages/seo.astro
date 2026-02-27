@@ -1,13 +1,13 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import { t } from '../i18n/index.ts';
-import IconSearch from '../components/icons/IconSearch.astro';
-import IconCode from '../components/icons/IconCode.astro';
-import IconBarChart from '../components/icons/IconBarChart.astro';
-import IconTarget from '../components/icons/IconTarget.astro';
-import IconBrain from '../components/icons/IconBrain.astro';
-import IconShield from '../components/icons/IconShield.astro';
 import IconArrowRight from '../components/icons/IconArrowRight.astro';
+import IconBarChart from '../components/icons/IconBarChart.astro';
+import IconBrain from '../components/icons/IconBrain.astro';
+import IconCode from '../components/icons/IconCode.astro';
+import IconSearch from '../components/icons/IconSearch.astro';
+import IconShield from '../components/icons/IconShield.astro';
+import IconTarget from '../components/icons/IconTarget.astro';
+import { t } from '../i18n/index.ts';
+import Layout from '../layouts/Layout.astro';
 
 const lang = 'en';
 const prefix = lang === 'en' ? '' : `/${lang}`;
@@ -276,44 +276,47 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
     </div>
   </section>
 
-  <script type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
+  <script
+    type="application/ld+json"
+    set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    'mainEntity': [
       {
-        "@type": "Question",
-        "name": "How long does SEO take to show results?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "SEO is a long-term investment. Most clients see initial improvements within 3-4 months, with significant results typically appearing after 6-12 months."
-        }
+        '@type': 'Question',
+        'name': 'How long does SEO take to show results?',
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': 'SEO is a long-term investment. Most clients see initial improvements within 3-4 months, with significant results typically appearing after 6-12 months.',
+        },
       },
       {
-        "@type": "Question",
-        "name": "Can you guarantee #1 rankings?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No legitimate SEO professional can guarantee specific rankings. I focus on sustainable growth and measurable improvements in traffic and conversions."
-        }
+        '@type': 'Question',
+        'name': 'Can you guarantee #1 rankings?',
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': 'No legitimate SEO professional can guarantee specific rankings. I focus on sustainable growth and measurable improvements in traffic and conversions.',
+        },
       },
       {
-        "@type": "Question",
-        "name": "Do you build backlinks?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "I focus on earning links through quality content and outreach, not buying or manipulating links which can harm your site."
-        }
+        '@type': 'Question',
+        'name': 'Do you build backlinks?',
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': 'I focus on earning links through quality content and outreach, not buying or manipulating links which can harm your site.',
+        },
       },
       {
-        "@type": "Question",
-        "name": "How do you measure SEO success?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Beyond rankings, I track organic traffic, conversions from organic search, and overall visibility improvements. Real business metrics matter most."
-        }
-      }
-    ]
-  })} />
+        '@type': 'Question',
+        'name': 'How do you measure SEO success?',
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': 'Beyond rankings, I track organic traffic, conversions from organic search, and overall visibility improvements. Real business metrics matter most.',
+        },
+      },
+    ],
+  })}
+  />
 </Layout>
 
 <style>

@@ -13,7 +13,8 @@ let daPath: string;
 if (lang === 'en') {
   enPath = currentPath;
   daPath = `/da${currentPath}`;
-} else {
+}
+ else {
   // Remove /da prefix for English
   enPath = currentPath.replace(/^\/da/, '') || '/';
   daPath = currentPath;
