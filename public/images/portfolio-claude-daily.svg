@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a0f"/>
+      <stop offset="50%" style="stop-color:#111118"/>
+      <stop offset="100%" style="stop-color:#0a0a0f"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#b8860b"/>
+      <stop offset="100%" style="stop-color:#daa520"/>
+    </linearGradient>
+    <linearGradient id="silver" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8b8b8b"/>
+      <stop offset="100%" style="stop-color:#c0c0c0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <!-- Grid pattern -->
+  <g opacity="0.03">
+    <line x1="0" y1="0" x2="0" y2="630" stroke="white" stroke-width="1" transform="translate(60,0)"/>
+    <line x1="0" y1="0" x2="0" y2="630" stroke="white" stroke-width="1" transform="translate(120,0)"/>
+    <line x1="0" y1="0" x2="0" y2="630" stroke="white" stroke-width="1" transform="translate(180,0)"/>
+    <line x1="0" y1="0" x2="0" y2="630" stroke="white" stroke-width="1" transform="translate(240,0)"/>
+    <line x1="0" y1="0" x2="0" y2="630" stroke="white" stroke-width="1" transform="translate(300,0)"/>
+    <line x1="0" y1="0" x2="1200" y2="0" stroke="white" stroke-width="1" transform="translate(0,60)"/>
+    <line x1="0" y1="0" x2="1200" y2="0" stroke="white" stroke-width="1" transform="translate(0,120)"/>
+    <line x1="0" y1="0" x2="1200" y2="0" stroke="white" stroke-width="1" transform="translate(0,180)"/>
+  </g>
+  <!-- Glow effects -->
+  <circle cx="850" cy="180" r="200" fill="#daa520" opacity="0.05"/>
+  <circle cx="350" cy="450" r="250" fill="#b8860b" opacity="0.03"/>
+  <!-- Newspaper/signal icon -->
+  <g transform="translate(525, 120)">
+    <rect x="0" y="0" width="150" height="110" rx="12" fill="url(#gold)" opacity="0.12"/>
+    <rect x="0" y="0" width="150" height="110" rx="12" stroke="url(#gold)" stroke-width="2" fill="none"/>
+    <!-- Signal bars inside -->
+    <rect x="30" y="70" width="16" height="20" rx="3" fill="url(#gold)" opacity="0.6"/>
+    <rect x="55" y="55" width="16" height="35" rx="3" fill="url(#gold)" opacity="0.7"/>
+    <rect x="80" y="40" width="16" height="50" rx="3" fill="url(#gold)" opacity="0.8"/>
+    <rect x="105" y="25" width="16" height="65" rx="3" fill="url(#gold)" opacity="0.9"/>
+    <!-- Headline lines -->
+    <rect x="30" y="15" width="90" height="3" rx="1.5" fill="#daa520" opacity="0.4"/>
+  </g>
+  <!-- Title text -->
+  <text x="600" y="300" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="48" font-weight="700" fill="white">Claude</text>
+  <text x="600" y="358" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="48" font-weight="700" fill="url(#gold)">Daily</text>
+  <!-- Subtitle -->
+  <text x="600" y="415" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="18" fill="#94a3b8" opacity="0.8">Signal over noise for builders</text>
+  <!-- Tech tags -->
+  <g transform="translate(355, 455)">
+    <rect x="0" y="0" width="80" height="30" rx="6" fill="#daa520" opacity="0.15" stroke="#daa520" stroke-width="1" stroke-opacity="0.3"/>
+    <text x="40" y="20" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#daa520">Claude</text>
+    <rect x="95" y="0" width="70" height="30" rx="6" fill="#00dc82" opacity="0.15" stroke="#00dc82" stroke-width="1" stroke-opacity="0.3"/>
+    <text x="130" y="20" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#00dc82">Nuxt</text>
+    <rect x="180" y="0" width="90" height="30" rx="6" fill="#38bdf8" opacity="0.15" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.3"/>
+    <text x="225" y="20" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#38bdf8">Tailwind</text>
+    <rect x="285" y="0" width="60" height="30" rx="6" fill="#c0c0c0" opacity="0.15" stroke="#c0c0c0" stroke-width="1" stroke-opacity="0.3"/>
+    <text x="315" y="20" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#c0c0c0">60+</text>
+    <rect x="360" y="0" width="80" height="30" rx="6" fill="#a78bfa" opacity="0.15" stroke="#a78bfa" stroke-width="1" stroke-opacity="0.3"/>
+    <text x="400" y="20" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#a78bfa">Sources</text>
+  </g>
+  <!-- URL bar mockup at bottom -->
+  <g transform="translate(375, 530)">
+    <rect x="0" y="0" width="450" height="35" rx="8" fill="white" opacity="0.05" stroke="white" stroke-width="1" stroke-opacity="0.1"/>
+    <text x="225" y="22" text-anchor="middle" font-family="monospace" font-size="13" fill="#94a3b8" opacity="0.6">simpleclaude.news</text>
+  </g>
+</svg>
