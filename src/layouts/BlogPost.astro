@@ -1,6 +1,8 @@
 ---
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
+import Analytics from '@vercel/analytics/astro';
+import { categoryColors, categoryLabels } from '../utils/blog';
 import '../styles/main.css';
 
 interface RelatedPost {
@@ -25,20 +27,6 @@ interface Props {
 const { title, description, date, category, image, author, readingTime, relatedPosts = [] } = Astro.props;
 
 const siteUrl = 'https://www.manoga.digital';
-
-const categoryLabels: Record<string, string> = {
-  'seo': 'SEO',
-  'ai': 'Artificial Intelligence',
-  'claude-code': 'Claude Code',
-  'gtm': 'Google Tag Manager',
-};
-
-const categoryColors: Record<string, string> = {
-  'seo': 'var(--accent)',
-  'ai': 'var(--accent-secondary)',
-  'claude-code': 'var(--accent-tertiary)',
-  'gtm': '#10b981',
-};
 
 const formattedDate = new Date(date).toLocaleDateString('en-US', {
   year: 'numeric',
@@ -152,6 +140,7 @@ const formattedDate = new Date(date).toLocaleDateString('en-US', {
       </article>
     </main>
     <Footer lang="en" />
+    <Analytics />
     <script define:vars={{ date }}>
       const postDate = new Date(`${date}T00:00:00`);
       const today = new Date();

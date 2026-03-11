@@ -1,6 +1,7 @@
 ---
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
+import Analytics from '@vercel/analytics/astro';
 import { t } from '../i18n/index.ts';
 import '../styles/main.css';
 
@@ -47,6 +48,7 @@ const desc = description || t('meta.description', lang);
       </>
     )}
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="alternate" type="application/rss+xml" title="Manoga Digital Blog" href="/rss.xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -70,5 +72,6 @@ const desc = description || t('meta.description', lang);
       <slot />
     </main>
     <Footer lang={lang} />
+    <Analytics />
   </body>
 </html>
