@@ -1,5 +1,7 @@
 ---
-import IconArrowRight from '../../components/icons/IconArrowRight.astro';
+import BenefitsGrid from '../../components/BenefitsGrid.astro';
+import CtaSection from '../../components/CtaSection.astro';
+import FaqSection from '../../components/FaqSection.astro';
 import IconBarChart from '../../components/icons/IconBarChart.astro';
 import IconBrain from '../../components/icons/IconBrain.astro';
 import IconCode from '../../components/icons/IconCode.astro';
@@ -74,49 +76,17 @@ const prefix = '/da'; // Hardcode for Danish pages
   </section>
 
   <!-- Benefits Section -->
-  <section class="section">
-    <div class="container">
-      <div class="text-center mb-3">
-        <span class="hero-tagline">{t('common.benefits', lang)}</span>
-        <h2>{t('pages.workshops.whyTitle', lang)}</h2>
-        <p style="max-width: 700px; margin: 0 auto;">{t('pages.workshops.whyDesc', lang)}</p>
-      </div>
-
-      <div class="benefits-grid reveal">
-        <div class="benefit-item">
-          <div class="benefit-icon">
-            <IconBarChart />
-          </div>
-          <h4>{t('pages.workshops.benefit1', lang)}</h4>
-          <p>{t('pages.workshops.benefit1Desc', lang)}</p>
-        </div>
-
-        <div class="benefit-item">
-          <div class="benefit-icon">
-            <IconWorkshop />
-          </div>
-          <h4>{t('pages.workshops.benefit2', lang)}</h4>
-          <p>{t('pages.workshops.benefit2Desc', lang)}</p>
-        </div>
-
-        <div class="benefit-item">
-          <div class="benefit-icon">
-            <IconShield />
-          </div>
-          <h4>{t('pages.workshops.benefit3', lang)}</h4>
-          <p>{t('pages.workshops.benefit3Desc', lang)}</p>
-        </div>
-
-        <div class="benefit-item">
-          <div class="benefit-icon">
-            <IconTarget />
-          </div>
-          <h4>{t('pages.workshops.benefit4', lang)}</h4>
-          <p>{t('pages.workshops.benefit4Desc', lang)}</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <BenefitsGrid
+    lang={lang}
+    title={t('pages.workshops.whyTitle', lang)}
+    description={t('pages.workshops.whyDesc', lang)}
+    items={[
+      { icon: IconBarChart, titleKey: 'pages.workshops.benefit1', descKey: 'pages.workshops.benefit1Desc' },
+      { icon: IconWorkshop, titleKey: 'pages.workshops.benefit2', descKey: 'pages.workshops.benefit2Desc' },
+      { icon: IconShield, titleKey: 'pages.workshops.benefit3', descKey: 'pages.workshops.benefit3Desc' },
+      { icon: IconTarget, titleKey: 'pages.workshops.benefit4', descKey: 'pages.workshops.benefit4Desc' },
+    ]}
+  />
 
   <!-- Workshop Formats Section -->
   <section class="section">
@@ -128,19 +98,19 @@ const prefix = '/da'; // Hardcode for Danish pages
 
       <div class="services-grid reveal">
         <div class="card">
-          <h4 class="card-title">{t('pages.workshops.workshop1', lang)}</h4>
+          <h3 class="card-title">{t('pages.workshops.workshop1', lang)}</h3>
           <p class="card-text">{t('pages.workshops.workshop1Desc', lang)}</p>
         </div>
         <div class="card">
-          <h4 class="card-title">{t('pages.workshops.workshop2', lang)}</h4>
+          <h3 class="card-title">{t('pages.workshops.workshop2', lang)}</h3>
           <p class="card-text">{t('pages.workshops.workshop2Desc', lang)}</p>
         </div>
         <div class="card">
-          <h4 class="card-title">{t('pages.workshops.workshop3', lang)}</h4>
+          <h3 class="card-title">{t('pages.workshops.workshop3', lang)}</h3>
           <p class="card-text">{t('pages.workshops.workshop3Desc', lang)}</p>
         </div>
         <div class="card">
-          <h4 class="card-title">{t('pages.workshops.workshop4', lang)}</h4>
+          <h3 class="card-title">{t('pages.workshops.workshop4', lang)}</h3>
           <p class="card-text">{t('pages.workshops.workshop4Desc', lang)}</p>
         </div>
       </div>
@@ -148,50 +118,18 @@ const prefix = '/da'; // Hardcode for Danish pages
   </section>
 
   <!-- FAQ Section -->
-  <section class="section">
-    <div class="container">
-      <div class="text-center mb-3">
-        <span class="hero-tagline">{t('common.gotQuestions', lang)}</span>
-        <h2>{t('common.faq', lang)}</h2>
-      </div>
-
-      <div class="faq-grid reveal">
-        <div class="faq-item">
-          <h4 class="faq-question">{t('pages.workshops.faq1', lang)}</h4>
-          <p class="faq-answer">{t('pages.workshops.faq1Answer', lang)}</p>
-        </div>
-
-        <div class="faq-item">
-          <h4 class="faq-question">{t('pages.workshops.faq2', lang)}</h4>
-          <p class="faq-answer">{t('pages.workshops.faq2Answer', lang)}</p>
-        </div>
-
-        <div class="faq-item">
-          <h4 class="faq-question">{t('pages.workshops.faq3', lang)}</h4>
-          <p class="faq-answer">{t('pages.workshops.faq3Answer', lang)}</p>
-        </div>
-
-        <div class="faq-item">
-          <h4 class="faq-question">{t('pages.workshops.faq4', lang)}</h4>
-          <p class="faq-answer">{t('pages.workshops.faq4Answer', lang)}</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <FaqSection
+    lang={lang}
+    items={[
+      { questionKey: 'pages.workshops.faq1', answerKey: 'pages.workshops.faq1Answer' },
+      { questionKey: 'pages.workshops.faq2', answerKey: 'pages.workshops.faq2Answer' },
+      { questionKey: 'pages.workshops.faq3', answerKey: 'pages.workshops.faq3Answer' },
+      { questionKey: 'pages.workshops.faq4', answerKey: 'pages.workshops.faq4Answer' },
+    ]}
+  />
 
   <!-- CTA -->
-  <section class="section">
-    <div class="container">
-      <div class="card text-center" style="padding: var(--space-xl); max-width: 800px; margin: 0 auto;">
-        <h2 class="mb-1">{t('cta.title', lang)}</h2>
-        <p style="font-size: 1.25rem; margin-bottom: var(--space-md);">{t('cta.subtitle', lang)}</p>
-        <a href={`${prefix}/contact`} class="btn btn-primary">
-          {t('cta.button', lang)}
-          <IconArrowRight />
-        </a>
-      </div>
-    </div>
-  </section>
+  <CtaSection lang={lang} prefix={prefix} />
 </Layout>
 
 <style>
@@ -209,74 +147,5 @@ const prefix = '/da'; // Hardcode for Danish pages
   line-height: 1.8;
   margin-bottom: var(--space-md);
   color: var(--text-secondary);
-}
-
-.benefits-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: var(--space-lg);
-}
-
-.benefit-item {
-  text-align: center;
-  padding: var(--space-lg);
-}
-
-.benefit-icon {
-  width: 60px;
-  height: 60px;
-  margin: 0 auto var(--space-md);
-  background: var(--gradient-primary);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.benefit-icon :global(svg) {
-  width: 28px;
-  height: 28px;
-  color: white;
-}
-
-.benefit-item h4 {
-  margin-bottom: var(--space-sm);
-  color: var(--text-primary);
-}
-
-.benefit-item p {
-  color: var(--text-secondary);
-  line-height: 1.6;
-}
-
-.faq-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 0;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.faq-item {
-  background: transparent;
-  padding: var(--space-lg) 0;
-  border-radius: 0;
-  border: none;
-  border-bottom: 1px solid var(--border);
-}
-
-.faq-item:last-child {
-  border-bottom: none;
-}
-
-.faq-question {
-  color: var(--text-primary);
-  margin-bottom: var(--space-sm);
-  font-size: 1.1rem;
-}
-
-.faq-answer {
-  color: var(--text-secondary);
-  line-height: 1.6;
 }
 </style>

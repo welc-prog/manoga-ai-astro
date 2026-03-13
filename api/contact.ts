@@ -14,6 +14,12 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
+  // Origin check — only accept requests from the site itself
+  const origin = req.headers.origin || req.headers.referer || '';
+  if (!origin.includes('manoga.digital') && process.env.NODE_ENV === 'production') {
+    return res.status(403).json({ error: 'Forbidden' });
+  }
+
   const { name, email, phone, service, message, website, _t } = req.body;
 
   // Honeypot check — bots fill this hidden field, humans don't see it
@@ -30,6 +36,14 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   // Validate required fields
   if (!name || !email || !message) {
     return res.status(400).json({ error: 'Missing required fields' });
+  }
+
+  // Input length validation
+  if (String(name).length > 200 || String(email).length > 254 || String(message).length > 5000) {
+    return res.status(400).json({ error: 'Input exceeds maximum length' });
+  }
+  if (phone && String(phone).length > 30) {
+    return res.status(400).json({ error: 'Input exceeds maximum length' });
   }
 
   // Basic email format validation
@@ -55,7 +69,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     await resend.emails.send({
       from: 'Manoga Contact <contact@manoga.digital>',
       to: 'hi@manoga.digital',
-      replyTo: email,
+      replyTo: String(email).replace(/[\r\n\0]/g, ''),
       subject: `New inquiry from ${safeName}`,
       html: `
         <h2>New Contact Form Submission</h2>

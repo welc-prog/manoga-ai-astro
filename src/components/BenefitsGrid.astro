@@ -1,0 +1,83 @@
+---
+import { t } from '../i18n/index.ts';
+
+interface BenefitItem {
+  icon: any;
+  titleKey: string;
+  descKey: string;
+}
+
+interface Props {
+  lang: string;
+  title: string;
+  description?: string;
+  items: BenefitItem[];
+}
+
+const { lang, title, description, items } = Astro.props;
+---
+
+<section class="section">
+  <div class="container">
+    <div class="text-center mb-3">
+      <span class="hero-tagline">{t('common.benefits', lang)}</span>
+      <h2>{title}</h2>
+      {description && <p style="max-width: 700px; margin: 0 auto;">{description}</p>}
+    </div>
+
+    <div class="benefits-grid reveal">
+      {items.map((item) => {
+        const Icon = item.icon;
+        return (
+          <div class="benefit-item">
+            <div class="benefit-icon">
+              <Icon />
+            </div>
+            <h3>{t(item.titleKey, lang)}</h3>
+            <p>{t(item.descKey, lang)}</p>
+          </div>
+        );
+      })}
+    </div>
+  </div>
+</section>
+
+<style>
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-lg);
+}
+
+.benefit-item {
+  text-align: center;
+  padding: var(--space-lg);
+}
+
+.benefit-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto var(--space-md);
+  background: var(--gradient-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.benefit-icon :global(svg) {
+  width: 28px;
+  height: 28px;
+  color: white;
+}
+
+.benefit-item h3 {
+  margin-bottom: var(--space-sm);
+  color: var(--text-primary);
+}
+
+.benefit-item p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+</style>

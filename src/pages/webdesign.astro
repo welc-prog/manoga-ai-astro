@@ -1,5 +1,7 @@
 ---
-import IconArrowRight from '../components/icons/IconArrowRight.astro';
+import BenefitsGrid from '../components/BenefitsGrid.astro';
+import CtaSection from '../components/CtaSection.astro';
+import FaqSection from '../components/FaqSection.astro';
 import IconBarChart from '../components/icons/IconBarChart.astro';
 import IconCode from '../components/icons/IconCode.astro';
 import IconExternal from '../components/icons/IconExternal.astro';
@@ -135,49 +137,17 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
   </section>
 
   <!-- Benefits Section -->
-  <section class="section">
-    <div class="container">
-      <div class="text-center mb-3">
-        <span class="hero-tagline">{t('common.benefits', lang)}</span>
-        <h2>{t('pages.webdesign.whyTitle', lang)}</h2>
-        <p style="max-width: 700px; margin: 0 auto;">{t('pages.webdesign.whyDesc', lang)}</p>
-      </div>
-
-      <div class="benefits-grid reveal">
-        <div class="benefit-item">
-          <div class="benefit-icon">
-            <IconTarget />
-          </div>
-          <h3>{t('pages.webdesign.benefit1', lang)}</h3>
-          <p>{t('pages.webdesign.benefit1Desc', lang)}</p>
-        </div>
-
-        <div class="benefit-item">
-          <div class="benefit-icon">
-            <IconBarChart />
-          </div>
-          <h3>{t('pages.webdesign.benefit2', lang)}</h3>
-          <p>{t('pages.webdesign.benefit2Desc', lang)}</p>
-        </div>
-
-        <div class="benefit-item">
-          <div class="benefit-icon">
-            <IconLayout />
-          </div>
-          <h3>{t('pages.webdesign.benefit3', lang)}</h3>
-          <p>{t('pages.webdesign.benefit3Desc', lang)}</p>
-        </div>
-
-        <div class="benefit-item">
-          <div class="benefit-icon">
-            <IconCode />
-          </div>
-          <h3>{t('pages.webdesign.benefit4', lang)}</h3>
-          <p>{t('pages.webdesign.benefit4Desc', lang)}</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <BenefitsGrid
+    lang={lang}
+    title={t('pages.webdesign.whyTitle', lang)}
+    description={t('pages.webdesign.whyDesc', lang)}
+    items={[
+      { icon: IconTarget, titleKey: 'pages.webdesign.benefit1', descKey: 'pages.webdesign.benefit1Desc' },
+      { icon: IconBarChart, titleKey: 'pages.webdesign.benefit2', descKey: 'pages.webdesign.benefit2Desc' },
+      { icon: IconLayout, titleKey: 'pages.webdesign.benefit3', descKey: 'pages.webdesign.benefit3Desc' },
+      { icon: IconCode, titleKey: 'pages.webdesign.benefit4', descKey: 'pages.webdesign.benefit4Desc' },
+    ]}
+  />
 
   <!-- Services Section -->
   <section class="section">
@@ -209,50 +179,18 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
   </section>
 
   <!-- FAQ Section -->
-  <section class="section">
-    <div class="container">
-      <div class="text-center mb-3">
-        <span class="hero-tagline">{t('common.gotQuestions', lang)}</span>
-        <h2>{t('common.faq', lang)}</h2>
-      </div>
-
-      <div class="faq-grid reveal">
-        <div class="faq-item">
-          <h3 class="faq-question">{t('pages.webdesign.faq1', lang)}</h3>
-          <p class="faq-answer">{t('pages.webdesign.faq1Answer', lang)}</p>
-        </div>
-
-        <div class="faq-item">
-          <h3 class="faq-question">{t('pages.webdesign.faq2', lang)}</h3>
-          <p class="faq-answer">{t('pages.webdesign.faq2Answer', lang)}</p>
-        </div>
-
-        <div class="faq-item">
-          <h3 class="faq-question">{t('pages.webdesign.faq3', lang)}</h3>
-          <p class="faq-answer">{t('pages.webdesign.faq3Answer', lang)}</p>
-        </div>
-
-        <div class="faq-item">
-          <h3 class="faq-question">{t('pages.webdesign.faq4', lang)}</h3>
-          <p class="faq-answer">{t('pages.webdesign.faq4Answer', lang)}</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <FaqSection
+    lang={lang}
+    items={[
+      { questionKey: 'pages.webdesign.faq1', answerKey: 'pages.webdesign.faq1Answer' },
+      { questionKey: 'pages.webdesign.faq2', answerKey: 'pages.webdesign.faq2Answer' },
+      { questionKey: 'pages.webdesign.faq3', answerKey: 'pages.webdesign.faq3Answer' },
+      { questionKey: 'pages.webdesign.faq4', answerKey: 'pages.webdesign.faq4Answer' },
+    ]}
+  />
 
   <!-- CTA -->
-  <section class="section">
-    <div class="container">
-      <div class="card text-center" style="padding: var(--space-xl); max-width: 800px; margin: 0 auto;">
-        <h2 class="mb-1">{t('cta.title', lang)}</h2>
-        <p style="font-size: 1.25rem; margin-bottom: var(--space-md);">{t('cta.subtitle', lang)}</p>
-        <a href={`${prefix}/contact`} class="btn btn-primary">
-          {t('cta.button', lang)}
-          <IconArrowRight />
-        </a>
-      </div>
-    </div>
-  </section>
+  <CtaSection lang={lang} prefix={prefix} />
 
   <script
     type="application/ld+json"
@@ -312,75 +250,6 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
   line-height: 1.8;
   margin-bottom: var(--space-md);
   color: var(--text-secondary);
-}
-
-.benefits-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: var(--space-lg);
-}
-
-.benefit-item {
-  text-align: center;
-  padding: var(--space-lg);
-}
-
-.benefit-icon {
-  width: 60px;
-  height: 60px;
-  margin: 0 auto var(--space-md);
-  background: var(--gradient-primary);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.benefit-icon :global(svg) {
-  width: 28px;
-  height: 28px;
-  color: white;
-}
-
-.benefit-item h3 {
-  margin-bottom: var(--space-sm);
-  color: var(--text-primary);
-}
-
-.benefit-item p {
-  color: var(--text-secondary);
-  line-height: 1.6;
-}
-
-.faq-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 0;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.faq-item {
-  background: transparent;
-  padding: var(--space-lg) 0;
-  border-radius: 0;
-  border: none;
-  border-bottom: 1px solid var(--border);
-}
-
-.faq-item:last-child {
-  border-bottom: none;
-}
-
-.faq-question {
-  color: var(--text-primary);
-  margin-bottom: var(--space-sm);
-  font-size: 1.1rem;
-}
-
-.faq-answer {
-  color: var(--text-secondary);
-  line-height: 1.6;
 }
 
 .demos-showcase-section {

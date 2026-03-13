@@ -1,5 +1,7 @@
 ---
-import IconArrowRight from '../../components/icons/IconArrowRight.astro';
+import BenefitsGrid from '../../components/BenefitsGrid.astro';
+import CtaSection from '../../components/CtaSection.astro';
+import FaqSection from '../../components/FaqSection.astro';
 import IconBarChart from '../../components/icons/IconBarChart.astro';
 import IconCode from '../../components/icons/IconCode.astro';
 import IconLayout from '../../components/icons/IconLayout.astro';
@@ -73,49 +75,17 @@ const prefix = '/da'; // Hardcode for Danish pages
   </section>
 
   <!-- Benefits Section -->
-  <section class="section">
-    <div class="container">
-      <div class="text-center mb-3">
-        <span class="hero-tagline">{t('common.benefits', lang)}</span>
-        <h2>{t('pages.metaAds.whyTitle', lang)}</h2>
-        <p style="max-width: 700px; margin: 0 auto;">{t('pages.metaAds.whyDesc', lang)}</p>
-      </div>
-
-      <div class="benefits-grid reveal">
-        <div class="benefit-item">
-          <div class="benefit-icon">
-            <IconTarget />
-          </div>
-          <h4>{t('pages.metaAds.benefit1', lang)}</h4>
-          <p>{t('pages.metaAds.benefit1Desc', lang)}</p>
-        </div>
-
-        <div class="benefit-item">
-          <div class="benefit-icon">
-            <IconBarChart />
-          </div>
-          <h4>{t('pages.metaAds.benefit2', lang)}</h4>
-          <p>{t('pages.metaAds.benefit2Desc', lang)}</p>
-        </div>
-
-        <div class="benefit-item">
-          <div class="benefit-icon">
-            <IconLayout />
-          </div>
-          <h4>{t('pages.metaAds.benefit3', lang)}</h4>
-          <p>{t('pages.metaAds.benefit3Desc', lang)}</p>
-        </div>
-
-        <div class="benefit-item">
-          <div class="benefit-icon">
-            <IconCode />
-          </div>
-          <h4>{t('pages.metaAds.benefit4', lang)}</h4>
-          <p>{t('pages.metaAds.benefit4Desc', lang)}</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <BenefitsGrid
+    lang={lang}
+    title={t('pages.metaAds.whyTitle', lang)}
+    description={t('pages.metaAds.whyDesc', lang)}
+    items={[
+      { icon: IconTarget, titleKey: 'pages.metaAds.benefit1', descKey: 'pages.metaAds.benefit1Desc' },
+      { icon: IconBarChart, titleKey: 'pages.metaAds.benefit2', descKey: 'pages.metaAds.benefit2Desc' },
+      { icon: IconLayout, titleKey: 'pages.metaAds.benefit3', descKey: 'pages.metaAds.benefit3Desc' },
+      { icon: IconCode, titleKey: 'pages.metaAds.benefit4', descKey: 'pages.metaAds.benefit4Desc' },
+    ]}
+  />
 
   <!-- Services Section -->
   <section class="section">
@@ -127,19 +97,19 @@ const prefix = '/da'; // Hardcode for Danish pages
 
       <div class="services-grid reveal">
         <div class="card">
-          <h4 class="card-title">{t('pages.metaAds.service1', lang)}</h4>
+          <h3 class="card-title">{t('pages.metaAds.service1', lang)}</h3>
           <p class="card-text">{t('pages.metaAds.service1Desc', lang)}</p>
         </div>
         <div class="card">
-          <h4 class="card-title">{t('pages.metaAds.service2', lang)}</h4>
+          <h3 class="card-title">{t('pages.metaAds.service2', lang)}</h3>
           <p class="card-text">{t('pages.metaAds.service2Desc', lang)}</p>
         </div>
         <div class="card">
-          <h4 class="card-title">{t('pages.metaAds.service3', lang)}</h4>
+          <h3 class="card-title">{t('pages.metaAds.service3', lang)}</h3>
           <p class="card-text">{t('pages.metaAds.service3Desc', lang)}</p>
         </div>
         <div class="card">
-          <h4 class="card-title">{t('pages.metaAds.service4', lang)}</h4>
+          <h3 class="card-title">{t('pages.metaAds.service4', lang)}</h3>
           <p class="card-text">{t('pages.metaAds.service4Desc', lang)}</p>
         </div>
       </div>
@@ -147,50 +117,18 @@ const prefix = '/da'; // Hardcode for Danish pages
   </section>
 
   <!-- FAQ Section -->
-  <section class="section">
-    <div class="container">
-      <div class="text-center mb-3">
-        <span class="hero-tagline">{t('common.gotQuestions', lang)}</span>
-        <h2>{t('common.faq', lang)}</h2>
-      </div>
-
-      <div class="faq-grid reveal">
-        <div class="faq-item">
-          <h4 class="faq-question">{t('pages.metaAds.faq1', lang)}</h4>
-          <p class="faq-answer">{t('pages.metaAds.faq1Answer', lang)}</p>
-        </div>
-
-        <div class="faq-item">
-          <h4 class="faq-question">{t('pages.metaAds.faq2', lang)}</h4>
-          <p class="faq-answer">{t('pages.metaAds.faq2Answer', lang)}</p>
-        </div>
-
-        <div class="faq-item">
-          <h4 class="faq-question">{t('pages.metaAds.faq3', lang)}</h4>
-          <p class="faq-answer">{t('pages.metaAds.faq3Answer', lang)}</p>
-        </div>
-
-        <div class="faq-item">
-          <h4 class="faq-question">{t('pages.metaAds.faq4', lang)}</h4>
-          <p class="faq-answer">{t('pages.metaAds.faq4Answer', lang)}</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <FaqSection
+    lang={lang}
+    items={[
+      { questionKey: 'pages.metaAds.faq1', answerKey: 'pages.metaAds.faq1Answer' },
+      { questionKey: 'pages.metaAds.faq2', answerKey: 'pages.metaAds.faq2Answer' },
+      { questionKey: 'pages.metaAds.faq3', answerKey: 'pages.metaAds.faq3Answer' },
+      { questionKey: 'pages.metaAds.faq4', answerKey: 'pages.metaAds.faq4Answer' },
+    ]}
+  />
 
   <!-- CTA -->
-  <section class="section">
-    <div class="container">
-      <div class="card text-center" style="padding: var(--space-xl); max-width: 800px; margin: 0 auto;">
-        <h2 class="mb-1">{t('cta.title', lang)}</h2>
-        <p style="font-size: 1.25rem; margin-bottom: var(--space-md);">{t('cta.subtitle', lang)}</p>
-        <a href={`${prefix}/contact`} class="btn btn-primary">
-          {t('cta.button', lang)}
-          <IconArrowRight />
-        </a>
-      </div>
-    </div>
-  </section>
+  <CtaSection lang={lang} prefix={prefix} />
 </Layout>
 
 <style>
@@ -208,74 +146,5 @@ const prefix = '/da'; // Hardcode for Danish pages
   line-height: 1.8;
   margin-bottom: var(--space-md);
   color: var(--text-secondary);
-}
-
-.benefits-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: var(--space-lg);
-}
-
-.benefit-item {
-  text-align: center;
-  padding: var(--space-lg);
-}
-
-.benefit-icon {
-  width: 60px;
-  height: 60px;
-  margin: 0 auto var(--space-md);
-  background: var(--gradient-primary);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.benefit-icon :global(svg) {
-  width: 28px;
-  height: 28px;
-  color: white;
-}
-
-.benefit-item h4 {
-  margin-bottom: var(--space-sm);
-  color: var(--text-primary);
-}
-
-.benefit-item p {
-  color: var(--text-secondary);
-  line-height: 1.6;
-}
-
-.faq-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 0;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.faq-item {
-  background: transparent;
-  padding: var(--space-lg) 0;
-  border-radius: 0;
-  border: none;
-  border-bottom: 1px solid var(--border);
-}
-
-.faq-item:last-child {
-  border-bottom: none;
-}
-
-.faq-question {
-  color: var(--text-primary);
-  margin-bottom: var(--space-sm);
-  font-size: 1.1rem;
-}
-
-.faq-answer {
-  color: var(--text-secondary);
-  line-height: 1.6;
 }
 </style>

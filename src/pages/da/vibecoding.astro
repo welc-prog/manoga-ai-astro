@@ -1,11 +1,15 @@
 ---
-import IconArrowRight from '../../components/icons/IconArrowRight.astro';
+import BenefitsGrid from '../../components/BenefitsGrid.astro';
+import CtaSection from '../../components/CtaSection.astro';
+import FaqSection from '../../components/FaqSection.astro';
 import IconBarChart from '../../components/icons/IconBarChart.astro';
 import IconBrain from '../../components/icons/IconBrain.astro';
 import IconCode from '../../components/icons/IconCode.astro';
 import IconLayout from '../../components/icons/IconLayout.astro';
 import IconShield from '../../components/icons/IconShield.astro';
 import IconTarget from '../../components/icons/IconTarget.astro';
+import MidCta from '../../components/MidCta.astro';
+import ProofStrip from '../../components/ProofStrip.astro';
 import { t } from '../../i18n/index.ts';
 import Layout from '../../layouts/Layout.astro';
 
@@ -26,26 +30,12 @@ const prefix = '/da'; // Hardcode for Danish pages
   </section>
 
   <!-- Results Approach -->
-  <section class="proof-strip">
-    <div class="container">
-      <div class="proof-items">
-        <div class="proof-item">
-          <span class="proof-number">10x</span>
-          <span class="proof-label">Hurtigere end traditionel udvikling</span>
-        </div>
-        <div class="proof-divider"></div>
-        <div class="proof-item">
-          <span class="proof-number">MVP</span>
-          <span class="proof-label">På dage, ikke måneder</span>
-        </div>
-        <div class="proof-divider"></div>
-        <div class="proof-item">
-          <span class="proof-number">QA</span>
-          <span class="proof-label">Produktionsklar kode</span>
-        </div>
-      </div>
-    </div>
-  </section>
+  <ProofStrip items={[
+    { number: '10x', label: 'Hurtigere end traditionel udvikling' },
+    { number: 'MVP', label: 'På dage, ikke måneder' },
+    { number: 'QA', label: 'Produktionsklar kode' },
+  ]}
+  />
 
   <!-- Mini Result -->
   <section class="section section-sm">
@@ -124,17 +114,17 @@ const prefix = '/da'; // Hardcode for Danish pages
       <div class="shipping-examples">
         <div class="shipping-example">
           <span class="shipping-timeline">Uge 1-2</span>
-          <h4>MVP Launch</h4>
+          <h3>MVP Launch</h3>
           <p>Kernefunktioner, autentificering, responsivt design, deployet til produktion</p>
         </div>
         <div class="shipping-example">
           <span class="shipping-timeline">Uge 3-4</span>
-          <h4>Fuldt Produkt</h4>
+          <h3>Fuldt Produkt</h3>
           <p>Avancerede funktioner, integrationer, analyse, SEO-optimering, performance-tuning</p>
         </div>
         <div class="shipping-example">
           <span class="shipping-timeline">Løbende</span>
-          <h4>Vækst & Support</h4>
+          <h3>Vækst & Support</h3>
           <p>Feature-iterationer, overvågning, fejlrettelser, skalering af infrastruktur</p>
         </div>
       </div>
@@ -142,54 +132,20 @@ const prefix = '/da'; // Hardcode for Danish pages
   </section>
 
   <!-- Benefits Section -->
-  <section class="section">
-    <div class="container">
-      <div class="text-center mb-3">
-        <span class="hero-tagline">{t('common.benefits', lang)}</span>
-        <h2>{t('pages.vibecoding.whyTitle', lang)}</h2>
-        <p style="max-width: 700px; margin: 0 auto;">{t('pages.vibecoding.whyDesc', lang)}</p>
-      </div>
-
-      <div class="benefits-grid reveal">
-        <div class="benefit-item">
-          <div class="benefit-icon">
-            <IconCode />
-          </div>
-          <h4>{t('pages.vibecoding.benefit1', lang)}</h4>
-          <p>{t('pages.vibecoding.benefit1Desc', lang)}</p>
-        </div>
-
-        <div class="benefit-item">
-          <div class="benefit-icon">
-            <IconTarget />
-          </div>
-          <h4>{t('pages.vibecoding.benefit2', lang)}</h4>
-          <p>{t('pages.vibecoding.benefit2Desc', lang)}</p>
-        </div>
-
-        <div class="benefit-item">
-          <div class="benefit-icon">
-            <IconBarChart />
-          </div>
-          <h4>{t('pages.vibecoding.benefit3', lang)}</h4>
-          <p>{t('pages.vibecoding.benefit3Desc', lang)}</p>
-        </div>
-
-        <div class="benefit-item">
-          <div class="benefit-icon">
-            <IconShield />
-          </div>
-          <h4>{t('pages.vibecoding.benefit4', lang)}</h4>
-          <p>{t('pages.vibecoding.benefit4Desc', lang)}</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <BenefitsGrid
+    lang={lang}
+    title={t('pages.vibecoding.whyTitle', lang)}
+    description={t('pages.vibecoding.whyDesc', lang)}
+    items={[
+      { icon: IconCode, titleKey: 'pages.vibecoding.benefit1', descKey: 'pages.vibecoding.benefit1Desc' },
+      { icon: IconTarget, titleKey: 'pages.vibecoding.benefit2', descKey: 'pages.vibecoding.benefit2Desc' },
+      { icon: IconBarChart, titleKey: 'pages.vibecoding.benefit3', descKey: 'pages.vibecoding.benefit3Desc' },
+      { icon: IconShield, titleKey: 'pages.vibecoding.benefit4', descKey: 'pages.vibecoding.benefit4Desc' },
+    ]}
+  />
 
   <!-- Mid-page CTA -->
-  <div class="mid-cta">
-    <a href="/da/contact" class="btn btn-primary btn-sm">Book Gratis Konsultation &rarr;</a>
-  </div>
+  <MidCta href="/da/contact" text="Book gratis samtale →" />
 
   <!-- Services Section -->
   <section class="section">
@@ -201,19 +157,19 @@ const prefix = '/da'; // Hardcode for Danish pages
 
       <div class="services-grid reveal">
         <div class="card">
-          <h4 class="card-title">{t('pages.vibecoding.service1', lang)}</h4>
+          <h3 class="card-title">{t('pages.vibecoding.service1', lang)}</h3>
           <p class="card-text">{t('pages.vibecoding.service1Desc', lang)}</p>
         </div>
         <div class="card">
-          <h4 class="card-title">{t('pages.vibecoding.service2', lang)}</h4>
+          <h3 class="card-title">{t('pages.vibecoding.service2', lang)}</h3>
           <p class="card-text">{t('pages.vibecoding.service2Desc', lang)}</p>
         </div>
         <div class="card">
-          <h4 class="card-title">{t('pages.vibecoding.service3', lang)}</h4>
+          <h3 class="card-title">{t('pages.vibecoding.service3', lang)}</h3>
           <p class="card-text">{t('pages.vibecoding.service3Desc', lang)}</p>
         </div>
         <div class="card">
-          <h4 class="card-title">{t('pages.vibecoding.service4', lang)}</h4>
+          <h3 class="card-title">{t('pages.vibecoding.service4', lang)}</h3>
           <p class="card-text">{t('pages.vibecoding.service4Desc', lang)}</p>
         </div>
       </div>
@@ -231,22 +187,22 @@ const prefix = '/da'; // Hardcode for Danish pages
       <div class="process-grid reveal">
         <div class="process-step">
           <div class="process-number">1</div>
-          <h4 class="process-title">{t('process.discovery', lang)}</h4>
+          <h3 class="process-title">{t('process.discovery', lang)}</h3>
           <p class="process-text">{t('process.discoveryDesc', lang)}</p>
         </div>
         <div class="process-step">
           <div class="process-number">2</div>
-          <h4 class="process-title">{t('process.design', lang)}</h4>
+          <h3 class="process-title">{t('process.design', lang)}</h3>
           <p class="process-text">{t('process.designDesc', lang)}</p>
         </div>
         <div class="process-step">
           <div class="process-number">3</div>
-          <h4 class="process-title">{t('process.develop', lang)}</h4>
+          <h3 class="process-title">{t('process.develop', lang)}</h3>
           <p class="process-text">{t('process.developDesc', lang)}</p>
         </div>
         <div class="process-step">
           <div class="process-number">4</div>
-          <h4 class="process-title">{t('process.deploy', lang)}</h4>
+          <h3 class="process-title">{t('process.deploy', lang)}</h3>
           <p class="process-text">{t('process.deployDesc', lang)}</p>
         </div>
       </div>
@@ -254,50 +210,18 @@ const prefix = '/da'; // Hardcode for Danish pages
   </section>
 
   <!-- FAQ Section -->
-  <section class="section">
-    <div class="container">
-      <div class="text-center mb-3">
-        <span class="hero-tagline">{t('common.gotQuestions', lang)}</span>
-        <h2>{t('common.faq', lang)}</h2>
-      </div>
-
-      <div class="faq-grid reveal">
-        <div class="faq-item">
-          <h4 class="faq-question">{t('pages.vibecoding.faq1', lang)}</h4>
-          <p class="faq-answer">{t('pages.vibecoding.faq1Answer', lang)}</p>
-        </div>
-
-        <div class="faq-item">
-          <h4 class="faq-question">{t('pages.vibecoding.faq2', lang)}</h4>
-          <p class="faq-answer">{t('pages.vibecoding.faq2Answer', lang)}</p>
-        </div>
-
-        <div class="faq-item">
-          <h4 class="faq-question">{t('pages.vibecoding.faq3', lang)}</h4>
-          <p class="faq-answer">{t('pages.vibecoding.faq3Answer', lang)}</p>
-        </div>
-
-        <div class="faq-item">
-          <h4 class="faq-question">{t('pages.vibecoding.faq4', lang)}</h4>
-          <p class="faq-answer">{t('pages.vibecoding.faq4Answer', lang)}</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <FaqSection
+    lang={lang}
+    items={[
+      { questionKey: 'pages.vibecoding.faq1', answerKey: 'pages.vibecoding.faq1Answer' },
+      { questionKey: 'pages.vibecoding.faq2', answerKey: 'pages.vibecoding.faq2Answer' },
+      { questionKey: 'pages.vibecoding.faq3', answerKey: 'pages.vibecoding.faq3Answer' },
+      { questionKey: 'pages.vibecoding.faq4', answerKey: 'pages.vibecoding.faq4Answer' },
+    ]}
+  />
 
   <!-- CTA -->
-  <section class="section">
-    <div class="container">
-      <div class="card text-center" style="padding: var(--space-xl); max-width: 800px; margin: 0 auto;">
-        <h2 class="mb-1">{t('cta.title', lang)}</h2>
-        <p style="font-size: 1.25rem; margin-bottom: var(--space-md);">{t('cta.subtitle', lang)}</p>
-        <a href={`${prefix}/contact`} class="btn btn-primary">
-          {t('cta.button', lang)}
-          <IconArrowRight />
-        </a>
-      </div>
-    </div>
-  </section>
+  <CtaSection lang={lang} prefix={prefix} />
 </Layout>
 
 <style>
@@ -327,74 +251,5 @@ const prefix = '/da'; // Hardcode for Danish pages
   line-height: 1.8;
   margin-bottom: var(--space-md);
   color: var(--text-secondary);
-}
-
-.benefits-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: var(--space-lg);
-}
-
-.benefit-item {
-  text-align: center;
-  padding: var(--space-lg);
-}
-
-.benefit-icon {
-  width: 60px;
-  height: 60px;
-  margin: 0 auto var(--space-md);
-  background: var(--gradient-primary);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.benefit-icon :global(svg) {
-  width: 28px;
-  height: 28px;
-  color: white;
-}
-
-.benefit-item h4 {
-  margin-bottom: var(--space-sm);
-  color: var(--text-primary);
-}
-
-.benefit-item p {
-  color: var(--text-secondary);
-  line-height: 1.6;
-}
-
-.faq-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 0;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.faq-item {
-  background: transparent;
-  padding: var(--space-lg) 0;
-  border-radius: 0;
-  border: none;
-  border-bottom: 1px solid var(--border);
-}
-
-.faq-item:last-child {
-  border-bottom: none;
-}
-
-.faq-question {
-  color: var(--text-primary);
-  margin-bottom: var(--space-sm);
-  font-size: 1.1rem;
-}
-
-.faq-answer {
-  color: var(--text-secondary);
-  line-height: 1.6;
 }
 </style>

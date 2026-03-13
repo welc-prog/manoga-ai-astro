@@ -1,0 +1,66 @@
+---
+import { t } from '../i18n/index.ts';
+
+interface FaqItem {
+  questionKey: string;
+  answerKey: string;
+}
+
+interface Props {
+  lang: string;
+  items: FaqItem[];
+}
+
+const { lang, items } = Astro.props;
+---
+
+<section class="section">
+  <div class="container">
+    <div class="text-center mb-3">
+      <span class="hero-tagline">{t('common.gotQuestions', lang)}</span>
+      <h2>{t('common.faq', lang)}</h2>
+    </div>
+
+    <div class="faq-grid reveal">
+      {items.map(item => (
+        <div class="faq-item">
+          <h3 class="faq-question">{t(item.questionKey, lang)}</h3>
+          <p class="faq-answer">{t(item.answerKey, lang)}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+.faq-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background: transparent;
+  padding: var(--space-lg) 0;
+  border-radius: 0;
+  border: none;
+  border-bottom: 1px solid var(--border);
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-question {
+  color: var(--text-primary);
+  margin-bottom: var(--space-sm);
+  font-size: 1.1rem;
+}
+
+.faq-answer {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+</style>

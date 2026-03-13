@@ -1,0 +1,28 @@
+---
+interface ProofItem {
+  number: string;
+  label: string;
+}
+
+interface Props {
+  items: ProofItem[];
+}
+
+const { items } = Astro.props;
+---
+
+<section class="proof-strip">
+  <div class="container">
+    <div class="proof-items">
+      {items.map((item, index) => (
+        <>
+          {index > 0 && <div class="proof-divider"></div>}
+          <div class="proof-item">
+            <span class="proof-number">{item.number}</span>
+            <span class="proof-label">{item.label}</span>
+          </div>
+        </>
+      ))}
+    </div>
+  </div>
+</section>

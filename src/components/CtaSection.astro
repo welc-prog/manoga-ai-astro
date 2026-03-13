@@ -1,0 +1,24 @@
+---
+import { t } from '../i18n/index.ts';
+import IconArrowRight from './icons/IconArrowRight.astro';
+
+interface Props {
+  lang: string;
+  prefix: string;
+}
+
+const { lang, prefix } = Astro.props;
+---
+
+<section class="section">
+  <div class="container">
+    <div class="card text-center" style="padding: var(--space-xl); max-width: 800px; margin: 0 auto;">
+      <h2 class="mb-1">{t('cta.title', lang)}</h2>
+      <p style="font-size: 1.25rem; margin-bottom: var(--space-md);">{t('cta.subtitle', lang)}</p>
+      <a href={`${prefix}/contact`} class="btn btn-primary">
+        {t('cta.button', lang)}
+        <IconArrowRight />
+      </a>
+    </div>
+  </div>
+</section>

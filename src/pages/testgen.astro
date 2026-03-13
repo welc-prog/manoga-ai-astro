@@ -137,10 +137,10 @@ const lang = 'en';
             <li>{t('pages.testgen.oneTimeFeature3', lang)}</li>
             <li>{t('pages.testgen.oneTimeFeature4', lang)}</li>
           </ul>
-          <button class="btn btn-secondary" data-tier="onetime" aria-label="Get started with One-Time plan">
+          <a href="/contact" class="btn btn-secondary">
             {t('pages.testgen.oneTimeCta', lang)}
             <IconArrowRight />
-          </button>
+          </a>
         </div>
 
         <!-- Starter -->
@@ -156,10 +156,10 @@ const lang = 'en';
             <li>{t('pages.testgen.starterFeature3', lang)}</li>
             <li>{t('pages.testgen.starterFeature4', lang)}</li>
           </ul>
-          <button class="btn btn-secondary" data-tier="starter" aria-label="Subscribe to Starter plan">
+          <a href="/contact" class="btn btn-secondary">
             {t('pages.testgen.starterCta', lang)}
             <IconArrowRight />
-          </button>
+          </a>
         </div>
 
         <!-- Pro (Featured) -->
@@ -176,13 +176,13 @@ const lang = 'en';
             <li>{t('pages.testgen.proFeature3', lang)}</li>
             <li>{t('pages.testgen.proFeature4', lang)}</li>
           </ul>
-          <button class="btn btn-primary" data-tier="pro" aria-label="Subscribe to Pro plan">
+          <a href="/contact" class="btn btn-primary">
             {t('pages.testgen.proCta', lang)}
             <IconArrowRight />
-          </button>
+          </a>
         </div>
       </div>
-      <div id="checkout-status" class="checkout-status" role="alert" aria-live="polite" style="display: none;"></div>
+      <p class="text-center" style="margin-top: var(--space-lg); color: var(--text-secondary);">All prices are starting points. Contact us to get a fixed quote for your project.</p>
     </div>
   </section>
 
@@ -229,8 +229,8 @@ const lang = 'en';
       <div class="card text-center" style="padding: var(--space-xl); max-width: 800px; margin: 0 auto;">
         <h2 class="mb-1">{t('pages.testgen.ctaTitle', lang)}</h2>
         <p style="font-size: 1.25rem; margin-bottom: var(--space-md);">{t('pages.testgen.ctaSubtitle', lang)}</p>
-        <a href="#pricing" class="btn btn-primary">
-          View Pricing
+        <a href="/contact" class="btn btn-primary">
+          Get a Quote
           <IconArrowRight />
         </a>
       </div>
@@ -244,31 +244,15 @@ const lang = 'en';
     '@context': 'https://schema.org',
     '@type': 'Product',
     'name': 'TestGen AI',
-    'description': 'AI-powered test suite generation delivered as pull requests.',
+    'description': 'AI-powered test suite generation delivered as pull requests. Contact us for a fixed-price quote.',
     'brand': { '@type': 'Organization', 'name': 'Manoga' },
-    'offers': [
-      {
-        '@type': 'Offer',
-        'name': 'One-Time',
-        'price': '199.00',
-        'priceCurrency': 'USD',
-        'availability': 'https://schema.org/InStock',
-      },
-      {
-        '@type': 'Offer',
-        'name': 'Starter',
-        'price': '99.00',
-        'priceCurrency': 'USD',
-        'availability': 'https://schema.org/InStock',
-      },
-      {
-        '@type': 'Offer',
-        'name': 'Pro',
-        'price': '249.00',
-        'priceCurrency': 'USD',
-        'availability': 'https://schema.org/InStock',
-      },
-    ],
+    'offers': {
+      '@type': 'AggregateOffer',
+      'lowPrice': '99.00',
+      'highPrice': '249.00',
+      'priceCurrency': 'USD',
+      'availability': 'https://schema.org/InStock',
+    },
   })}
   />
 
@@ -292,7 +276,7 @@ const lang = 'en';
         'name': 'How long does delivery take?',
         'acceptedAnswer': {
           '@type': 'Answer',
-          'text': 'One-time orders are delivered within 48 hours. Subscription plans get priority delivery, typically within 24 hours.',
+          'text': 'Most projects are delivered within 48 hours. Larger codebases or ongoing plans may have custom timelines discussed during quoting.',
         },
       },
       {
@@ -321,10 +305,10 @@ const lang = 'en';
       },
       {
         '@type': 'Question',
-        'name': 'How do I cancel my subscription?',
+        'name': 'How does pricing work?',
         'acceptedAnswer': {
           '@type': 'Answer',
-          'text': 'You can cancel anytime from your Stripe billing portal. No questions asked, no cancellation fees.',
+          'text': 'Every project gets a fixed-price quote based on codebase size, framework complexity, and your specific requirements. No surprises.',
         },
       },
     ],
@@ -332,52 +316,6 @@ const lang = 'en';
   />
 </Layout>
 
-<script>
-const checkoutStatus = document.getElementById('checkout-status');
-
-function showCheckoutError() {
-  if (checkoutStatus) {
-    checkoutStatus.textContent = 'Something went wrong. Please try again or contact us at hi@manoga.digital.';
-    checkoutStatus.style.display = 'block';
-    checkoutStatus.scrollIntoView({ behavior: 'smooth', block: 'center' });
-  }
-}
-
-document.querySelectorAll('[data-tier]').forEach((btn) => {
-  btn.addEventListener('click', async () => {
-    const tier = (btn as HTMLElement).dataset.tier;
-    const button = btn as HTMLButtonElement;
-    button.disabled = true;
-    button.style.opacity = '0.7';
-    if (checkoutStatus)
-      checkoutStatus.style.display = 'none';
-
-    try {
-      const res = await fetch('/api/testgen-checkout', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ tier }),
-      });
-
-      const data = await res.json();
-
-      if (data.url) {
-        window.location.href = data.url;
-      }
-      else {
-        showCheckoutError();
-        button.disabled = false;
-        button.style.opacity = '1';
-      }
-    }
-    catch {
-      showCheckoutError();
-      button.disabled = false;
-      button.style.opacity = '1';
-    }
-  });
-});
-</script>
 
 <style>
 .testgen-hero-visual {
@@ -392,18 +330,6 @@ document.querySelectorAll('[data-tier]').forEach((btn) => {
   width: 100%;
   height: auto;
   display: block;
-}
-
-.checkout-status {
-  max-width: 600px;
-  margin: var(--space-lg) auto 0;
-  padding: var(--space-md);
-  border-radius: var(--radius-md);
-  background: rgba(239, 68, 68, 0.1);
-  border: 1px solid rgba(239, 68, 68, 0.3);
-  color: rgb(239, 68, 68);
-  text-align: center;
-  font-size: 1rem;
 }
 
 .faq-grid {

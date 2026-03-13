@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
+import { categoryColors, categoryLabels } from '../../utils/blog';
 
 const today = new Date();
 today.setHours(23, 59, 59, 999);
@@ -16,26 +17,9 @@ const categories = [
   { id: 'gtm', label: 'GTM' },
 ];
 
-const categoryColors: Record<string, string> = {
-  'seo': 'var(--accent)',
-  'ai': 'var(--accent-secondary)',
-  'claude-code': 'var(--accent-tertiary)',
-  'gtm': '#10b981',
-};
-
-function categoryLabel(cat: string): string {
-  switch (cat) {
-    case 'claude-code': return 'Claude Code';
-    case 'gtm': return 'GTM';
-    case 'ai': return 'AI';
-    default: return 'SEO';
-  }
-}
-
-function readingTime(description: string): string {
-  // Estimate ~4 min avg for a blog post, vary by description length
-  const min = Math.max(3, Math.min(8, Math.round(description.length / 30)));
-  return `${min} min read`;
+function readingTime(body: string): string {
+  const words = (body || '').split(/\s+/).length;
+  return `${Math.max(1, Math.ceil(words / 200))} min read`;
 }
 ---
 
@@ -77,14 +61,14 @@ function readingTime(description: string): string {
             <div class="blog-card-image">
               <img src={posts[0].data.image} alt={posts[0].data.title} width="800" height="450" loading="eager" />
               <span class="blog-card-category" style={`--cat-color: ${categoryColors[posts[0].data.category]}`}>
-                {categoryLabel(posts[0].data.category)}
+                {categoryLabels[posts[0].data.category]}
               </span>
             </div>
             <div class="blog-card-body">
               <time datetime={posts[0].data.date}>
                 {new Date(posts[0].data.date).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
               </time>
-              <span class="blog-reading-time">{readingTime(posts[0].data.description)}</span>
+              <span class="blog-reading-time">{readingTime(posts[0].body)}</span>
               <h3>{posts[0].data.title}</h3>
               <p>{posts[0].data.description}</p>
               <span class="blog-card-link">Read Article &rarr;</span>
@@ -106,14 +90,14 @@ function readingTime(description: string): string {
             <div class="blog-card-image">
               <img src={post.data.image} alt={post.data.title} width="600" height="315" loading="lazy" />
               <span class="blog-card-category" style={`--cat-color: ${categoryColors[post.data.category]}`}>
-                {categoryLabel(post.data.category)}
+                {categoryLabels[post.data.category]}
               </span>
             </div>
             <div class="blog-card-body">
               <time datetime={post.data.date}>
                 {new Date(post.data.date).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
               </time>
-              <span class="blog-reading-time">{readingTime(post.data.description)}</span>
+              <span class="blog-reading-time">{readingTime(post.body)}</span>
               <h3>{post.data.title}</h3>
               <p>{post.data.description}</p>
               <span class="blog-card-link">Read Article &rarr;</span>

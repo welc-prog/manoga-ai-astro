@@ -26,6 +26,16 @@
     --border: rgba(255, 255, 255, 0.07);
     --border-hover: rgba(255, 255, 255, 0.14);
     --border-accent: rgba(201, 165, 92, 0.25);
+    --border-subtle: rgba(255, 255, 255, 0.05);
+
+    /* Surfaces */
+    --bg-surface: #151517;
+
+    /* Accent Aliases (referenced across components) */
+    --accent-primary: #c9a55c;
+    --accent-secondary: #a78b4a;
+    --accent-tertiary: #8a7040;
+    --gradient-primary: linear-gradient(135deg, #c9a55c, #d4b46a);
 
     /* Typography */
     --font-main: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;

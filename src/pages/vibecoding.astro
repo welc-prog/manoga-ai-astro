@@ -1,11 +1,15 @@
 ---
-import IconArrowRight from '../components/icons/IconArrowRight.astro';
+import BenefitsGrid from '../components/BenefitsGrid.astro';
+import CtaSection from '../components/CtaSection.astro';
+import FaqSection from '../components/FaqSection.astro';
 import IconBarChart from '../components/icons/IconBarChart.astro';
 import IconBrain from '../components/icons/IconBrain.astro';
 import IconCode from '../components/icons/IconCode.astro';
 import IconLayout from '../components/icons/IconLayout.astro';
 import IconShield from '../components/icons/IconShield.astro';
 import IconTarget from '../components/icons/IconTarget.astro';
+import MidCta from '../components/MidCta.astro';
+import ProofStrip from '../components/ProofStrip.astro';
 import { t } from '../i18n/index.ts';
 import Layout from '../layouts/Layout.astro';
 
@@ -26,26 +30,12 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
   </section>
 
   <!-- Results Approach -->
-  <section class="proof-strip">
-    <div class="container">
-      <div class="proof-items">
-        <div class="proof-item">
-          <span class="proof-number">10x</span>
-          <span class="proof-label">Faster Than Traditional Dev</span>
-        </div>
-        <div class="proof-divider"></div>
-        <div class="proof-item">
-          <span class="proof-number">MVP</span>
-          <span class="proof-label">In Days, Not Months</span>
-        </div>
-        <div class="proof-divider"></div>
-        <div class="proof-item">
-          <span class="proof-number">QA</span>
-          <span class="proof-label">Production-Grade Code</span>
-        </div>
-      </div>
-    </div>
-  </section>
+  <ProofStrip items={[
+    { number: '10x', label: 'Faster Than Traditional Dev' },
+    { number: 'MVP', label: 'In Days, Not Months' },
+    { number: 'QA', label: 'Production-Grade Code' },
+  ]}
+  />
 
   <!-- Mini Result -->
   <section class="section section-sm">
@@ -142,54 +132,20 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
   </section>
 
   <!-- Benefits Section -->
-  <section class="section">
-    <div class="container">
-      <div class="text-center mb-3">
-        <span class="hero-tagline">{t('common.benefits', lang)}</span>
-        <h2>{t('pages.vibecoding.whyTitle', lang)}</h2>
-        <p style="max-width: 700px; margin: 0 auto;">{t('pages.vibecoding.whyDesc', lang)}</p>
-      </div>
-
-      <div class="benefits-grid reveal">
-        <div class="benefit-item">
-          <div class="benefit-icon">
-            <IconCode />
-          </div>
-          <h3>{t('pages.vibecoding.benefit1', lang)}</h3>
-          <p>{t('pages.vibecoding.benefit1Desc', lang)}</p>
-        </div>
-
-        <div class="benefit-item">
-          <div class="benefit-icon">
-            <IconTarget />
-          </div>
-          <h3>{t('pages.vibecoding.benefit2', lang)}</h3>
-          <p>{t('pages.vibecoding.benefit2Desc', lang)}</p>
-        </div>
-
-        <div class="benefit-item">
-          <div class="benefit-icon">
-            <IconBarChart />
-          </div>
-          <h3>{t('pages.vibecoding.benefit3', lang)}</h3>
-          <p>{t('pages.vibecoding.benefit3Desc', lang)}</p>
-        </div>
-
-        <div class="benefit-item">
-          <div class="benefit-icon">
-            <IconShield />
-          </div>
-          <h3>{t('pages.vibecoding.benefit4', lang)}</h3>
-          <p>{t('pages.vibecoding.benefit4Desc', lang)}</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <BenefitsGrid
+    lang={lang}
+    title={t('pages.vibecoding.whyTitle', lang)}
+    description={t('pages.vibecoding.whyDesc', lang)}
+    items={[
+      { icon: IconCode, titleKey: 'pages.vibecoding.benefit1', descKey: 'pages.vibecoding.benefit1Desc' },
+      { icon: IconTarget, titleKey: 'pages.vibecoding.benefit2', descKey: 'pages.vibecoding.benefit2Desc' },
+      { icon: IconBarChart, titleKey: 'pages.vibecoding.benefit3', descKey: 'pages.vibecoding.benefit3Desc' },
+      { icon: IconShield, titleKey: 'pages.vibecoding.benefit4', descKey: 'pages.vibecoding.benefit4Desc' },
+    ]}
+  />
 
   <!-- Mid-page CTA -->
-  <div class="mid-cta">
-    <a href="/contact" class="btn btn-primary btn-sm">Book Free Consultation &rarr;</a>
-  </div>
+  <MidCta href="/contact" text="Book Free Consultation →" />
 
   <!-- Services Section -->
   <section class="section">
@@ -254,50 +210,18 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
   </section>
 
   <!-- FAQ Section -->
-  <section class="section">
-    <div class="container">
-      <div class="text-center mb-3">
-        <span class="hero-tagline">{t('common.gotQuestions', lang)}</span>
-        <h2>{t('common.faq', lang)}</h2>
-      </div>
-
-      <div class="faq-grid reveal">
-        <div class="faq-item">
-          <h3 class="faq-question">{t('pages.vibecoding.faq1', lang)}</h3>
-          <p class="faq-answer">{t('pages.vibecoding.faq1Answer', lang)}</p>
-        </div>
-
-        <div class="faq-item">
-          <h3 class="faq-question">{t('pages.vibecoding.faq2', lang)}</h3>
-          <p class="faq-answer">{t('pages.vibecoding.faq2Answer', lang)}</p>
-        </div>
-
-        <div class="faq-item">
-          <h3 class="faq-question">{t('pages.vibecoding.faq3', lang)}</h3>
-          <p class="faq-answer">{t('pages.vibecoding.faq3Answer', lang)}</p>
-        </div>
-
-        <div class="faq-item">
-          <h3 class="faq-question">{t('pages.vibecoding.faq4', lang)}</h3>
-          <p class="faq-answer">{t('pages.vibecoding.faq4Answer', lang)}</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <FaqSection
+    lang={lang}
+    items={[
+      { questionKey: 'pages.vibecoding.faq1', answerKey: 'pages.vibecoding.faq1Answer' },
+      { questionKey: 'pages.vibecoding.faq2', answerKey: 'pages.vibecoding.faq2Answer' },
+      { questionKey: 'pages.vibecoding.faq3', answerKey: 'pages.vibecoding.faq3Answer' },
+      { questionKey: 'pages.vibecoding.faq4', answerKey: 'pages.vibecoding.faq4Answer' },
+    ]}
+  />
 
   <!-- CTA -->
-  <section class="section">
-    <div class="container">
-      <div class="card text-center" style="padding: var(--space-xl); max-width: 800px; margin: 0 auto;">
-        <h2 class="mb-1">{t('cta.title', lang)}</h2>
-        <p style="font-size: 1.25rem; margin-bottom: var(--space-md);">{t('cta.subtitle', lang)}</p>
-        <a href={`${prefix}/contact`} class="btn btn-primary">
-          {t('cta.button', lang)}
-          <IconArrowRight />
-        </a>
-      </div>
-    </div>
-  </section>
+  <CtaSection lang={lang} prefix={prefix} />
 
   <script
     type="application/ld+json"
@@ -369,74 +293,5 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
   line-height: 1.8;
   margin-bottom: var(--space-md);
   color: var(--text-secondary);
-}
-
-.benefits-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: var(--space-lg);
-}
-
-.benefit-item {
-  text-align: center;
-  padding: var(--space-lg);
-}
-
-.benefit-icon {
-  width: 60px;
-  height: 60px;
-  margin: 0 auto var(--space-md);
-  background: var(--gradient-primary);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.benefit-icon :global(svg) {
-  width: 28px;
-  height: 28px;
-  color: white;
-}
-
-.benefit-item h3 {
-  margin-bottom: var(--space-sm);
-  color: var(--text-primary);
-}
-
-.benefit-item p {
-  color: var(--text-secondary);
-  line-height: 1.6;
-}
-
-.faq-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 0;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.faq-item {
-  background: transparent;
-  padding: var(--space-lg) 0;
-  border-radius: 0;
-  border: none;
-  border-bottom: 1px solid var(--border);
-}
-
-.faq-item:last-child {
-  border-bottom: none;
-}
-
-.faq-question {
-  color: var(--text-primary);
-  margin-bottom: var(--space-sm);
-  font-size: 1.1rem;
-}
-
-.faq-answer {
-  color: var(--text-secondary);
-  line-height: 1.6;
 }
 </style>
