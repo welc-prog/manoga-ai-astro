@@ -1,7 +1,7 @@
 ---
 title: "How to Audit Your GTM Container"
 description: "Practical guide to auditing your GTM container. Find unused tags, fix performance issues, standardize naming, and improve data quality."
-date: "2026-03-19"
+date: "2026-03-17"
 category: "gtm"
 image: "/images/blog/gtm-container-audit.svg"
 author: "Kenneth Abueg"

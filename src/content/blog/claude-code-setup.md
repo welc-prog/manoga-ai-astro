@@ -69,13 +69,13 @@ The `-p` flag runs a single prompt and exits, which is useful for quick queries 
 
 ## Choosing the Right Model
 
-Claude Code supports three models in the Claude 4.6 family, and choosing the right one for each task is an important optimization.
+Claude Code supports the full Claude model family, and choosing the right one for each task is an important optimization.
 
-**Opus 4.6** is the most capable model. It excels at complex reasoning, architectural decisions, security audits, and tasks requiring deep analysis. Use Opus when mistakes would be costly or when you need the model to hold many constraints in mind simultaneously. It is slower and more expensive, but the quality difference on complex tasks is significant.
+**Opus 4.6** is the most capable model, now with a 1M token context window. It excels at complex reasoning, architectural decisions, security audits, and tasks requiring deep analysis across large codebases. Use Opus when mistakes would be costly or when you need the model to hold many constraints in mind simultaneously. It is slower and more expensive, but the quality difference on complex tasks is significant.
 
-**Sonnet 4.6** is the balanced choice and the best default for most development work. Feature implementation, code reviews, refactoring, writing tests, API design, and bug fixes all work well with Sonnet. It is fast enough for interactive use and smart enough for most coding tasks.
+**Sonnet 4.6** is the balanced choice and the best default for most development work. It also supports the 1M context window and approaches Opus-level intelligence at a lower price point. Feature implementation, code reviews, refactoring, writing tests, API design, and bug fixes all work well with Sonnet. It is fast enough for interactive use and smart enough for most coding tasks.
 
-**Haiku 4.6** is the speed-optimized model. Use it for quick fixes, running tests, file operations, git commits, and any task where speed matters more than deep reasoning. It costs significantly less than the other models, making it ideal for high-volume operations.
+**Haiku 4.5** is the speed-optimized model. Use it for quick fixes, running tests, file operations, git commits, and any task where speed matters more than deep reasoning. It costs significantly less than the other models, making it ideal for high-volume operations.
 
 A practical rule of thumb: start with Sonnet for everyday work, upgrade to Opus for anything high-stakes or complex, and drop to Haiku for simple repetitive tasks. These [model selection patterns](/blog/claude-code-workflows) apply across all development phases.
 

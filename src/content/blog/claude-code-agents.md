@@ -122,7 +122,7 @@ Each agent in the pipeline passes context to the next, so the test-runner knows 
 
 ## Best Practices for Agent Configuration
 
-**Match models to complexity.** Use Opus for agents that need deep reasoning like security analysis and architecture review. Use Sonnet for balanced tasks like code review and test generation. Use Haiku for quick operations like pre-commit checks and file validation.
+**Match models to complexity.** Use Opus 4.6 for agents that need deep reasoning like security analysis and architecture review. Use Sonnet 4.6 for balanced tasks like code review and test generation. Use Haiku 4.5 for quick operations like pre-commit checks and file validation.
 
 **Define clear success criteria.** Each agent should know what done looks like. Vague objectives produce vague results. Specific criteria like "all endpoints have input validation" or "test coverage is above 80 percent" give the agent a clear target.
 

@@ -1,7 +1,7 @@
 ---
 title: "Getting Started with AI: A Guide for Leaders"
 description: "A practical guide for business leaders on developing an AI strategy, building the right team, and running successful pilot projects."
-date: "2026-03-18"
+date: "2026-03-17"
 category: "ai"
 image: "/images/blog/ai-guide-for-leaders.svg"
 author: "Kenneth Abueg"

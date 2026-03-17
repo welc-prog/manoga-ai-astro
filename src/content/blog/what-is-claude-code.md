@@ -18,7 +18,7 @@ Claude Code is a CLI tool built by [Anthropic](https://www.anthropic.com) that c
 
 You install it, point it at your project, and start describing what you need. It understands context. If you tell it to fix a bug, it will read the relevant files, trace the issue, propose a fix, and apply it. If you ask it to build a new feature, it will scaffold the code, write tests, and commit the changes. The key difference from traditional AI chat is that Claude Code has agency. It does not just suggest code in a text box. It acts on your codebase.
 
-The tool supports the full Claude 4.6 model family, which includes Opus for complex reasoning, Sonnet for balanced day-to-day coding, and Haiku for quick operations. You choose the model that fits the task, balancing cost, speed, and capability. You can learn more about the tool at the [official documentation](https://docs.anthropic.com/en/docs/claude-code).
+The tool supports the full Claude model family, including Opus 4.6 and Sonnet 4.6 with 1M token context windows for working across large codebases, and Haiku 4.5 for quick operations. You choose the model that fits the task, balancing cost, speed, and capability. You can learn more about the tool at the [official documentation](https://docs.anthropic.com/en/docs/claude-code).
 
 ## How It Differs from Chatbot AI
 

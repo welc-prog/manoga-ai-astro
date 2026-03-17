@@ -66,7 +66,7 @@ After extensive daily use, certain workflow patterns have proven especially effe
 
 **Start every session with context.** Tell Claude Code what you are working on and why. A brief description of the task and any constraints gives it the context to make better decisions throughout the session.
 
-**Use the right model for the phase.** Use Opus for planning and architecture decisions where getting it right matters most. Switch to Sonnet for implementation work. Drop to Haiku for quick operations like commits and file management.
+**Use the right model for the phase.** Use Opus 4.6 for planning and architecture decisions where getting it right matters most. Switch to Sonnet 4.6 for implementation work. Drop to Haiku 4.5 for quick operations like commits and file management.
 
 **Let Claude Code handle the tedious parts.** Boilerplate, tests, documentation, and refactoring are where the time savings are largest. Save your focus for design decisions, user experience, and business logic where human judgment matters most. Learn the [initial setup](/blog/claude-code-setup) to start optimizing your workflow.
 

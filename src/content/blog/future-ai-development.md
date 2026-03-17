@@ -1,7 +1,7 @@
 ---
 title: "The Future of AI-Assisted Development"
 description: "Where AI development is heading, what developers should prepare for, and how Claude Code shapes software engineering's future."
-date: "2026-03-19"
+date: "2026-03-17"
 category: "claude-code"
 image: "/images/blog/future-ai-development.svg"
 author: "Kenneth Abueg"

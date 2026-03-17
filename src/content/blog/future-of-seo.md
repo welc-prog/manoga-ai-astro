@@ -1,7 +1,7 @@
 ---
 title: "The Future of SEO: AI Search and Beyond"
 description: "Explore how AI overviews, generative search, and zero-click searches are reshaping SEO and how to adapt your strategy."
-date: "2026-03-18"
+date: "2026-03-17"
 category: "seo"
 image: "/images/blog/future-of-seo.svg"
 author: "Kenneth Abueg"
