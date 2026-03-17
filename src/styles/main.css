@@ -356,6 +356,8 @@ p {
     align-items: center;
     gap: 5px;
     padding: 0;
+    position: relative;
+    top: -1px;
     transition: var(--transition);
 }
 
