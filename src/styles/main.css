@@ -2592,7 +2592,7 @@ button.btn-primary {
 
 .credibility-items {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
     gap: var(--space-xl);
 }
@@ -2601,7 +2601,10 @@ button.btn-primary {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 4px;
+    flex: 1 1 0;
+    min-width: 0;
 }
 
 .credibility-number {
@@ -3472,14 +3475,18 @@ button.btn-primary {
 .mini-result-content {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
   gap: var(--space-xl);
 }
 
 .mini-result-stat {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 4px;
+  flex: 1 1 0;
+  min-width: 0;
 }
 
 .mini-result-number {
