@@ -11,6 +11,7 @@
     "lint:fix": "eslint src/ api/ --fix"
   },
   "dependencies": {
+    "@astrojs/rss": "^4.0.17",
     "@astrojs/sitemap": "^3.7.0",
     "@vercel/analytics": "^1.6.1",
     "astro": "^5.18.0",
