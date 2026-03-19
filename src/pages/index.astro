@@ -33,6 +33,11 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
           </div>
           <p class="hero-availability">Currently accepting new projects for Q2 2026</p>
         </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hero-orb hero-orb--gold"></div>
+          <div class="hero-orb hero-orb--blue"></div>
+          <div class="hero-orb hero-orb--ring"></div>
+        </div>
       </div>
     </div>
   </section>
@@ -64,13 +69,40 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
     </div>
   </section>
 
+  <!-- Tech Trust Strip -->
+  <div class="tech-strip">
+    <div class="tech-strip-track">
+      <span>Nuxt</span>
+      <span>Vue</span>
+      <span>TypeScript</span>
+      <span>Astro</span>
+      <span>Python</span>
+      <span>Vercel</span>
+      <span>Supabase</span>
+      <span>Stripe</span>
+      <span>Google Ads</span>
+      <span>Meta Ads</span>
+      <!-- duplicate for seamless loop -->
+      <span>Nuxt</span>
+      <span>Vue</span>
+      <span>TypeScript</span>
+      <span>Astro</span>
+      <span>Python</span>
+      <span>Vercel</span>
+      <span>Supabase</span>
+      <span>Stripe</span>
+      <span>Google Ads</span>
+      <span>Meta Ads</span>
+    </div>
+  </div>
+
   <!-- Core Services Section -->
   <section class="section" id="services">
     <div class="container">
       <div class="text-center mb-3">
         <span class="hero-tagline">{t('services.whatWeDo', lang)}</span>
         <h2>{t('services.title', lang)}</h2>
-        <p style="max-width: 600px; margin: 0 auto;">{t('services.subtitle', lang)}</p>
+        <p class="text-center-narrow">{t('services.subtitle', lang)}</p>
       </div>
 
       <div class="services-grid stagger reveal">
@@ -114,12 +146,12 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
   </section>
 
   <!-- Digital Marketing Section -->
-  <section class="section">
+  <section class="section section--alt">
     <div class="container">
       <div class="text-center mb-3">
         <span class="hero-tagline">{t('marketing.tagline', lang)}</span>
         <h2>15+ {t('marketing.yearsOf', lang)} <span class="text-gradient">{t('marketing.expertise', lang)}</span></h2>
-        <p style="max-width: 600px; margin: 0 auto;">{t('marketing.subtitle', lang)}</p>
+        <p class="text-center-narrow">{t('marketing.subtitle', lang)}</p>
       </div>
 
       <div class="services-grid stagger reveal">
@@ -130,7 +162,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
           </div>
           <h3 class="card-title">SEO</h3>
           <p class="card-text">{t('marketing.seo', lang)}</p>
-          <a href={`${prefix}/seo`}>{t('common.learnMore', lang)} →</a>
+          <a href={`${prefix}/seo`} class="btn btn-secondary mt-1">{t('common.learnMore', lang)}</a>
         </div>
 
         <!-- Google Ads -->
@@ -140,7 +172,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
           </div>
           <h3 class="card-title">Google Ads</h3>
           <p class="card-text">{t('marketing.googleAds', lang)}</p>
-          <a href={`${prefix}/google-ads`}>{t('common.learnMore', lang)} →</a>
+          <a href={`${prefix}/google-ads`} class="btn btn-secondary mt-1">{t('common.learnMore', lang)}</a>
         </div>
 
         <!-- Meta Advertising -->
@@ -150,7 +182,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
           </div>
           <h3 class="card-title">{t('nav.metaAds', lang)}</h3>
           <p class="card-text">{t('marketing.metaAds', lang)}</p>
-          <a href={`${prefix}/meta-advertising`}>{t('common.learnMore', lang)} →</a>
+          <a href={`${prefix}/meta-advertising`} class="btn btn-secondary mt-1">{t('common.learnMore', lang)}</a>
         </div>
 
         <!-- Web Design -->
@@ -160,7 +192,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
           </div>
           <h3 class="card-title">{t('nav.webdesign', lang)}</h3>
           <p class="card-text">{t('marketing.webDesign', lang)}</p>
-          <a href={`${prefix}/webdesign`}>{t('common.learnMore', lang)} →</a>
+          <a href={`${prefix}/webdesign`} class="btn btn-secondary mt-1">{t('common.learnMore', lang)}</a>
         </div>
 
         <!-- Google Tag Manager -->
@@ -170,7 +202,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
           </div>
           <h3 class="card-title">Google Tag Manager</h3>
           <p class="card-text">{t('marketing.gtm', lang)}</p>
-          <a href={`${prefix}/google-tag-manager`}>{t('common.learnMore', lang)} →</a>
+          <a href={`${prefix}/google-tag-manager`} class="btn btn-secondary mt-1">{t('common.learnMore', lang)}</a>
         </div>
 
         <!-- Analytics -->
@@ -180,7 +212,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
           </div>
           <h3 class="card-title">{t('marketing.analytics', lang)}</h3>
           <p class="card-text">{t('marketing.analyticsDesc', lang)}</p>
-          <a href={`${prefix}/contact`}>{t('common.learnMore', lang)} →</a>
+          <a href={`${prefix}/contact`} class="btn btn-secondary mt-1">{t('common.learnMore', lang)}</a>
         </div>
       </div>
     </div>
@@ -192,7 +224,7 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
       <div class="text-center mb-3">
         <span class="hero-tagline">{t('portfolio.tagline', lang)}</span>
         <h2>{t('portfolio.featured', lang)} <span class="text-gradient">{t('portfolio.projects', lang)}</span></h2>
-        <p style="max-width: 600px; margin: 0 auto;">{t('portfolio.subtitle', lang)}</p>
+        <p class="text-center-narrow">{t('portfolio.subtitle', lang)}</p>
       </div>
 
       <div class="showcase-grid reveal">
@@ -249,6 +281,60 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
             <a href="https://letmeclaudethatforyou.live" target="_blank" rel="noopener" class="btn btn-primary">
               {t('portfolio.visitSite', lang)} <IconExternal />
             </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Results That Matter -->
+  <section class="results-section">
+    <div class="container">
+      <div class="text-center mb-3">
+        <span class="hero-tagline">Proven Impact</span>
+        <h2>Results That <span class="text-gradient">Matter</span></h2>
+      </div>
+      <div class="results-grid">
+        <div class="result-card">
+          <span class="result-number">+340%</span>
+          <span class="result-label">Organic Traffic Growth</span>
+        </div>
+        <div class="result-card">
+          <span class="result-number">100/100</span>
+          <span class="result-label">Lighthouse Score</span>
+        </div>
+        <div class="result-card">
+          <span class="result-number">&lt;4hr</span>
+          <span class="result-label">MVP to Live Site</span>
+        </div>
+        <div class="result-card">
+          <span class="result-number">5</span>
+          <span class="result-label">Languages Supported</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials-section section">
+    <div class="container">
+      <div class="text-center mb-3">
+        <span class="hero-tagline">What Clients Say</span>
+        <h2>Trusted by <span class="text-gradient">Founders & Teams</span></h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="card testimonial-card">
+          <p class="testimonial-quote">"Kenneth delivered a full multilingual platform in under a month. The SEO architecture alone saved us six months of backfilling technical debt."</p>
+          <div class="testimonial-author">
+            <strong>— Crypto Founder</strong>
+            <span>WeLoveEverythingCrypto</span>
+          </div>
+        </div>
+        <div class="card testimonial-card">
+          <p class="testimonial-quote">"The AI consulting workshop completely changed how our team approaches automation. Practical, no fluff, immediately applicable."</p>
+          <div class="testimonial-author">
+            <strong>— Marketing Director</strong>
+            <span>E-commerce Scale-up</span>
           </div>
         </div>
       </div>

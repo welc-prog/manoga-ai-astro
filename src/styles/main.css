@@ -477,10 +477,10 @@ p {
 
 .hero-content {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: var(--space-xl);
     align-items: center;
-    max-width: 720px;
+    max-width: 100%;
 }
 
 .hero-text {
@@ -534,7 +534,56 @@ p {
 }
 
 .hero-visual {
-    display: none;
+    position: relative;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    pointer-events: none;
+}
+
+.hero-orb--gold {
+    width: 280px;
+    height: 280px;
+    background: radial-gradient(circle, rgba(201, 165, 92, 0.35) 0%, transparent 70%);
+    top: 10%;
+    left: 10%;
+    animation: orbFloat 8s ease-in-out infinite;
+}
+
+.hero-orb--blue {
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(100, 150, 255, 0.2) 0%, transparent 70%);
+    bottom: 15%;
+    right: 15%;
+    animation: orbFloat 10s ease-in-out infinite reverse;
+}
+
+.hero-orb--ring {
+    width: 320px;
+    height: 320px;
+    border: 1px solid rgba(201, 165, 92, 0.15);
+    background: transparent;
+    filter: none;
+    animation: orbSpin 20s linear infinite;
+}
+
+@keyframes orbFloat {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes orbSpin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }
 
 /* AI Brain — hidden in new design */
@@ -4081,13 +4130,17 @@ h2 {
   }
 }
 
-/* Hero availability notice */
+/* Hero availability notice — pill badge */
 .hero-availability {
-  font-size: 0.8rem;
-  color: var(--text-muted);
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.75rem;
+  color: var(--accent);
   margin-top: var(--space-md);
-  padding-top: var(--space-sm);
-  border-top: 1px solid var(--border);
+  padding: 0.35em 0.85em;
+  background: var(--accent-subtle);
+  border: 1px solid var(--border-accent);
+  border-radius: var(--radius-full);
 }
 
 /* Blog post count */
@@ -4168,6 +4221,15 @@ h2 {
 
   .hero-availability {
     text-align: center;
+  }
+
+  .hero-visual {
+    display: none;
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr;
+    max-width: 720px;
   }
 
   /* Proof strip — centered on mobile for all heroes */
@@ -6605,4 +6667,181 @@ h2 {
 .blog-empty p {
   font-size: 0.95rem !important;
   color: var(--text-secondary) !important;
+}
+
+/* ============================================
+   UTILITY — text-center-narrow
+   ============================================ */
+.text-center-narrow {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ============================================
+   SECTION ALT — alternate background
+   ============================================ */
+.section--alt {
+  background: var(--bg-secondary);
+  position: relative;
+}
+
+.section--alt::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(201, 165, 92, 0.04) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+/* ============================================
+   TECH TRUST STRIP — marquee
+   ============================================ */
+.tech-strip {
+  overflow: hidden;
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: var(--space-sm) 0;
+}
+
+.tech-strip-track {
+  display: flex;
+  gap: var(--space-xl);
+  width: max-content;
+  animation: techScroll 30s linear infinite;
+}
+
+.tech-strip-track span {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+@keyframes techScroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tech-strip-track {
+    animation: none;
+  }
+}
+
+/* ============================================
+   RESULTS THAT MATTER
+   ============================================ */
+.results-section {
+  padding: var(--space-2xl) 0;
+  background: var(--bg-secondary);
+  position: relative;
+}
+
+.results-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 60% 80% at 50% 50%, rgba(201, 165, 92, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+}
+
+.result-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: var(--space-lg) var(--space-md);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  transition: border-color var(--transition), transform var(--transition);
+}
+
+.result-card:hover {
+  border-color: var(--border-accent);
+  transform: translateY(-4px);
+}
+
+.result-number {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+  margin-bottom: var(--space-xs);
+}
+
+.result-label {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 768px) {
+  .results-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .results-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================
+   TESTIMONIALS
+   ============================================ */
+.testimonials-section {
+  background: var(--bg-primary);
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-lg);
+}
+
+.testimonial-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.testimonial-quote {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+  font-style: italic;
+  max-width: none;
+}
+
+.testimonial-author {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.testimonial-author strong {
+  color: var(--text-primary);
+  font-size: 0.9rem;
+}
+
+.testimonial-author span {
+  font-size: 0.8rem;
+  color: var(--accent);
+}
+
+@media (max-width: 768px) {
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
 }
