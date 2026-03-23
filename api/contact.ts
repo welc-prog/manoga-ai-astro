@@ -1,12 +1,19 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { Resend } from 'resend';
 
+const RE_AMP = /&/g;
+const RE_LT = /</g;
+const RE_GT = />/g;
+const RE_QUOT = /"/g;
+const RE_EMAIL = /^[^\s@]+@[^\s@][^\s.@]*\.[^\s@]+$/;
+const RE_NEWLINES = /[\r\n\0]/g;
+
 function escapeHtml(str: string): string {
   return str
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;');
+    .replace(RE_AMP, '&amp;')
+    .replace(RE_LT, '&lt;')
+    .replace(RE_GT, '&gt;')
+    .replace(RE_QUOT, '&quot;');
 }
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
@@ -47,8 +54,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   }
 
   // Basic email format validation
-  const emailRegex = /^[^\s@]+@[^\s@][^\s.@]*\.[^\s@]+$/;
-  if (!emailRegex.test(email)) {
+  if (!RE_EMAIL.test(email)) {
     return res.status(400).json({ error: 'Invalid email address' });
   }
 
@@ -69,7 +75,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     await resend.emails.send({
       from: 'Manoga Contact <contact@manoga.digital>',
       to: 'hi@manoga.digital',
-      replyTo: String(email).replace(/[\r\n\0]/g, ''),
+      replyTo: String(email).replace(RE_NEWLINES, ''),
       subject: `New inquiry from ${safeName}`,
       html: `
         <h2>New Contact Form Submission</h2>

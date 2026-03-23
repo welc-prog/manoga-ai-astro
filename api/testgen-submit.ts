@@ -2,12 +2,18 @@ import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { Resend } from 'resend';
 import Stripe from 'stripe';
 
+const RE_AMP = /&/g;
+const RE_LT = /</g;
+const RE_GT = />/g;
+const RE_QUOT = /"/g;
+const RE_EMAIL = /^[^\s@]+@[^\s@][^\s.@]*\.[^\s@]+$/;
+
 function escapeHtml(str: string): string {
   return str
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;');
+    .replace(RE_AMP, '&amp;')
+    .replace(RE_LT, '&lt;')
+    .replace(RE_GT, '&gt;')
+    .replace(RE_QUOT, '&quot;');
 }
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
@@ -37,8 +43,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(400).json({ error: 'Repository URL must be a GitHub URL' });
   }
 
-  const emailRegex = /^[^\s@]+@[^\s@][^\s.@]*\.[^\s@]+$/;
-  if (!emailRegex.test(email)) {
+  if (!RE_EMAIL.test(email)) {
     return res.status(400).json({ error: 'Invalid email address' });
   }
 

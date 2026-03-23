@@ -3,6 +3,9 @@ import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import { categoryColors, categoryLabels } from '../../utils/blog';
 
+const RE_MD_EXT = /\.md$/;
+const RE_WHITESPACE = /\s+/;
+
 const today = new Date();
 today.setHours(23, 59, 59, 999);
 const posts = (await getCollection('blog'))
@@ -23,7 +26,7 @@ const categories = [
 ];
 
 function readingTime(body: string): string {
-  const words = (body || '').split(/\s+/).length;
+  const words = (body || '').split(RE_WHITESPACE).length;
   return `${Math.max(1, Math.ceil(words / 200))} min read`;
 }
 ---
@@ -57,7 +60,7 @@ function readingTime(body: string): string {
       {posts.length > 0 && (
         <div class="blog-featured" id="blog-featured">
           <a
-            href={`/blog/${posts[0].id.replace(/\.md$/, '')}`}
+            href={`/blog/${posts[0].id.replace(RE_MD_EXT, '')}`}
             class="blog-featured-card"
             data-category={posts[0].data.category}
             data-date={posts[0].data.date}
@@ -95,7 +98,7 @@ function readingTime(body: string): string {
       <div class="blog-grid" id="blog-grid">
         {posts.slice(1).map((post, idx) => (
           <a
-            href={`/blog/${post.id.replace(/\.md$/, '')}`}
+            href={`/blog/${post.id.replace(RE_MD_EXT, '')}`}
             class="blog-card"
             data-category={post.data.category}
             data-date={post.data.date}

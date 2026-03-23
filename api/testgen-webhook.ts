@@ -7,12 +7,17 @@ export const config = {
   api: { bodyParser: false },
 };
 
+const RE_AMP = /&/g;
+const RE_LT = /</g;
+const RE_GT = />/g;
+const RE_QUOT = /"/g;
+
 function escapeHtml(str: string): string {
   return str
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;');
+    .replace(RE_AMP, '&amp;')
+    .replace(RE_LT, '&lt;')
+    .replace(RE_GT, '&gt;')
+    .replace(RE_QUOT, '&quot;');
 }
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {

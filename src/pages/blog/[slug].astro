@@ -2,6 +2,9 @@
 import { getCollection, render } from 'astro:content';
 import BlogPost from '../../layouts/BlogPost.astro';
 
+const RE_MD_EXT = /\.md$/;
+const RE_WHITESPACE = /\s+/;
+
 export async function getStaticPaths() {
   const today = new Date();
   today.setHours(23, 59, 59, 999);
@@ -9,7 +12,7 @@ export async function getStaticPaths() {
   return posts
     .filter(post => new Date(`${post.data.date}T00:00:00`) <= today)
     .map(post => ({
-      params: { slug: post.id.replace(/\.md$/, '') },
+      params: { slug: post.id.endsWith('.md') ? post.id.slice(0, -3) : post.id },
       props: { post },
     }));
 }
@@ -17,7 +20,7 @@ export async function getStaticPaths() {
 const { post } = Astro.props;
 const { Content } = await render(post);
 
-const wordCount = (post.body || '').split(/\s+/).length;
+const wordCount = (post.body || '').split(RE_WHITESPACE).length;
 const readingTime = Math.ceil(wordCount / 200);
 
 const now = new Date();
@@ -39,7 +42,7 @@ const relatedPosts = allPosts
   author={post.data.author}
   readingTime={readingTime}
   relatedPosts={relatedPosts.map(p => ({
-    slug: p.id.replace(/\.md$/, ''),
+    slug: p.id.replace(RE_MD_EXT, ''),
     title: p.data.title,
     date: p.data.date,
     image: p.data.image,
