@@ -3,7 +3,6 @@ import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import { categoryColors, categoryLabels } from '../../utils/blog';
 
-const RE_MD_EXT = /\.md$/;
 const RE_WHITESPACE = /\s+/;
 
 const today = new Date();
@@ -60,7 +59,7 @@ function readingTime(body: string): string {
       {posts.length > 0 && (
         <div class="blog-featured" id="blog-featured">
           <a
-            href={`/blog/${posts[0].id.replace(RE_MD_EXT, '')}`}
+            href={`/blog/${posts[0].id}`}
             class="blog-featured-card"
             data-category={posts[0].data.category}
             data-date={posts[0].data.date}
@@ -98,7 +97,7 @@ function readingTime(body: string): string {
       <div class="blog-grid" id="blog-grid">
         {posts.slice(1).map((post, idx) => (
           <a
-            href={`/blog/${post.id.replace(RE_MD_EXT, '')}`}
+            href={`/blog/${post.id}`}
             class="blog-card"
             data-category={post.data.category}
             data-date={post.data.date}

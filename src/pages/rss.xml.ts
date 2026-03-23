@@ -2,8 +2,6 @@ import type { APIContext } from 'astro';
 import rss from '@astrojs/rss';
 import { getCollection } from 'astro:content';
 
-const RE_MD_EXT = /\.md$/;
-
 export async function GET(context: APIContext) {
   const today = new Date();
   today.setHours(23, 59, 59, 999);
@@ -20,7 +18,7 @@ export async function GET(context: APIContext) {
       title: post.data.title,
       description: post.data.description,
       pubDate: new Date(`${post.data.date}T00:00:00`),
-      link: `/blog/${post.id.replace(RE_MD_EXT, '')}/`,
+      link: `/blog/${post.id}/`,
       categories: [post.data.category],
     })),
   });
