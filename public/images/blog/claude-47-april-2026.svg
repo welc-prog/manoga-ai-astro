@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg-47" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0a0f"/>
+      <stop offset="50%" stop-color="#0e0e16"/>
+      <stop offset="100%" stop-color="#12121a"/>
+    </linearGradient>
+    <radialGradient id="glow-47" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#d4a574" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#d4a574" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="accent-47" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#d4a574"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <linearGradient id="ring-47" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#d4a574" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#d4a574" stop-opacity="0.2"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg-47)"/>
+
+  <g opacity="0.04">
+    <pattern id="grid-47" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-width="0.5"/>
+    </pattern>
+    <rect width="1200" height="630" fill="url(#grid-47)"/>
+  </g>
+
+  <circle cx="900" cy="315" r="340" fill="url(#glow-47)"/>
+
+  <g transform="translate(900,315)" opacity="0.65">
+    <circle r="180" fill="none" stroke="url(#ring-47)" stroke-width="1.25"/>
+    <circle r="140" fill="none" stroke="url(#ring-47)" stroke-width="1.25" opacity="0.7"/>
+    <circle r="100" fill="none" stroke="url(#ring-47)" stroke-width="1.25" opacity="0.4"/>
+  </g>
+
+  <g transform="translate(80,150)" fill="#f4f4f5" font-family="Inter, system-ui, sans-serif">
+    <text x="0" y="0" font-size="22" fill="#d4a574" letter-spacing="6" font-weight="500">APRIL 2026 · RELEASE NOTES</text>
+
+    <text x="0" y="90" font-size="84" font-weight="700" letter-spacing="-2">Claude 4.7</text>
+    <text x="0" y="178" font-size="84" font-weight="500" fill="#d4a574" letter-spacing="-2">and the April wave.</text>
+
+    <text x="0" y="260" font-size="26" fill="#cbcbd1" font-weight="400">Opus 4.7 · 1M context · Claude Code updates</text>
+    <text x="0" y="296" font-size="26" fill="#cbcbd1" font-weight="400">Agent SDK · Remote Control · MCP ecosystem</text>
+  </g>
+
+  <g transform="translate(80,540)" fill="#8a8a93" font-family="Inter, system-ui, sans-serif" font-size="18" letter-spacing="1">
+    <text x="0" y="0">manoga.digital</text>
+    <text x="1040" y="0">/ release roundup</text>
+  </g>
+
+  <rect x="80" y="500" width="1040" height="2" fill="url(#accent-47)" opacity="0.6"/>
+</svg>
