@@ -1,7 +1,7 @@
 {
   "meta": {
-    "homeTitle": "AI-bureau og digital marketing i Danmark | Manoga",
-    "homeDescription": "Manoga er et AI-first digitalt bureau. Vi kombinerer 15+ \u00e5rs erfaring med vibecoding og leverer resultater op til 10x hurtigere. Book en gratis samtale.",
+    "homeTitle": "Paid media, SEO og AI-native produkter | Manoga Digital",
+    "homeDescription": "Kenneth Abueg — 15 \u00e5r med Google Ads, Meta, YouTube, Apple Search, Bing, GTM og SEO. Bygger ogs\u00e5 AI-native webapps. Solo, fra Danmark.",
     "vibecodingTitle": "Vibecoding: AI-udvikling 10x hurtigere | Manoga",
     "vibecodingDescription": "Lanc\u00e9r din MVP eller webapp op til 10x hurtigere med vibecoding. Vores AI-assisterede proces sparer tid og budget. Start dit projekt med Manoga i dag.",
     "aiConsultingTitle": "AI-r\u00e5dgivning: Strategi, audit og implementering | Manoga",
@@ -34,12 +34,12 @@
     "portfolio": "Portefølje"
   },
   "hero": {
-    "tagline": "Boutique digitalt bureau — Danmark",
-    "title": "Strategi m\u00f8der",
-    "titleAccent": "Eksekvering",
-    "description": "15+ \u00e5rs erfaring med digital marketing, accelereret med AI. M\u00e5lbar v\u00e6kst gennem SEO, betalt annoncering og moderne webudvikling.",
-    "cta": "Book en gratis samtale",
-    "secondary": "Se vores arbejde"
+    "tagline": "Solo · Danmark · Ledige pladser Q2 2026",
+    "title": "Jeg k\u00f8rer paid media",
+    "titleAccent": "og bygger produkterne bag.",
+    "description": "15 \u00e5r med Google Ads, Meta, YouTube, Apple Search, Microsoft Ads, GTM og SEO. Nu ogs\u00e5 AI-native webapps — solo, ikke som bureau.",
+    "cta": "Start en samtale",
+    "secondary": "Se hvad jeg har bygget"
   },
   "credibility": {
     "years": "Års erfaring i digital marketing",
@@ -117,9 +117,54 @@
     "deployDesc": "Lanc\u00e9r trygt. L\u00f8bende support og AI-drevet optimering."
   },
   "cta": {
-    "title": "Klar til at l\u00f8fte din forretning?",
-    "subtitle": "Lad os tale om, hvordan vi kan accelerere dit n\u00e6ste projekt med 15+ \u00e5rs digital ekspertise.",
-    "button": "Kom i gang i dag"
+    "title": "Har du et problem, der er v\u00e6rd at l\u00f8se?",
+    "subtitle": "Skriv et par linjer om, hvad du arbejder med. Jeg svarer inden for 24 timer p\u00e5 hverdage.",
+    "button": "Start en samtale"
+  },
+  "home": {
+    "channelsEyebrow": "Kanaler jeg arbejder i",
+    "channelsTitle": "Alle de platforme, der faktisk flytter tallene.",
+    "channelsNote": "Hands-on p\u00e5 tv\u00e6rs af alle st\u00f8rre annonceplatforme, tracking-stacks og analyseværktøjer. Ikke forhandler, ikke partner — bare erfaring.",
+    "paidEyebrow": "Paid media & SEO",
+    "paidTitle": "Det grundl\u00e6ggende, udf\u00f8rt af en der har lavet det siden 2010.",
+    "paidSubtitle": "Opbygning, genopbygning, audits og l\u00f8bende drift. Ingen mellemled — du taler med den person, der rent faktisk arbejder i kontoen.",
+    "paidMediaTitle": "Paid media-styring",
+    "paidMediaDesc": "Google Ads (Search, PMax, Shopping, Display, Demand Gen), Meta, YouTube, Apple Search Ads, Microsoft/Bing, LinkedIn. Budget fra 5.000 kr/md og opefter.",
+    "seoTitle": "S\u00f8gemaskineoptimering",
+    "seoDesc": "Teknisk SEO, indholdsstruktur, on-page og intern linking. Samme disciplin i 15 \u00e5r — bare bedre v\u00e6rkt\u00f8jer til research i dag.",
+    "trackingTitle": "Tracking der holder i retten",
+    "trackingDesc": "GTM, GA4, server-side tracking, Conversions API, Enhanced Conversions, consent mode v2. Hvis tallet er forkert, er alt ovenp\u00e5 ligegyldigt.",
+    "buildEyebrow": "AI-native builds",
+    "buildTitle": "Produkter leveret, ikke slides afholdt.",
+    "buildSubtitle": "Jeg bruger Claude Code og moderne frameworks til at bygge rigtige ting — portef\u00f8ljen nedenunder er alt sammen live og kodet af mig.",
+    "vibecodingTitle": "Vibecoding",
+    "vibecodingDesc": "Produktionsklare webapps i Astro, Nuxt eller Next. Fra id\u00e9 i et dokument til udrullet site — hurtigt, men faktisk til at vedligeholde.",
+    "aiConsultingTitle": "AI-r\u00e5dgivning",
+    "aiConsultingDesc": "Hvor AI giver mening, hvor det ikke g\u00f8r, og hvad det realistisk koster. Jeg siger til, n\u00e5r det er klogere at k\u00f8be et v\u00e6rkt\u00f8j end at bygge et.",
+    "workshopsTitle": "Hands-on workshops",
+    "workshopsDesc": "Halv- eller heldag for sm\u00e5 teams. Prompting, Claude Code, interne v\u00e6rkt\u00f8jer. Vi g\u00e5r fra sessionen med noget, der k\u00f8rer.",
+    "portfolioEyebrow": "Live projekter",
+    "portfolioTitle": "Alt p\u00e5 listen er offentligt og i produktion.",
+    "welcTag": "Udvalgt",
+    "welcRole": "Design · Udvikling · SEO · Indholdssystem",
+    "welcStory": "Flersproget kryptonyhedsplatform bygget end-to-end — Nuxt 4, 5 sprog, 1.000+ artikler med automatiserede publiceringsflows. I produktion i dag.",
+    "handballRole": "Solo builder",
+    "handballStory": "Offline-first kampsporing for h\u00e5ndboldtr\u00e6nere. Dexie + Supabase-sync, live-statistik, 364 tests. Bruges under rigtige kampe.",
+    "claudeDailyRole": "Solo builder",
+    "claudeDailyStory": "Automatiseret dagligt digest, der scanner 60+ kilder for Claude-nyheder. Bruger Claude til at rangere det, der betyder noget. K\u00f8rer hver morgen p\u00e5 cron.",
+    "lmctfyRole": "Weekendprojekt",
+    "lmctfyStory": "Et lille viralt v\u00e6rkt\u00f8j — genererer delbare 'sp\u00f8rg Claude'-links. Bygget p\u00e5 \u00e9n weekend; f\u00e5r stadig trafik.",
+    "visitLive": "Bes\u00f8g live-siden",
+    "howEyebrow": "S\u00e5dan arbejder jeg",
+    "howTitle": "Kort version.",
+    "how1Title": "Du taler med mig",
+    "how1Desc": "Ingen account manager, ingen tragt. Samme person p\u00e5 den f\u00f8rste mail og den sidste faktura.",
+    "how2Title": "Skriftlig audit f\u00f8r forslag",
+    "how2Desc": "Jeg kigger p\u00e5 det, du har, f\u00f8rst. Hvis det \u00e6rlige svar er 'hyr mig ikke endnu', siger jeg det og peger dig et andet sted hen.",
+    "how3Title": "Fast scope eller timetakst",
+    "how3Desc": "Hvad der giver mening. Ingen retainer du ikke kan slukke, ingen skjulte linjer, ingen vidaresalg af andres v\u00e6rkt\u00f8jer.",
+    "how4Title": "Svar inden for 24t p\u00e5 hverdage",
+    "how4Desc": "Oftest samme dag. Hvis noget br\u00e6nder, s\u00e5 ring direkte — nummeret st\u00e5r i footeren."
   },
   "contact": {
     "tagline": "Kontakt os",
@@ -157,7 +202,7 @@
     "step3": "Et klart tilbud med omfang, tidsplan og gennemsigtig pris — ingen overraskelser."
   },
   "footer": {
-    "description": "Vi hj\u00e6lper virksomheder med vibecoding, AI-r\u00e5dgivning og praksisn\u00e6re workshops. 15+ \u00e5rs erfaring i digital marketing m\u00f8der banebrydende AI.",
+    "description": "Solo-operat\u00f8r baseret i Danmark. 15 \u00e5rs erfaring med paid media og SEO; bygger nu ogs\u00e5 AI-native produkter. Arbejder p\u00e5 tv\u00e6rs af Google Ads, Meta, YouTube, Apple Search, Bing, GTM og GA4.",
     "digitalMarketing": "Digital marketing",
     "seoServices": "SEO-ydelser",
     "aiServices": "AI-ydelser",

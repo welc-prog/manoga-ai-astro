@@ -33,3 +33,4 @@ screenshot*.mjs
 # Claude Code
 CLAUDE.md
 .claude/
+.swarm-worktrees/

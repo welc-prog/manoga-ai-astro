@@ -7,352 +7,305 @@ import Layout from '../layouts/Layout.astro';
 
 const lang = 'en';
 const prefix = lang === 'en' ? '' : `/${lang}`;
+
+const channels = [
+  'Google Ads',
+  'Meta',
+  'YouTube',
+  'Apple Search Ads',
+  'Microsoft/Bing',
+  'LinkedIn Ads',
+  'Google Tag Manager',
+  'GA4',
+  'Server-side tracking',
+  'Technical SEO',
+];
 ---
 
 <Layout title={t('meta.homeTitle', lang)} description={t('meta.homeDescription', lang)} lang={lang}>
-  <!-- Hero Section -->
-  <section class="hero section" id="hero">
+  <!-- ============ HERO ============ -->
+  <section class="hp-hero">
     <div class="container">
-      <div class="hero-content">
-        <div class="hero-text">
-          <span class="hero-tagline">{t('hero.tagline', lang)}</span>
-          <h1 class="hero-title">
-            {t('hero.title', lang)}
-            <span class="text-gradient">{t('hero.titleAccent', lang)}</span>
+      <div class="hp-hero-inner">
+        <div class="hp-hero-main">
+          <div class="hp-eyebrow">
+            <span class="hp-eyebrow-dot" aria-hidden="true"></span>
+            {t('hero.tagline', lang)}
+          </div>
+          <h1 class="hp-hero-title">
+            <span class="hp-hero-line">{t('hero.title', lang)}</span>
+            <span class="hp-hero-line hp-hero-line--accent">{t('hero.titleAccent', lang)}</span>
           </h1>
-          <div class="hero-accent-line"></div>
-          <p class="hero-description">{t('hero.description', lang)}</p>
-          <div class="hero-buttons">
+          <p class="hp-hero-desc">{t('hero.description', lang)}</p>
+          <div class="hp-hero-actions">
             <a href={`${prefix}/contact`} class="btn btn-primary">
               {t('hero.cta', lang)}
               <IconArrowRight />
             </a>
-            <a href={`${prefix}/portfolio`} class="btn btn-secondary">
-              {t('hero.secondary', lang)}
-            </a>
+            <a href={`${prefix}/portfolio`} class="btn btn-secondary">{t('hero.secondary', lang)}</a>
           </div>
-          <p class="hero-availability">Currently accepting new projects for Q2 2026</p>
         </div>
-        <div class="hero-visual" aria-hidden="true">
-          <div class="hero-orb hero-orb--gold"></div>
-          <div class="hero-orb hero-orb--blue"></div>
-          <div class="hero-orb hero-orb--ring"></div>
-        </div>
+
+        <aside class="hp-hero-meta" aria-label="At a glance">
+          <dl class="hp-meta-list">
+            <div class="hp-meta-row">
+              <dt>Based</dt>
+              <dd>Copenhagen, Denmark</dd>
+            </div>
+            <div class="hp-meta-row">
+              <dt>Experience</dt>
+              <dd>15 years in digital</dd>
+            </div>
+            <div class="hp-meta-row">
+              <dt>Setup</dt>
+              <dd>Solo operator — not an agency</dd>
+            </div>
+            <div class="hp-meta-row">
+              <dt>Availability</dt>
+              <dd>Q2 2026 · accepting briefs</dd>
+            </div>
+            <div class="hp-meta-row">
+              <dt>Reply time</dt>
+              <dd>Within 24h on weekdays</dd>
+            </div>
+            <div class="hp-meta-row">
+              <dt>Registered</dt>
+              <dd>CVR DK39733730</dd>
+            </div>
+          </dl>
+        </aside>
       </div>
     </div>
   </section>
 
-  <!-- Credibility Strip -->
-  <section class="credibility-strip">
+  <!-- ============ CHANNELS STRIP ============ -->
+  <section class="hp-channels" aria-labelledby="channels-title">
     <div class="container">
-      <div class="credibility-items">
-        <div class="credibility-item">
-          <span class="credibility-number">15+</span>
-          <span class="credibility-label">{t('credibility.years', lang)}</span>
-        </div>
-        <div class="credibility-divider"></div>
-        <div class="credibility-item">
-          <span class="credibility-number">100+</span>
-          <span class="credibility-label">{t('credibility.projects', lang)}</span>
-        </div>
-        <div class="credibility-divider"></div>
-        <div class="credibility-item">
-          <span class="credibility-number">SEO</span>
-          <span class="credibility-label">{t('credibility.seoExpert', lang)}</span>
-        </div>
-        <div class="credibility-divider"></div>
-        <div class="credibility-item">
-          <span class="credibility-number">AI</span>
-          <span class="credibility-label">{t('credibility.aiNative', lang)}</span>
-        </div>
+      <div class="hp-channels-head">
+        <span class="hp-eyebrow-static">{t('home.channelsEyebrow', lang)}</span>
+        <h2 id="channels-title" class="hp-channels-title">{t('home.channelsTitle', lang)}</h2>
       </div>
+      <ul class="hp-channels-list">
+        {channels.map(c => (
+          <li class="hp-channel-item">{c}</li>
+        ))}
+      </ul>
+      <p class="hp-channels-note">{t('home.channelsNote', lang)}</p>
     </div>
   </section>
 
-  <!-- Tech Trust Strip -->
-  <div class="tech-strip">
-    <div class="tech-strip-track">
-      <span>Nuxt</span>
-      <span>Vue</span>
-      <span>TypeScript</span>
-      <span>Astro</span>
-      <span>Python</span>
-      <span>Vercel</span>
-      <span>Supabase</span>
-      <span>Stripe</span>
-      <span>Google Ads</span>
-      <span>Meta Ads</span>
-      <!-- duplicate for seamless loop -->
-      <span>Nuxt</span>
-      <span>Vue</span>
-      <span>TypeScript</span>
-      <span>Astro</span>
-      <span>Python</span>
-      <span>Vercel</span>
-      <span>Supabase</span>
-      <span>Stripe</span>
-      <span>Google Ads</span>
-      <span>Meta Ads</span>
-    </div>
-  </div>
-
-  <!-- Core Services Section -->
-  <section class="section" id="services">
+  <!-- ============ TRACK 1: PAID MEDIA & SEO ============ -->
+  <section class="hp-track" aria-labelledby="paid-title">
     <div class="container">
-      <div class="text-center mb-3">
-        <span class="hero-tagline">{t('services.whatWeDo', lang)}</span>
-        <h2>{t('services.title', lang)}</h2>
-        <p class="text-center-narrow">{t('services.subtitle', lang)}</p>
+      <div class="hp-track-head">
+        <span class="hp-track-num">01</span>
+        <div>
+          <span class="hp-eyebrow-static">{t('home.paidEyebrow', lang)}</span>
+          <h2 id="paid-title" class="hp-track-title">{t('home.paidTitle', lang)}</h2>
+          <p class="hp-track-sub">{t('home.paidSubtitle', lang)}</p>
+        </div>
       </div>
 
-      <div class="services-grid stagger reveal">
-        <!-- Vibecoding -->
-        <div class="card service-card">
-          <div class="card-icon card-icon-image">
-            <img src="/images/icon-vibecoding.webp" alt="Vibecoding" loading="lazy" />
+      <ol class="hp-offer-list">
+        <li class="hp-offer">
+          <span class="hp-offer-num" aria-hidden="true">01</span>
+          <div class="hp-offer-body">
+            <h3 class="hp-offer-title">{t('home.paidMediaTitle', lang)}</h3>
+            <p class="hp-offer-desc">{t('home.paidMediaDesc', lang)}</p>
+            <div class="hp-offer-links">
+              <a href={`${prefix}/google-ads`}>Google Ads <IconArrowRight /></a>
+              <a href={`${prefix}/meta-advertising`}>Meta Advertising <IconArrowRight /></a>
+            </div>
           </div>
-          <h3 class="card-title">Vibecoding</h3>
-          <p class="card-text">{t('services.vibecoding', lang)}</p>
-          <a href={`${prefix}/vibecoding`} class="btn btn-secondary mt-1">
-            {t('common.learnMore', lang)}
+        </li>
+        <li class="hp-offer">
+          <span class="hp-offer-num" aria-hidden="true">02</span>
+          <div class="hp-offer-body">
+            <h3 class="hp-offer-title">{t('home.seoTitle', lang)}</h3>
+            <p class="hp-offer-desc">{t('home.seoDesc', lang)}</p>
+            <div class="hp-offer-links">
+              <a href={`${prefix}/seo`}>SEO services <IconArrowRight /></a>
+            </div>
+          </div>
+        </li>
+        <li class="hp-offer">
+          <span class="hp-offer-num" aria-hidden="true">03</span>
+          <div class="hp-offer-body">
+            <h3 class="hp-offer-title">{t('home.trackingTitle', lang)}</h3>
+            <p class="hp-offer-desc">{t('home.trackingDesc', lang)}</p>
+            <div class="hp-offer-links">
+              <a href={`${prefix}/google-tag-manager`}>Tracking & GTM <IconArrowRight /></a>
+            </div>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ TRACK 2: AI-NATIVE BUILDS ============ -->
+  <section class="hp-track hp-track--alt" aria-labelledby="build-title">
+    <div class="container">
+      <div class="hp-track-head">
+        <span class="hp-track-num">02</span>
+        <div>
+          <span class="hp-eyebrow-static">{t('home.buildEyebrow', lang)}</span>
+          <h2 id="build-title" class="hp-track-title">{t('home.buildTitle', lang)}</h2>
+          <p class="hp-track-sub">{t('home.buildSubtitle', lang)}</p>
+        </div>
+      </div>
+
+      <ol class="hp-offer-list">
+        <li class="hp-offer">
+          <span class="hp-offer-num" aria-hidden="true">04</span>
+          <div class="hp-offer-body">
+            <h3 class="hp-offer-title">{t('home.vibecodingTitle', lang)}</h3>
+            <p class="hp-offer-desc">{t('home.vibecodingDesc', lang)}</p>
+            <div class="hp-offer-links">
+              <a href={`${prefix}/vibecoding`}>Vibecoding <IconArrowRight /></a>
+              <a href={`${prefix}/webdesign`}>Web design <IconArrowRight /></a>
+            </div>
+          </div>
+        </li>
+        <li class="hp-offer">
+          <span class="hp-offer-num" aria-hidden="true">05</span>
+          <div class="hp-offer-body">
+            <h3 class="hp-offer-title">{t('home.aiConsultingTitle', lang)}</h3>
+            <p class="hp-offer-desc">{t('home.aiConsultingDesc', lang)}</p>
+            <div class="hp-offer-links">
+              <a href={`${prefix}/ai-consulting`}>AI consulting <IconArrowRight /></a>
+            </div>
+          </div>
+        </li>
+        <li class="hp-offer">
+          <span class="hp-offer-num" aria-hidden="true">06</span>
+          <div class="hp-offer-body">
+            <h3 class="hp-offer-title">{t('home.workshopsTitle', lang)}</h3>
+            <p class="hp-offer-desc">{t('home.workshopsDesc', lang)}</p>
+            <div class="hp-offer-links">
+              <a href={`${prefix}/workshops`}>Workshops <IconArrowRight /></a>
+            </div>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ PORTFOLIO EDITORIAL ============ -->
+  <section class="hp-work" aria-labelledby="work-title">
+    <div class="container">
+      <div class="hp-work-head">
+        <span class="hp-eyebrow-static">{t('home.portfolioEyebrow', lang)}</span>
+        <h2 id="work-title" class="hp-work-title">{t('home.portfolioTitle', lang)}</h2>
+      </div>
+
+      <!-- Featured: WELC -->
+      <article class="hp-featured">
+        <a href="https://weloveeverythingcrypto.com" target="_blank" rel="noopener" class="hp-featured-media" aria-label="Visit WeLoveEverythingCrypto">
+          <img src="/images/portfolio-crypto.webp" alt="WeLoveEverythingCrypto" loading="lazy" />
+        </a>
+        <div class="hp-featured-body">
+          <span class="hp-tag">{t('home.welcTag', lang)}</span>
+          <h3 class="hp-featured-title">WeLoveEverythingCrypto</h3>
+          <p class="hp-featured-role">{t('home.welcRole', lang)}</p>
+          <p class="hp-featured-story">{t('home.welcStory', lang)}</p>
+          <dl class="hp-facts">
+            <div><dt>Stack</dt><dd>Nuxt 4 · TypeScript · Vercel</dd></div>
+            <div><dt>Languages</dt><dd>5</dd></div>
+            <div><dt>Articles</dt><dd>1,000+</dd></div>
+            <div><dt>Role</dt><dd>Solo build</dd></div>
+          </dl>
+          <a href="https://weloveeverythingcrypto.com" target="_blank" rel="noopener" class="hp-featured-link">
+            {t('home.visitLive', lang)} <IconExternal />
           </a>
         </div>
+      </article>
 
-        <!-- AI Consulting -->
-        <div class="card service-card">
-          <div class="card-icon card-icon-image">
-            <img src="/images/icon-ai-consulting.webp" alt="AI Consulting" loading="lazy" />
-          </div>
-          <h3 class="card-title">{t('services.aiConsulting', lang)}</h3>
-          <p class="card-text">{t('services.aiConsultingDesc', lang)}</p>
-          <a href={`${prefix}/ai-consulting`} class="btn btn-secondary mt-1">
-            {t('common.learnMore', lang)}
+      <!-- Supporting projects -->
+      <div class="hp-supporting">
+        <article class="hp-case">
+          <a href="https://handballtracker.com" target="_blank" rel="noopener" class="hp-case-media">
+            <img src="/images/portfolio-handball.webp" alt="Handball Tracker" loading="lazy" />
           </a>
-        </div>
-
-        <!-- Workshops -->
-        <div class="card service-card">
-          <div class="card-icon card-icon-image">
-            <img src="/images/icon-workshops.webp" alt="AI Workshops" loading="lazy" />
+          <div class="hp-case-body">
+            <h3 class="hp-case-title">Handball Tracker</h3>
+            <p class="hp-case-role">{t('home.handballRole', lang)}</p>
+            <p class="hp-case-story">{t('home.handballStory', lang)}</p>
+            <a href="https://handballtracker.com" target="_blank" rel="noopener" class="hp-case-link">handballtracker.com <IconExternal /></a>
           </div>
-          <h3 class="card-title">{t('services.workshops', lang)}</h3>
-          <p class="card-text">{t('services.workshopsDesc', lang)}</p>
-          <a href={`${prefix}/workshops`} class="btn btn-secondary mt-1">
-            {t('common.learnMore', lang)}
+        </article>
+
+        <article class="hp-case">
+          <a href="https://simpleclaude.news" target="_blank" rel="noopener" class="hp-case-media">
+            <img src="/images/portfolio-claude-daily.svg" alt="Claude Daily" loading="lazy" />
           </a>
-        </div>
+          <div class="hp-case-body">
+            <h3 class="hp-case-title">Claude Daily</h3>
+            <p class="hp-case-role">{t('home.claudeDailyRole', lang)}</p>
+            <p class="hp-case-story">{t('home.claudeDailyStory', lang)}</p>
+            <a href="https://simpleclaude.news" target="_blank" rel="noopener" class="hp-case-link">simpleclaude.news <IconExternal /></a>
+          </div>
+        </article>
+
+        <article class="hp-case">
+          <a href="https://letmeclaudethatforyou.live" target="_blank" rel="noopener" class="hp-case-media">
+            <img src="/images/portfolio-lmctfy.svg" alt="Let Me Claude That For You" loading="lazy" />
+          </a>
+          <div class="hp-case-body">
+            <h3 class="hp-case-title">Let Me Claude That For You</h3>
+            <p class="hp-case-role">{t('home.lmctfyRole', lang)}</p>
+            <p class="hp-case-story">{t('home.lmctfyStory', lang)}</p>
+            <a href="https://letmeclaudethatforyou.live" target="_blank" rel="noopener" class="hp-case-link">letmeclaudethatforyou.live <IconExternal /></a>
+          </div>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- Digital Marketing Section -->
-  <section class="section section--alt">
+  <!-- ============ HOW I WORK ============ -->
+  <section class="hp-how" aria-labelledby="how-title">
     <div class="container">
-      <div class="text-center mb-3">
-        <span class="hero-tagline">{t('marketing.tagline', lang)}</span>
-        <h2>15+ {t('marketing.yearsOf', lang)} <span class="text-gradient">{t('marketing.expertise', lang)}</span></h2>
-        <p class="text-center-narrow">{t('marketing.subtitle', lang)}</p>
-      </div>
+      <div class="hp-how-grid">
+        <header class="hp-how-head">
+          <span class="hp-eyebrow-static">{t('home.howEyebrow', lang)}</span>
+          <h2 id="how-title" class="hp-how-title">{t('home.howTitle', lang)}</h2>
+        </header>
 
-      <div class="services-grid stagger reveal">
-        <!-- SEO -->
-        <div class="card">
-          <div class="card-icon card-icon-image">
-            <img src="/images/icon-seo.webp" alt="SEO" loading="lazy" />
+        <dl class="hp-how-list">
+          <div class="hp-how-item">
+            <dt>{t('home.how1Title', lang)}</dt>
+            <dd>{t('home.how1Desc', lang)}</dd>
           </div>
-          <h3 class="card-title">SEO</h3>
-          <p class="card-text">{t('marketing.seo', lang)}</p>
-          <a href={`${prefix}/seo`} class="btn btn-secondary mt-1">{t('common.learnMore', lang)}</a>
-        </div>
-
-        <!-- Google Ads -->
-        <div class="card">
-          <div class="card-icon card-icon-image">
-            <img src="/images/icon-google-ads.webp" alt="Google Ads" loading="lazy" />
+          <div class="hp-how-item">
+            <dt>{t('home.how2Title', lang)}</dt>
+            <dd>{t('home.how2Desc', lang)}</dd>
           </div>
-          <h3 class="card-title">Google Ads</h3>
-          <p class="card-text">{t('marketing.googleAds', lang)}</p>
-          <a href={`${prefix}/google-ads`} class="btn btn-secondary mt-1">{t('common.learnMore', lang)}</a>
-        </div>
-
-        <!-- Meta Advertising -->
-        <div class="card">
-          <div class="card-icon card-icon-image">
-            <img src="/images/icon-meta-ads.webp" alt="Meta Advertising" loading="lazy" />
+          <div class="hp-how-item">
+            <dt>{t('home.how3Title', lang)}</dt>
+            <dd>{t('home.how3Desc', lang)}</dd>
           </div>
-          <h3 class="card-title">{t('nav.metaAds', lang)}</h3>
-          <p class="card-text">{t('marketing.metaAds', lang)}</p>
-          <a href={`${prefix}/meta-advertising`} class="btn btn-secondary mt-1">{t('common.learnMore', lang)}</a>
-        </div>
-
-        <!-- Web Design -->
-        <div class="card">
-          <div class="card-icon card-icon-image">
-            <img src="/images/icon-webdesign.webp" alt="Web Design" loading="lazy" />
+          <div class="hp-how-item">
+            <dt>{t('home.how4Title', lang)}</dt>
+            <dd>{t('home.how4Desc', lang)}</dd>
           </div>
-          <h3 class="card-title">{t('nav.webdesign', lang)}</h3>
-          <p class="card-text">{t('marketing.webDesign', lang)}</p>
-          <a href={`${prefix}/webdesign`} class="btn btn-secondary mt-1">{t('common.learnMore', lang)}</a>
-        </div>
-
-        <!-- Google Tag Manager -->
-        <div class="card">
-          <div class="card-icon card-icon-image">
-            <img src="/images/icon-gtm.webp" alt="Google Tag Manager" loading="lazy" />
-          </div>
-          <h3 class="card-title">Google Tag Manager</h3>
-          <p class="card-text">{t('marketing.gtm', lang)}</p>
-          <a href={`${prefix}/google-tag-manager`} class="btn btn-secondary mt-1">{t('common.learnMore', lang)}</a>
-        </div>
-
-        <!-- Analytics -->
-        <div class="card">
-          <div class="card-icon card-icon-image">
-            <img src="/images/icon-analytics.webp" alt="Analytics" loading="lazy" />
-          </div>
-          <h3 class="card-title">{t('marketing.analytics', lang)}</h3>
-          <p class="card-text">{t('marketing.analyticsDesc', lang)}</p>
-          <a href={`${prefix}/contact`} class="btn btn-secondary mt-1">{t('common.learnMore', lang)}</a>
-        </div>
+        </dl>
       </div>
     </div>
   </section>
 
-  <!-- Portfolio Showcase -->
-  <section class="section" id="portfolio">
+  <!-- ============ CTA ============ -->
+  <section class="hp-cta">
     <div class="container">
-      <div class="text-center mb-3">
-        <span class="hero-tagline">{t('portfolio.tagline', lang)}</span>
-        <h2>{t('portfolio.featured', lang)} <span class="text-gradient">{t('portfolio.projects', lang)}</span></h2>
-        <p class="text-center-narrow">{t('portfolio.subtitle', lang)}</p>
-      </div>
-
-      <div class="showcase-grid reveal">
-        <!-- WELC -->
-        <div class="showcase-item">
-          <img class="showcase-image" src="/images/portfolio-crypto.webp" alt="WeLoveEverythingCrypto" loading="lazy" />
-          <div class="showcase-overlay">
-            <span class="showcase-tag">{t('portfolio.liveProject', lang)}</span>
-            <span class="showcase-metric">5 Languages · 1000+ Articles</span>
-            <h3 class="showcase-title">WeLoveEverythingCrypto</h3>
-            <p>{t('portfolio.welcDesc', lang)}</p>
-            <a href="https://weloveeverythingcrypto.com" target="_blank" rel="noopener" class="btn btn-primary">
-              {t('portfolio.visitSite', lang)} <IconExternal />
-            </a>
-          </div>
+      <div class="hp-cta-inner">
+        <div>
+          <h2 class="hp-cta-title">{t('cta.title', lang)}</h2>
+          <p class="hp-cta-sub">{t('cta.subtitle', lang)}</p>
         </div>
-
-        <!-- Handball Stats -->
-        <div class="showcase-item">
-          <img class="showcase-image" src="/images/portfolio-handball.webp" alt="Handball Tracker" loading="lazy" />
-          <div class="showcase-overlay">
-            <span class="showcase-tag">{t('portfolio.liveProject', lang)}</span>
-            <span class="showcase-metric">Real-time Stats · Live Tracking</span>
-            <h3 class="showcase-title">Handball Tracker</h3>
-            <p>{t('portfolio.handballDesc', lang)}</p>
-            <a href="https://handballtracker.com" target="_blank" rel="noopener" class="btn btn-primary">
-              {t('portfolio.visitSite', lang)} <IconExternal />
-            </a>
-          </div>
-        </div>
-
-        <!-- Claude Daily -->
-        <div class="showcase-item">
-          <img class="showcase-image" src="/images/portfolio-claude-daily.svg" alt="Claude Daily" loading="lazy" />
-          <div class="showcase-overlay">
-            <span class="showcase-tag">{t('portfolio.liveProject', lang)}</span>
-            <span class="showcase-metric">60+ Sources · Daily Digest</span>
-            <h3 class="showcase-title">Claude Daily</h3>
-            <p>{t('portfolio.claudeDailyDesc', lang)}</p>
-            <a href="https://simpleclaude.news" target="_blank" rel="noopener" class="btn btn-primary">
-              {t('portfolio.visitSite', lang)} <IconExternal />
-            </a>
-          </div>
-        </div>
-
-        <!-- Let Me Claude That For You -->
-        <div class="showcase-item">
-          <img class="showcase-image" src="/images/portfolio-lmctfy.svg" alt="Let Me Claude That For You" loading="lazy" />
-          <div class="showcase-overlay">
-            <span class="showcase-tag">{t('portfolio.liveProject', lang)}</span>
-            <span class="showcase-metric">Viral Tool · 10s Setup</span>
-            <h3 class="showcase-title">Let Me Claude That For You</h3>
-            <p>{t('portfolio.lmctfyDesc', lang)}</p>
-            <a href="https://letmeclaudethatforyou.live" target="_blank" rel="noopener" class="btn btn-primary">
-              {t('portfolio.visitSite', lang)} <IconExternal />
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Results That Matter -->
-  <section class="results-section">
-    <div class="container">
-      <div class="text-center mb-3">
-        <span class="hero-tagline">Proven Impact</span>
-        <h2>Results That <span class="text-gradient">Matter</span></h2>
-      </div>
-      <div class="results-grid">
-        <div class="result-card">
-          <span class="result-number">+340%</span>
-          <span class="result-label">Organic Traffic Growth</span>
-        </div>
-        <div class="result-card">
-          <span class="result-number">100/100</span>
-          <span class="result-label">Lighthouse Score</span>
-        </div>
-        <div class="result-card">
-          <span class="result-number">&lt;4hr</span>
-          <span class="result-label">MVP to Live Site</span>
-        </div>
-        <div class="result-card">
-          <span class="result-number">5</span>
-          <span class="result-label">Languages Supported</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonials -->
-  <section class="testimonials-section section">
-    <div class="container">
-      <div class="text-center mb-3">
-        <span class="hero-tagline">What Clients Say</span>
-        <h2>Trusted by <span class="text-gradient">Founders & Teams</span></h2>
-      </div>
-      <div class="testimonials-grid">
-        <div class="card testimonial-card">
-          <p class="testimonial-quote">"Kenneth delivered a full multilingual platform in under a month. The SEO architecture alone saved us six months of backfilling technical debt."</p>
-          <div class="testimonial-author">
-            <strong>— Crypto Founder</strong>
-            <span>WeLoveEverythingCrypto</span>
-          </div>
-        </div>
-        <div class="card testimonial-card">
-          <p class="testimonial-quote">"The AI consulting workshop completely changed how our team approaches automation. Practical, no fluff, immediately applicable."</p>
-          <div class="testimonial-author">
-            <strong>— Marketing Director</strong>
-            <span>E-commerce Scale-up</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA Section -->
-  <section class="cta-section">
-    <div class="container">
-      <div class="cta-card">
-        <h2>{t('cta.title', lang)}</h2>
-        <p>{t('cta.subtitle', lang)}</p>
-        <div class="cta-buttons">
+        <div class="hp-cta-actions">
           <a href={`${prefix}/contact`} class="btn btn-primary">
             {t('cta.button', lang)}
             <IconArrowRight />
           </a>
-          <a href="tel:+4550587900" class="btn btn-secondary">
+          <a href="tel:+4550587900" class="hp-cta-phone">
             <IconPhone />
             +45 50 58 79 00
           </a>
@@ -360,5 +313,732 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
       </div>
     </div>
   </section>
-
 </Layout>
+
+<style>
+  /* ============ HOMEPAGE V2 — EDITORIAL ============ */
+
+  /* Page-level override: kill any legacy section border separators */
+  :global(main) :where(.hp-hero, .hp-channels, .hp-track, .hp-work, .hp-how, .hp-cta) {
+    border-top: none;
+  }
+
+  .hp-hero,
+  .hp-channels,
+  .hp-track,
+  .hp-work,
+  .hp-how,
+  .hp-cta {
+    position: relative;
+    padding: clamp(4rem, 8vw, 7rem) 0;
+  }
+
+  .hp-hero { padding-top: clamp(7rem, 10vw, 10rem); }
+
+  .hp-channels,
+  .hp-track--alt,
+  .hp-how {
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .hp-track,
+  .hp-work,
+  .hp-cta {
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  /* ============ ESCAPE HATCH — override the messy legacy cascade ============ */
+  /* Some global rules inside main.css set heading margins/padding on everything.
+     Force our own tokens using :where() for low specificity + !important where the
+     legacy side has hard declarations (observed on h1/h2/h3). */
+  .hp-hero-title,
+  .hp-channels-title,
+  .hp-track-title,
+  .hp-work-title,
+  .hp-how-title,
+  .hp-featured-title,
+  .hp-case-title,
+  .hp-offer-title,
+  .hp-cta-title {
+    margin: 0;
+  }
+
+  /* ============ EYEBROW ============ */
+  .hp-eyebrow,
+  .hp-eyebrow-static {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'JetBrains Mono', monospace, var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  .hp-eyebrow-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 0 0 rgba(201, 165, 92, 0.5);
+    animation: hp-pulse 2s ease-out infinite;
+  }
+
+  @keyframes hp-pulse {
+    0% { box-shadow: 0 0 0 0 rgba(201, 165, 92, 0.5); }
+    70% { box-shadow: 0 0 0 10px rgba(201, 165, 92, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(201, 165, 92, 0); }
+  }
+
+  /* ============ HERO ============ */
+  .hp-hero-inner {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: clamp(2.5rem, 6vw, 5rem);
+    align-items: start;
+  }
+
+  .hp-hero-main {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+  }
+
+  .hp-hero-title {
+    font-family: var(--font-heading);
+    font-weight: 500;
+    font-size: clamp(2.75rem, 7.5vw, 5.75rem);
+    line-height: 0.98;
+    letter-spacing: -0.04em;
+    color: var(--text-primary);
+    display: flex;
+    flex-direction: column;
+    gap: 0.1em;
+  }
+
+  .hp-hero-line {
+    display: block;
+  }
+
+  .hp-hero-line--accent {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--accent);
+    letter-spacing: -0.035em;
+  }
+
+  .hp-hero-desc {
+    font-size: clamp(1.05rem, 1.4vw, 1.25rem);
+    line-height: 1.55;
+    color: rgba(244, 244, 245, 0.82);
+    max-width: 36em;
+    margin: 0;
+  }
+
+  .hp-hero-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+  }
+
+  /* Meta list */
+  .hp-hero-meta {
+    border-left: 1px solid rgba(255, 255, 255, 0.08);
+    padding-left: clamp(1.5rem, 3vw, 2.5rem);
+    padding-top: 0.5rem;
+  }
+
+  .hp-meta-list {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hp-meta-row {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 1rem;
+    padding: 0.85rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 0.92rem;
+    line-height: 1.4;
+  }
+
+  .hp-meta-row:last-child { border-bottom: none; }
+
+  .hp-meta-row dt {
+    font-family: 'JetBrains Mono', monospace, var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(244, 244, 245, 0.55);
+    padding-top: 2px;
+  }
+
+  .hp-meta-row dd {
+    margin: 0;
+    color: rgba(244, 244, 245, 0.92);
+    font-weight: 500;
+  }
+
+  /* ============ CHANNELS ============ */
+  .hp-channels-head {
+    max-width: 48rem;
+    margin-bottom: clamp(2rem, 4vw, 3rem);
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .hp-channels-title {
+    font-family: var(--font-heading);
+    font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+    font-weight: 500;
+    letter-spacing: -0.025em;
+    line-height: 1.15;
+    color: var(--text-primary);
+  }
+
+  .hp-channels-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+  }
+
+  .hp-channel-item {
+    padding: 1rem 1.25rem 1rem 0;
+    margin-right: 1.25rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    font-family: 'JetBrains Mono', monospace, var(--font-mono);
+    font-size: 0.85rem;
+    letter-spacing: 0.02em;
+    color: rgba(244, 244, 245, 0.88);
+    flex: 1 0 auto;
+    min-width: 180px;
+  }
+
+  .hp-channel-item::before {
+    content: "— ";
+    color: var(--accent);
+    margin-right: 0.4rem;
+  }
+
+  .hp-channels-note {
+    color: rgba(244, 244, 245, 0.62);
+    font-size: 0.95rem;
+    max-width: 52ch;
+    margin: 0;
+  }
+
+  /* ============ TRACK ============ */
+  .hp-track-head {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: clamp(1.5rem, 4vw, 3rem);
+    align-items: start;
+    margin-bottom: clamp(3rem, 6vw, 4.5rem);
+  }
+
+  .hp-track-num {
+    font-family: 'JetBrains Mono', monospace, var(--font-mono);
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    font-weight: 300;
+    color: rgba(201, 165, 92, 0.35);
+    line-height: 1;
+    padding-top: 0.25rem;
+  }
+
+  .hp-track-title {
+    font-family: var(--font-heading);
+    font-size: clamp(1.75rem, 3.8vw, 2.75rem);
+    font-weight: 500;
+    letter-spacing: -0.025em;
+    line-height: 1.12;
+    color: var(--text-primary);
+    margin-top: 0.75rem !important;
+    max-width: 22ch;
+  }
+
+  .hp-track-sub {
+    margin-top: 1rem;
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    color: rgba(244, 244, 245, 0.78);
+    max-width: 52ch;
+  }
+
+  /* ============ OFFER LIST ============ */
+  .hp-offer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .hp-offer {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: clamp(1.5rem, 3vw, 2.5rem);
+    padding: clamp(2rem, 3.5vw, 2.75rem) 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    transition: background 0.3s ease;
+  }
+
+  .hp-offer:hover {
+    background: linear-gradient(
+      to right,
+      rgba(201, 165, 92, 0.02),
+      rgba(201, 165, 92, 0) 60%
+    );
+  }
+
+  .hp-offer-num {
+    font-family: 'JetBrains Mono', monospace, var(--font-mono);
+    font-size: 0.78rem;
+    letter-spacing: 0.2em;
+    color: rgba(244, 244, 245, 0.4);
+    padding-top: 0.4rem;
+  }
+
+  .hp-offer-body { max-width: 60rem; }
+
+  .hp-offer-title {
+    font-family: var(--font-heading);
+    font-size: clamp(1.4rem, 2.2vw, 1.85rem);
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    color: var(--text-primary);
+    margin: 0 0 0.75rem 0 !important;
+  }
+
+  .hp-offer-desc {
+    margin: 0 0 1.25rem;
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    color: rgba(244, 244, 245, 0.8);
+    max-width: 58ch;
+  }
+
+  .hp-offer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem 2rem;
+  }
+
+  .hp-offer-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--accent);
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    border-bottom: 1px solid rgba(201, 165, 92, 0.3);
+    padding-bottom: 2px;
+    transition: color 0.2s ease, border-color 0.2s ease, gap 0.2s ease;
+  }
+
+  .hp-offer-links a:hover {
+    color: var(--accent-hover);
+    border-bottom-color: var(--accent);
+    gap: 0.8rem;
+  }
+
+  .hp-offer-links a :global(svg) {
+    width: 12px;
+    height: 12px;
+  }
+
+  /* ============ WORK / PORTFOLIO ============ */
+  .hp-work-head {
+    max-width: 42rem;
+    margin-bottom: clamp(2.5rem, 5vw, 4rem);
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .hp-work-title {
+    font-family: var(--font-heading);
+    font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+    font-weight: 500;
+    letter-spacing: -0.025em;
+    line-height: 1.15;
+    color: var(--text-primary);
+  }
+
+  /* Featured */
+  .hp-featured {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items: center;
+    padding: clamp(2rem, 4vw, 3rem) 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .hp-featured-media {
+    display: block;
+    border-radius: 4px;
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+    background: #111113;
+    position: relative;
+    transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+
+  .hp-featured-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+
+  .hp-featured-media:hover img { transform: scale(1.03); }
+
+  .hp-featured-body {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .hp-tag {
+    align-self: flex-start;
+    font-family: 'JetBrains Mono', monospace, var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    padding: 0.35rem 0.75rem;
+    border: 1px solid rgba(201, 165, 92, 0.3);
+    border-radius: 100px;
+  }
+
+  .hp-featured-title {
+    font-family: var(--font-heading);
+    font-size: clamp(1.75rem, 3.2vw, 2.5rem);
+    font-weight: 500;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    color: var(--text-primary);
+    margin: 0 !important;
+  }
+
+  .hp-featured-role {
+    margin: 0;
+    font-family: 'JetBrains Mono', monospace, var(--font-mono);
+    font-size: 0.82rem;
+    color: rgba(244, 244, 245, 0.6);
+    letter-spacing: 0.02em;
+  }
+
+  .hp-featured-story {
+    margin: 0;
+    color: rgba(244, 244, 245, 0.82);
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .hp-facts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+    margin: 0.75rem 0 0.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .hp-facts > div {
+    padding: 0.85rem 0;
+    border-right: 1px solid rgba(255, 255, 255, 0.06);
+    padding-right: 1rem;
+  }
+  .hp-facts > div:nth-child(2n) { border-right: none; padding-right: 0; padding-left: 1rem; }
+  .hp-facts > div:nth-child(1), .hp-facts > div:nth-child(2) { border-bottom: 1px solid rgba(255,255,255,0.06); }
+
+  .hp-facts dt {
+    font-family: 'JetBrains Mono', monospace, var(--font-mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(244, 244, 245, 0.5);
+    margin-bottom: 0.3rem;
+  }
+
+  .hp-facts dd {
+    margin: 0;
+    color: rgba(244, 244, 245, 0.92);
+    font-size: 0.92rem;
+    font-weight: 500;
+  }
+
+  .hp-featured-link {
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--accent);
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(201, 165, 92, 0.3);
+    transition: border-color 0.2s ease, gap 0.2s ease;
+  }
+
+  .hp-featured-link:hover {
+    border-bottom-color: var(--accent);
+    gap: 0.8rem;
+  }
+
+  .hp-featured-link :global(svg) { width: 14px; height: 14px; }
+
+  /* Supporting projects */
+  .hp-supporting {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(1.5rem, 3vw, 2.5rem);
+    margin-top: clamp(2.5rem, 5vw, 4rem);
+  }
+
+  .hp-case {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .hp-case-media {
+    display: block;
+    aspect-ratio: 4 / 3;
+    background: #111113;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .hp-case-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+
+  .hp-case-media:hover img { transform: scale(1.04); }
+
+  .hp-case-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+  }
+
+  .hp-case-title {
+    font-family: var(--font-heading);
+    font-size: 1.35rem;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    color: var(--text-primary);
+    margin: 0 !important;
+  }
+
+  .hp-case-role {
+    margin: 0;
+    font-family: 'JetBrains Mono', monospace, var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(244, 244, 245, 0.55);
+  }
+
+  .hp-case-story {
+    margin: 0;
+    color: rgba(244, 244, 245, 0.78);
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .hp-case-link {
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--accent);
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-top: 0.25rem;
+  }
+
+  .hp-case-link:hover { gap: 0.65rem; }
+  .hp-case-link :global(svg) { width: 12px; height: 12px; }
+
+  /* ============ HOW I WORK ============ */
+  .hp-how-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.8fr;
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items: start;
+  }
+
+  .hp-how-head {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: sticky;
+    top: 100px;
+  }
+
+  .hp-how-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 500;
+    letter-spacing: -0.025em;
+    line-height: 1.1;
+    color: var(--text-primary);
+  }
+
+  .hp-how-list {
+    margin: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .hp-how-item {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .hp-how-item dt {
+    font-family: var(--font-heading);
+    font-size: 1.125rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+  }
+
+  .hp-how-item dd {
+    margin: 0;
+    color: rgba(244, 244, 245, 0.8);
+    font-size: 1rem;
+    line-height: 1.65;
+    max-width: 58ch;
+  }
+
+  /* ============ CTA ============ */
+  .hp-cta {
+    background: linear-gradient(
+      180deg,
+      rgba(201, 165, 92, 0.04),
+      rgba(10, 10, 12, 0) 80%
+    );
+  }
+
+  .hp-cta-inner {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items: center;
+    padding: clamp(2.5rem, 5vw, 4rem) 0;
+    border-top: 1px solid rgba(201, 165, 92, 0.2);
+    border-bottom: 1px solid rgba(201, 165, 92, 0.2);
+  }
+
+  .hp-cta-title {
+    font-family: var(--font-heading);
+    font-size: clamp(1.85rem, 3.8vw, 2.75rem);
+    font-weight: 500;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    color: var(--text-primary);
+    margin: 0 0 0.75rem 0 !important;
+  }
+
+  .hp-cta-sub {
+    margin: 0;
+    color: rgba(244, 244, 245, 0.78);
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    max-width: 48ch;
+  }
+
+  .hp-cta-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-end;
+  }
+
+  .hp-cta-phone {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: rgba(244, 244, 245, 0.88);
+    font-family: 'JetBrains Mono', monospace, var(--font-mono);
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    transition: border-color 0.2s ease, color 0.2s ease;
+  }
+
+  .hp-cta-phone:hover {
+    border-bottom-color: var(--accent);
+    color: var(--accent);
+  }
+
+  .hp-cta-phone :global(svg) { width: 14px; height: 14px; }
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width: 960px) {
+    .hp-hero-inner { grid-template-columns: 1fr; }
+
+    .hp-hero-meta {
+      border-left: none;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-left: 0;
+      padding-top: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .hp-meta-row { grid-template-columns: 140px 1fr; }
+
+    .hp-supporting { grid-template-columns: 1fr; }
+
+    .hp-featured { grid-template-columns: 1fr; }
+
+    .hp-how-grid { grid-template-columns: 1fr; }
+    .hp-how-head { position: static; }
+
+    .hp-cta-inner { grid-template-columns: 1fr; }
+    .hp-cta-actions { align-items: flex-start; }
+  }
+
+  @media (max-width: 640px) {
+    .hp-track-head { grid-template-columns: 1fr; }
+    .hp-track-num { display: block; }
+
+    .hp-offer { grid-template-columns: 1fr; gap: 0.75rem; }
+    .hp-offer-num { padding-top: 0; }
+
+    .hp-meta-row { grid-template-columns: 110px 1fr; font-size: 0.88rem; }
+
+    .hp-facts { grid-template-columns: 1fr; }
+    .hp-facts > div {
+      border-right: none !important;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      padding: 0.75rem 0 !important;
+    }
+    .hp-facts > div:last-child { border-bottom: none; }
+
+    .hp-hero-actions { flex-direction: column; align-items: stretch; }
+    .hp-hero-actions :global(.btn) { justify-content: center; }
+  }
+</style>

@@ -1,7 +1,7 @@
 {
   "meta": {
-    "homeTitle": "AI-First Digital Agency for Growth | Manoga",
-    "homeDescription": "Manoga is your AI-first digital agency. We combine 15+ years of experience with vibecoding for 10x faster results. Get a free consultation.",
+    "homeTitle": "Paid media, SEO & AI-native builds | Manoga Digital",
+    "homeDescription": "Kenneth Abueg — 15 years across Google Ads, Meta, YouTube, Apple Search, Bing, GTM and SEO. Also ships AI-native web apps. Solo, from Denmark.",
     "vibecodingTitle": "Vibecoding: 10x Faster AI-Assisted Development | Manoga",
     "vibecodingDescription": "Launch your MVP or web app 10x faster with Vibecoding. Our AI-assisted development process saves you time and money. Start your project with Manoga today.",
     "aiConsultingTitle": "AI Consulting: Strategy, Audit & Implementation | Manoga",
@@ -39,12 +39,12 @@
     "portfolio": "Portfolio"
   },
   "hero": {
-    "tagline": "Boutique Digital Agency — Denmark",
-    "title": "Strategy Meets",
-    "titleAccent": "Execution",
-    "description": "15+ years of digital marketing expertise, accelerated with AI. Measurable growth through SEO, paid media, and modern web development.",
-    "cta": "Book a Free Consultation",
-    "secondary": "See Our Work"
+    "tagline": "Solo · Denmark · Taking on Q2 2026",
+    "title": "I run paid media",
+    "titleAccent": "and build the products behind it.",
+    "description": "15 years across Google Ads, Meta, YouTube, Apple Search, Microsoft Ads, GTM and SEO. Now also shipping AI-native web apps — solo, not as an agency.",
+    "cta": "Start a conversation",
+    "secondary": "See what I've built"
   },
   "credibility": {
     "years": "Years in Digital Marketing",
@@ -122,9 +122,54 @@
     "deployDesc": "Launch with confidence. Continuous support and AI-powered optimization."
   },
   "cta": {
-    "title": "Ready to Transform Your Business?",
-    "subtitle": "Let's discuss how we can accelerate your next project with 15+ years of digital expertise.",
-    "button": "Get Started Today"
+    "title": "Got a problem worth solving?",
+    "subtitle": "Write me a few sentences about what you're working on. I reply within 24 hours on weekdays.",
+    "button": "Start a conversation"
+  },
+  "home": {
+    "channelsEyebrow": "Where I work",
+    "channelsTitle": "Every channel that actually moves the number.",
+    "channelsNote": "Hands-on across every major ad platform, tracking stack, and analytics tool. Not a reseller, not a partner — just experience.",
+    "paidEyebrow": "Paid media & SEO",
+    "paidTitle": "The fundamentals, done by someone who's been doing them since 2010.",
+    "paidSubtitle": "Account builds, rebuilds, audits, and ongoing management. No account managers in between — you talk to the person running the account.",
+    "paidMediaTitle": "Paid media management",
+    "paidMediaDesc": "Google Ads (Search, PMax, Shopping, Display, Demand Gen), Meta, YouTube, Apple Search Ads, Microsoft/Bing, LinkedIn. Budget from DKK 5k/mo and up.",
+    "seoTitle": "Search engine optimization",
+    "seoDesc": "Technical SEO, content architecture, on-page, and internal linking. Same discipline for 15 years — I just have better tools for research now.",
+    "trackingTitle": "Tracking that holds up in court",
+    "trackingDesc": "GTM, GA4, server-side tracking, Conversions API, Enhanced Conversions, consent mode v2. If the number is wrong, nothing built on top of it matters.",
+    "buildEyebrow": "AI-native builds",
+    "buildTitle": "Products shipped, not decks delivered.",
+    "buildSubtitle": "I use Claude Code and modern frameworks to build real things — the portfolio below is all live, all coded by me.",
+    "vibecodingTitle": "Vibecoding",
+    "vibecodingDesc": "Production web apps in Astro, Nuxt or Next. From an idea in a doc to a deployed site — fast, but actually maintainable.",
+    "aiConsultingTitle": "AI consulting",
+    "aiConsultingDesc": "Where to use AI, where not to, what it'll realistically cost you. I'll tell you when buying a tool is smarter than building one.",
+    "workshopsTitle": "Hands-on workshops",
+    "workshopsDesc": "Half-day or full-day for small teams. Prompting, Claude Code, building internal tools. We leave the session with something running.",
+    "portfolioEyebrow": "Live work",
+    "portfolioTitle": "Everything on this list is public and in production.",
+    "welcTag": "Featured",
+    "welcRole": "Designer · Developer · SEO · Content system",
+    "welcStory": "A multilingual crypto news platform I built end-to-end — Nuxt 4, 5 languages, 1,000+ articles with automated publishing pipelines. Live in production.",
+    "handballRole": "Solo builder",
+    "handballStory": "Offline-first match tracker for handball coaches. Dexie + Supabase sync, real-time stats, 364 tests. Used during actual matches.",
+    "claudeDailyRole": "Solo builder",
+    "claudeDailyStory": "Automated daily digest scanning 60+ sources for Claude news. Uses Claude to rank what matters. Runs every morning on a cron.",
+    "lmctfyRole": "Weekend project",
+    "lmctfyStory": "A tiny viral tool — generates shareable 'just ask Claude' links. Built in one weekend; still gets traffic.",
+    "visitLive": "Visit live site",
+    "howEyebrow": "How I work",
+    "howTitle": "Short version.",
+    "how1Title": "You talk to me",
+    "how1Desc": "Not an account manager, not a funnel. Same person on the first email and the last invoice.",
+    "how2Title": "Written audit before proposals",
+    "how2Desc": "I look at what you have first. If the honest answer is 'don't hire me yet,' I'll say so and point you somewhere better.",
+    "how3Title": "Fixed scope or hourly",
+    "how3Desc": "Whichever makes sense. No retainers you can't turn off, no surprise line items, no reselling other people's tools.",
+    "how4Title": "Reply within 24h on weekdays",
+    "how4Desc": "Usually same day. If something is on fire, call me directly — the number's in the footer."
   },
   "contact": {
     "tagline": "Get In Touch",
@@ -162,7 +207,7 @@
     "step3": "A clear proposal with scope, timeline, and transparent pricing — no surprises."
   },
   "footer": {
-    "description": "Boutique digital agency based in Denmark. 15+ years of marketing expertise combined with AI-native development. Strategy, execution, and measurable results.",
+    "description": "Solo operator based in Denmark. 15 years of paid media and SEO; now also building AI-native products. Worked across Google Ads, Meta, YouTube, Apple Search, Bing, GTM, and GA4.",
     "digitalMarketing": "Digital Marketing",
     "seoServices": "SEO Services",
     "aiServices": "AI Services",

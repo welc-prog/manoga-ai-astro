@@ -58,11 +58,15 @@ const desc = description || t('meta.description', lang);
       type="application/ld+json"
       set:html={JSON.stringify({
       '@context': 'https://schema.org',
-      '@type': 'Organization',
+      '@type': 'ProfessionalService',
       'name': 'Manoga Digital',
       'url': 'https://www.manoga.digital',
-      'description': 'Digital agency specializing in AI consulting, SEO, and web design',
-      'sameAs': ['https://www.linkedin.com/company/manoga'],
+      'description': 'Solo operator based in Denmark. 15 years of paid media (Google Ads, Meta, YouTube, Apple Search, Bing, LinkedIn) and SEO, plus AI-native product development.',
+      'founder': { '@type': 'Person', 'name': 'Kenneth Abueg' },
+      'areaServed': 'Worldwide',
+      'address': { '@type': 'PostalAddress', 'addressCountry': 'DK' },
+      'telephone': '+4550587900',
+      'sameAs': ['https://www.linkedin.com/in/kennethabueg/'],
     })}
     />
   </head>
