@@ -73,36 +73,36 @@ const channels = [
             <span class="mh-id-avatar" aria-hidden="true">K</span>
             <div>
               <p class="mh-id-name">Kenneth Abueg</p>
-              <p class="mh-id-role">Senior paid-media operator · AI-native builder</p>
+              <p class="mh-id-role">Senior paid media operator · AI-native app builder</p>
             </div>
           </div>
 
           <dl class="mh-id-facts">
             <div>
               <dt>Based in</dt>
-              <dd>Nibe, Denmark</dd>
+              <dd>Nibe, North Jutland, Denmark</dd>
             </div>
             <div>
-              <dt>Doing this since</dt>
+              <dt>Started</dt>
               <dd>2010 · 15 years</dd>
             </div>
             <div>
-              <dt>Setup</dt>
+              <dt>Working model</dt>
               <dd>Solo operator — not an agency</dd>
             </div>
             <div>
-              <dt>Works with</dt>
+              <dt>Usually hired by</dt>
               <dd>Founders, in-house marketing leads, CMOs</dd>
             </div>
             <div>
-              <dt>Response</dt>
+              <dt>Replies</dt>
               <dd>Within one working day</dd>
             </div>
           </dl>
 
           <div class="mh-id-status">
             <span class="mh-status-dot" aria-hidden="true"></span>
-            Accepting new work for Q2 2026
+            Available for new work in Q2 2026
           </div>
         </div>
       </aside>
@@ -117,7 +117,7 @@ const channels = [
         {channels.map(c => (
           <li class="mh-trust-item">
             <span class="mh-trust-name">{c.name}</span>
-            <span class="mh-trust-since">since {c.since}</span>
+            <span class="mh-trust-since">{c.since === 'current' ? 'in use now' : `since ${c.since}`}</span>
           </li>
         ))}
       </ul>
@@ -215,7 +215,7 @@ const channels = [
         <a href="https://weloveeverythingcrypto.com" target="_blank" rel="noopener" class="mh-featured-media">
           <img src="/images/portfolio-crypto.webp" alt="WeLoveEverythingCrypto" loading="lazy" />
           <span class="mh-featured-visit">
-            Visit live <IconExternal />
+            See it live <IconExternal />
           </span>
         </a>
         <div class="mh-featured-body">
@@ -227,7 +227,7 @@ const channels = [
             <div><dt>Stack</dt><dd>Nuxt 4 · TypeScript · Vercel</dd></div>
             <div><dt>Languages</dt><dd>5</dd></div>
             <div><dt>Articles</dt><dd>1,000+</dd></div>
-            <div><dt>Built by</dt><dd>Kenneth, solo</dd></div>
+            <div><dt>Operator</dt><dd>Kenneth Abueg</dd></div>
           </dl>
         </div>
       </article>

@@ -34,10 +34,10 @@
     "portfolio": "Portefølje"
   },
   "hero": {
-    "tagline": "Senior paid media · AI-native produkter",
-    "title": "Dine annoncer og det produkt, de peger på.",
-    "titleAccent": "Bygget af én person.",
-    "description": "Jeg har brugt femten år på paid media — Google Ads, Meta, YouTube, Apple Search, Microsoft, LinkedIn, GTM og SEO. I dag bygger jeg også de AI-native webapps, de fleste marketers skal sende videre til et udviklingsteam. Du får begge dele uden håndteringen.",
+    "tagline": "Senior paid media · AI-native webapps",
+    "title": "Dine annoncer. Din tracking. Det produkt trafikken lander på.",
+    "titleAccent": "Én person hele vejen.",
+    "description": "Jeg har arbejdet med paid media siden 2010: Google Ads, Meta, YouTube, Apple Search Ads, Microsoft Ads, LinkedIn, GTM, GA4 og SEO. I dag bygger jeg også de AI-native webapps, som mange marketingteams ellers ville sende videre til udvikling. Du arbejder med én person fra første klik til færdigt produkt.",
     "cta": "Start en samtale",
     "secondary": "Se hvad jeg har bygget"
   },
@@ -117,30 +117,30 @@
     "deployDesc": "Lanc\u00e9r trygt. L\u00f8bende support og AI-drevet optimering."
   },
   "cta": {
-    "title": "Har du et projekt, der fortjener at blive gjort ordentligt?",
-    "subtitle": "Et par linjer om hvor du står, og hvad du prøver at flytte. Jeg læser hver mail personligt og svarer inden for én arbejdsdag.",
+    "title": "Har du brug for skarpere paid media eller et produkt, der faktisk bliver bygget?",
+    "subtitle": "Skriv et par linjer om, hvor det sidder fast, og hvad du vil have til at rykke. Jeg læser hver mail selv og svarer inden for én arbejdsdag.",
     "button": "Start en samtale"
   },
   "home": {
-    "trustEyebrow": "Kanaler og værktøjer jeg arbejder i",
-    "trustNote": "Hands-on. Ikke forhandler, ikke partner. Alle platforme nedenfor er noget jeg har bygget kampagner i, debugget tracking for eller skrevet kode mod.",
+    "trustEyebrow": "Kanaler, tracking og værktøjer jeg arbejder i",
+    "trustNote": "Ingen partnerbadges. Ingen reseller-snak. Alt nedenfor er noget jeg selv har kørt spend i, sat tracking op for eller bygget integrationer til.",
 
     "whyEyebrow": "Derfor er det anderledes",
-    "whyTitle": "De fleste bureauer sælger dig en skive. Du får hele rørledningen.",
-    "why1Title": "Senior, ikke et team af juniorer",
-    "why1Desc": "Hver konto, audit og build laves personligt af mig. Ingen karrierestarter på dit mediebudget; ingen projektleder der leger hviskeleg.",
-    "why2Title": "Marketing og engineering under samme tag",
-    "why2Desc": "Jeg kører annoncerne OG bygger landingssider, tracking og AI-værktøjer de afhænger af. Færre overleveringer betyder færre ting der går i stykker mellem teams.",
+    "whyTitle": "De fleste bureauer leverer ét led. Jeg tager hele kæden.",
+    "why1Title": "Senior hele vejen igennem",
+    "why1Desc": "Jeg laver selv hver konto, audit og build. Ingen junior på dit budget og ingen account manager som mellemled.",
+    "why2Title": "Marketing og udvikling hos samme person",
+    "why2Desc": "Jeg kører annoncerne og bygger landingssiderne, trackingen og AI-værktøjerne bag dem. Færre overleveringer giver færre ting, der går i stykker.",
     "why3Title": "Ærlig om grænserne",
-    "why3Desc": "Jeg laver ikke kreativ produktion, organisk social eller PR. Hvis en brief ikke passer, siger jeg det og peger dig hen til en der gør det bedre.",
+    "why3Desc": "Jeg laver ikke kreativ produktion, organisk social eller PR. Hvis opgaven ikke passer, siger jeg det og sender dig videre til en, der er bedre til den del.",
 
     "offerEyebrow": "Hvad jeg laver",
     "offerTitle": "To discipliner, samme operatør.",
-    "offerSubtitle": "Paid media og SEO har jeg lavet siden 2010. AI-native produktarbejde har jeg lagt ovenpå — med samme forståelse af outcomes, ikke outputs.",
+    "offerSubtitle": "Paid media og SEO har været mit arbejde siden 2010. AI-native produktarbejde er kommet ovenpå, men med samme fokus på resultater frem for leverancer.",
 
     "offer1Kicker": "Disciplin 01",
     "offer1Title": "Paid media, SEO & tracking",
-    "offer1Lede": "Opbygning, genopbygning, audits og løbende drift. Plus det tracking-fundament, der gør tallene rigtige.",
+    "offer1Lede": "Opsætning, genopbygning, audits og løbende drift af konti. Plus trackingfundamentet, så tallene faktisk kan bruges.",
     "offer1Bullets": [
       "Google Ads — Search, Performance Max, Shopping, Demand Gen, YouTube",
       "Meta — Advantage+, retargeting, kreative test-frameworks",
@@ -152,7 +152,7 @@
 
     "offer2Kicker": "Disciplin 02",
     "offer2Title": "AI-native webapps",
-    "offer2Lede": "Produktionsapps bygget med Claude Code og moderne frameworks. Samme senior-øje på produktet som på de annoncer, der sender trafik til det.",
+    "offer2Lede": "Produktionsklare webapps bygget med Claude Code og moderne frameworks. Samme seniorblik på produktet som på de annoncer, der sender trafikken ind.",
     "offer2Bullets": [
       "Vibecoding — produktionsapps i Astro, Nuxt eller Next",
       "AI-rådgivning — hvor AI giver mening, hvor det ikke gør, hvad det reelt koster",
@@ -163,23 +163,23 @@
     "offer2Cta": "Se AI-arbejde",
 
     "portfolioEyebrow": "Udvalgt arbejde",
-    "portfolioTitle": "Live, i produktion, bygget solo.",
-    "portfolioSubtitle": "Alle projekter nedenfor er offentligt tilgængelige og kodet af mig. Rigtige produkter med rigtige brugere — ikke case-study-renders.",
+    "portfolioTitle": "Rigtige produkter. Live. Bygget solo.",
+    "portfolioSubtitle": "Alle projekterne nedenfor er offentligt tilgængelige og kodet af mig. Rigtige produkter med rigtige brugere, ikke case-grafik.",
 
-    "welcTag": "Featured · Live",
-    "welcRole": "Produkt · Engineering · SEO · Indholdssystem",
-    "welcStory": "Flersproget kryptonyhedsplatform, end-to-end. Fem sprog, 1.000+ artikler, automatiserede publiceringsflows og den SEO-arkitektur, der bærer det. Aktiv i produktion.",
-    "handballRole": "Solo build",
-    "handballStory": "Offline-first kampsporing for håndboldtrænere. Dexie + Supabase-sync, live-statistik, 364 beståede tests. Bruges på sidelinjen under rigtige kampe.",
-    "claudeDailyRole": "Solo build",
-    "claudeDailyStory": "Automatiseret dagligt digest, der scanner 60+ kilder for Claude-nyheder og bruger Claude selv til at rangere det vigtigste. Sender en kurateret morgen-mail på cron.",
-    "lmctfyRole": "Weekend-build",
-    "lmctfyStory": "Et lille viralt værktøj, der genererer delbare 'spørg Claude'-links. Bygget på én weekend; får stadig stabil trafik.",
-    "visitLive": "Besøg live-siden",
+    "welcTag": "Udvalgt · Live",
+    "welcRole": "Produkt · Udvikling · SEO · Publiceringssystem",
+    "welcStory": "Flersproget kryptonyhedssite bygget end-to-end. Fem sprog, 1.000+ artikler, automatiserede publiceringsflows og en SEO-arkitektur, der holder i drift.",
+    "handballRole": "Produkt · Udvikling",
+    "handballStory": "Offline-first kamptracker til håndboldtrænere. Dexie + Supabase-sync, live-statistik og 364 beståede tests. Bruges på sidelinjen under rigtige kampe.",
+    "claudeDailyRole": "Produkt · Automatisering",
+    "claudeDailyStory": "Automatiseret nyhedsbrev, der scanner 60+ kilder efter Claude-nyt og bruger Claude selv til at rangere det vigtigste. Sender en kurateret morgenmail på cron.",
+    "lmctfyRole": "Weekendprojekt",
+    "lmctfyStory": "Et lille viralt værktøj, der genererer delbare 'spørg Claude'-links. Bygget på en weekend og får stadig stabil trafik.",
+    "visitLive": "Besøg sitet",
 
     "engagementEyebrow": "Sådan fungerer samarbejder",
     "engagementTitle": "Tre måder at hyre mig på.",
-    "engagementSubtitle": "Ingen retainer du ikke kan opsige. Ingen overraskelseslinjer. Ingen videresalg af andres værktøjer som mine egne.",
+    "engagementSubtitle": "Ingen retaineraftaler, du ikke kan opsige. Ingen skjulte poster. Ingen videresalg af andres værktøjer som mine egne.",
     "engage1Title": "Audit",
     "engage1Price": "Fra 15.000 kr.",
     "engage1Desc": "Skriftlig deep-dive i dine annoncekonti, tracking-setup eller et eksisterende produkt. Leveret som et struktureret dokument med prioriterede fixes — ikke slides.",
@@ -193,7 +193,7 @@
     "aboutEyebrow": "Om mig",
     "aboutTitle": "Femten år, én operatør.",
     "aboutBody1": "Jeg begyndte med paid search i 2010 — dengang Google Ads stadig hed AdWords og Facebook Ads knap havde targeting. Siden da har jeg arbejdet in-house, i bureauer og med mine egne kunder i Danmark, Norden og videre ud. Kanalerne har ændret sig; disciplinen har ikke.",
-    "aboutBody2": "Det nye er bygget. Claude Code gør det realistisk for én operatør at shippe produktionssoftware. Jeg bruger det hver dag — til mine egne produkter (WELC, Claude Daily, Handball Tracker) og til kundearbejde. Hvis du nogensinde har ønsket dig, at din marketer og din udvikler var den samme person, er det nu et rigtigt valg."
+    "aboutBody2": "Det nye er, at jeg også bygger. Claude Code gør det realistisk for én person at shippe produktionssoftware. Jeg bruger det hver dag til mine egne produkter (WELC, Claude Daily, Handball Tracker og LMCTFY) og til kundearbejde. Hvis du længe har ønsket dig, at din marketer og din udvikler var den samme person, er det nu en reel mulighed."
   },
   "contact": {
     "tagline": "Kontakt os",
@@ -231,7 +231,7 @@
     "step3": "Et klart tilbud med omfang, tidsplan og gennemsigtig pris — ingen overraskelser."
   },
   "footer": {
-    "description": "Solo-operat\u00f8r baseret i Danmark. 15 \u00e5rs erfaring med paid media og SEO; bygger nu ogs\u00e5 AI-native produkter. Arbejder p\u00e5 tv\u00e6rs af Google Ads, Meta, YouTube, Apple Search, Bing, GTM og GA4.",
+    "description": "Solooperatør i Nibe, Danmark. 15 år med paid media og SEO, og nu også AI-native webapps. Hands-on med Google Ads, Meta, YouTube, Apple Search Ads, Microsoft Ads, LinkedIn, GTM, GA4 og SEO.",
     "digitalMarketing": "Digital marketing",
     "seoServices": "SEO-ydelser",
     "aiServices": "AI-ydelser",

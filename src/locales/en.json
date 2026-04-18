@@ -39,10 +39,10 @@
     "portfolio": "Portfolio"
   },
   "hero": {
-    "tagline": "Senior paid media · AI-native builds",
-    "title": "Your ads and the product they point to.",
-    "titleAccent": "Built by one person.",
-    "description": "I've spent fifteen years running paid media — Google Ads, Meta, YouTube, Apple Search, Microsoft, LinkedIn, GTM and SEO. Today I also build the AI-native web apps most marketers hand off to an engineering team. You get both, without the handoff.",
+    "tagline": "Senior paid media · AI-native web apps",
+    "title": "The ads. The tracking. The product they land on.",
+    "titleAccent": "One operator. No handoff.",
+    "description": "I've worked in paid media since 2010 across Google Ads, Meta, YouTube, Apple Search Ads, Microsoft Ads, LinkedIn, GTM, GA4 and SEO. I also build the AI-native web apps many marketing teams would normally have to hand off to development. You work with one person from click to shipped product.",
     "cta": "Start a conversation",
     "secondary": "See what I've built"
   },
@@ -122,30 +122,30 @@
     "deployDesc": "Launch with confidence. Continuous support and AI-powered optimization."
   },
   "cta": {
-    "title": "Have a project worth doing right?",
-    "subtitle": "A few sentences about where you are and what you're trying to move. I read every email personally and reply within one working day.",
+    "title": "Need sharper paid media or a product that actually ships?",
+    "subtitle": "Send a few lines on where things are stuck and what you need to move. I read every email myself and reply within one working day.",
     "button": "Start a conversation"
   },
   "home": {
-    "trustEyebrow": "Channels and tools I work across",
-    "trustNote": "Hands-on, not a reseller and not a partner. Every platform below is something I've built campaigns in, debugged tracking for, or shipped code against.",
+    "trustEyebrow": "Channels, tracking and stacks I work in",
+    "trustNote": "No reseller language. No partner-badge theater. Every platform below is something I've managed spend in, fixed tracking for, or built against myself.",
 
     "whyEyebrow": "Why this is different",
-    "whyTitle": "Most agencies sell you a slice. You get the whole pipeline.",
-    "why1Title": "Senior, not a team of juniors",
-    "why1Desc": "Every account, audit and build is done by me personally. No career-starter on your spend; no account manager playing telephone.",
-    "why2Title": "Marketing and engineering under one roof",
-    "why2Desc": "I run the ads AND build the landing pages, tracking, and AI tooling they depend on. Fewer handoffs means fewer things broken between teams.",
+    "whyTitle": "One person across media, tracking and product.",
+    "why1Title": "Senior operator, start to finish",
+    "why1Desc": "Every audit, account and build is handled by me. No junior handoff on your spend. No account manager relaying messages.",
+    "why2Title": "Ads and product in the same brain",
+    "why2Desc": "I run the paid media and build the landing pages, tracking and AI tooling behind it. Fewer handoffs means fewer broken dependencies.",
     "why3Title": "Honest about the limits",
     "why3Desc": "I don't do creative production, organic social, or PR. I'll tell you when a brief isn't a fit and point you at someone who'll do it better.",
 
     "offerEyebrow": "What I do",
     "offerTitle": "Two practices, same operator.",
-    "offerSubtitle": "Paid media and SEO is what I've been doing since 2010. AI-native product work is what I've added on top — using the same framework of outcomes, not outputs.",
+    "offerSubtitle": "Paid media and SEO is the long arc: fifteen years, starting in 2010. AI-native product work is the newer layer, applied with the same focus on outcomes, instrumentation and actual use.",
 
     "offer1Kicker": "Practice 01",
     "offer1Title": "Paid media, SEO & tracking",
-    "offer1Lede": "Account builds, rebuilds, audits and ongoing management. Plus the tracking foundation that makes the numbers real.",
+    "offer1Lede": "Account builds, rebuilds, audits and ongoing management. Plus the tracking foundation that makes the numbers usable.",
     "offer1Bullets": [
       "Google Ads — Search, Performance Max, Shopping, Demand Gen, YouTube",
       "Meta — Advantage+, retargeting, creative testing frameworks",
@@ -157,7 +157,7 @@
 
     "offer2Kicker": "Practice 02",
     "offer2Title": "AI-native web apps",
-    "offer2Lede": "Production apps built with Claude Code and modern frameworks. Same senior eye on the product as I have on the ads driving traffic to it.",
+    "offer2Lede": "Production apps built with Claude Code and modern frameworks. The same senior eye on the product as on the ads driving traffic to it.",
     "offer2Bullets": [
       "Vibecoding — production apps in Astro, Nuxt or Next",
       "AI consulting — where to use AI, where not to, what it'll actually cost",
@@ -168,23 +168,23 @@
     "offer2Cta": "See AI work",
 
     "portfolioEyebrow": "Selected work",
-    "portfolioTitle": "Live, in production, built solo.",
-    "portfolioSubtitle": "Every project below is publicly accessible and was coded by me. Real products with real users — not case-study renders.",
+    "portfolioTitle": "Real products. Live. Built solo.",
+    "portfolioSubtitle": "Everything below is public and coded by me. Real products with real users, not polished case-study renders.",
 
     "welcTag": "Featured · Live",
-    "welcRole": "Product · Engineering · SEO · Content system",
-    "welcStory": "Multilingual crypto news platform, end-to-end. Five languages, 1,000+ articles, automated publishing pipelines, and the SEO architecture to support it. Active in production.",
-    "handballRole": "Solo build",
-    "handballStory": "Offline-first match tracker for handball coaches. Dexie + Supabase sync, live statistics, 364 passing tests. Used on sidelines during real matches.",
-    "claudeDailyRole": "Solo build",
-    "claudeDailyStory": "Automated daily digest that scans 60+ sources for Claude-related news and uses Claude itself to rank what matters. Ships a curated morning email on a cron.",
+    "welcRole": "Product · Engineering · SEO · Publishing system",
+    "welcStory": "Multilingual crypto news platform built end to end. Five languages, 1,000+ articles, automated publishing flows and SEO architecture that holds up in production.",
+    "handballRole": "Product · Engineering",
+    "handballStory": "Offline-first match tracker for handball coaches. Dexie + Supabase sync, live statistics and 364 passing tests. Used on the sideline during real matches.",
+    "claudeDailyRole": "Product · Automation",
+    "claudeDailyStory": "Daily Claude-news digest scanning 60+ sources every morning, then using Claude itself to rank what matters. Curated email, shipped on a cron.",
     "lmctfyRole": "Weekend build",
-    "lmctfyStory": "A small viral tool that generates shareable \"just ask Claude\" links. Built in a weekend; still gets steady traffic.",
-    "visitLive": "Visit live site",
+    "lmctfyStory": "A small viral tool that generates shareable \"just ask Claude\" links. Built in a weekend and still gets steady traffic.",
+    "visitLive": "See it live",
 
     "engagementEyebrow": "How engagements work",
     "engagementTitle": "Three ways to hire me.",
-    "engagementSubtitle": "No retainers you can't cancel. No surprise line items. No reselling other people's tools as mine.",
+    "engagementSubtitle": "No retainers you can't cancel. No surprise invoice lines. No reselling other people's tools as mine.",
     "engage1Title": "Audit",
     "engage1Price": "From DKK 15,000",
     "engage1Desc": "Written deep-dive on your ad accounts, tracking setup or an existing product. Delivered as a structured document with prioritised fixes, not a slide deck.",
@@ -197,8 +197,8 @@
 
     "aboutEyebrow": "About",
     "aboutTitle": "Fifteen years, one operator.",
-    "aboutBody1": "I started doing paid search in 2010 — back when Google Ads was still called AdWords and Facebook Ads had no targeting to speak of. Since then I've worked in-house, inside agencies, and with my own clients across Denmark, the Nordics and further out. The channels have changed; the discipline hasn't.",
-    "aboutBody2": "The part that's new is the building. Claude Code made it realistic for a single operator to ship production software. I use it every day — for my own products (WELC, Claude Daily, Handball Tracker) and for client work. If you've ever wished your marketer and your engineer were the same person, that's now a hiring option."
+    "aboutBody1": "I started in paid search in 2010, back when Google Ads was still AdWords and Facebook Ads barely had targeting. Since then I've worked in-house, inside agencies and with my own clients across Denmark, the Nordics and beyond. The channels have changed; the discipline hasn't.",
+    "aboutBody2": "The newer layer is the building. Claude Code made it realistic for a single operator to ship production software. I use it every day for my own products (WELC, Claude Daily, Handball Tracker and LMCTFY) and for client work. If you've ever wished your marketer and your engineer were the same person, that's now a hiring option."
   },
   "contact": {
     "tagline": "Get In Touch",
@@ -236,7 +236,7 @@
     "step3": "A clear proposal with scope, timeline, and transparent pricing — no surprises."
   },
   "footer": {
-    "description": "Solo operator based in Denmark. 15 years of paid media and SEO; now also building AI-native products. Worked across Google Ads, Meta, YouTube, Apple Search, Bing, GTM, and GA4.",
+    "description": "Solo operator in Nibe, Denmark. 15 years in paid media and SEO, now also building AI-native web apps. Hands-on across Google Ads, Meta, YouTube, Apple Search Ads, Microsoft Ads, LinkedIn, GTM, GA4 and SEO.",
     "digitalMarketing": "Digital Marketing",
     "seoServices": "SEO Services",
     "aiServices": "AI Services",

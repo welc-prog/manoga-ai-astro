@@ -17,7 +17,7 @@ const offer1Bullets = [
 ];
 const offer2Bullets = [
   'Vibecoding — produktionsapps i Astro, Nuxt eller Next',
-  'AI-rådgivning — hvor AI giver mening, hvor ikke, hvad det reelt koster',
+  'AI-rådgivning — hvor AI giver mening, hvor det ikke gør, og hvad det reelt koster',
   'Workshops — halv- eller heldag for små teams, hands-on',
   'Interne værktøjer — dashboards, datapipelines, automatisering',
   'Full-stack: frontend, backend, deployment, monitoring',
@@ -67,32 +67,32 @@ const channels = [
         </div>
       </div>
 
-      <aside class="mh-hero-col-side" aria-label="At a glance">
+      <aside class="mh-hero-col-side" aria-label="Kort fortalt">
         <div class="mh-card mh-id-card">
           <div class="mh-id-head">
             <span class="mh-id-avatar" aria-hidden="true">K</span>
             <div>
               <p class="mh-id-name">Kenneth Abueg</p>
-              <p class="mh-id-role">Senior paid-media-operatør · AI-native builder</p>
+              <p class="mh-id-role">Senior paid media-specialist · bygger AI-native webapps</p>
             </div>
           </div>
 
           <dl class="mh-id-facts">
             <div>
               <dt>Baseret i</dt>
-              <dd>Nibe, Danmark</dd>
+              <dd>Nibe, Nordjylland</dd>
             </div>
             <div>
-              <dt>Har lavet dette siden</dt>
+              <dt>Startår</dt>
               <dd>2010 · 15 år</dd>
             </div>
             <div>
-              <dt>Opsætning</dt>
-              <dd>Solo-operatør — ikke et bureau</dd>
+              <dt>Arbejdsform</dt>
+              <dd>Solooperatør — ikke et bureau</dd>
             </div>
             <div>
-              <dt>Arbejder med</dt>
-              <dd>Founders, in-house marketing-ansvarlige, CMOs</dd>
+              <dt>Typiske kunder</dt>
+              <dd>Founders, in-house marketingansvarlige og CMOs</dd>
             </div>
             <div>
               <dt>Svartid</dt>
@@ -102,7 +102,7 @@ const channels = [
 
           <div class="mh-id-status">
             <span class="mh-status-dot" aria-hidden="true"></span>
-            Ledig til nye projekter i Q2 2026
+            Ledig til nye opgaver i Q2 2026
           </div>
         </div>
       </aside>
@@ -117,7 +117,7 @@ const channels = [
         {channels.map(c => (
           <li class="mh-trust-item">
             <span class="mh-trust-name">{c.name}</span>
-            <span class="mh-trust-since">siden {c.since}</span>
+            <span class="mh-trust-since">{c.since === 'aktuelt' ? 'i brug nu' : `siden ${c.since}`}</span>
           </li>
         ))}
       </ul>
@@ -215,7 +215,7 @@ const channels = [
         <a href="https://weloveeverythingcrypto.com" target="_blank" rel="noopener" class="mh-featured-media">
           <img src="/images/portfolio-crypto.webp" alt="WeLoveEverythingCrypto" loading="lazy" />
           <span class="mh-featured-visit">
-            Besøg live <IconExternal />
+            Besøg sitet <IconExternal />
           </span>
         </a>
         <div class="mh-featured-body">
@@ -227,7 +227,7 @@ const channels = [
             <div><dt>Stack</dt><dd>Nuxt 4 · TypeScript · Vercel</dd></div>
             <div><dt>Sprog</dt><dd>5</dd></div>
             <div><dt>Artikler</dt><dd>1.000+</dd></div>
-            <div><dt>Bygget af</dt><dd>Kenneth, solo</dd></div>
+            <div><dt>Operatør</dt><dd>Kenneth Abueg</dd></div>
           </dl>
         </div>
       </article>
