@@ -8,304 +8,336 @@ import Layout from '../layouts/Layout.astro';
 const lang = 'en';
 const prefix = lang === 'en' ? '' : `/${lang}`;
 
+const offer1Bullets = [
+  'Google Ads — Search, Performance Max, Shopping, Demand Gen, YouTube',
+  'Meta — Advantage+, retargeting, creative testing frameworks',
+  'Apple Search Ads, Microsoft Advertising, LinkedIn Ads',
+  'Technical SEO, content architecture, on-page and internal linking',
+  'GTM, GA4, server-side tracking, Conversions API, consent mode v2',
+];
+const offer2Bullets = [
+  'Vibecoding — production apps in Astro, Nuxt or Next',
+  'AI consulting — where to use AI, where not to, what it\'ll actually cost',
+  'Workshops — half or full day for small teams, hands-on',
+  'Internal tooling — dashboards, data pipelines, automation',
+  'Full-stack: frontend, backend, deployment, monitoring',
+];
+
 const channels = [
-  'Google Ads',
-  'Meta',
-  'YouTube',
-  'Apple Search Ads',
-  'Microsoft/Bing',
-  'LinkedIn Ads',
-  'Google Tag Manager',
-  'GA4',
-  'Server-side tracking',
-  'Technical SEO',
+  { name: 'Google Ads', since: '2010' },
+  { name: 'Meta', since: '2012' },
+  { name: 'YouTube Ads', since: '2013' },
+  { name: 'Apple Search Ads', since: '2018' },
+  { name: 'Microsoft Ads', since: '2014' },
+  { name: 'LinkedIn Ads', since: '2015' },
+  { name: 'Google Tag Manager', since: '2013' },
+  { name: 'GA4 · server-side', since: 'current' },
+  { name: 'Technical SEO', since: '2010' },
+  { name: 'Astro · Nuxt · Next', since: 'current' },
 ];
 ---
 
 <Layout title={t('meta.homeTitle', lang)} description={t('meta.homeDescription', lang)} lang={lang}>
   <!-- ============ HERO ============ -->
-  <section class="hp-hero">
-    <div class="container">
-      <div class="hp-hero-inner">
-        <div class="hp-hero-main">
-          <div class="hp-eyebrow">
-            <span class="hp-eyebrow-dot" aria-hidden="true"></span>
-            {t('hero.tagline', lang)}
-          </div>
-          <h1 class="hp-hero-title">
-            <span class="hp-hero-line">{t('hero.title', lang)}</span>
-            <span class="hp-hero-line hp-hero-line--accent">{t('hero.titleAccent', lang)}</span>
-          </h1>
-          <p class="hp-hero-desc">{t('hero.description', lang)}</p>
-          <div class="hp-hero-actions">
-            <a href={`${prefix}/contact`} class="btn btn-primary">
-              {t('hero.cta', lang)}
-              <IconArrowRight />
-            </a>
-            <a href={`${prefix}/portfolio`} class="btn btn-secondary">{t('hero.secondary', lang)}</a>
-          </div>
-        </div>
+  <section class="mh-hero">
+    <div class="mh-hero-glow" aria-hidden="true"></div>
+    <div class="container mh-hero-inner">
+      <div class="mh-hero-col-main">
+        <span class="mh-kicker">
+          <span class="mh-kicker-dot" aria-hidden="true"></span>
+          {t('hero.tagline', lang)}
+        </span>
 
-        <aside class="hp-hero-meta" aria-label="At a glance">
-          <dl class="hp-meta-list">
-            <div class="hp-meta-row">
-              <dt>Based</dt>
+        <h1 class="mh-hero-h1">
+          {t('hero.title', lang)}
+          <br />
+          <span class="mh-hero-h1-accent">{t('hero.titleAccent', lang)}</span>
+        </h1>
+
+        <p class="mh-hero-lede">{t('hero.description', lang)}</p>
+
+        <div class="mh-hero-actions">
+          <a href={`${prefix}/contact`} class="mh-btn mh-btn--primary">
+            {t('hero.cta', lang)}
+            <IconArrowRight />
+          </a>
+          <a href={`${prefix}/portfolio`} class="mh-btn mh-btn--ghost">
+            {t('hero.secondary', lang)}
+          </a>
+        </div>
+      </div>
+
+      <aside class="mh-hero-col-side" aria-label="At a glance">
+        <div class="mh-card mh-id-card">
+          <div class="mh-id-head">
+            <span class="mh-id-avatar" aria-hidden="true">K</span>
+            <div>
+              <p class="mh-id-name">Kenneth Abueg</p>
+              <p class="mh-id-role">Senior paid-media operator · AI-native builder</p>
+            </div>
+          </div>
+
+          <dl class="mh-id-facts">
+            <div>
+              <dt>Based in</dt>
               <dd>Nibe, Denmark</dd>
             </div>
-            <div class="hp-meta-row">
-              <dt>Experience</dt>
-              <dd>15 years in digital</dd>
+            <div>
+              <dt>Doing this since</dt>
+              <dd>2010 · 15 years</dd>
             </div>
-            <div class="hp-meta-row">
+            <div>
               <dt>Setup</dt>
               <dd>Solo operator — not an agency</dd>
             </div>
-            <div class="hp-meta-row">
-              <dt>Availability</dt>
-              <dd>Q2 2026 · accepting briefs</dd>
+            <div>
+              <dt>Works with</dt>
+              <dd>Founders, in-house marketing leads, CMOs</dd>
             </div>
-            <div class="hp-meta-row">
-              <dt>Reply time</dt>
-              <dd>Within 24h on weekdays</dd>
-            </div>
-            <div class="hp-meta-row">
-              <dt>Registered</dt>
-              <dd>CVR DK39733730</dd>
+            <div>
+              <dt>Response</dt>
+              <dd>Within one working day</dd>
             </div>
           </dl>
-        </aside>
-      </div>
+
+          <div class="mh-id-status">
+            <span class="mh-status-dot" aria-hidden="true"></span>
+            Accepting new work for Q2 2026
+          </div>
+        </div>
+      </aside>
     </div>
   </section>
 
-  <!-- ============ CHANNELS STRIP ============ -->
-  <section class="hp-channels" aria-labelledby="channels-title">
+  <!-- ============ TRUST STRIP ============ -->
+  <section class="mh-trust">
     <div class="container">
-      <div class="hp-channels-head">
-        <span class="hp-eyebrow-static">{t('home.channelsEyebrow', lang)}</span>
-        <h2 id="channels-title" class="hp-channels-title">{t('home.channelsTitle', lang)}</h2>
-      </div>
-      <ul class="hp-channels-list">
+      <span class="mh-eyebrow">{t('home.trustEyebrow', lang)}</span>
+      <ul class="mh-trust-grid">
         {channels.map(c => (
-          <li class="hp-channel-item">{c}</li>
+          <li class="mh-trust-item">
+            <span class="mh-trust-name">{c.name}</span>
+            <span class="mh-trust-since">since {c.since}</span>
+          </li>
         ))}
       </ul>
-      <p class="hp-channels-note">{t('home.channelsNote', lang)}</p>
+      <p class="mh-trust-note">{t('home.trustNote', lang)}</p>
     </div>
   </section>
 
-  <!-- ============ TRACK 1: PAID MEDIA & SEO ============ -->
-  <section class="hp-track" aria-labelledby="paid-title">
+  <!-- ============ WHY ME ============ -->
+  <section class="mh-why">
     <div class="container">
-      <div class="hp-track-head">
-        <span class="hp-track-num">01</span>
-        <div>
-          <span class="hp-eyebrow-static">{t('home.paidEyebrow', lang)}</span>
-          <h2 id="paid-title" class="hp-track-title">{t('home.paidTitle', lang)}</h2>
-          <p class="hp-track-sub">{t('home.paidSubtitle', lang)}</p>
-        </div>
-      </div>
+      <header class="mh-section-head">
+        <span class="mh-eyebrow">{t('home.whyEyebrow', lang)}</span>
+        <h2 class="mh-h2">{t('home.whyTitle', lang)}</h2>
+      </header>
 
-      <ol class="hp-offer-list">
-        <li class="hp-offer">
-          <span class="hp-offer-num" aria-hidden="true">01</span>
-          <div class="hp-offer-body">
-            <h3 class="hp-offer-title">{t('home.paidMediaTitle', lang)}</h3>
-            <p class="hp-offer-desc">{t('home.paidMediaDesc', lang)}</p>
-            <div class="hp-offer-links">
-              <a href={`${prefix}/google-ads`}>Google Ads <IconArrowRight /></a>
-              <a href={`${prefix}/meta-advertising`}>Meta Advertising <IconArrowRight /></a>
-            </div>
-          </div>
-        </li>
-        <li class="hp-offer">
-          <span class="hp-offer-num" aria-hidden="true">02</span>
-          <div class="hp-offer-body">
-            <h3 class="hp-offer-title">{t('home.seoTitle', lang)}</h3>
-            <p class="hp-offer-desc">{t('home.seoDesc', lang)}</p>
-            <div class="hp-offer-links">
-              <a href={`${prefix}/seo`}>SEO services <IconArrowRight /></a>
-            </div>
-          </div>
-        </li>
-        <li class="hp-offer">
-          <span class="hp-offer-num" aria-hidden="true">03</span>
-          <div class="hp-offer-body">
-            <h3 class="hp-offer-title">{t('home.trackingTitle', lang)}</h3>
-            <p class="hp-offer-desc">{t('home.trackingDesc', lang)}</p>
-            <div class="hp-offer-links">
-              <a href={`${prefix}/google-tag-manager`}>Tracking & GTM <IconArrowRight /></a>
-            </div>
-          </div>
-        </li>
-      </ol>
+      <div class="mh-why-grid">
+        <article class="mh-why-card">
+          <span class="mh-why-num">01</span>
+          <h3 class="mh-card-title">{t('home.why1Title', lang)}</h3>
+          <p class="mh-card-body">{t('home.why1Desc', lang)}</p>
+        </article>
+        <article class="mh-why-card">
+          <span class="mh-why-num">02</span>
+          <h3 class="mh-card-title">{t('home.why2Title', lang)}</h3>
+          <p class="mh-card-body">{t('home.why2Desc', lang)}</p>
+        </article>
+        <article class="mh-why-card">
+          <span class="mh-why-num">03</span>
+          <h3 class="mh-card-title">{t('home.why3Title', lang)}</h3>
+          <p class="mh-card-body">{t('home.why3Desc', lang)}</p>
+        </article>
+      </div>
     </div>
   </section>
 
-  <!-- ============ TRACK 2: AI-NATIVE BUILDS ============ -->
-  <section class="hp-track hp-track--alt" aria-labelledby="build-title">
+  <!-- ============ OFFERINGS ============ -->
+  <section class="mh-offer">
     <div class="container">
-      <div class="hp-track-head">
-        <span class="hp-track-num">02</span>
-        <div>
-          <span class="hp-eyebrow-static">{t('home.buildEyebrow', lang)}</span>
-          <h2 id="build-title" class="hp-track-title">{t('home.buildTitle', lang)}</h2>
-          <p class="hp-track-sub">{t('home.buildSubtitle', lang)}</p>
-        </div>
-      </div>
+      <header class="mh-section-head mh-section-head--center">
+        <span class="mh-eyebrow">{t('home.offerEyebrow', lang)}</span>
+        <h2 class="mh-h2">{t('home.offerTitle', lang)}</h2>
+        <p class="mh-section-sub">{t('home.offerSubtitle', lang)}</p>
+      </header>
 
-      <ol class="hp-offer-list">
-        <li class="hp-offer">
-          <span class="hp-offer-num" aria-hidden="true">04</span>
-          <div class="hp-offer-body">
-            <h3 class="hp-offer-title">{t('home.vibecodingTitle', lang)}</h3>
-            <p class="hp-offer-desc">{t('home.vibecodingDesc', lang)}</p>
-            <div class="hp-offer-links">
-              <a href={`${prefix}/vibecoding`}>Vibecoding <IconArrowRight /></a>
-              <a href={`${prefix}/webdesign`}>Web design <IconArrowRight /></a>
-            </div>
+      <div class="mh-offer-grid">
+        <article class="mh-offer-card">
+          <div class="mh-offer-visual">
+            <img src="/images/icon-google-ads.webp" alt="" loading="lazy" width="60" height="60" />
+            <img src="/images/icon-meta-ads.webp" alt="" loading="lazy" width="60" height="60" />
+            <img src="/images/icon-seo.webp" alt="" loading="lazy" width="60" height="60" />
+            <img src="/images/icon-gtm.webp" alt="" loading="lazy" width="60" height="60" />
           </div>
-        </li>
-        <li class="hp-offer">
-          <span class="hp-offer-num" aria-hidden="true">05</span>
-          <div class="hp-offer-body">
-            <h3 class="hp-offer-title">{t('home.aiConsultingTitle', lang)}</h3>
-            <p class="hp-offer-desc">{t('home.aiConsultingDesc', lang)}</p>
-            <div class="hp-offer-links">
-              <a href={`${prefix}/ai-consulting`}>AI consulting <IconArrowRight /></a>
-            </div>
+          <span class="mh-offer-kicker">{t('home.offer1Kicker', lang)}</span>
+          <h3 class="mh-offer-title">{t('home.offer1Title', lang)}</h3>
+          <p class="mh-offer-lede">{t('home.offer1Lede', lang)}</p>
+          <ul class="mh-offer-bullets">
+            {offer1Bullets.map(b => <li>{b}</li>)}
+          </ul>
+          <a href={`${prefix}/seo`} class="mh-offer-link">
+            {t('home.offer1Cta', lang)} <IconArrowRight />
+          </a>
+        </article>
+
+        <article class="mh-offer-card mh-offer-card--alt">
+          <div class="mh-offer-visual">
+            <img src="/images/icon-vibecoding.webp" alt="" loading="lazy" width="60" height="60" />
+            <img src="/images/icon-ai-consulting.webp" alt="" loading="lazy" width="60" height="60" />
+            <img src="/images/icon-workshops.webp" alt="" loading="lazy" width="60" height="60" />
+            <img src="/images/icon-webdesign.webp" alt="" loading="lazy" width="60" height="60" />
           </div>
-        </li>
-        <li class="hp-offer">
-          <span class="hp-offer-num" aria-hidden="true">06</span>
-          <div class="hp-offer-body">
-            <h3 class="hp-offer-title">{t('home.workshopsTitle', lang)}</h3>
-            <p class="hp-offer-desc">{t('home.workshopsDesc', lang)}</p>
-            <div class="hp-offer-links">
-              <a href={`${prefix}/workshops`}>Workshops <IconArrowRight /></a>
-            </div>
-          </div>
-        </li>
-      </ol>
+          <span class="mh-offer-kicker">{t('home.offer2Kicker', lang)}</span>
+          <h3 class="mh-offer-title">{t('home.offer2Title', lang)}</h3>
+          <p class="mh-offer-lede">{t('home.offer2Lede', lang)}</p>
+          <ul class="mh-offer-bullets">
+            {offer2Bullets.map(b => <li>{b}</li>)}
+          </ul>
+          <a href={`${prefix}/ai-consulting`} class="mh-offer-link">
+            {t('home.offer2Cta', lang)} <IconArrowRight />
+          </a>
+        </article>
+      </div>
     </div>
   </section>
 
-  <!-- ============ PORTFOLIO EDITORIAL ============ -->
-  <section class="hp-work" aria-labelledby="work-title">
+  <!-- ============ PORTFOLIO ============ -->
+  <section class="mh-work">
     <div class="container">
-      <div class="hp-work-head">
-        <span class="hp-eyebrow-static">{t('home.portfolioEyebrow', lang)}</span>
-        <h2 id="work-title" class="hp-work-title">{t('home.portfolioTitle', lang)}</h2>
-      </div>
+      <header class="mh-section-head">
+        <span class="mh-eyebrow">{t('home.portfolioEyebrow', lang)}</span>
+        <h2 class="mh-h2">{t('home.portfolioTitle', lang)}</h2>
+        <p class="mh-section-sub">{t('home.portfolioSubtitle', lang)}</p>
+      </header>
 
-      <!-- Featured: WELC -->
-      <article class="hp-featured">
-        <a href="https://weloveeverythingcrypto.com" target="_blank" rel="noopener" class="hp-featured-media" aria-label="Visit WeLoveEverythingCrypto">
+      <article class="mh-featured">
+        <a href="https://weloveeverythingcrypto.com" target="_blank" rel="noopener" class="mh-featured-media">
           <img src="/images/portfolio-crypto.webp" alt="WeLoveEverythingCrypto" loading="lazy" />
+          <span class="mh-featured-visit">
+            Visit live <IconExternal />
+          </span>
         </a>
-        <div class="hp-featured-body">
-          <span class="hp-tag">{t('home.welcTag', lang)}</span>
-          <h3 class="hp-featured-title">WeLoveEverythingCrypto</h3>
-          <p class="hp-featured-role">{t('home.welcRole', lang)}</p>
-          <p class="hp-featured-story">{t('home.welcStory', lang)}</p>
-          <dl class="hp-facts">
+        <div class="mh-featured-body">
+          <span class="mh-chip">{t('home.welcTag', lang)}</span>
+          <h3 class="mh-featured-title">WeLoveEverythingCrypto</h3>
+          <p class="mh-featured-role">{t('home.welcRole', lang)}</p>
+          <p class="mh-featured-story">{t('home.welcStory', lang)}</p>
+          <dl class="mh-featured-facts">
             <div><dt>Stack</dt><dd>Nuxt 4 · TypeScript · Vercel</dd></div>
             <div><dt>Languages</dt><dd>5</dd></div>
             <div><dt>Articles</dt><dd>1,000+</dd></div>
-            <div><dt>Role</dt><dd>Solo build</dd></div>
+            <div><dt>Built by</dt><dd>Kenneth, solo</dd></div>
           </dl>
-          <a href="https://weloveeverythingcrypto.com" target="_blank" rel="noopener" class="hp-featured-link">
-            {t('home.visitLive', lang)} <IconExternal />
-          </a>
         </div>
       </article>
 
-      <!-- Supporting projects -->
-      <div class="hp-supporting">
-        <article class="hp-case">
-          <a href="https://handballtracker.com" target="_blank" rel="noopener" class="hp-case-media">
+      <div class="mh-work-grid">
+        <article class="mh-case">
+          <a href="https://handballtracker.com" target="_blank" rel="noopener" class="mh-case-media">
             <img src="/images/portfolio-handball.webp" alt="Handball Tracker" loading="lazy" />
           </a>
-          <div class="hp-case-body">
-            <h3 class="hp-case-title">Handball Tracker</h3>
-            <p class="hp-case-role">{t('home.handballRole', lang)}</p>
-            <p class="hp-case-story">{t('home.handballStory', lang)}</p>
-            <a href="https://handballtracker.com" target="_blank" rel="noopener" class="hp-case-link">handballtracker.com <IconExternal /></a>
+          <div class="mh-case-body">
+            <h3 class="mh-case-title">Handball Tracker</h3>
+            <p class="mh-case-role">{t('home.handballRole', lang)}</p>
+            <p class="mh-case-story">{t('home.handballStory', lang)}</p>
+            <a href="https://handballtracker.com" target="_blank" rel="noopener" class="mh-case-link">
+              handballtracker.com <IconExternal />
+            </a>
           </div>
         </article>
 
-        <article class="hp-case">
-          <a href="https://simpleclaude.news" target="_blank" rel="noopener" class="hp-case-media">
+        <article class="mh-case">
+          <a href="https://simpleclaude.news" target="_blank" rel="noopener" class="mh-case-media">
             <img src="/images/portfolio-claude-daily.svg" alt="Claude Daily" loading="lazy" />
           </a>
-          <div class="hp-case-body">
-            <h3 class="hp-case-title">Claude Daily</h3>
-            <p class="hp-case-role">{t('home.claudeDailyRole', lang)}</p>
-            <p class="hp-case-story">{t('home.claudeDailyStory', lang)}</p>
-            <a href="https://simpleclaude.news" target="_blank" rel="noopener" class="hp-case-link">simpleclaude.news <IconExternal /></a>
+          <div class="mh-case-body">
+            <h3 class="mh-case-title">Claude Daily</h3>
+            <p class="mh-case-role">{t('home.claudeDailyRole', lang)}</p>
+            <p class="mh-case-story">{t('home.claudeDailyStory', lang)}</p>
+            <a href="https://simpleclaude.news" target="_blank" rel="noopener" class="mh-case-link">
+              simpleclaude.news <IconExternal />
+            </a>
           </div>
         </article>
 
-        <article class="hp-case">
-          <a href="https://letmeclaudethatforyou.live" target="_blank" rel="noopener" class="hp-case-media">
+        <article class="mh-case">
+          <a href="https://letmeclaudethatforyou.live" target="_blank" rel="noopener" class="mh-case-media">
             <img src="/images/portfolio-lmctfy.svg" alt="Let Me Claude That For You" loading="lazy" />
           </a>
-          <div class="hp-case-body">
-            <h3 class="hp-case-title">Let Me Claude That For You</h3>
-            <p class="hp-case-role">{t('home.lmctfyRole', lang)}</p>
-            <p class="hp-case-story">{t('home.lmctfyStory', lang)}</p>
-            <a href="https://letmeclaudethatforyou.live" target="_blank" rel="noopener" class="hp-case-link">letmeclaudethatforyou.live <IconExternal /></a>
+          <div class="mh-case-body">
+            <h3 class="mh-case-title">Let Me Claude That For You</h3>
+            <p class="mh-case-role">{t('home.lmctfyRole', lang)}</p>
+            <p class="mh-case-story">{t('home.lmctfyStory', lang)}</p>
+            <a href="https://letmeclaudethatforyou.live" target="_blank" rel="noopener" class="mh-case-link">
+              letmeclaudethatforyou.live <IconExternal />
+            </a>
           </div>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- ============ HOW I WORK ============ -->
-  <section class="hp-how" aria-labelledby="how-title">
+  <!-- ============ ABOUT ============ -->
+  <section class="mh-about">
     <div class="container">
-      <div class="hp-how-grid">
-        <header class="hp-how-head">
-          <span class="hp-eyebrow-static">{t('home.howEyebrow', lang)}</span>
-          <h2 id="how-title" class="hp-how-title">{t('home.howTitle', lang)}</h2>
+      <div class="mh-about-inner">
+        <header class="mh-about-head">
+          <span class="mh-eyebrow">{t('home.aboutEyebrow', lang)}</span>
+          <h2 class="mh-h2">{t('home.aboutTitle', lang)}</h2>
         </header>
+        <div class="mh-about-body">
+          <p>{t('home.aboutBody1', lang)}</p>
+          <p>{t('home.aboutBody2', lang)}</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <dl class="hp-how-list">
-          <div class="hp-how-item">
-            <dt>{t('home.how1Title', lang)}</dt>
-            <dd>{t('home.how1Desc', lang)}</dd>
-          </div>
-          <div class="hp-how-item">
-            <dt>{t('home.how2Title', lang)}</dt>
-            <dd>{t('home.how2Desc', lang)}</dd>
-          </div>
-          <div class="hp-how-item">
-            <dt>{t('home.how3Title', lang)}</dt>
-            <dd>{t('home.how3Desc', lang)}</dd>
-          </div>
-          <div class="hp-how-item">
-            <dt>{t('home.how4Title', lang)}</dt>
-            <dd>{t('home.how4Desc', lang)}</dd>
-          </div>
-        </dl>
+  <!-- ============ ENGAGEMENTS ============ -->
+  <section class="mh-engage">
+    <div class="container">
+      <header class="mh-section-head">
+        <span class="mh-eyebrow">{t('home.engagementEyebrow', lang)}</span>
+        <h2 class="mh-h2">{t('home.engagementTitle', lang)}</h2>
+        <p class="mh-section-sub">{t('home.engagementSubtitle', lang)}</p>
+      </header>
+
+      <div class="mh-engage-grid">
+        <article class="mh-engage-card">
+          <h3 class="mh-card-title">{t('home.engage1Title', lang)}</h3>
+          <p class="mh-engage-price">{t('home.engage1Price', lang)}</p>
+          <p class="mh-card-body">{t('home.engage1Desc', lang)}</p>
+        </article>
+        <article class="mh-engage-card mh-engage-card--feature">
+          <h3 class="mh-card-title">{t('home.engage2Title', lang)}</h3>
+          <p class="mh-engage-price">{t('home.engage2Price', lang)}</p>
+          <p class="mh-card-body">{t('home.engage2Desc', lang)}</p>
+        </article>
+        <article class="mh-engage-card">
+          <h3 class="mh-card-title">{t('home.engage3Title', lang)}</h3>
+          <p class="mh-engage-price">{t('home.engage3Price', lang)}</p>
+          <p class="mh-card-body">{t('home.engage3Desc', lang)}</p>
+        </article>
       </div>
     </div>
   </section>
 
   <!-- ============ CTA ============ -->
-  <section class="hp-cta">
+  <section class="mh-cta">
     <div class="container">
-      <div class="hp-cta-inner">
-        <div>
-          <h2 class="hp-cta-title">{t('cta.title', lang)}</h2>
-          <p class="hp-cta-sub">{t('cta.subtitle', lang)}</p>
+      <div class="mh-cta-card">
+        <div class="mh-cta-glow" aria-hidden="true"></div>
+        <div class="mh-cta-body">
+          <h2 class="mh-cta-title">{t('cta.title', lang)}</h2>
+          <p class="mh-cta-sub">{t('cta.subtitle', lang)}</p>
         </div>
-        <div class="hp-cta-actions">
-          <a href={`${prefix}/contact`} class="btn btn-primary">
+        <div class="mh-cta-actions">
+          <a href={`${prefix}/contact`} class="mh-btn mh-btn--primary">
             {t('cta.button', lang)}
             <IconArrowRight />
           </a>
-          <a href="tel:+4550587900" class="hp-cta-phone">
+          <a href="tel:+4550587900" class="mh-cta-phone">
             <IconPhone />
             +45 50 58 79 00
           </a>
@@ -316,729 +348,938 @@ const channels = [
 </Layout>
 
 <style>
-  /* ============ HOMEPAGE V2 — EDITORIAL ============ */
+  /* ============================================================
+     MANOGA HOMEPAGE V3 — CONFIDENT SOLO STUDIO
+     Rich, warm, premium. No italic flips, no monospace everywhere.
+     ============================================================ */
 
-  /* Page-level override: kill any legacy section border separators */
-  :global(main) :where(.hp-hero, .hp-channels, .hp-track, .hp-work, .hp-how, .hp-cta) {
-    border-top: none;
+  :root {
+    --mh-bg: #0a0a0c;
+    --mh-bg-raised: #121217;
+    --mh-bg-card: linear-gradient(180deg, rgba(255,255,255,0.035), rgba(255,255,255,0.012));
+    --mh-bg-card-alt: linear-gradient(180deg, rgba(201,165,92,0.05), rgba(201,165,92,0.01));
+    --mh-border: rgba(255,255,255,0.08);
+    --mh-border-bright: rgba(255,255,255,0.14);
+    --mh-border-gold: rgba(201,165,92,0.32);
+    --mh-text: #f5f5f7;
+    --mh-text-muted: rgba(245,245,247,0.72);
+    --mh-text-dim: rgba(245,245,247,0.55);
+    --mh-gold: #d4b46a;
+    --mh-gold-soft: #c9a55c;
+    --mh-gold-deep: #a78b4a;
   }
 
-  .hp-hero,
-  .hp-channels,
-  .hp-track,
-  .hp-work,
-  .hp-how,
-  .hp-cta {
+  /* Normalise against the legacy global cascade */
+  :global(main) :where(.mh-hero, .mh-trust, .mh-why, .mh-offer, .mh-work, .mh-about, .mh-engage, .mh-cta) {
+    border-top: none !important;
+  }
+
+  .mh-hero,
+  .mh-trust,
+  .mh-why,
+  .mh-offer,
+  .mh-work,
+  .mh-about,
+  .mh-engage,
+  .mh-cta {
     position: relative;
-    padding: clamp(4rem, 8vw, 7rem) 0;
+    padding: clamp(4.5rem, 8vw, 7.5rem) 0;
   }
+  .mh-hero { padding-top: clamp(7rem, 11vw, 10rem); padding-bottom: clamp(3.5rem, 6vw, 5rem); }
 
-  .hp-hero { padding-top: clamp(7rem, 10vw, 10rem); }
-
-  .hp-channels,
-  .hp-track--alt,
-  .hp-how {
-    border-top: 1px solid rgba(255, 255, 255, 0.06);
-  }
-
-  .hp-track,
-  .hp-work,
-  .hp-cta {
-    border-top: 1px solid rgba(255, 255, 255, 0.06);
-  }
-
-  /* ============ ESCAPE HATCH — override the messy legacy cascade ============ */
-  /* Some global rules inside main.css set heading margins/padding on everything.
-     Force our own tokens using :where() for low specificity + !important where the
-     legacy side has hard declarations (observed on h1/h2/h3). */
-  .hp-hero-title,
-  .hp-channels-title,
-  .hp-track-title,
-  .hp-work-title,
-  .hp-how-title,
-  .hp-featured-title,
-  .hp-case-title,
-  .hp-offer-title,
-  .hp-cta-title {
-    margin: 0;
-  }
-
-  /* ============ EYEBROW ============ */
-  .hp-eyebrow,
-  .hp-eyebrow-static {
+  /* ============ SHARED ATOMS ============ */
+  .mh-eyebrow {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    font-family: 'JetBrains Mono', monospace, var(--font-mono);
-    font-size: 0.7rem;
-    letter-spacing: 0.18em;
+    font-size: 0.72rem;
+    letter-spacing: 0.22em;
     text-transform: uppercase;
-    color: var(--accent);
-    font-weight: 500;
+    color: var(--mh-gold);
+    font-weight: 600;
   }
 
-  .hp-eyebrow-dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: var(--accent);
-    box-shadow: 0 0 0 0 rgba(201, 165, 92, 0.5);
-    animation: hp-pulse 2s ease-out infinite;
+  .mh-h2 {
+    font-family: var(--font-heading), 'Inter', sans-serif;
+    font-size: clamp(2rem, 4.4vw, 3.125rem);
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    line-height: 1.08;
+    color: var(--mh-text);
+    margin: 0 !important;
+    max-width: 22ch;
   }
 
-  @keyframes hp-pulse {
-    0% { box-shadow: 0 0 0 0 rgba(201, 165, 92, 0.5); }
-    70% { box-shadow: 0 0 0 10px rgba(201, 165, 92, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(201, 165, 92, 0); }
+  .mh-section-head {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: clamp(2.5rem, 5vw, 4rem);
+    max-width: 46rem;
+  }
+  .mh-section-head--center {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+  }
+  .mh-section-head--center .mh-h2 { max-width: 24ch; }
+
+  .mh-section-sub {
+    color: var(--mh-text-muted);
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    margin: 0;
+    max-width: 56ch;
+  }
+  .mh-section-head--center .mh-section-sub { margin: 0 auto; }
+
+  .mh-card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    color: var(--mh-text);
+    margin: 0 !important;
+  }
+
+  .mh-card-body {
+    color: var(--mh-text-muted);
+    line-height: 1.65;
+    font-size: 0.975rem;
+    margin: 0;
+  }
+
+  /* ============ BUTTONS ============ */
+  .mh-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
+    padding: 0.95rem 1.6rem;
+    border-radius: 999px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    border: 1px solid transparent;
+    transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+    white-space: nowrap;
+  }
+
+  .mh-btn--primary {
+    background: linear-gradient(180deg, var(--mh-gold), var(--mh-gold-deep));
+    color: #1a1206;
+    box-shadow: 0 1px 0 rgba(255,255,255,0.15) inset, 0 8px 24px -10px rgba(201,165,92,0.55);
+  }
+  .mh-btn--primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 1px 0 rgba(255,255,255,0.2) inset, 0 12px 28px -10px rgba(201,165,92,0.7);
+  }
+  .mh-btn--primary :global(svg) { width: 14px; height: 14px; }
+
+  .mh-btn--ghost {
+    background: rgba(255,255,255,0.03);
+    color: var(--mh-text);
+    border-color: var(--mh-border-bright);
+  }
+  .mh-btn--ghost:hover {
+    background: rgba(255,255,255,0.06);
+    border-color: var(--mh-border-gold);
   }
 
   /* ============ HERO ============ */
-  .hp-hero-inner {
-    display: grid;
-    grid-template-columns: 1.4fr 1fr;
-    gap: clamp(2.5rem, 6vw, 5rem);
-    align-items: start;
+  .mh-hero {
+    overflow: hidden;
   }
 
-  .hp-hero-main {
+  .mh-hero-glow {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background:
+      radial-gradient(ellipse 55% 45% at 75% 20%, rgba(201,165,92,0.18), transparent 60%),
+      radial-gradient(ellipse 45% 60% at 10% 80%, rgba(101,130,200,0.07), transparent 60%);
+    pointer-events: none;
+  }
+
+  .mh-hero-inner {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1.25fr 0.9fr;
+    gap: clamp(2rem, 5vw, 4.5rem);
+    align-items: center;
+  }
+
+  .mh-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.72rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--mh-gold);
+    font-weight: 600;
+    padding: 0.5rem 0.9rem;
+    border: 1px solid var(--mh-border-gold);
+    border-radius: 999px;
+    background: rgba(201,165,92,0.06);
+    align-self: flex-start;
+  }
+
+  .mh-kicker-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--mh-gold);
+    box-shadow: 0 0 12px rgba(201,165,92,0.8);
+    animation: mh-pulse 2.2s ease-out infinite;
+  }
+  @keyframes mh-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+
+  .mh-hero-col-main {
     display: flex;
     flex-direction: column;
     gap: 1.75rem;
   }
 
-  .hp-hero-title {
-    font-family: var(--font-heading);
-    font-weight: 500;
-    font-size: clamp(2.75rem, 7.5vw, 5.75rem);
-    line-height: 0.98;
-    letter-spacing: -0.04em;
-    color: var(--text-primary);
-    display: flex;
-    flex-direction: column;
-    gap: 0.1em;
-  }
-
-  .hp-hero-line {
-    display: block;
-  }
-
-  .hp-hero-line--accent {
-    font-style: italic;
-    font-weight: 400;
-    color: var(--accent);
+  .mh-hero-h1 {
+    font-family: var(--font-heading), 'Inter', sans-serif;
+    font-size: clamp(2.75rem, 6.2vw, 4.5rem);
+    font-weight: 600;
+    line-height: 1.02;
     letter-spacing: -0.035em;
+    color: var(--mh-text);
+    margin: 0 !important;
   }
 
-  .hp-hero-desc {
-    font-size: clamp(1.05rem, 1.4vw, 1.25rem);
-    line-height: 1.55;
-    color: rgba(244, 244, 245, 0.82);
-    max-width: 36em;
+  .mh-hero-h1-accent {
+    background: linear-gradient(120deg, #f5e8c8 0%, var(--mh-gold) 55%, var(--mh-gold-deep) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+  }
+
+  .mh-hero-lede {
+    color: var(--mh-text-muted);
+    font-size: clamp(1.0625rem, 1.3vw, 1.2rem);
+    line-height: 1.65;
+    max-width: 40em;
     margin: 0;
   }
 
-  .hp-hero-actions {
+  .mh-hero-actions {
     display: flex;
-    gap: 1rem;
+    gap: 0.85rem;
     flex-wrap: wrap;
     margin-top: 0.5rem;
   }
 
-  /* Meta list */
-  .hp-hero-meta {
-    border-left: 1px solid rgba(255, 255, 255, 0.08);
-    padding-left: clamp(1.5rem, 3vw, 2.5rem);
-    padding-top: 0.5rem;
+  /* Hero side card */
+  .mh-hero-col-side {
+    display: flex;
+    align-items: stretch;
   }
 
-  .hp-meta-list {
-    margin: 0;
+  .mh-card {
+    background: var(--mh-bg-card);
+    border: 1px solid var(--mh-border);
+    border-radius: 20px;
+    padding: 1.75rem;
+    position: relative;
+    backdrop-filter: blur(8px);
+  }
+
+  .mh-id-card {
+    width: 100%;
     display: flex;
     flex-direction: column;
+    gap: 1.25rem;
   }
 
-  .hp-meta-row {
-    display: grid;
-    grid-template-columns: 110px 1fr;
+  .mh-id-head {
+    display: flex;
+    align-items: center;
     gap: 1rem;
-    padding: 0.85rem 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    font-size: 0.92rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid var(--mh-border);
+  }
+
+  .mh-id-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--mh-gold), var(--mh-gold-deep));
+    color: #1a1206;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.3rem;
+    flex-shrink: 0;
+    box-shadow: 0 4px 14px -4px rgba(201,165,92,0.5);
+  }
+
+  .mh-id-name {
+    margin: 0;
+    color: var(--mh-text);
+    font-weight: 600;
+    font-size: 1.05rem;
+    letter-spacing: -0.01em;
+  }
+
+  .mh-id-role {
+    margin: 2px 0 0;
+    color: var(--mh-text-dim);
+    font-size: 0.82rem;
     line-height: 1.4;
   }
 
-  .hp-meta-row:last-child { border-bottom: none; }
-
-  .hp-meta-row dt {
-    font-family: 'JetBrains Mono', monospace, var(--font-mono);
-    font-size: 0.7rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: rgba(244, 244, 245, 0.55);
-    padding-top: 2px;
-  }
-
-  .hp-meta-row dd {
+  .mh-id-facts {
     margin: 0;
-    color: rgba(244, 244, 245, 0.92);
-    font-weight: 500;
-  }
-
-  /* ============ CHANNELS ============ */
-  .hp-channels-head {
-    max-width: 48rem;
-    margin-bottom: clamp(2rem, 4vw, 3rem);
     display: flex;
     flex-direction: column;
+    gap: 0.9rem;
+  }
+
+  .mh-id-facts > div {
+    display: grid;
+    grid-template-columns: 120px 1fr;
     gap: 0.75rem;
   }
 
-  .hp-channels-title {
-    font-family: var(--font-heading);
-    font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  .mh-id-facts dt {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--mh-text-dim);
     font-weight: 500;
-    letter-spacing: -0.025em;
-    line-height: 1.15;
-    color: var(--text-primary);
+    padding-top: 1px;
   }
 
-  .hp-channels-list {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 1.5rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.07);
-  }
-
-  .hp-channel-item {
-    padding: 1rem 1.25rem 1rem 0;
-    margin-right: 1.25rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
-    font-family: 'JetBrains Mono', monospace, var(--font-mono);
-    font-size: 0.85rem;
-    letter-spacing: 0.02em;
-    color: rgba(244, 244, 245, 0.88);
-    flex: 1 0 auto;
-    min-width: 180px;
-  }
-
-  .hp-channel-item::before {
-    content: "— ";
-    color: var(--accent);
-    margin-right: 0.4rem;
-  }
-
-  .hp-channels-note {
-    color: rgba(244, 244, 245, 0.62);
-    font-size: 0.95rem;
-    max-width: 52ch;
+  .mh-id-facts dd {
     margin: 0;
-  }
-
-  /* ============ TRACK ============ */
-  .hp-track-head {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: clamp(1.5rem, 4vw, 3rem);
-    align-items: start;
-    margin-bottom: clamp(3rem, 6vw, 4.5rem);
-  }
-
-  .hp-track-num {
-    font-family: 'JetBrains Mono', monospace, var(--font-mono);
-    font-size: clamp(2.5rem, 4vw, 3.5rem);
-    font-weight: 300;
-    color: rgba(201, 165, 92, 0.35);
-    line-height: 1;
-    padding-top: 0.25rem;
-  }
-
-  .hp-track-title {
-    font-family: var(--font-heading);
-    font-size: clamp(1.75rem, 3.8vw, 2.75rem);
+    color: var(--mh-text);
+    font-size: 0.92rem;
     font-weight: 500;
-    letter-spacing: -0.025em;
-    line-height: 1.12;
-    color: var(--text-primary);
-    margin-top: 0.75rem !important;
-    max-width: 22ch;
+    line-height: 1.4;
   }
 
-  .hp-track-sub {
-    margin-top: 1rem;
-    font-size: 1.0625rem;
-    line-height: 1.65;
-    color: rgba(244, 244, 245, 0.78);
-    max-width: 52ch;
-  }
-
-  /* ============ OFFER LIST ============ */
-  .hp-offer-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
-  }
-
-  .hp-offer {
-    display: grid;
-    grid-template-columns: 80px 1fr;
-    gap: clamp(1.5rem, 3vw, 2.5rem);
-    padding: clamp(2rem, 3.5vw, 2.75rem) 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    transition: background 0.3s ease;
-  }
-
-  .hp-offer:hover {
-    background: linear-gradient(
-      to right,
-      rgba(201, 165, 92, 0.02),
-      rgba(201, 165, 92, 0) 60%
-    );
-  }
-
-  .hp-offer-num {
-    font-family: 'JetBrains Mono', monospace, var(--font-mono);
-    font-size: 0.78rem;
-    letter-spacing: 0.2em;
-    color: rgba(244, 244, 245, 0.4);
-    padding-top: 0.4rem;
-  }
-
-  .hp-offer-body { max-width: 60rem; }
-
-  .hp-offer-title {
-    font-family: var(--font-heading);
-    font-size: clamp(1.4rem, 2.2vw, 1.85rem);
-    font-weight: 500;
-    letter-spacing: -0.02em;
-    line-height: 1.2;
-    color: var(--text-primary);
-    margin: 0 0 0.75rem 0 !important;
-  }
-
-  .hp-offer-desc {
-    margin: 0 0 1.25rem;
-    font-size: 1.0625rem;
-    line-height: 1.65;
-    color: rgba(244, 244, 245, 0.8);
-    max-width: 58ch;
-  }
-
-  .hp-offer-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem 2rem;
-  }
-
-  .hp-offer-links a {
+  .mh-id-status {
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
-    color: var(--accent);
-    font-size: 0.9rem;
+    gap: 0.55rem;
+    padding: 0.7rem 1rem;
+    border-radius: 12px;
+    background: rgba(47, 171, 103, 0.08);
+    border: 1px solid rgba(47, 171, 103, 0.25);
+    color: #78dca0;
+    font-size: 0.85rem;
     font-weight: 500;
-    letter-spacing: 0.01em;
-    border-bottom: 1px solid rgba(201, 165, 92, 0.3);
-    padding-bottom: 2px;
-    transition: color 0.2s ease, border-color 0.2s ease, gap 0.2s ease;
   }
 
-  .hp-offer-links a:hover {
-    color: var(--accent-hover);
-    border-bottom-color: var(--accent);
-    gap: 0.8rem;
+  .mh-status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #47d17e;
+    box-shadow: 0 0 10px #47d17e;
+    animation: mh-pulse-green 2s ease-out infinite;
+  }
+  @keyframes mh-pulse-green {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.45; }
   }
 
-  .hp-offer-links a :global(svg) {
-    width: 12px;
-    height: 12px;
+  /* ============ TRUST STRIP ============ */
+  .mh-trust {
+    border-top: 1px solid var(--mh-border);
+    border-bottom: 1px solid var(--mh-border);
+    background: rgba(255,255,255,0.015);
   }
 
-  /* ============ WORK / PORTFOLIO ============ */
-  .hp-work-head {
-    max-width: 42rem;
-    margin-bottom: clamp(2.5rem, 5vw, 4rem);
+  .mh-trust > .container {
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
+    gap: 1.5rem;
   }
 
-  .hp-work-title {
-    font-family: var(--font-heading);
-    font-size: clamp(1.75rem, 3.5vw, 2.5rem);
-    font-weight: 500;
-    letter-spacing: -0.025em;
-    line-height: 1.15;
-    color: var(--text-primary);
-  }
-
-  /* Featured */
-  .hp-featured {
+  .mh-trust-grid {
+    list-style: none;
+    padding: 0;
+    margin: 0;
     display: grid;
-    grid-template-columns: 1.15fr 1fr;
-    gap: clamp(2rem, 5vw, 4rem);
-    align-items: center;
-    padding: clamp(2rem, 4vw, 3rem) 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  }
-
-  .hp-featured-media {
-    display: block;
-    border-radius: 4px;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 0;
+    border: 1px solid var(--mh-border);
+    border-radius: 16px;
     overflow: hidden;
-    aspect-ratio: 4 / 3;
-    background: #111113;
-    position: relative;
-    transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
   }
 
-  .hp-featured-media img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
-  }
-
-  .hp-featured-media:hover img { transform: scale(1.03); }
-
-  .hp-featured-body {
+  .mh-trust-item {
+    padding: 1.1rem 1.25rem;
+    border-right: 1px solid var(--mh-border);
+    border-bottom: 1px solid var(--mh-border);
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 0.25rem;
+    transition: background 0.2s ease;
+  }
+  .mh-trust-item:hover { background: rgba(201,165,92,0.04); }
+
+  .mh-trust-name {
+    color: var(--mh-text);
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: -0.005em;
   }
 
-  .hp-tag {
-    align-self: flex-start;
-    font-family: 'JetBrains Mono', monospace, var(--font-mono);
-    font-size: 0.68rem;
+  .mh-trust-since {
+    color: var(--mh-text-dim);
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+    text-transform: lowercase;
+  }
+
+  .mh-trust-note {
+    color: var(--mh-text-dim);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+    max-width: 60ch;
+  }
+
+  /* ============ WHY ============ */
+  .mh-why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+
+  .mh-why-card {
+    background: var(--mh-bg-card);
+    border: 1px solid var(--mh-border);
+    border-radius: 20px;
+    padding: 2rem 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+  }
+
+  .mh-why-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--mh-border-gold);
+    background: linear-gradient(180deg, rgba(201,165,92,0.05), rgba(255,255,255,0.012));
+  }
+
+  .mh-why-num {
+    font-family: var(--font-heading), 'Inter', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: var(--mh-gold);
+    line-height: 1;
+    letter-spacing: -0.04em;
+    background: linear-gradient(180deg, var(--mh-gold), var(--mh-gold-deep));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* ============ OFFERINGS ============ */
+  .mh-offer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .mh-offer-card {
+    background: var(--mh-bg-card);
+    border: 1px solid var(--mh-border);
+    border-radius: 24px;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+  }
+  .mh-offer-card--alt { background: var(--mh-bg-card-alt); }
+
+  .mh-offer-card:hover {
+    border-color: var(--mh-border-gold);
+    transform: translateY(-2px);
+  }
+
+  .mh-offer-visual {
+    display: flex;
+    gap: 0.6rem;
+    margin-bottom: 0.25rem;
+  }
+  .mh-offer-visual img {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid var(--mh-border);
+    padding: 8px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+  }
+  .mh-offer-card:hover .mh-offer-visual img { transform: translateY(-2px); }
+  .mh-offer-visual img:nth-child(2) { transition-delay: 40ms; }
+  .mh-offer-visual img:nth-child(3) { transition-delay: 80ms; }
+  .mh-offer-visual img:nth-child(4) { transition-delay: 120ms; }
+
+  .mh-offer-kicker {
+    font-size: 0.72rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: var(--accent);
-    padding: 0.35rem 0.75rem;
-    border: 1px solid rgba(201, 165, 92, 0.3);
-    border-radius: 100px;
+    color: var(--mh-gold);
+    font-weight: 600;
   }
 
-  .hp-featured-title {
-    font-family: var(--font-heading);
-    font-size: clamp(1.75rem, 3.2vw, 2.5rem);
-    font-weight: 500;
-    letter-spacing: -0.03em;
-    line-height: 1.1;
-    color: var(--text-primary);
+  .mh-offer-title {
+    font-family: var(--font-heading), 'Inter', sans-serif;
+    font-size: clamp(1.5rem, 2.4vw, 1.85rem);
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    line-height: 1.15;
+    color: var(--mh-text);
     margin: 0 !important;
   }
 
-  .hp-featured-role {
+  .mh-offer-lede {
+    color: var(--mh-text-muted);
+    font-size: 1.0625rem;
+    line-height: 1.6;
     margin: 0;
-    font-family: 'JetBrains Mono', monospace, var(--font-mono);
-    font-size: 0.82rem;
-    color: rgba(244, 244, 245, 0.6);
-    letter-spacing: 0.02em;
   }
 
-  .hp-featured-story {
-    margin: 0;
-    color: rgba(244, 244, 245, 0.82);
-    font-size: 1rem;
-    line-height: 1.7;
-  }
-
-  .hp-facts {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0;
-    margin: 0.75rem 0 0.5rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  }
-
-  .hp-facts > div {
-    padding: 0.85rem 0;
-    border-right: 1px solid rgba(255, 255, 255, 0.06);
-    padding-right: 1rem;
-  }
-  .hp-facts > div:nth-child(2n) { border-right: none; padding-right: 0; padding-left: 1rem; }
-  .hp-facts > div:nth-child(1), .hp-facts > div:nth-child(2) { border-bottom: 1px solid rgba(255,255,255,0.06); }
-
-  .hp-facts dt {
-    font-family: 'JetBrains Mono', monospace, var(--font-mono);
-    font-size: 0.65rem;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: rgba(244, 244, 245, 0.5);
-    margin-bottom: 0.3rem;
-  }
-
-  .hp-facts dd {
-    margin: 0;
-    color: rgba(244, 244, 245, 0.92);
-    font-size: 0.92rem;
-    font-weight: 500;
-  }
-
-  .hp-featured-link {
-    align-self: flex-start;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: var(--accent);
-    font-size: 0.95rem;
-    font-weight: 500;
-    padding: 0.75rem 0;
-    border-bottom: 1px solid rgba(201, 165, 92, 0.3);
-    transition: border-color 0.2s ease, gap 0.2s ease;
-  }
-
-  .hp-featured-link:hover {
-    border-bottom-color: var(--accent);
-    gap: 0.8rem;
-  }
-
-  .hp-featured-link :global(svg) { width: 14px; height: 14px; }
-
-  /* Supporting projects */
-  .hp-supporting {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: clamp(1.5rem, 3vw, 2.5rem);
-    margin-top: clamp(2.5rem, 5vw, 4rem);
-  }
-
-  .hp-case {
+  .mh-offer-bullets {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0 0;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 0.65rem;
+    border-top: 1px solid var(--mh-border);
+    padding-top: 1.25rem;
   }
 
-  .hp-case-media {
+  .mh-offer-bullets li {
+    color: var(--mh-text-muted);
+    font-size: 0.94rem;
+    line-height: 1.5;
+    padding-left: 1.35rem;
+    position: relative;
+  }
+
+  .mh-offer-bullets li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.55em;
+    width: 14px;
+    height: 2px;
+    background: var(--mh-gold);
+    border-radius: 2px;
+  }
+
+  .mh-offer-link {
+    align-self: flex-start;
+    margin-top: 0.75rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    color: var(--mh-gold);
+    font-size: 0.92rem;
+    font-weight: 600;
+    letter-spacing: 0.005em;
+    padding: 0.65rem 0;
+    border-bottom: 1px solid rgba(201,165,92,0.25);
+    transition: gap 0.2s ease, border-color 0.2s ease;
+  }
+  .mh-offer-link:hover {
+    gap: 0.7rem;
+    border-bottom-color: var(--mh-gold);
+  }
+  .mh-offer-link :global(svg) { width: 13px; height: 13px; }
+
+  /* ============ PORTFOLIO ============ */
+  .mh-featured {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: clamp(2rem, 4vw, 3.5rem);
+    align-items: center;
+    padding: clamp(2rem, 4vw, 3rem);
+    background: var(--mh-bg-card);
+    border: 1px solid var(--mh-border);
+    border-radius: 24px;
+    margin-bottom: clamp(2rem, 4vw, 3rem);
+  }
+
+  .mh-featured-media {
     display: block;
     aspect-ratio: 4 / 3;
-    background: #111113;
-    border-radius: 4px;
+    background: var(--mh-bg-raised);
+    border-radius: 16px;
     overflow: hidden;
+    position: relative;
+    border: 1px solid var(--mh-border);
   }
-
-  .hp-case-media img {
+  .mh-featured-media img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
     transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
   }
+  .mh-featured-media:hover img { transform: scale(1.03); }
 
-  .hp-case-media:hover img { transform: scale(1.04); }
+  .mh-featured-visit {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.5rem 0.9rem;
+    background: rgba(10, 10, 12, 0.78);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--mh-border-bright);
+    border-radius: 999px;
+    color: var(--mh-text);
+    font-size: 0.82rem;
+    font-weight: 500;
+    opacity: 0;
+    transform: translateY(4px);
+    transition: all 0.3s ease;
+  }
+  .mh-featured-media:hover .mh-featured-visit {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .mh-featured-visit :global(svg) { width: 12px; height: 12px; }
 
-  .hp-case-body {
+  .mh-featured-body {
     display: flex;
     flex-direction: column;
-    gap: 0.55rem;
+    gap: 0.9rem;
   }
 
-  .hp-case-title {
-    font-family: var(--font-heading);
-    font-size: 1.35rem;
-    font-weight: 500;
-    letter-spacing: -0.02em;
-    line-height: 1.2;
-    color: var(--text-primary);
+  .mh-chip {
+    align-self: flex-start;
+    font-size: 0.68rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--mh-gold);
+    padding: 0.35rem 0.75rem;
+    border: 1px solid var(--mh-border-gold);
+    border-radius: 999px;
+    background: rgba(201,165,92,0.06);
+  }
+
+  .mh-featured-title {
+    font-family: var(--font-heading), 'Inter', sans-serif;
+    font-size: clamp(1.75rem, 3vw, 2.25rem);
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    line-height: 1.12;
+    color: var(--mh-text);
     margin: 0 !important;
   }
 
-  .hp-case-role {
+  .mh-featured-role {
+    color: var(--mh-text-dim);
+    font-size: 0.82rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
     margin: 0;
-    font-family: 'JetBrains Mono', monospace, var(--font-mono);
-    font-size: 0.72rem;
+    font-weight: 600;
+  }
+
+  .mh-featured-story {
+    color: var(--mh-text-muted);
+    line-height: 1.65;
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  .mh-featured-facts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+    margin: 0.5rem 0 0;
+    border-top: 1px solid var(--mh-border);
+  }
+  .mh-featured-facts > div {
+    padding: 0.85rem 1rem 0.85rem 0;
+    border-bottom: 1px solid var(--mh-border);
+    border-right: 1px solid var(--mh-border);
+  }
+  .mh-featured-facts > div:nth-child(2n) { border-right: none; padding-right: 0; padding-left: 1rem; }
+  .mh-featured-facts > div:nth-last-child(-n+2) { border-bottom: none; }
+
+  .mh-featured-facts dt {
+    font-size: 0.68rem;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: rgba(244, 244, 245, 0.55);
+    color: var(--mh-text-dim);
+    margin-bottom: 0.25rem;
+    font-weight: 500;
   }
-
-  .hp-case-story {
+  .mh-featured-facts dd {
     margin: 0;
-    color: rgba(244, 244, 245, 0.78);
-    font-size: 0.95rem;
-    line-height: 1.6;
+    color: var(--mh-text);
+    font-size: 0.9rem;
+    font-weight: 500;
   }
 
-  .hp-case-link {
+  /* Supporting grid */
+  .mh-work-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .mh-case {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: var(--mh-bg-card);
+    border: 1px solid var(--mh-border);
+    border-radius: 18px;
+    padding: 1.25rem;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+  }
+  .mh-case:hover {
+    border-color: var(--mh-border-gold);
+    transform: translateY(-2px);
+  }
+
+  .mh-case-media {
+    display: block;
+    aspect-ratio: 4 / 3;
+    background: var(--mh-bg-raised);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--mh-border);
+  }
+  .mh-case-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  .mh-case:hover .mh-case-media img { transform: scale(1.04); }
+
+  .mh-case-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    padding: 0.25rem 0.5rem 0.5rem;
+  }
+
+  .mh-case-title {
+    font-family: var(--font-heading), 'Inter', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--mh-text);
+    margin: 0 !important;
+  }
+
+  .mh-case-role {
+    color: var(--mh-text-dim);
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin: 0;
+    font-weight: 600;
+  }
+
+  .mh-case-story {
+    color: var(--mh-text-muted);
+    font-size: 0.92rem;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .mh-case-link {
     align-self: flex-start;
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
-    color: var(--accent);
+    color: var(--mh-gold);
     font-size: 0.85rem;
-    font-weight: 500;
+    font-weight: 600;
     margin-top: 0.25rem;
+    transition: gap 0.2s ease;
+  }
+  .mh-case-link:hover { gap: 0.6rem; }
+  .mh-case-link :global(svg) { width: 12px; height: 12px; }
+
+  /* ============ ABOUT ============ */
+  .mh-about {
+    background: linear-gradient(180deg, rgba(201,165,92,0.025), transparent);
   }
 
-  .hp-case-link:hover { gap: 0.65rem; }
-  .hp-case-link :global(svg) { width: 12px; height: 12px; }
-
-  /* ============ HOW I WORK ============ */
-  .hp-how-grid {
+  .mh-about-inner {
     display: grid;
-    grid-template-columns: 1fr 1.8fr;
-    gap: clamp(2rem, 5vw, 4rem);
+    grid-template-columns: 0.9fr 1.3fr;
+    gap: clamp(2.5rem, 6vw, 5rem);
     align-items: start;
   }
 
-  .hp-how-head {
+  .mh-about-head {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    position: sticky;
-    top: 100px;
   }
 
-  .hp-how-title {
-    font-family: var(--font-heading);
-    font-size: clamp(2rem, 4vw, 3rem);
-    font-weight: 500;
-    letter-spacing: -0.025em;
-    line-height: 1.1;
-    color: var(--text-primary);
+  .mh-about-body {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    color: var(--mh-text-muted);
+    font-size: 1.0625rem;
+    line-height: 1.75;
+  }
+  .mh-about-body p { margin: 0; max-width: 62ch; }
+
+  /* ============ ENGAGEMENTS ============ */
+  .mh-engage-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
   }
 
-  .hp-how-list {
-    margin: 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  .mh-engage-card {
+    background: var(--mh-bg-card);
+    border: 1px solid var(--mh-border);
+    border-radius: 20px;
+    padding: 2rem 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+  }
+  .mh-engage-card:hover {
+    border-color: var(--mh-border-gold);
+    transform: translateY(-2px);
   }
 
-  .hp-how-item {
-    padding: 1.5rem 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  .mh-engage-card--feature {
+    border-color: var(--mh-border-gold);
+    background: linear-gradient(180deg, rgba(201,165,92,0.06), rgba(201,165,92,0.01));
+    box-shadow: 0 20px 40px -28px rgba(201,165,92,0.4);
   }
 
-  .hp-how-item dt {
-    font-family: var(--font-heading);
-    font-size: 1.125rem;
+  .mh-engage-price {
+    color: var(--mh-gold);
+    font-size: 1.05rem;
     font-weight: 600;
     letter-spacing: -0.01em;
-    color: var(--text-primary);
-    margin-bottom: 0.5rem;
-  }
-
-  .hp-how-item dd {
     margin: 0;
-    color: rgba(244, 244, 245, 0.8);
-    font-size: 1rem;
-    line-height: 1.65;
-    max-width: 58ch;
   }
 
   /* ============ CTA ============ */
-  .hp-cta {
-    background: linear-gradient(
-      180deg,
-      rgba(201, 165, 92, 0.04),
-      rgba(10, 10, 12, 0) 80%
-    );
-  }
-
-  .hp-cta-inner {
+  .mh-cta-card {
+    position: relative;
+    overflow: hidden;
+    padding: clamp(2.5rem, 5vw, 4rem);
+    border-radius: 28px;
+    background: linear-gradient(135deg, rgba(201,165,92,0.14), rgba(201,165,92,0.04) 50%, transparent 90%);
+    border: 1px solid var(--mh-border-gold);
     display: grid;
-    grid-template-columns: 1.3fr 1fr;
-    gap: clamp(2rem, 5vw, 4rem);
+    grid-template-columns: 1.3fr auto;
+    gap: clamp(1.5rem, 4vw, 3rem);
     align-items: center;
-    padding: clamp(2.5rem, 5vw, 4rem) 0;
-    border-top: 1px solid rgba(201, 165, 92, 0.2);
-    border-bottom: 1px solid rgba(201, 165, 92, 0.2);
   }
 
-  .hp-cta-title {
-    font-family: var(--font-heading);
-    font-size: clamp(1.85rem, 3.8vw, 2.75rem);
-    font-weight: 500;
+  .mh-cta-glow {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 70% 90% at 100% 50%, rgba(201,165,92,0.2), transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .mh-cta-body { position: relative; z-index: 1; }
+
+  .mh-cta-title {
+    font-family: var(--font-heading), 'Inter', sans-serif;
+    font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+    font-weight: 600;
     letter-spacing: -0.03em;
     line-height: 1.1;
-    color: var(--text-primary);
-    margin: 0 0 0.75rem 0 !important;
+    color: var(--mh-text);
+    margin: 0 0 0.6rem !important;
   }
 
-  .hp-cta-sub {
-    margin: 0;
-    color: rgba(244, 244, 245, 0.78);
+  .mh-cta-sub {
+    color: var(--mh-text-muted);
     font-size: 1.0625rem;
-    line-height: 1.65;
-    max-width: 48ch;
+    line-height: 1.6;
+    margin: 0;
+    max-width: 54ch;
   }
 
-  .hp-cta-actions {
+  .mh-cta-actions {
+    position: relative;
+    z-index: 1;
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    align-items: flex-end;
+    align-items: stretch;
   }
 
-  .hp-cta-phone {
+  .mh-cta-phone {
     display: inline-flex;
     align-items: center;
-    gap: 0.6rem;
-    color: rgba(244, 244, 245, 0.88);
-    font-family: 'JetBrains Mono', monospace, var(--font-mono);
-    font-size: 0.95rem;
+    justify-content: center;
+    gap: 0.55rem;
+    padding: 0.8rem 1.2rem;
+    color: var(--mh-text);
+    font-size: 0.92rem;
+    font-weight: 500;
     letter-spacing: 0.02em;
-    padding: 0.5rem 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    border: 1px solid var(--mh-border);
+    border-radius: 999px;
     transition: border-color 0.2s ease, color 0.2s ease;
   }
-
-  .hp-cta-phone:hover {
-    border-bottom-color: var(--accent);
-    color: var(--accent);
+  .mh-cta-phone:hover {
+    border-color: var(--mh-border-gold);
+    color: var(--mh-gold);
   }
-
-  .hp-cta-phone :global(svg) { width: 14px; height: 14px; }
+  .mh-cta-phone :global(svg) { width: 13px; height: 13px; }
 
   /* ============ RESPONSIVE ============ */
-  @media (max-width: 960px) {
-    .hp-hero-inner { grid-template-columns: 1fr; }
-
-    .hp-hero-meta {
-      border-left: none;
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
-      padding-left: 0;
-      padding-top: 1.5rem;
-      margin-top: 1rem;
-    }
-
-    .hp-meta-row { grid-template-columns: 140px 1fr; }
-
-    .hp-supporting { grid-template-columns: 1fr; }
-
-    .hp-featured { grid-template-columns: 1fr; }
-
-    .hp-how-grid { grid-template-columns: 1fr; }
-    .hp-how-head { position: static; }
-
-    .hp-cta-inner { grid-template-columns: 1fr; }
-    .hp-cta-actions { align-items: flex-start; }
+  @media (max-width: 1000px) {
+    .mh-hero-inner { grid-template-columns: 1fr; }
+    .mh-why-grid, .mh-offer-grid, .mh-work-grid, .mh-engage-grid { grid-template-columns: 1fr; }
+    .mh-featured { grid-template-columns: 1fr; }
+    .mh-about-inner { grid-template-columns: 1fr; }
+    .mh-cta-card { grid-template-columns: 1fr; }
   }
 
   @media (max-width: 640px) {
-    .hp-track-head { grid-template-columns: 1fr; }
-    .hp-track-num { display: block; }
-
-    .hp-offer { grid-template-columns: 1fr; gap: 0.75rem; }
-    .hp-offer-num { padding-top: 0; }
-
-    .hp-meta-row { grid-template-columns: 110px 1fr; font-size: 0.88rem; }
-
-    .hp-facts { grid-template-columns: 1fr; }
-    .hp-facts > div {
+    .mh-id-facts > div { grid-template-columns: 110px 1fr; gap: 0.5rem; }
+    .mh-hero-actions .mh-btn { flex: 1 1 auto; }
+    .mh-offer-card { padding: 1.75rem 1.5rem; }
+    .mh-featured { padding: 1.5rem; }
+    .mh-featured-facts { grid-template-columns: 1fr; }
+    .mh-featured-facts > div {
       border-right: none !important;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
       padding: 0.75rem 0 !important;
     }
-    .hp-facts > div:last-child { border-bottom: none; }
-
-    .hp-hero-actions { flex-direction: column; align-items: stretch; }
-    .hp-hero-actions :global(.btn) { justify-content: center; }
+    .mh-featured-facts > div:not(:last-child) { border-bottom: 1px solid var(--mh-border) !important; }
   }
 </style>
