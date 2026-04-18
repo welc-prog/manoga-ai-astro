@@ -7,337 +7,352 @@ import Layout from '../layouts/Layout.astro';
 
 const lang = 'en';
 const prefix = lang === 'en' ? '' : `/${lang}`;
-
-const offer1Bullets = [
-  'Google Ads — Search, Performance Max, Shopping, Demand Gen, YouTube',
-  'Meta — Advantage+, retargeting, creative testing frameworks',
-  'Apple Search Ads, Microsoft Advertising, LinkedIn Ads',
-  'Technical SEO, content architecture, on-page and internal linking',
-  'GTM, GA4, server-side tracking, Conversions API, consent mode v2',
-];
-const offer2Bullets = [
-  'Vibecoding — production apps in Astro, Nuxt or Next',
-  'AI consulting — where to use AI, where not to, what it\'ll actually cost',
-  'Workshops — half or full day for small teams, hands-on',
-  'Internal tooling — dashboards, data pipelines, automation',
-  'Full-stack: frontend, backend, deployment, monitoring',
-];
-
-const channels = [
-  { name: 'Google Ads', since: '2010' },
-  { name: 'Meta', since: '2012' },
-  { name: 'YouTube Ads', since: '2013' },
-  { name: 'Apple Search Ads', since: '2018' },
-  { name: 'Microsoft Ads', since: '2014' },
-  { name: 'LinkedIn Ads', since: '2015' },
-  { name: 'Google Tag Manager', since: '2013' },
-  { name: 'GA4 · server-side', since: 'current' },
-  { name: 'Technical SEO', since: '2010' },
-  { name: 'Astro · Nuxt · Next', since: 'current' },
-];
 ---
 
 <Layout title={t('meta.homeTitle', lang)} description={t('meta.homeDescription', lang)} lang={lang}>
-  <!-- ============ HERO ============ -->
-  <section class="mh-hero">
-    <div class="mh-hero-glow" aria-hidden="true"></div>
-    <div class="container mh-hero-inner">
-      <div class="mh-hero-col-main">
-        <span class="mh-kicker">
-          <span class="mh-kicker-dot" aria-hidden="true"></span>
-          {t('hero.tagline', lang)}
-        </span>
-
-        <h1 class="mh-hero-h1">
-          {t('hero.title', lang)}
-          <br />
-          <span class="mh-hero-h1-accent">{t('hero.titleAccent', lang)}</span>
-        </h1>
-
-        <p class="mh-hero-lede">{t('hero.description', lang)}</p>
-
-        <div class="mh-hero-actions">
-          <a href={`${prefix}/contact`} class="mh-btn mh-btn--primary">
-            {t('hero.cta', lang)}
-            <IconArrowRight />
-          </a>
-          <a href={`${prefix}/portfolio`} class="mh-btn mh-btn--ghost">
-            {t('hero.secondary', lang)}
-          </a>
-        </div>
-      </div>
-
-      <aside class="mh-hero-col-side" aria-label="At a glance">
-        <div class="mh-card mh-id-card">
-          <div class="mh-id-head">
-            <span class="mh-id-avatar" aria-hidden="true">K</span>
-            <div>
-              <p class="mh-id-name">Kenneth Abueg</p>
-              <p class="mh-id-role">Senior paid media operator · AI-native app builder</p>
-            </div>
-          </div>
-
-          <dl class="mh-id-facts">
-            <div>
-              <dt>Based in</dt>
-              <dd>Nibe, North Jutland, Denmark</dd>
-            </div>
-            <div>
-              <dt>Started</dt>
-              <dd>2010 · 15 years</dd>
-            </div>
-            <div>
-              <dt>Working model</dt>
-              <dd>Solo operator — not an agency</dd>
-            </div>
-            <div>
-              <dt>Usually hired by</dt>
-              <dd>Founders, in-house marketing leads, CMOs</dd>
-            </div>
-            <div>
-              <dt>Replies</dt>
-              <dd>Within one working day</dd>
-            </div>
-          </dl>
-
-          <div class="mh-id-status">
-            <span class="mh-status-dot" aria-hidden="true"></span>
-            Available for new work in Q2 2026
-          </div>
-        </div>
-      </aside>
-    </div>
-  </section>
-
-  <!-- ============ TRUST STRIP ============ -->
-  <section class="mh-trust">
+  <!-- Hero Section -->
+  <section class="hero section" id="hero">
     <div class="container">
-      <span class="mh-eyebrow">{t('home.trustEyebrow', lang)}</span>
-      <ul class="mh-trust-grid">
-        {channels.map(c => (
-          <li class="mh-trust-item">
-            <span class="mh-trust-name">{c.name}</span>
-            <span class="mh-trust-since">{c.since === 'current' ? 'in use now' : `since ${c.since}`}</span>
-          </li>
-        ))}
-      </ul>
-      <p class="mh-trust-note">{t('home.trustNote', lang)}</p>
-    </div>
-  </section>
-
-  <!-- ============ WHY ME ============ -->
-  <section class="mh-why">
-    <div class="container">
-      <header class="mh-section-head">
-        <span class="mh-eyebrow">{t('home.whyEyebrow', lang)}</span>
-        <h2 class="mh-h2">{t('home.whyTitle', lang)}</h2>
-      </header>
-
-      <div class="mh-why-grid">
-        <article class="mh-why-card">
-          <span class="mh-why-num">01</span>
-          <h3 class="mh-card-title">{t('home.why1Title', lang)}</h3>
-          <p class="mh-card-body">{t('home.why1Desc', lang)}</p>
-        </article>
-        <article class="mh-why-card">
-          <span class="mh-why-num">02</span>
-          <h3 class="mh-card-title">{t('home.why2Title', lang)}</h3>
-          <p class="mh-card-body">{t('home.why2Desc', lang)}</p>
-        </article>
-        <article class="mh-why-card">
-          <span class="mh-why-num">03</span>
-          <h3 class="mh-card-title">{t('home.why3Title', lang)}</h3>
-          <p class="mh-card-body">{t('home.why3Desc', lang)}</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ OFFERINGS ============ -->
-  <section class="mh-offer">
-    <div class="container">
-      <header class="mh-section-head mh-section-head--center">
-        <span class="mh-eyebrow">{t('home.offerEyebrow', lang)}</span>
-        <h2 class="mh-h2">{t('home.offerTitle', lang)}</h2>
-        <p class="mh-section-sub">{t('home.offerSubtitle', lang)}</p>
-      </header>
-
-      <div class="mh-offer-grid">
-        <article class="mh-offer-card">
-          <div class="mh-offer-visual">
-            <img src="/images/icon-google-ads.webp" alt="" loading="lazy" width="60" height="60" />
-            <img src="/images/icon-meta-ads.webp" alt="" loading="lazy" width="60" height="60" />
-            <img src="/images/icon-seo.webp" alt="" loading="lazy" width="60" height="60" />
-            <img src="/images/icon-gtm.webp" alt="" loading="lazy" width="60" height="60" />
-          </div>
-          <span class="mh-offer-kicker">{t('home.offer1Kicker', lang)}</span>
-          <h3 class="mh-offer-title">{t('home.offer1Title', lang)}</h3>
-          <p class="mh-offer-lede">{t('home.offer1Lede', lang)}</p>
-          <ul class="mh-offer-bullets">
-            {offer1Bullets.map(b => <li>{b}</li>)}
-          </ul>
-          <a href={`${prefix}/seo`} class="mh-offer-link">
-            {t('home.offer1Cta', lang)} <IconArrowRight />
-          </a>
-        </article>
-
-        <article class="mh-offer-card mh-offer-card--alt">
-          <div class="mh-offer-visual">
-            <img src="/images/icon-vibecoding.webp" alt="" loading="lazy" width="60" height="60" />
-            <img src="/images/icon-ai-consulting.webp" alt="" loading="lazy" width="60" height="60" />
-            <img src="/images/icon-workshops.webp" alt="" loading="lazy" width="60" height="60" />
-            <img src="/images/icon-webdesign.webp" alt="" loading="lazy" width="60" height="60" />
-          </div>
-          <span class="mh-offer-kicker">{t('home.offer2Kicker', lang)}</span>
-          <h3 class="mh-offer-title">{t('home.offer2Title', lang)}</h3>
-          <p class="mh-offer-lede">{t('home.offer2Lede', lang)}</p>
-          <ul class="mh-offer-bullets">
-            {offer2Bullets.map(b => <li>{b}</li>)}
-          </ul>
-          <a href={`${prefix}/ai-consulting`} class="mh-offer-link">
-            {t('home.offer2Cta', lang)} <IconArrowRight />
-          </a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ PORTFOLIO ============ -->
-  <section class="mh-work">
-    <div class="container">
-      <header class="mh-section-head">
-        <span class="mh-eyebrow">{t('home.portfolioEyebrow', lang)}</span>
-        <h2 class="mh-h2">{t('home.portfolioTitle', lang)}</h2>
-        <p class="mh-section-sub">{t('home.portfolioSubtitle', lang)}</p>
-      </header>
-
-      <article class="mh-featured">
-        <a href="https://weloveeverythingcrypto.com" target="_blank" rel="noopener" class="mh-featured-media">
-          <img src="/images/portfolio-crypto.webp" alt="WeLoveEverythingCrypto" loading="lazy" />
-          <span class="mh-featured-visit">
-            See it live <IconExternal />
-          </span>
-        </a>
-        <div class="mh-featured-body">
-          <span class="mh-chip">{t('home.welcTag', lang)}</span>
-          <h3 class="mh-featured-title">WeLoveEverythingCrypto</h3>
-          <p class="mh-featured-role">{t('home.welcRole', lang)}</p>
-          <p class="mh-featured-story">{t('home.welcStory', lang)}</p>
-          <dl class="mh-featured-facts">
-            <div><dt>Stack</dt><dd>Nuxt 4 · TypeScript · Vercel</dd></div>
-            <div><dt>Languages</dt><dd>5</dd></div>
-            <div><dt>Articles</dt><dd>1,000+</dd></div>
-            <div><dt>Operator</dt><dd>Kenneth Abueg</dd></div>
-          </dl>
-        </div>
-      </article>
-
-      <div class="mh-work-grid">
-        <article class="mh-case">
-          <a href="https://handballtracker.com" target="_blank" rel="noopener" class="mh-case-media">
-            <img src="/images/portfolio-handball.webp" alt="Handball Tracker" loading="lazy" />
-          </a>
-          <div class="mh-case-body">
-            <h3 class="mh-case-title">Handball Tracker</h3>
-            <p class="mh-case-role">{t('home.handballRole', lang)}</p>
-            <p class="mh-case-story">{t('home.handballStory', lang)}</p>
-            <a href="https://handballtracker.com" target="_blank" rel="noopener" class="mh-case-link">
-              handballtracker.com <IconExternal />
+      <div class="hero-content">
+        <div class="hero-text">
+          <span class="hero-tagline">{t('hero.tagline', lang)}</span>
+          <h1 class="hero-title">
+            {t('hero.title', lang)}
+            <span class="text-gradient">{t('hero.titleAccent', lang)}</span>
+          </h1>
+          <div class="hero-accent-line"></div>
+          <p class="hero-description">{t('hero.description', lang)}</p>
+          <div class="hero-buttons">
+            <a href={`${prefix}/contact`} class="btn btn-primary">
+              {t('hero.cta', lang)}
+              <IconArrowRight />
+            </a>
+            <a href={`${prefix}/portfolio`} class="btn btn-secondary">
+              {t('hero.secondary', lang)}
             </a>
           </div>
-        </article>
-
-        <article class="mh-case">
-          <a href="https://simpleclaude.news" target="_blank" rel="noopener" class="mh-case-media">
-            <img src="/images/portfolio-claude-daily.svg" alt="Claude Daily" loading="lazy" />
-          </a>
-          <div class="mh-case-body">
-            <h3 class="mh-case-title">Claude Daily</h3>
-            <p class="mh-case-role">{t('home.claudeDailyRole', lang)}</p>
-            <p class="mh-case-story">{t('home.claudeDailyStory', lang)}</p>
-            <a href="https://simpleclaude.news" target="_blank" rel="noopener" class="mh-case-link">
-              simpleclaude.news <IconExternal />
-            </a>
-          </div>
-        </article>
-
-        <article class="mh-case">
-          <a href="https://letmeclaudethatforyou.live" target="_blank" rel="noopener" class="mh-case-media">
-            <img src="/images/portfolio-lmctfy.svg" alt="Let Me Claude That For You" loading="lazy" />
-          </a>
-          <div class="mh-case-body">
-            <h3 class="mh-case-title">Let Me Claude That For You</h3>
-            <p class="mh-case-role">{t('home.lmctfyRole', lang)}</p>
-            <p class="mh-case-story">{t('home.lmctfyStory', lang)}</p>
-            <a href="https://letmeclaudethatforyou.live" target="_blank" rel="noopener" class="mh-case-link">
-              letmeclaudethatforyou.live <IconExternal />
-            </a>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ ABOUT ============ -->
-  <section class="mh-about">
-    <div class="container">
-      <div class="mh-about-inner">
-        <header class="mh-about-head">
-          <span class="mh-eyebrow">{t('home.aboutEyebrow', lang)}</span>
-          <h2 class="mh-h2">{t('home.aboutTitle', lang)}</h2>
-        </header>
-        <div class="mh-about-body">
-          <p>{t('home.aboutBody1', lang)}</p>
-          <p>{t('home.aboutBody2', lang)}</p>
+          <p class="hero-availability">Currently accepting new projects for Q2 2026</p>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hero-orb hero-orb--gold"></div>
+          <div class="hero-orb hero-orb--blue"></div>
+          <div class="hero-orb hero-orb--ring"></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ ENGAGEMENTS ============ -->
-  <section class="mh-engage">
+  <!-- Credibility Strip -->
+  <section class="credibility-strip">
     <div class="container">
-      <header class="mh-section-head">
-        <span class="mh-eyebrow">{t('home.engagementEyebrow', lang)}</span>
-        <h2 class="mh-h2">{t('home.engagementTitle', lang)}</h2>
-        <p class="mh-section-sub">{t('home.engagementSubtitle', lang)}</p>
-      </header>
-
-      <div class="mh-engage-grid">
-        <article class="mh-engage-card">
-          <h3 class="mh-card-title">{t('home.engage1Title', lang)}</h3>
-          <p class="mh-engage-price">{t('home.engage1Price', lang)}</p>
-          <p class="mh-card-body">{t('home.engage1Desc', lang)}</p>
-        </article>
-        <article class="mh-engage-card mh-engage-card--feature">
-          <h3 class="mh-card-title">{t('home.engage2Title', lang)}</h3>
-          <p class="mh-engage-price">{t('home.engage2Price', lang)}</p>
-          <p class="mh-card-body">{t('home.engage2Desc', lang)}</p>
-        </article>
-        <article class="mh-engage-card">
-          <h3 class="mh-card-title">{t('home.engage3Title', lang)}</h3>
-          <p class="mh-engage-price">{t('home.engage3Price', lang)}</p>
-          <p class="mh-card-body">{t('home.engage3Desc', lang)}</p>
-        </article>
+      <div class="credibility-items">
+        <div class="credibility-item">
+          <span class="credibility-number">15+</span>
+          <span class="credibility-label">{t('credibility.years', lang)}</span>
+        </div>
+        <div class="credibility-divider"></div>
+        <div class="credibility-item">
+          <span class="credibility-number">100+</span>
+          <span class="credibility-label">{t('credibility.projects', lang)}</span>
+        </div>
+        <div class="credibility-divider"></div>
+        <div class="credibility-item">
+          <span class="credibility-number">SEO</span>
+          <span class="credibility-label">{t('credibility.seoExpert', lang)}</span>
+        </div>
+        <div class="credibility-divider"></div>
+        <div class="credibility-item">
+          <span class="credibility-number">AI</span>
+          <span class="credibility-label">{t('credibility.aiNative', lang)}</span>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ CTA ============ -->
-  <section class="mh-cta">
+  <!-- Tech Trust Strip -->
+  <div class="tech-strip">
+    <div class="tech-strip-track">
+      <span>Nuxt</span>
+      <span>Vue</span>
+      <span>TypeScript</span>
+      <span>Astro</span>
+      <span>Python</span>
+      <span>Vercel</span>
+      <span>Supabase</span>
+      <span>Stripe</span>
+      <span>Google Ads</span>
+      <span>Meta Ads</span>
+      <!-- duplicate for seamless loop -->
+      <span>Nuxt</span>
+      <span>Vue</span>
+      <span>TypeScript</span>
+      <span>Astro</span>
+      <span>Python</span>
+      <span>Vercel</span>
+      <span>Supabase</span>
+      <span>Stripe</span>
+      <span>Google Ads</span>
+      <span>Meta Ads</span>
+    </div>
+  </div>
+
+  <!-- Core Services Section -->
+  <section class="section" id="services">
     <div class="container">
-      <div class="mh-cta-card">
-        <div class="mh-cta-glow" aria-hidden="true"></div>
-        <div class="mh-cta-body">
-          <h2 class="mh-cta-title">{t('cta.title', lang)}</h2>
-          <p class="mh-cta-sub">{t('cta.subtitle', lang)}</p>
+      <div class="text-center mb-3">
+        <span class="hero-tagline">{t('services.whatWeDo', lang)}</span>
+        <h2>{t('services.title', lang)}</h2>
+        <p class="text-center-narrow">{t('services.subtitle', lang)}</p>
+      </div>
+
+      <div class="services-grid stagger reveal">
+        <!-- Vibecoding -->
+        <div class="card service-card">
+          <div class="card-icon card-icon-image">
+            <img src="/images/icon-vibecoding.webp" alt="Vibecoding" loading="lazy" />
+          </div>
+          <h3 class="card-title">Vibecoding</h3>
+          <p class="card-text">{t('services.vibecoding', lang)}</p>
+          <a href={`${prefix}/vibecoding`} class="btn btn-secondary mt-1">
+            {t('common.learnMore', lang)}
+          </a>
         </div>
-        <div class="mh-cta-actions">
-          <a href={`${prefix}/contact`} class="mh-btn mh-btn--primary">
+
+        <!-- AI Consulting -->
+        <div class="card service-card">
+          <div class="card-icon card-icon-image">
+            <img src="/images/icon-ai-consulting.webp" alt="AI Consulting" loading="lazy" />
+          </div>
+          <h3 class="card-title">{t('services.aiConsulting', lang)}</h3>
+          <p class="card-text">{t('services.aiConsultingDesc', lang)}</p>
+          <a href={`${prefix}/ai-consulting`} class="btn btn-secondary mt-1">
+            {t('common.learnMore', lang)}
+          </a>
+        </div>
+
+        <!-- Workshops -->
+        <div class="card service-card">
+          <div class="card-icon card-icon-image">
+            <img src="/images/icon-workshops.webp" alt="AI Workshops" loading="lazy" />
+          </div>
+          <h3 class="card-title">{t('services.workshops', lang)}</h3>
+          <p class="card-text">{t('services.workshopsDesc', lang)}</p>
+          <a href={`${prefix}/workshops`} class="btn btn-secondary mt-1">
+            {t('common.learnMore', lang)}
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Digital Marketing Section -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="text-center mb-3">
+        <span class="hero-tagline">{t('marketing.tagline', lang)}</span>
+        <h2>15+ {t('marketing.yearsOf', lang)} <span class="text-gradient">{t('marketing.expertise', lang)}</span></h2>
+        <p class="text-center-narrow">{t('marketing.subtitle', lang)}</p>
+      </div>
+
+      <div class="services-grid stagger reveal">
+        <!-- SEO -->
+        <div class="card">
+          <div class="card-icon card-icon-image">
+            <img src="/images/icon-seo.webp" alt="SEO" loading="lazy" />
+          </div>
+          <h3 class="card-title">SEO</h3>
+          <p class="card-text">{t('marketing.seo', lang)}</p>
+          <a href={`${prefix}/seo`} class="btn btn-secondary mt-1">{t('common.learnMore', lang)}</a>
+        </div>
+
+        <!-- Google Ads -->
+        <div class="card">
+          <div class="card-icon card-icon-image">
+            <img src="/images/icon-google-ads.webp" alt="Google Ads" loading="lazy" />
+          </div>
+          <h3 class="card-title">Google Ads</h3>
+          <p class="card-text">{t('marketing.googleAds', lang)}</p>
+          <a href={`${prefix}/google-ads`} class="btn btn-secondary mt-1">{t('common.learnMore', lang)}</a>
+        </div>
+
+        <!-- Meta Advertising -->
+        <div class="card">
+          <div class="card-icon card-icon-image">
+            <img src="/images/icon-meta-ads.webp" alt="Meta Advertising" loading="lazy" />
+          </div>
+          <h3 class="card-title">{t('nav.metaAds', lang)}</h3>
+          <p class="card-text">{t('marketing.metaAds', lang)}</p>
+          <a href={`${prefix}/meta-advertising`} class="btn btn-secondary mt-1">{t('common.learnMore', lang)}</a>
+        </div>
+
+        <!-- Web Design -->
+        <div class="card">
+          <div class="card-icon card-icon-image">
+            <img src="/images/icon-webdesign.webp" alt="Web Design" loading="lazy" />
+          </div>
+          <h3 class="card-title">{t('nav.webdesign', lang)}</h3>
+          <p class="card-text">{t('marketing.webDesign', lang)}</p>
+          <a href={`${prefix}/webdesign`} class="btn btn-secondary mt-1">{t('common.learnMore', lang)}</a>
+        </div>
+
+        <!-- Google Tag Manager -->
+        <div class="card">
+          <div class="card-icon card-icon-image">
+            <img src="/images/icon-gtm.webp" alt="Google Tag Manager" loading="lazy" />
+          </div>
+          <h3 class="card-title">Google Tag Manager</h3>
+          <p class="card-text">{t('marketing.gtm', lang)}</p>
+          <a href={`${prefix}/google-tag-manager`} class="btn btn-secondary mt-1">{t('common.learnMore', lang)}</a>
+        </div>
+
+        <!-- Analytics -->
+        <div class="card">
+          <div class="card-icon card-icon-image">
+            <img src="/images/icon-analytics.webp" alt="Analytics" loading="lazy" />
+          </div>
+          <h3 class="card-title">{t('marketing.analytics', lang)}</h3>
+          <p class="card-text">{t('marketing.analyticsDesc', lang)}</p>
+          <a href={`${prefix}/contact`} class="btn btn-secondary mt-1">{t('common.learnMore', lang)}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Showcase -->
+  <section class="section" id="portfolio">
+    <div class="container">
+      <div class="text-center mb-3">
+        <span class="hero-tagline">{t('portfolio.tagline', lang)}</span>
+        <h2>{t('portfolio.featured', lang)} <span class="text-gradient">{t('portfolio.projects', lang)}</span></h2>
+        <p class="text-center-narrow">{t('portfolio.subtitle', lang)}</p>
+      </div>
+
+      <div class="showcase-grid reveal">
+        <!-- WELC -->
+        <div class="showcase-item">
+          <img class="showcase-image" src="/images/portfolio-crypto.webp" alt="WeLoveEverythingCrypto" loading="lazy" />
+          <div class="showcase-overlay">
+            <span class="showcase-tag">{t('portfolio.liveProject', lang)}</span>
+            <span class="showcase-metric">5 Languages · 1000+ Articles</span>
+            <h3 class="showcase-title">WeLoveEverythingCrypto</h3>
+            <p>{t('portfolio.welcDesc', lang)}</p>
+            <a href="https://weloveeverythingcrypto.com" target="_blank" rel="noopener" class="btn btn-primary">
+              {t('portfolio.visitSite', lang)} <IconExternal />
+            </a>
+          </div>
+        </div>
+
+        <!-- Handball Stats -->
+        <div class="showcase-item">
+          <img class="showcase-image" src="/images/portfolio-handball.webp" alt="Handball Tracker" loading="lazy" />
+          <div class="showcase-overlay">
+            <span class="showcase-tag">{t('portfolio.liveProject', lang)}</span>
+            <span class="showcase-metric">Real-time Stats · Live Tracking</span>
+            <h3 class="showcase-title">Handball Tracker</h3>
+            <p>{t('portfolio.handballDesc', lang)}</p>
+            <a href="https://handballtracker.com" target="_blank" rel="noopener" class="btn btn-primary">
+              {t('portfolio.visitSite', lang)} <IconExternal />
+            </a>
+          </div>
+        </div>
+
+        <!-- Claude Daily -->
+        <div class="showcase-item">
+          <img class="showcase-image" src="/images/portfolio-claude-daily.svg" alt="Claude Daily" loading="lazy" />
+          <div class="showcase-overlay">
+            <span class="showcase-tag">{t('portfolio.liveProject', lang)}</span>
+            <span class="showcase-metric">60+ Sources · Daily Digest</span>
+            <h3 class="showcase-title">Claude Daily</h3>
+            <p>{t('portfolio.claudeDailyDesc', lang)}</p>
+            <a href="https://simpleclaude.news" target="_blank" rel="noopener" class="btn btn-primary">
+              {t('portfolio.visitSite', lang)} <IconExternal />
+            </a>
+          </div>
+        </div>
+
+        <!-- Let Me Claude That For You -->
+        <div class="showcase-item">
+          <img class="showcase-image" src="/images/portfolio-lmctfy.svg" alt="Let Me Claude That For You" loading="lazy" />
+          <div class="showcase-overlay">
+            <span class="showcase-tag">{t('portfolio.liveProject', lang)}</span>
+            <span class="showcase-metric">Viral Tool · 10s Setup</span>
+            <h3 class="showcase-title">Let Me Claude That For You</h3>
+            <p>{t('portfolio.lmctfyDesc', lang)}</p>
+            <a href="https://letmeclaudethatforyou.live" target="_blank" rel="noopener" class="btn btn-primary">
+              {t('portfolio.visitSite', lang)} <IconExternal />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Results That Matter -->
+  <section class="results-section">
+    <div class="container">
+      <div class="text-center mb-3">
+        <span class="hero-tagline">Proven Impact</span>
+        <h2>Results That <span class="text-gradient">Matter</span></h2>
+      </div>
+      <div class="results-grid">
+        <div class="result-card">
+          <span class="result-number">+340%</span>
+          <span class="result-label">Organic Traffic Growth</span>
+        </div>
+        <div class="result-card">
+          <span class="result-number">100/100</span>
+          <span class="result-label">Lighthouse Score</span>
+        </div>
+        <div class="result-card">
+          <span class="result-number">&lt;4hr</span>
+          <span class="result-label">MVP to Live Site</span>
+        </div>
+        <div class="result-card">
+          <span class="result-number">5</span>
+          <span class="result-label">Languages Supported</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials-section section">
+    <div class="container">
+      <div class="text-center mb-3">
+        <span class="hero-tagline">What Clients Say</span>
+        <h2>Trusted by <span class="text-gradient">Founders & Teams</span></h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="card testimonial-card">
+          <p class="testimonial-quote">"Kenneth delivered a full multilingual platform in under a month. The SEO architecture alone saved us six months of backfilling technical debt."</p>
+          <div class="testimonial-author">
+            <strong>— Crypto Founder</strong>
+            <span>WeLoveEverythingCrypto</span>
+          </div>
+        </div>
+        <div class="card testimonial-card">
+          <p class="testimonial-quote">"The AI consulting workshop completely changed how our team approaches automation. Practical, no fluff, immediately applicable."</p>
+          <div class="testimonial-author">
+            <strong>— Marketing Director</strong>
+            <span>E-commerce Scale-up</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-card">
+        <h2>{t('cta.title', lang)}</h2>
+        <p>{t('cta.subtitle', lang)}</p>
+        <div class="cta-buttons">
+          <a href={`${prefix}/contact`} class="btn btn-primary">
             {t('cta.button', lang)}
             <IconArrowRight />
           </a>
-          <a href="tel:+4550587900" class="mh-cta-phone">
+          <a href="tel:+4550587900" class="btn btn-secondary">
             <IconPhone />
             +45 50 58 79 00
           </a>
@@ -345,941 +360,5 @@ const channels = [
       </div>
     </div>
   </section>
+
 </Layout>
-
-<style>
-  /* ============================================================
-     MANOGA HOMEPAGE V3 — CONFIDENT SOLO STUDIO
-     Rich, warm, premium. No italic flips, no monospace everywhere.
-     ============================================================ */
-
-  :root {
-    --mh-bg: #0a0a0c;
-    --mh-bg-raised: #121217;
-    --mh-bg-card: linear-gradient(180deg, rgba(255,255,255,0.035), rgba(255,255,255,0.012));
-    --mh-bg-card-alt: linear-gradient(180deg, rgba(201,165,92,0.05), rgba(201,165,92,0.01));
-    --mh-border: rgba(255,255,255,0.08);
-    --mh-border-bright: rgba(255,255,255,0.14);
-    --mh-border-gold: rgba(201,165,92,0.32);
-    --mh-text: #f5f5f7;
-    --mh-text-muted: rgba(245,245,247,0.72);
-    --mh-text-dim: rgba(245,245,247,0.55);
-    --mh-gold: #d4b46a;
-    --mh-gold-soft: #c9a55c;
-    --mh-gold-deep: #a78b4a;
-  }
-
-  /* Normalise against the legacy global cascade */
-  :global(main) :where(.mh-hero, .mh-trust, .mh-why, .mh-offer, .mh-work, .mh-about, .mh-engage, .mh-cta) {
-    border-top: none !important;
-  }
-
-  .mh-hero,
-  .mh-trust,
-  .mh-why,
-  .mh-offer,
-  .mh-work,
-  .mh-about,
-  .mh-engage,
-  .mh-cta {
-    position: relative;
-    padding: clamp(4.5rem, 8vw, 7.5rem) 0;
-  }
-  .mh-hero { padding-top: clamp(7rem, 11vw, 10rem); padding-bottom: clamp(3.5rem, 6vw, 5rem); }
-
-  /* ============ SHARED ATOMS ============ */
-  .mh-eyebrow {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 0.72rem;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--mh-gold);
-    font-weight: 600;
-  }
-
-  .mh-h2 {
-    font-family: var(--font-heading), 'Inter', sans-serif;
-    font-size: clamp(2rem, 4.4vw, 3.125rem);
-    font-weight: 600;
-    letter-spacing: -0.03em;
-    line-height: 1.08;
-    color: var(--mh-text);
-    margin: 0 !important;
-    max-width: 22ch;
-  }
-
-  .mh-section-head {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    margin-bottom: clamp(2.5rem, 5vw, 4rem);
-    max-width: 46rem;
-  }
-  .mh-section-head--center {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    align-items: center;
-  }
-  .mh-section-head--center .mh-h2 { max-width: 24ch; }
-
-  .mh-section-sub {
-    color: var(--mh-text-muted);
-    font-size: 1.0625rem;
-    line-height: 1.65;
-    margin: 0;
-    max-width: 56ch;
-  }
-  .mh-section-head--center .mh-section-sub { margin: 0 auto; }
-
-  .mh-card-title {
-    font-size: 1.25rem;
-    font-weight: 600;
-    letter-spacing: -0.015em;
-    color: var(--mh-text);
-    margin: 0 !important;
-  }
-
-  .mh-card-body {
-    color: var(--mh-text-muted);
-    line-height: 1.65;
-    font-size: 0.975rem;
-    margin: 0;
-  }
-
-  /* ============ BUTTONS ============ */
-  .mh-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.55rem;
-    padding: 0.95rem 1.6rem;
-    border-radius: 999px;
-    font-size: 0.95rem;
-    font-weight: 600;
-    letter-spacing: 0.01em;
-    border: 1px solid transparent;
-    transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
-    white-space: nowrap;
-  }
-
-  .mh-btn--primary {
-    background: linear-gradient(180deg, var(--mh-gold), var(--mh-gold-deep));
-    color: #1a1206;
-    box-shadow: 0 1px 0 rgba(255,255,255,0.15) inset, 0 8px 24px -10px rgba(201,165,92,0.55);
-  }
-  .mh-btn--primary:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 1px 0 rgba(255,255,255,0.2) inset, 0 12px 28px -10px rgba(201,165,92,0.7);
-  }
-  .mh-btn--primary :global(svg) { width: 14px; height: 14px; }
-
-  .mh-btn--ghost {
-    background: rgba(255,255,255,0.03);
-    color: var(--mh-text);
-    border-color: var(--mh-border-bright);
-  }
-  .mh-btn--ghost:hover {
-    background: rgba(255,255,255,0.06);
-    border-color: var(--mh-border-gold);
-  }
-
-  /* ============ HERO ============ */
-  .mh-hero {
-    overflow: hidden;
-  }
-
-  .mh-hero-glow {
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-    background:
-      radial-gradient(ellipse 55% 45% at 75% 20%, rgba(201,165,92,0.18), transparent 60%),
-      radial-gradient(ellipse 45% 60% at 10% 80%, rgba(101,130,200,0.07), transparent 60%);
-    pointer-events: none;
-  }
-
-  .mh-hero-inner {
-    position: relative;
-    z-index: 1;
-    display: grid;
-    grid-template-columns: 1.25fr 0.9fr;
-    gap: clamp(2rem, 5vw, 4.5rem);
-    align-items: center;
-  }
-
-  .mh-kicker {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.6rem;
-    font-size: 0.72rem;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--mh-gold);
-    font-weight: 600;
-    padding: 0.5rem 0.9rem;
-    border: 1px solid var(--mh-border-gold);
-    border-radius: 999px;
-    background: rgba(201,165,92,0.06);
-    align-self: flex-start;
-  }
-
-  .mh-kicker-dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: var(--mh-gold);
-    box-shadow: 0 0 12px rgba(201,165,92,0.8);
-    animation: mh-pulse 2.2s ease-out infinite;
-  }
-  @keyframes mh-pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.4; }
-  }
-
-  .mh-hero-col-main {
-    display: flex;
-    flex-direction: column;
-    gap: 1.75rem;
-  }
-
-  .mh-hero-h1 {
-    font-family: var(--font-heading), 'Inter', sans-serif;
-    font-size: clamp(2.75rem, 6.2vw, 4.5rem);
-    font-weight: 600;
-    line-height: 1.02;
-    letter-spacing: -0.035em;
-    color: var(--mh-text);
-    margin: 0 !important;
-  }
-
-  .mh-hero-h1-accent {
-    background: linear-gradient(120deg, #f5e8c8 0%, var(--mh-gold) 55%, var(--mh-gold-deep) 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    display: inline-block;
-  }
-
-  .mh-hero-lede {
-    color: var(--mh-text-muted);
-    font-size: clamp(1.0625rem, 1.3vw, 1.2rem);
-    line-height: 1.65;
-    max-width: 40em;
-    margin: 0;
-  }
-
-  .mh-hero-actions {
-    display: flex;
-    gap: 0.85rem;
-    flex-wrap: wrap;
-    margin-top: 0.5rem;
-  }
-
-  /* Hero side card */
-  .mh-hero-col-side {
-    display: flex;
-    align-items: stretch;
-  }
-
-  .mh-card {
-    background: var(--mh-bg-card);
-    border: 1px solid var(--mh-border);
-    border-radius: 20px;
-    padding: 1.75rem;
-    position: relative;
-    backdrop-filter: blur(8px);
-  }
-
-  .mh-id-card {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
-  }
-
-  .mh-id-head {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding-bottom: 1.25rem;
-    border-bottom: 1px solid var(--mh-border);
-  }
-
-  .mh-id-avatar {
-    width: 48px;
-    height: 48px;
-    border-radius: 12px;
-    background: linear-gradient(135deg, var(--mh-gold), var(--mh-gold-deep));
-    color: #1a1206;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    font-size: 1.3rem;
-    flex-shrink: 0;
-    box-shadow: 0 4px 14px -4px rgba(201,165,92,0.5);
-  }
-
-  .mh-id-name {
-    margin: 0;
-    color: var(--mh-text);
-    font-weight: 600;
-    font-size: 1.05rem;
-    letter-spacing: -0.01em;
-  }
-
-  .mh-id-role {
-    margin: 2px 0 0;
-    color: var(--mh-text-dim);
-    font-size: 0.82rem;
-    line-height: 1.4;
-  }
-
-  .mh-id-facts {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 0.9rem;
-  }
-
-  .mh-id-facts > div {
-    display: grid;
-    grid-template-columns: 120px 1fr;
-    gap: 0.75rem;
-  }
-
-  .mh-id-facts dt {
-    font-size: 0.72rem;
-    text-transform: uppercase;
-    letter-spacing: 0.14em;
-    color: var(--mh-text-dim);
-    font-weight: 500;
-    padding-top: 1px;
-  }
-
-  .mh-id-facts dd {
-    margin: 0;
-    color: var(--mh-text);
-    font-size: 0.92rem;
-    font-weight: 500;
-    line-height: 1.4;
-  }
-
-  .mh-id-status {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.55rem;
-    padding: 0.7rem 1rem;
-    border-radius: 12px;
-    background: rgba(47, 171, 103, 0.08);
-    border: 1px solid rgba(47, 171, 103, 0.25);
-    color: #78dca0;
-    font-size: 0.85rem;
-    font-weight: 500;
-  }
-
-  .mh-status-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: #47d17e;
-    box-shadow: 0 0 10px #47d17e;
-    animation: mh-pulse-green 2s ease-out infinite;
-  }
-  @keyframes mh-pulse-green {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.45; }
-  }
-
-  /* ============ TRUST STRIP ============ */
-  .mh-trust {
-    border-top: 1px solid var(--mh-border);
-    border-bottom: 1px solid var(--mh-border);
-    background: rgba(255,255,255,0.015);
-  }
-
-  .mh-trust > .container {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-
-  .mh-trust-grid {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-    gap: 0;
-    border: 1px solid var(--mh-border);
-    border-radius: 16px;
-    overflow: hidden;
-  }
-
-  .mh-trust-item {
-    padding: 1.1rem 1.25rem;
-    border-right: 1px solid var(--mh-border);
-    border-bottom: 1px solid var(--mh-border);
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
-    transition: background 0.2s ease;
-  }
-  .mh-trust-item:hover { background: rgba(201,165,92,0.04); }
-
-  .mh-trust-name {
-    color: var(--mh-text);
-    font-weight: 600;
-    font-size: 0.95rem;
-    letter-spacing: -0.005em;
-  }
-
-  .mh-trust-since {
-    color: var(--mh-text-dim);
-    font-size: 0.75rem;
-    letter-spacing: 0.06em;
-    text-transform: lowercase;
-  }
-
-  .mh-trust-note {
-    color: var(--mh-text-dim);
-    font-size: 0.95rem;
-    line-height: 1.6;
-    margin: 0;
-    max-width: 60ch;
-  }
-
-  /* ============ WHY ============ */
-  .mh-why-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.25rem;
-  }
-
-  .mh-why-card {
-    background: var(--mh-bg-card);
-    border: 1px solid var(--mh-border);
-    border-radius: 20px;
-    padding: 2rem 1.75rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.9rem;
-    transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
-  }
-
-  .mh-why-card:hover {
-    transform: translateY(-3px);
-    border-color: var(--mh-border-gold);
-    background: linear-gradient(180deg, rgba(201,165,92,0.05), rgba(255,255,255,0.012));
-  }
-
-  .mh-why-num {
-    font-family: var(--font-heading), 'Inter', sans-serif;
-    font-size: 2.5rem;
-    font-weight: 300;
-    color: var(--mh-gold);
-    line-height: 1;
-    letter-spacing: -0.04em;
-    background: linear-gradient(180deg, var(--mh-gold), var(--mh-gold-deep));
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  /* ============ OFFERINGS ============ */
-  .mh-offer-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-  }
-
-  .mh-offer-card {
-    background: var(--mh-bg-card);
-    border: 1px solid var(--mh-border);
-    border-radius: 24px;
-    padding: 2.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1.1rem;
-    position: relative;
-    overflow: hidden;
-    transition: border-color 0.3s ease, transform 0.3s ease;
-  }
-  .mh-offer-card--alt { background: var(--mh-bg-card-alt); }
-
-  .mh-offer-card:hover {
-    border-color: var(--mh-border-gold);
-    transform: translateY(-2px);
-  }
-
-  .mh-offer-visual {
-    display: flex;
-    gap: 0.6rem;
-    margin-bottom: 0.25rem;
-  }
-  .mh-offer-visual img {
-    width: 52px;
-    height: 52px;
-    border-radius: 12px;
-    background: rgba(255,255,255,0.03);
-    border: 1px solid var(--mh-border);
-    padding: 8px;
-    object-fit: contain;
-    transition: transform 0.3s ease;
-  }
-  .mh-offer-card:hover .mh-offer-visual img { transform: translateY(-2px); }
-  .mh-offer-visual img:nth-child(2) { transition-delay: 40ms; }
-  .mh-offer-visual img:nth-child(3) { transition-delay: 80ms; }
-  .mh-offer-visual img:nth-child(4) { transition-delay: 120ms; }
-
-  .mh-offer-kicker {
-    font-size: 0.72rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--mh-gold);
-    font-weight: 600;
-  }
-
-  .mh-offer-title {
-    font-family: var(--font-heading), 'Inter', sans-serif;
-    font-size: clamp(1.5rem, 2.4vw, 1.85rem);
-    font-weight: 600;
-    letter-spacing: -0.025em;
-    line-height: 1.15;
-    color: var(--mh-text);
-    margin: 0 !important;
-  }
-
-  .mh-offer-lede {
-    color: var(--mh-text-muted);
-    font-size: 1.0625rem;
-    line-height: 1.6;
-    margin: 0;
-  }
-
-  .mh-offer-bullets {
-    list-style: none;
-    padding: 0;
-    margin: 0.5rem 0 0;
-    display: flex;
-    flex-direction: column;
-    gap: 0.65rem;
-    border-top: 1px solid var(--mh-border);
-    padding-top: 1.25rem;
-  }
-
-  .mh-offer-bullets li {
-    color: var(--mh-text-muted);
-    font-size: 0.94rem;
-    line-height: 1.5;
-    padding-left: 1.35rem;
-    position: relative;
-  }
-
-  .mh-offer-bullets li::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0.55em;
-    width: 14px;
-    height: 2px;
-    background: var(--mh-gold);
-    border-radius: 2px;
-  }
-
-  .mh-offer-link {
-    align-self: flex-start;
-    margin-top: 0.75rem;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.45rem;
-    color: var(--mh-gold);
-    font-size: 0.92rem;
-    font-weight: 600;
-    letter-spacing: 0.005em;
-    padding: 0.65rem 0;
-    border-bottom: 1px solid rgba(201,165,92,0.25);
-    transition: gap 0.2s ease, border-color 0.2s ease;
-  }
-  .mh-offer-link:hover {
-    gap: 0.7rem;
-    border-bottom-color: var(--mh-gold);
-  }
-  .mh-offer-link :global(svg) { width: 13px; height: 13px; }
-
-  /* ============ PORTFOLIO ============ */
-  .mh-featured {
-    display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    gap: clamp(2rem, 4vw, 3.5rem);
-    align-items: center;
-    padding: clamp(2rem, 4vw, 3rem);
-    background: var(--mh-bg-card);
-    border: 1px solid var(--mh-border);
-    border-radius: 24px;
-    margin-bottom: clamp(2rem, 4vw, 3rem);
-  }
-
-  .mh-featured-media {
-    display: block;
-    aspect-ratio: 4 / 3;
-    background: var(--mh-bg-raised);
-    border-radius: 16px;
-    overflow: hidden;
-    position: relative;
-    border: 1px solid var(--mh-border);
-  }
-  .mh-featured-media img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
-  }
-  .mh-featured-media:hover img { transform: scale(1.03); }
-
-  .mh-featured-visit {
-    position: absolute;
-    bottom: 1rem;
-    right: 1rem;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    padding: 0.5rem 0.9rem;
-    background: rgba(10, 10, 12, 0.78);
-    backdrop-filter: blur(12px);
-    border: 1px solid var(--mh-border-bright);
-    border-radius: 999px;
-    color: var(--mh-text);
-    font-size: 0.82rem;
-    font-weight: 500;
-    opacity: 0;
-    transform: translateY(4px);
-    transition: all 0.3s ease;
-  }
-  .mh-featured-media:hover .mh-featured-visit {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  .mh-featured-visit :global(svg) { width: 12px; height: 12px; }
-
-  .mh-featured-body {
-    display: flex;
-    flex-direction: column;
-    gap: 0.9rem;
-  }
-
-  .mh-chip {
-    align-self: flex-start;
-    font-size: 0.68rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    font-weight: 600;
-    color: var(--mh-gold);
-    padding: 0.35rem 0.75rem;
-    border: 1px solid var(--mh-border-gold);
-    border-radius: 999px;
-    background: rgba(201,165,92,0.06);
-  }
-
-  .mh-featured-title {
-    font-family: var(--font-heading), 'Inter', sans-serif;
-    font-size: clamp(1.75rem, 3vw, 2.25rem);
-    font-weight: 600;
-    letter-spacing: -0.03em;
-    line-height: 1.12;
-    color: var(--mh-text);
-    margin: 0 !important;
-  }
-
-  .mh-featured-role {
-    color: var(--mh-text-dim);
-    font-size: 0.82rem;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    margin: 0;
-    font-weight: 600;
-  }
-
-  .mh-featured-story {
-    color: var(--mh-text-muted);
-    line-height: 1.65;
-    font-size: 1rem;
-    margin: 0;
-  }
-
-  .mh-featured-facts {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0;
-    margin: 0.5rem 0 0;
-    border-top: 1px solid var(--mh-border);
-  }
-  .mh-featured-facts > div {
-    padding: 0.85rem 1rem 0.85rem 0;
-    border-bottom: 1px solid var(--mh-border);
-    border-right: 1px solid var(--mh-border);
-  }
-  .mh-featured-facts > div:nth-child(2n) { border-right: none; padding-right: 0; padding-left: 1rem; }
-  .mh-featured-facts > div:nth-last-child(-n+2) { border-bottom: none; }
-
-  .mh-featured-facts dt {
-    font-size: 0.68rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--mh-text-dim);
-    margin-bottom: 0.25rem;
-    font-weight: 500;
-  }
-  .mh-featured-facts dd {
-    margin: 0;
-    color: var(--mh-text);
-    font-size: 0.9rem;
-    font-weight: 500;
-  }
-
-  /* Supporting grid */
-  .mh-work-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-  }
-
-  .mh-case {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    background: var(--mh-bg-card);
-    border: 1px solid var(--mh-border);
-    border-radius: 18px;
-    padding: 1.25rem;
-    transition: border-color 0.3s ease, transform 0.3s ease;
-  }
-  .mh-case:hover {
-    border-color: var(--mh-border-gold);
-    transform: translateY(-2px);
-  }
-
-  .mh-case-media {
-    display: block;
-    aspect-ratio: 4 / 3;
-    background: var(--mh-bg-raised);
-    border-radius: 12px;
-    overflow: hidden;
-    border: 1px solid var(--mh-border);
-  }
-  .mh-case-media img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
-  }
-  .mh-case:hover .mh-case-media img { transform: scale(1.04); }
-
-  .mh-case-body {
-    display: flex;
-    flex-direction: column;
-    gap: 0.6rem;
-    padding: 0.25rem 0.5rem 0.5rem;
-  }
-
-  .mh-case-title {
-    font-family: var(--font-heading), 'Inter', sans-serif;
-    font-size: 1.2rem;
-    font-weight: 600;
-    letter-spacing: -0.02em;
-    color: var(--mh-text);
-    margin: 0 !important;
-  }
-
-  .mh-case-role {
-    color: var(--mh-text-dim);
-    font-size: 0.7rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    margin: 0;
-    font-weight: 600;
-  }
-
-  .mh-case-story {
-    color: var(--mh-text-muted);
-    font-size: 0.92rem;
-    line-height: 1.6;
-    margin: 0;
-  }
-
-  .mh-case-link {
-    align-self: flex-start;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    color: var(--mh-gold);
-    font-size: 0.85rem;
-    font-weight: 600;
-    margin-top: 0.25rem;
-    transition: gap 0.2s ease;
-  }
-  .mh-case-link:hover { gap: 0.6rem; }
-  .mh-case-link :global(svg) { width: 12px; height: 12px; }
-
-  /* ============ ABOUT ============ */
-  .mh-about {
-    background: linear-gradient(180deg, rgba(201,165,92,0.025), transparent);
-  }
-
-  .mh-about-inner {
-    display: grid;
-    grid-template-columns: 0.9fr 1.3fr;
-    gap: clamp(2.5rem, 6vw, 5rem);
-    align-items: start;
-  }
-
-  .mh-about-head {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .mh-about-body {
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
-    color: var(--mh-text-muted);
-    font-size: 1.0625rem;
-    line-height: 1.75;
-  }
-  .mh-about-body p { margin: 0; max-width: 62ch; }
-
-  /* ============ ENGAGEMENTS ============ */
-  .mh-engage-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.25rem;
-  }
-
-  .mh-engage-card {
-    background: var(--mh-bg-card);
-    border: 1px solid var(--mh-border);
-    border-radius: 20px;
-    padding: 2rem 1.75rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    transition: border-color 0.3s ease, transform 0.3s ease;
-  }
-  .mh-engage-card:hover {
-    border-color: var(--mh-border-gold);
-    transform: translateY(-2px);
-  }
-
-  .mh-engage-card--feature {
-    border-color: var(--mh-border-gold);
-    background: linear-gradient(180deg, rgba(201,165,92,0.06), rgba(201,165,92,0.01));
-    box-shadow: 0 20px 40px -28px rgba(201,165,92,0.4);
-  }
-
-  .mh-engage-price {
-    color: var(--mh-gold);
-    font-size: 1.05rem;
-    font-weight: 600;
-    letter-spacing: -0.01em;
-    margin: 0;
-  }
-
-  /* ============ CTA ============ */
-  .mh-cta-card {
-    position: relative;
-    overflow: hidden;
-    padding: clamp(2.5rem, 5vw, 4rem);
-    border-radius: 28px;
-    background: linear-gradient(135deg, rgba(201,165,92,0.14), rgba(201,165,92,0.04) 50%, transparent 90%);
-    border: 1px solid var(--mh-border-gold);
-    display: grid;
-    grid-template-columns: 1.3fr auto;
-    gap: clamp(1.5rem, 4vw, 3rem);
-    align-items: center;
-  }
-
-  .mh-cta-glow {
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(ellipse 70% 90% at 100% 50%, rgba(201,165,92,0.2), transparent 60%);
-    pointer-events: none;
-    z-index: 0;
-  }
-
-  .mh-cta-body { position: relative; z-index: 1; }
-
-  .mh-cta-title {
-    font-family: var(--font-heading), 'Inter', sans-serif;
-    font-size: clamp(1.75rem, 3.5vw, 2.5rem);
-    font-weight: 600;
-    letter-spacing: -0.03em;
-    line-height: 1.1;
-    color: var(--mh-text);
-    margin: 0 0 0.6rem !important;
-  }
-
-  .mh-cta-sub {
-    color: var(--mh-text-muted);
-    font-size: 1.0625rem;
-    line-height: 1.6;
-    margin: 0;
-    max-width: 54ch;
-  }
-
-  .mh-cta-actions {
-    position: relative;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    align-items: stretch;
-  }
-
-  .mh-cta-phone {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.55rem;
-    padding: 0.8rem 1.2rem;
-    color: var(--mh-text);
-    font-size: 0.92rem;
-    font-weight: 500;
-    letter-spacing: 0.02em;
-    border: 1px solid var(--mh-border);
-    border-radius: 999px;
-    transition: border-color 0.2s ease, color 0.2s ease;
-  }
-  .mh-cta-phone:hover {
-    border-color: var(--mh-border-gold);
-    color: var(--mh-gold);
-  }
-  .mh-cta-phone :global(svg) { width: 13px; height: 13px; }
-
-  /* ============ RESPONSIVE ============ */
-  @media (max-width: 1000px) {
-    .mh-hero-inner { grid-template-columns: 1fr; }
-    .mh-why-grid, .mh-offer-grid, .mh-work-grid, .mh-engage-grid { grid-template-columns: 1fr; }
-    .mh-featured { grid-template-columns: 1fr; }
-    .mh-about-inner { grid-template-columns: 1fr; }
-    .mh-cta-card { grid-template-columns: 1fr; }
-  }
-
-  @media (max-width: 640px) {
-    .mh-id-facts > div { grid-template-columns: 110px 1fr; gap: 0.5rem; }
-    .mh-hero-actions .mh-btn { flex: 1 1 auto; }
-    .mh-offer-card { padding: 1.75rem 1.5rem; }
-    .mh-featured { padding: 1.5rem; }
-    .mh-featured-facts { grid-template-columns: 1fr; }
-    .mh-featured-facts > div {
-      border-right: none !important;
-      padding: 0.75rem 0 !important;
-    }
-    .mh-featured-facts > div:not(:last-child) { border-bottom: 1px solid var(--mh-border) !important; }
-  }
-</style>
